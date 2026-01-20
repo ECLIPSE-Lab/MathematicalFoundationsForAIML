@@ -29,140 +29,431 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </article-meta>
   </front>
   <body>
-    <sec id="mathematical-foundations-of-ai-ml---proposed-syllabus">
-      <title>1 Mathematical Foundations of AI &amp; ML - proposed
-  syllabus</title>
+    <sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg">
+      <title>1 Mathematical Foundations of AI &amp; ML – Unified Syllabus
+  Overview (with ML-PC &amp; MG)</title>
+      <p>
+        <bold>Legend</bold>
+      </p>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>★</bold> First serious use — concept must be introduced
+      in MFML <italic>before</italic> being used in ML-PC or MG
+      </p>
+        </list-item>
+        <list-item>
+          <p><bold>◎</bold> Reinforcement / application — concept is applied
+      or deepened, but not introduced
+      </p>
+        </list-item>
+        <list-item>
+          <p><bold>(R)</bold> Refresher — topic was covered in a prior
+      course and is only briefly revisited
+      </p>
+        </list-item>
+        <list-item>
+          <p><bold>MFML</bold> Mathematical Foundations of AI &amp; ML
+      </p>
+        </list-item>
+        <list-item>
+          <p><bold>ML-PC</bold> Machine Learning in Materials Processing
+      &amp; Characterization
+      </p>
+        </list-item>
+        <list-item>
+          <p><bold>MG</bold> Materials Genomics</p>
+        </list-item>
+      </list>
       <table-wrap>
         <table>
           <colgroup>
-            <col width="20%"/>
-            <col width="20%"/>
-            <col width="20%"/>
-            <col width="20%"/>
-            <col width="20%"/>
+            <col width="17%"/>
+            <col width="17%"/>
+            <col width="17%"/>
+            <col width="17%"/>
+            <col width="17%"/>
+            <col width="17%"/>
           </colgroup>
           <thead>
             <tr>
               <th>Week</th>
-              <th>MFML – Mathematical Foundations</th>
-              <th>ML-PC – ML in Materials Processing &amp;
-          Characterization</th>
-              <th>MG – Materials Genomics</th>
+              <th>MFML – Mathematical Foundations (revised)</th>
+              <th>ML-PC – ML in Materials Processing &amp; Characterization
+          (revised)</th>
+              <th>MG – Materials Genomics (revised)</th>
               <th>Exercise (90 min, Python-based)</th>
+              <th>Dependency Logic</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>1</td>
-              <td>Data as vectors, models, feature spaces</td>
-              <td>What counts as data in processing &amp;
-          characterization</td>
-              <td>What counts as data in materials databases</td>
-              <td>NumPy arrays, vector operations, plotting simple
-          datasets</td>
+              <td>Learning vs data analysis; models, loss functions,
+          prediction vs explanation</td>
+              <td>Role of ML in processing &amp; characterization; ML vs
+          physics models</td>
+              <td>Role of ML in materials discovery; databases &amp;
+          targets</td>
+              <td>NumPy refresher; vectors, dot products, simple loss
+          (MSE)</td>
+              <td>MFML defines “learning” as optimization, not
+          statistics</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>Data types, scales, normalization, units</td>
-              <td>Sensors, signals, images as arrays</td>
-              <td>Descriptors, compositions, metadata</td>
-              <td>Scaling &amp; normalization effects; visual
-          comparison</td>
+              <td>Linear algebra refresher for learning: covariance, PCA/SVD
+          (R)</td>
+              <td>PCA as a tool for spectra &amp; images (◎)</td>
+              <td>PCA &amp; low-D structure in materials spaces (◎)</td>
+              <td>PCA refresher on known dataset; visualize variance
+          directions</td>
+              <td>PCA assumed known; MFML aligns notation &amp;
+          geometry</td>
             </tr>
             <tr>
               <td>3</td>
-              <td>Probability, expectation, variance, noise</td>
-              <td>Measurement noise in experiments</td>
-              <td>Noise &amp; uncertainty in databases</td>
-              <td>Monte Carlo sampling, simulate noisy measurements</td>
+              <td>Regression as loss minimization; linear models
+          revisited</td>
+              <td>Regression as surrogate modeling for processes &amp;
+          properties (★)</td>
+              <td>Regression &amp; correlation in materials datasets
+          (★)</td>
+              <td>Linear regression from scratch via loss minimization</td>
+              <td>Regression reframed explicitly as learning problem</td>
             </tr>
             <tr>
               <td>4</td>
-              <td>Sampling, Nyquist, FFT as representation change</td>
-              <td>Signal preprocessing (spectra, time series)</td>
-              <td>Property distributions &amp; statistics</td>
-              <td>FFT on synthetic signals; filtering</td>
+              <td>Neural networks early: neuron, activations, universal
+          approximation</td>
+              <td>NN regression for materials properties (★)</td>
+              <td>NN models for structure–property relations (★)</td>
+              <td>Single-neuron + activation functions (manual forward
+          pass)</td>
+              <td>MFML must precede any NN usage</td>
             </tr>
             <tr>
               <td>5</td>
-              <td>Linear regression, least squares (geometry)</td>
-              <td>Regression for process/property modeling</td>
-              <td>Correlation analysis in materials data</td>
-              <td>Implement linear regression from scratch</td>
+              <td>Backpropagation, gradients, training dynamics</td>
+              <td>NN training stability &amp; convergence (★)</td>
+              <td>NN training pitfalls in materials data (◎)</td>
+              <td>Manual backprop for shallow NN</td>
+              <td>MFML supplies chain rule &amp; gradient flow</td>
             </tr>
             <tr>
               <td>6</td>
-              <td>SVD &amp; PCA (eigenvectors, variance)</td>
-              <td>PCA on spectra &amp; micrographs</td>
-              <td>PCA &amp; embeddings for materials spaces</td>
-              <td>PCA on high-dimensional dataset, visualize components</td>
+              <td>Loss landscapes, conditioning, optimization behavior</td>
+              <td>Hyperparameters, robustness, convergence issues (★)</td>
+              <td>Model robustness &amp; sensitivity (◎)</td>
+              <td>Gradient descent experiments: learning rate &amp;
+          conditioning</td>
+              <td>Optimization treated as learning dynamics</td>
             </tr>
             <tr>
               <td>7</td>
-              <td>Loss functions, gradients, sensitivity</td>
-              <td>Model tuning &amp; objective functions</td>
-              <td>Descriptor relevance &amp; feature selection</td>
-              <td>Manual gradient descent on toy problems</td>
+              <td>Generalization, bias–variance, regularization</td>
+              <td>Overfitting control in models (★)</td>
+              <td>Limits of high-D regression (★)</td>
+              <td>Overfitting demo: polynomial vs NN models</td>
+              <td>Critical conceptual gate for both applied courses</td>
             </tr>
             <tr>
               <td>8</td>
-              <td>Optimization, regularization (L1/L2)</td>
-              <td>Model robustness &amp; stability</td>
-              <td>High-dimensional regression challenges</td>
-              <td>Compare regularization strengths</td>
+              <td>Probabilistic view of learning: noise &amp;
+          likelihood</td>
+              <td>Noise-aware modeling &amp; error propagation (◎)</td>
+              <td>Noise &amp; uncertainty in materials datasets (★)</td>
+              <td>Noise injection; likelihood vs MSE comparison</td>
+              <td>MFML reframes probability for ML</td>
             </tr>
             <tr>
               <td>9</td>
-              <td>Neurons, activations, backpropagation</td>
-              <td>NN regression/classification for properties</td>
-              <td>NN for structure–property mapping</td>
-              <td>Tiny neural net: forward + backward pass</td>
+              <td>Representation learning: learned vs engineered
+          features</td>
+              <td>Feature learning in signals &amp; images (★)</td>
+              <td>Descriptor learning vs hand-crafted features (★)</td>
+              <td>Feature learning with simple NN</td>
+              <td>Transition from classical descriptors</td>
             </tr>
             <tr>
               <td>10</td>
-              <td>Capacity, overfitting, generalization</td>
-              <td>CNNs for images (conceptual math only)</td>
-              <td>Representation learning (conceptual)</td>
-              <td>Framework NN (PyTorch/Keras), overfitting demo</td>
+              <td>Latent spaces: autoencoders &amp; embeddings</td>
+              <td>Compression &amp; anomaly detection in processes (★)</td>
+              <td>Latent materials spaces &amp; embeddings (★)</td>
+              <td>Autoencoder with framework (PyTorch/Keras)</td>
+              <td>Core week for Materials Genomics</td>
             </tr>
             <tr>
               <td>11</td>
-              <td>Autoencoders &amp; latent variables</td>
-              <td>Anomaly detection in processes</td>
-              <td>Latent materials spaces &amp; clustering</td>
-              <td>Train autoencoder, visualize latent space</td>
+              <td>Unsupervised learning revisited (objectives, not
+          algorithms)</td>
+              <td>Clustering &amp; process drift detection (◎)</td>
+              <td>Clustering vs discovery in materials space (◎)</td>
+              <td>Compare clustering vs AE embeddings</td>
+              <td>Students reinterpret known clustering methods</td>
             </tr>
             <tr>
               <td>12</td>
-              <td>Unsupervised learning &amp; uncertainty intro</td>
-              <td>Drift &amp; anomaly detection</td>
-              <td>Discovery in latent space</td>
-              <td>Clustering + uncertainty estimation</td>
+              <td>Uncertainty in predictions (aleatoric vs epistemic);
+          Gaussian Processes (conceptual)</td>
+              <td>Trust &amp; confidence in ML-assisted decisions; surrogate
+          models (★)</td>
+              <td>Discovery &amp; screening with uncertainty; exploration vs
+          exploitation (★)</td>
+              <td>Predictive uncertainty: GP regression vs NN ensembles</td>
+              <td>Enables responsible ML &amp; accelerator concepts</td>
             </tr>
             <tr>
               <td>13</td>
-              <td>Physics-informed ML, explainability</td>
-              <td>Physics-informed constraints in ML</td>
-              <td>Trust, interpretability, causality</td>
-              <td>Sensitivity analysis, simple PINN demo</td>
+              <td>Physics-informed &amp; constrained learning</td>
+              <td>Physics-informed ML for processes &amp; characterization
+          (★)</td>
+              <td>Physical constraints in materials ML (◎)</td>
+              <td>Constrained NN / penalty-based PINN demo</td>
+              <td>MFML leads constraints &amp; PINN concepts</td>
             </tr>
             <tr>
               <td>14</td>
-              <td>Integration, limits, outlook</td>
-              <td>Integrated case studies</td>
-              <td>Discovery limits &amp; ethics</td>
-              <td>Mini end-to-end project / synthesis</td>
+              <td>Explainability, limits, scientific trust</td>
+              <td>Integrated case studies &amp; failure modes</td>
+              <td>Limits &amp; ethics of data-driven discovery</td>
+              <td>Mini end-to-end synthesis project</td>
+              <td>All courses converge conceptually</td>
             </tr>
           </tbody>
         </table>
       </table-wrap>
     </sec>
-    <sec id="references">
-      <title>References</title>
+    <sec id="recommended-readings">
+      <title>2 Recommended readings</title>
+      <p>We base much of the lecture on the following books:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Neuer
+      (<xref alt="2024" rid="ref-neuer2024machine" ref-type="bibr">2024</xref>),
+      Machine Learning for Engineers: Introduction to Physics-Informed,
+      Explainable Learning Methods for AI in Engineering Applications.
+      Springer Nature.</p>
+        </list-item>
+        <list-item>
+          <p>McClarren
+      (<xref alt="2021" rid="ref-ryan2021machine" ref-type="bibr">2021</xref>),
+      Machine Learning for Engineers: Using Data to Solve Problems for
+      Physical Systems. Springer.</p>
+        </list-item>
+      </list>
+      <p>Tangentially, we also recommend the following books:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Murphy
+      (<xref alt="2012" rid="ref-murphy2012machine" ref-type="bibr">2012</xref>),
+      Machine Learning: A Probabilistic Perspective. MIT Press.</p>
+        </list-item>
+        <list-item>
+          <p>Bishop
+      (<xref alt="2006" rid="ref-bishop2006pattern" ref-type="bibr">2006</xref>),
+      Pattern Recognition and Machine Learning. Springer Science+
+      Business Media, LLC Berlin, Germany.</p>
+        </list-item>
+      </list>
+      <table-wrap>
+        <table>
+          <colgroup>
+            <col width="17%"/>
+            <col width="17%"/>
+            <col width="17%"/>
+            <col width="17%"/>
+            <col width="17%"/>
+            <col width="17%"/>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>MFML Week</th>
+              <th>MFML Lecture Focus (Revised)</th>
+              <th>Neuer – Required Reading</th>
+              <th>Neuer – Optional / Skim</th>
+              <th>McClarren – Contextual / Optional</th>
+              <th>Bishop – Targeted Depth (Optional)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Learning vs data analysis; models, loss functions</td>
+              <td>Ch. 1.1 Data-Based Modeling; 1.1.1 Concept of Model</td>
+              <td>1.1.3 Criticism of Data-Based Modeling</td>
+              <td>Ch. 1 Introduction (ML in physical systems)</td>
+              <td>Ch. 1 §1.1–1.2 (what is a model, pattern recognition
+          view)</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Linear algebra refresher; covariance, PCA/SVD (R)</td>
+              <td>Ch. 5.2 PCA (skim, notation &amp; geometry only)</td>
+              <td>PCA implementation details</td>
+              <td>Ch. 5 Dimension Reduction (ROM intuition)</td>
+              <td>Ch. 12 §12.1–12.2 PCA derivation (selective)</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Regression as loss minimization</td>
+              <td>Ch. 4.2.2 Regression; Ch. 4.4.1 LMS theory</td>
+              <td>LMS algorithm variants</td>
+              <td>Ch. 4 Regression (physical meaning of regression)</td>
+              <td>Ch. 3 §3.1–3.3 Linear regression, least squares
+          geometry</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Neural networks early: neuron &amp; activations</td>
+              <td>Ch. 4.5.1 Neuron; 4.5.3 Activation Functions</td>
+              <td>Framework-specific NN sections</td>
+              <td>Ch. 8 Neural Networks (surrogate perspective)</td>
+              <td>Ch. 5 §5.1–5.2 Neural network basics</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Backpropagation &amp; gradient flow</td>
+              <td>Ch. 4.5.4 Training of Neural Networks</td>
+              <td>Advanced NN variants</td>
+              <td>Ch. 7 Optimization (inverse-problem framing)</td>
+              <td>Ch. 5 §5.3 Backpropagation (conceptual)</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Loss landscapes &amp; optimization behavior</td>
+              <td>Ch. 4.4.6 Hyperparameters; Ch. 4.5.5 Optimization</td>
+              <td>Detailed optimizer variants</td>
+              <td>Ch. 7 Optimization</td>
+              <td>Ch. 3 §3.4 Regularization; §3.5 Bayesian view (skim)</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Generalization, bias–variance, regularization</td>
+              <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
+              <td>—</td>
+              <td>Ch. 6 Model Selection &amp; Validation</td>
+              <td>Ch. 3 §3.2 Bias–variance decomposition</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Probabilistic view of learning; noise</td>
+              <td>Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4
+          Uncertainty</td>
+              <td>Bayesian details</td>
+              <td>Ch. 3 Error and Uncertainty</td>
+              <td>Ch. 2 §2.1–2.3 Gaussian distributions &amp; moments</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Representation learning; features vs learned reps</td>
+              <td>Ch. 5.5 Autoencoder (intro &amp; motivation)</td>
+              <td>AE uncertainty extensions</td>
+              <td>Ch. 5 Dimension Reduction</td>
+              <td>Ch. 12 §12.3 Nonlinear PCA / latent variables</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Latent spaces; embeddings</td>
+              <td>Ch. 5.5.1–5.5.3 Autoencoder &amp; Latent Space</td>
+              <td>AE architectures</td>
+              <td>Ch. 5 Dimension Reduction</td>
+              <td>Ch. 12 §12.3–12.4 Latent variable intuition</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Unsupervised learning revisited (objectives)</td>
+              <td>Ch. 5.3 K-Means (objective-based view)</td>
+              <td>t-SNE, advanced clustering</td>
+              <td>Ch. 9 Classification (decision boundaries)</td>
+              <td>Ch. 9 Mixture Models &amp; EM (conceptual only)</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Uncertainty in predictions</td>
+              <td>Ch. 6.4 Stochastic Methods for Uncertainty</td>
+              <td>Advanced stochastic methods</td>
+              <td>Ch. 3 Error and Uncertainty</td>
+              <td>Ch. 3 §3.5 Bayesian regularization (skim)</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Physics-informed &amp; constrained learning</td>
+              <td>Ch. 6.1–6.3 Physics-Informed Learning</td>
+              <td>Semantic technologies</td>
+              <td>Ch. 11 Physics-Informed &amp; Hybrid Models</td>
+              <td>Ch. 1 §1.6 Model complexity &amp; Occam’s razor</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Explainability, limits, scientific trust</td>
+              <td>Ch. 7 Explainability (discussion &amp; outlook)</td>
+              <td>—</td>
+              <td>Ch. 12 Limitations and Outlook</td>
+              <td>Ch. 1 §1.1–1.2 Reflection on model limits</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
     </sec>
   </body>
   <back>
-</back>
+    <ref-list>
+      <title>References</title>
+      <ref id="ref-ryan2021machine">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>McClarren</surname>
+              <given-names>Ryan G..</given-names>
+            </name>
+          </person-group>
+          <source>Machine learning for engineers: Using data to solve problems for physical systems</source>
+          <publisher-name>Springer.</publisher-name>
+          <year iso-8601-date="2021">2021</year>
+        </element-citation>
+      </ref>
+      <ref id="ref-neuer2024machine">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Neuer</surname>
+              <given-names>Marcus J</given-names>
+            </name>
+          </person-group>
+          <source>Machine learning for engineers: Introduction to physics-informed, explainable learning methods for AI in engineering applications</source>
+          <publisher-name>Springer Nature</publisher-name>
+          <year iso-8601-date="2024">2024</year>
+        </element-citation>
+      </ref>
+      <ref id="ref-murphy2012machine">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Murphy</surname>
+              <given-names>Kevin P</given-names>
+            </name>
+          </person-group>
+          <source>Machine learning: A probabilistic perspective</source>
+          <publisher-name>MIT press</publisher-name>
+          <year iso-8601-date="2012">2012</year>
+        </element-citation>
+      </ref>
+      <ref id="ref-bishop2006pattern">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bishop</surname>
+              <given-names>Christopher M</given-names>
+            </name>
+          </person-group>
+          <source>Pattern recognition and machine learning by christopher m. bishop</source>
+          <publisher-name>Springer Science+ Business Media, LLC Berlin, Germany:</publisher-name>
+          <year iso-8601-date="2006">2006</year>
+          <volume>400</volume>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
   <sub-article article-type="notebook" id="nb-2-nb-1">
     <front-stub>
       <title-group>
