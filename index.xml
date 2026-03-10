@@ -1,779 +1,1983 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving
 and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
+
 <article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
-  <front>
-    <article-meta>
-      <title-group>
-        <article-title>Mathematical Foundations of AI &amp; ML</article-title>
-      </title-group>
-      <contrib-group>
-        <contrib contrib-type="author">
-          <name>
-            <surname>Pelz</surname>
-            <given-names>Philipp</given-names>
-          </name>
-          <string-name>Philipp Pelz</string-name>
-          <email>philipp.pelz@fau.de</email>
-        </contrib>
-      </contrib-group>
-      <history/>
-      <kwd-group kwd-group-type="author">
-        <kwd>Machine Learning</kwd>
-        <kwd>Artificial Intelligence</kwd>
-        <kwd>Mathematics</kwd>
-        <kwd>Linear Algebra</kwd>
-        <kwd>Probability</kwd>
-        <kwd>Optimization</kwd>
-      </kwd-group>
-    </article-meta>
-  </front>
-  <body>
-    <sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg">
-      <title>1 Mathematical Foundations of AI &amp; ML – Unified Syllabus
+
+<front>
+
+
+<article-meta>
+
+
+<title-group>
+<article-title>Mathematical Foundations of AI &amp; ML</article-title>
+</title-group>
+
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Pelz</surname>
+<given-names>Philipp</given-names>
+</name>
+<string-name>Philipp Pelz</string-name>
+
+<email>philipp.pelz@fau.de</email>
+</contrib>
+</contrib-group>
+
+
+
+
+
+
+
+
+
+<history></history>
+
+
+<kwd-group kwd-group-type="author">
+<kwd>Machine Learning</kwd>
+<kwd>Artificial Intelligence</kwd>
+<kwd>Mathematics</kwd>
+<kwd>Linear Algebra</kwd>
+<kwd>Probability</kwd>
+<kwd>Optimization</kwd>
+</kwd-group>
+
+
+
+
+</article-meta>
+
+</front>
+
+<body>
+<sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg">
+  <title>1 Mathematical Foundations of AI &amp; ML – Unified Syllabus
   Overview (with ML-PC &amp; MG)</title>
-      <p>
-        <bold>Legend</bold>
-      </p>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>★</bold> First serious use — concept must be introduced
+  <p><bold>Legend</bold></p>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>★</bold> First serious use — concept must be introduced
       in MFML <italic>before</italic> being used in ML-PC or MG
       </p>
-        </list-item>
-        <list-item>
-          <p><bold>◎</bold> Reinforcement / application — concept is applied
+    </list-item>
+    <list-item>
+      <p><bold>◎</bold> Reinforcement / application — concept is applied
       or deepened, but not introduced
       </p>
-        </list-item>
-        <list-item>
-          <p><bold>(R)</bold> Refresher — topic was covered in a prior
+    </list-item>
+    <list-item>
+      <p><bold>(R)</bold> Refresher — topic was covered in a prior
       course and is only briefly revisited
       </p>
-        </list-item>
-        <list-item>
-          <p><bold>MFML</bold> Mathematical Foundations of AI &amp; ML
+    </list-item>
+    <list-item>
+      <p><bold>MFML</bold> Mathematical Foundations of AI &amp; ML
       </p>
-        </list-item>
-        <list-item>
-          <p><bold>ML-PC</bold> Machine Learning in Materials Processing
+    </list-item>
+    <list-item>
+      <p><bold>ML-PC</bold> Machine Learning in Materials Processing
       &amp; Characterization
       </p>
-        </list-item>
-        <list-item>
-          <p><bold>MG</bold> Materials Genomics</p>
-        </list-item>
-      </list>
-      <table-wrap>
-        <table>
-          <colgroup>
-            <col width="17%"/>
-            <col width="17%"/>
-            <col width="17%"/>
-            <col width="17%"/>
-            <col width="17%"/>
-            <col width="17%"/>
-          </colgroup>
-          <thead>
-            <tr>
-              <th>Week</th>
-              <th>MFML – Mathematical Foundations (revised)</th>
-              <th>ML-PC – ML in Materials Processing &amp; Characterization
+    </list-item>
+    <list-item>
+      <p><bold>MG</bold> Materials Genomics</p>
+    </list-item>
+  </list>
+  <table-wrap>
+    <table>
+      <colgroup>
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>MFML – Mathematical Foundations (revised)</th>
+          <th>ML-PC – ML in Materials Processing &amp; Characterization
           (revised)</th>
-              <th>MG – Materials Genomics (revised)</th>
-              <th>Exercise (90 min, Python-based)</th>
-              <th>Dependency Logic</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Learning vs data analysis; models, loss functions,
+          <th>MG – Materials Genomics (revised)</th>
+          <th>Exercise (90 min, Python-based)</th>
+          <th>Dependency Logic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Learning vs data analysis; models, loss functions,
           prediction vs explanation</td>
-              <td>Role of ML in processing &amp; characterization; ML vs
+          <td>Role of ML in processing &amp; characterization; ML vs
           physics models</td>
-              <td>Role of ML in materials discovery; databases &amp;
+          <td>Role of ML in materials discovery; databases &amp;
           targets</td>
-              <td>NumPy refresher; vectors, dot products, simple loss
+          <td>NumPy refresher; vectors, dot products, simple loss
           (MSE)</td>
-              <td>MFML defines “learning” as optimization, not
+          <td>MFML defines “learning” as optimization, not
           statistics</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Linear algebra refresher for learning: covariance, PCA/SVD
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Linear algebra refresher for learning: covariance, PCA/SVD
           (R)</td>
-              <td>PCA as a tool for spectra &amp; images (◎)</td>
-              <td>PCA &amp; low-D structure in materials spaces (◎)</td>
-              <td>PCA refresher on known dataset; visualize variance
+          <td>PCA as a tool for spectra &amp; images (◎)</td>
+          <td>PCA &amp; low-D structure in materials spaces (◎)</td>
+          <td>PCA refresher on known dataset; visualize variance
           directions</td>
-              <td>PCA assumed known; MFML aligns notation &amp;
+          <td>PCA assumed known; MFML aligns notation &amp;
           geometry</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Regression as loss minimization; linear models
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Regression as loss minimization; linear models
           revisited</td>
-              <td>Regression as surrogate modeling for processes &amp;
+          <td>Regression as surrogate modeling for processes &amp;
           properties (★)</td>
-              <td>Regression &amp; correlation in materials datasets
+          <td>Regression &amp; correlation in materials datasets
           (★)</td>
-              <td>Linear regression from scratch via loss minimization</td>
-              <td>Regression reframed explicitly as learning problem</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Neural networks early: neuron, activations, universal
+          <td>Linear regression from scratch via loss minimization</td>
+          <td>Regression reframed explicitly as learning problem</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Neural networks early: neuron, activations, universal
           approximation</td>
-              <td>NN regression for materials properties (★)</td>
-              <td>NN models for structure–property relations (★)</td>
-              <td>Single-neuron + activation functions (manual forward
+          <td>NN regression for materials properties (★)</td>
+          <td>NN models for structure–property relations (★)</td>
+          <td>Single-neuron + activation functions (manual forward
           pass)</td>
-              <td>MFML must precede any NN usage</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Backpropagation, gradients, training dynamics</td>
-              <td>NN training stability &amp; convergence (★)</td>
-              <td>NN training pitfalls in materials data (◎)</td>
-              <td>Manual backprop for shallow NN</td>
-              <td>MFML supplies chain rule &amp; gradient flow</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Loss landscapes, conditioning, optimization behavior</td>
-              <td>Hyperparameters, robustness, convergence issues (★)</td>
-              <td>Model robustness &amp; sensitivity (◎)</td>
-              <td>Gradient descent experiments: learning rate &amp;
+          <td>MFML must precede any NN usage</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Backpropagation, gradients, training dynamics</td>
+          <td>NN training stability &amp; convergence (★)</td>
+          <td>NN training pitfalls in materials data (◎)</td>
+          <td>Manual backprop for shallow NN</td>
+          <td>MFML supplies chain rule &amp; gradient flow</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Loss landscapes, conditioning, optimization behavior</td>
+          <td>Hyperparameters, robustness, convergence issues (★)</td>
+          <td>Model robustness &amp; sensitivity (◎)</td>
+          <td>Gradient descent experiments: learning rate &amp;
           conditioning</td>
-              <td>Optimization treated as learning dynamics</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Generalization, bias–variance, regularization</td>
-              <td>Overfitting control in models (★)</td>
-              <td>Limits of high-D regression (★)</td>
-              <td>Overfitting demo: polynomial vs NN models</td>
-              <td>Critical conceptual gate for both applied courses</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>Probabilistic view of learning: noise &amp;
+          <td>Optimization treated as learning dynamics</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Generalization, bias–variance, regularization</td>
+          <td>Overfitting control in models (★)</td>
+          <td>Limits of high-D regression (★)</td>
+          <td>Overfitting demo: polynomial vs NN models</td>
+          <td>Critical conceptual gate for both applied courses</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Probabilistic view of learning: noise &amp;
           likelihood</td>
-              <td>Noise-aware modeling &amp; error propagation (◎)</td>
-              <td>Noise &amp; uncertainty in materials datasets (★)</td>
-              <td>Noise injection; likelihood vs MSE comparison</td>
-              <td>MFML reframes probability for ML</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>Representation learning: learned vs engineered
+          <td>Noise-aware modeling &amp; error propagation (◎)</td>
+          <td>Noise &amp; uncertainty in materials datasets (★)</td>
+          <td>Noise injection; likelihood vs MSE comparison</td>
+          <td>MFML reframes probability for ML</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Representation learning: learned vs engineered
           features</td>
-              <td>Feature learning in signals &amp; images (★)</td>
-              <td>Descriptor learning vs hand-crafted features (★)</td>
-              <td>Feature learning with simple NN</td>
-              <td>Transition from classical descriptors</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>Latent spaces: autoencoders &amp; embeddings</td>
-              <td>Compression &amp; anomaly detection in processes (★)</td>
-              <td>Latent materials spaces &amp; embeddings (★)</td>
-              <td>Autoencoder with framework (PyTorch/Keras)</td>
-              <td>Core week for Materials Genomics</td>
-            </tr>
-            <tr>
-              <td>11</td>
-              <td>Unsupervised learning revisited (objectives, not
+          <td>Feature learning in signals &amp; images (★)</td>
+          <td>Descriptor learning vs hand-crafted features (★)</td>
+          <td>Feature learning with simple NN</td>
+          <td>Transition from classical descriptors</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Latent spaces: autoencoders &amp; embeddings</td>
+          <td>Compression &amp; anomaly detection in processes (★)</td>
+          <td>Latent materials spaces &amp; embeddings (★)</td>
+          <td>Autoencoder with framework (PyTorch/Keras)</td>
+          <td>Core week for Materials Genomics</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Unsupervised learning revisited (objectives, not
           algorithms)</td>
-              <td>Clustering &amp; process drift detection (◎)</td>
-              <td>Clustering vs discovery in materials space (◎)</td>
-              <td>Compare clustering vs AE embeddings</td>
-              <td>Students reinterpret known clustering methods</td>
-            </tr>
-            <tr>
-              <td>12</td>
-              <td>Uncertainty in predictions (aleatoric vs epistemic);
+          <td>Clustering &amp; process drift detection (◎)</td>
+          <td>Clustering vs discovery in materials space (◎)</td>
+          <td>Compare clustering vs AE embeddings</td>
+          <td>Students reinterpret known clustering methods</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Uncertainty in predictions (aleatoric vs epistemic);
           Gaussian Processes (conceptual)</td>
-              <td>Trust &amp; confidence in ML-assisted decisions; surrogate
+          <td>Trust &amp; confidence in ML-assisted decisions; surrogate
           models (★)</td>
-              <td>Discovery &amp; screening with uncertainty; exploration vs
+          <td>Discovery &amp; screening with uncertainty; exploration vs
           exploitation (★)</td>
-              <td>Predictive uncertainty: GP regression vs NN ensembles</td>
-              <td>Enables responsible ML &amp; accelerator concepts</td>
-            </tr>
-            <tr>
-              <td>13</td>
-              <td>Physics-informed &amp; constrained learning</td>
-              <td>Physics-informed ML for processes &amp; characterization
+          <td>Predictive uncertainty: GP regression vs NN ensembles</td>
+          <td>Enables responsible ML &amp; accelerator concepts</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Physics-informed &amp; constrained learning</td>
+          <td>Physics-informed ML for processes &amp; characterization
           (★)</td>
-              <td>Physical constraints in materials ML (◎)</td>
-              <td>Constrained NN / penalty-based PINN demo</td>
-              <td>MFML leads constraints &amp; PINN concepts</td>
-            </tr>
-            <tr>
-              <td>14</td>
-              <td>Explainability, limits, scientific trust</td>
-              <td>Integrated case studies &amp; failure modes</td>
-              <td>Limits &amp; ethics of data-driven discovery</td>
-              <td>Mini end-to-end synthesis project</td>
-              <td>All courses converge conceptually</td>
-            </tr>
-          </tbody>
-        </table>
-      </table-wrap>
-    </sec>
-    <sec id="recommended-readings">
-      <title>2 Recommended readings</title>
-      <p>We base much of the lecture on the following books:</p>
-      <list list-type="bullet">
-        <list-item>
-          <p>Neuer
+          <td>Physical constraints in materials ML (◎)</td>
+          <td>Constrained NN / penalty-based PINN demo</td>
+          <td>MFML leads constraints &amp; PINN concepts</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Explainability, limits, scientific trust</td>
+          <td>Integrated case studies &amp; failure modes</td>
+          <td>Limits &amp; ethics of data-driven discovery</td>
+          <td>Mini end-to-end synthesis project</td>
+          <td>All courses converge conceptually</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+</sec>
+<sec id="recommended-readings">
+  <title>2 Recommended readings</title>
+  <p>We base much of the lecture on the following books:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Neuer
       (<xref alt="2024" rid="ref-neuer2024machine" ref-type="bibr">2024</xref>),
       Machine Learning for Engineers: Introduction to Physics-Informed,
       Explainable Learning Methods for AI in Engineering Applications.
       Springer Nature.</p>
-        </list-item>
-        <list-item>
-          <p>McClarren
+    </list-item>
+    <list-item>
+      <p>McClarren
       (<xref alt="2021" rid="ref-ryan2021machine" ref-type="bibr">2021</xref>),
       Machine Learning for Engineers: Using Data to Solve Problems for
       Physical Systems. Springer.</p>
-        </list-item>
-      </list>
-      <p>Tangentially, we also recommend the following books:</p>
-      <list list-type="bullet">
-        <list-item>
-          <p>Murphy
+    </list-item>
+  </list>
+  <p>Tangentially, we also recommend the following books:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Murphy
       (<xref alt="2012" rid="ref-murphy2012machine" ref-type="bibr">2012</xref>),
       Machine Learning: A Probabilistic Perspective. MIT Press.</p>
-        </list-item>
-        <list-item>
-          <p>Bishop
+    </list-item>
+    <list-item>
+      <p>Bishop
       (<xref alt="2006" rid="ref-bishop2006pattern" ref-type="bibr">2006</xref>),
       Pattern Recognition and Machine Learning. Springer Science+
       Business Media, LLC Berlin, Germany.</p>
-        </list-item>
-      </list>
-      <table-wrap>
-        <table>
-          <colgroup>
-            <col width="17%"/>
-            <col width="17%"/>
-            <col width="17%"/>
-            <col width="17%"/>
-            <col width="17%"/>
-            <col width="17%"/>
-          </colgroup>
-          <thead>
-            <tr>
-              <th>MFML Week</th>
-              <th>MFML Lecture Focus (Revised)</th>
-              <th>Neuer – Required Reading</th>
-              <th>Neuer – Optional / Skim</th>
-              <th>McClarren – Contextual / Optional</th>
-              <th>Bishop – Targeted Depth (Optional)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Learning vs data analysis; models, loss functions</td>
-              <td>Ch. 1.1 Data-Based Modeling; 1.1.1 Concept of Model</td>
-              <td>1.1.3 Criticism of Data-Based Modeling</td>
-              <td>Ch. 1 Introduction (ML in physical systems)</td>
-              <td>Ch. 1 §1.1–1.2 (what is a model, pattern recognition
+    </list-item>
+  </list>
+  <table-wrap>
+    <table>
+      <colgroup>
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>MFML Week</th>
+          <th>MFML Lecture Focus (Revised)</th>
+          <th>Neuer – Required Reading</th>
+          <th>Neuer – Optional / Skim</th>
+          <th>McClarren – Contextual / Optional</th>
+          <th>Bishop – Targeted Depth (Optional)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Learning vs data analysis; models, loss functions</td>
+          <td>Ch. 1.1 Data-Based Modeling; 1.1.1 Concept of Model</td>
+          <td>1.1.3 Criticism of Data-Based Modeling</td>
+          <td>Ch. 1 Introduction (ML in physical systems)</td>
+          <td>Ch. 1 §1.1–1.2 (what is a model, pattern recognition
           view)</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Linear algebra refresher; covariance, PCA/SVD (R)</td>
-              <td>Ch. 5.2 PCA (skim, notation &amp; geometry only)</td>
-              <td>PCA implementation details</td>
-              <td>Ch. 5 Dimension Reduction (ROM intuition)</td>
-              <td>Ch. 12 §12.1–12.2 PCA derivation (selective)</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Regression as loss minimization</td>
-              <td>Ch. 4.2.2 Regression; Ch. 4.4.1 LMS theory</td>
-              <td>LMS algorithm variants</td>
-              <td>Ch. 4 Regression (physical meaning of regression)</td>
-              <td>Ch. 3 §3.1–3.3 Linear regression, least squares
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Linear algebra refresher; covariance, PCA/SVD (R)</td>
+          <td>Ch. 5.2 PCA (skim, notation &amp; geometry only)</td>
+          <td>PCA implementation details</td>
+          <td>Ch. 5 Dimension Reduction (ROM intuition)</td>
+          <td>Ch. 12 §12.1–12.2 PCA derivation (selective)</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Regression as loss minimization</td>
+          <td>Ch. 4.2.2 Regression; Ch. 4.4.1 LMS theory</td>
+          <td>LMS algorithm variants</td>
+          <td>Ch. 4 Regression (physical meaning of regression)</td>
+          <td>Ch. 3 §3.1–3.3 Linear regression, least squares
           geometry</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Neural networks early: neuron &amp; activations</td>
-              <td>Ch. 4.5.1 Neuron; 4.5.3 Activation Functions</td>
-              <td>Framework-specific NN sections</td>
-              <td>Ch. 8 Neural Networks (surrogate perspective)</td>
-              <td>Ch. 5 §5.1–5.2 Neural network basics</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Backpropagation &amp; gradient flow</td>
-              <td>Ch. 4.5.4 Training of Neural Networks</td>
-              <td>Advanced NN variants</td>
-              <td>Ch. 7 Optimization (inverse-problem framing)</td>
-              <td>Ch. 5 §5.3 Backpropagation (conceptual)</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Loss landscapes &amp; optimization behavior</td>
-              <td>Ch. 4.4.6 Hyperparameters; Ch. 4.5.5 Optimization</td>
-              <td>Detailed optimizer variants</td>
-              <td>Ch. 7 Optimization</td>
-              <td>Ch. 3 §3.4 Regularization; §3.5 Bayesian view (skim)</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Generalization, bias–variance, regularization</td>
-              <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
-              <td>—</td>
-              <td>Ch. 6 Model Selection &amp; Validation</td>
-              <td>Ch. 3 §3.2 Bias–variance decomposition</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>Probabilistic view of learning; noise</td>
-              <td>Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Neural networks early: neuron &amp; activations</td>
+          <td>Ch. 4.5.1 Neuron; 4.5.3 Activation Functions</td>
+          <td>Framework-specific NN sections</td>
+          <td>Ch. 8 Neural Networks (surrogate perspective)</td>
+          <td>Ch. 5 §5.1–5.2 Neural network basics</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Backpropagation &amp; gradient flow</td>
+          <td>Ch. 4.5.4 Training of Neural Networks</td>
+          <td>Advanced NN variants</td>
+          <td>Ch. 7 Optimization (inverse-problem framing)</td>
+          <td>Ch. 5 §5.3 Backpropagation (conceptual)</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Loss landscapes &amp; optimization behavior</td>
+          <td>Ch. 4.4.6 Hyperparameters; Ch. 4.5.5 Optimization</td>
+          <td>Detailed optimizer variants</td>
+          <td>Ch. 7 Optimization</td>
+          <td>Ch. 3 §3.4 Regularization; §3.5 Bayesian view (skim)</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Generalization, bias–variance, regularization</td>
+          <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
+          <td>—</td>
+          <td>Ch. 6 Model Selection &amp; Validation</td>
+          <td>Ch. 3 §3.2 Bias–variance decomposition</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Probabilistic view of learning; noise</td>
+          <td>Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4
           Uncertainty</td>
-              <td>Bayesian details</td>
-              <td>Ch. 3 Error and Uncertainty</td>
-              <td>Ch. 2 §2.1–2.3 Gaussian distributions &amp; moments</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>Representation learning; features vs learned reps</td>
-              <td>Ch. 5.5 Autoencoder (intro &amp; motivation)</td>
-              <td>AE uncertainty extensions</td>
-              <td>Ch. 5 Dimension Reduction</td>
-              <td>Ch. 12 §12.3 Nonlinear PCA / latent variables</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>Latent spaces; embeddings</td>
-              <td>Ch. 5.5.1–5.5.3 Autoencoder &amp; Latent Space</td>
-              <td>AE architectures</td>
-              <td>Ch. 5 Dimension Reduction</td>
-              <td>Ch. 12 §12.3–12.4 Latent variable intuition</td>
-            </tr>
-            <tr>
-              <td>11</td>
-              <td>Unsupervised learning revisited (objectives)</td>
-              <td>Ch. 5.3 K-Means (objective-based view)</td>
-              <td>t-SNE, advanced clustering</td>
-              <td>Ch. 9 Classification (decision boundaries)</td>
-              <td>Ch. 9 Mixture Models &amp; EM (conceptual only)</td>
-            </tr>
-            <tr>
-              <td>12</td>
-              <td>Uncertainty in predictions</td>
-              <td>Ch. 6.4 Stochastic Methods for Uncertainty</td>
-              <td>Advanced stochastic methods</td>
-              <td>Ch. 3 Error and Uncertainty</td>
-              <td>Ch. 3 §3.5 Bayesian regularization (skim)</td>
-            </tr>
-            <tr>
-              <td>13</td>
-              <td>Physics-informed &amp; constrained learning</td>
-              <td>Ch. 6.1–6.3 Physics-Informed Learning</td>
-              <td>Semantic technologies</td>
-              <td>Ch. 11 Physics-Informed &amp; Hybrid Models</td>
-              <td>Ch. 1 §1.6 Model complexity &amp; Occam’s razor</td>
-            </tr>
-            <tr>
-              <td>14</td>
-              <td>Explainability, limits, scientific trust</td>
-              <td>Ch. 7 Explainability (discussion &amp; outlook)</td>
-              <td>—</td>
-              <td>Ch. 12 Limitations and Outlook</td>
-              <td>Ch. 1 §1.1–1.2 Reflection on model limits</td>
-            </tr>
-          </tbody>
-        </table>
-      </table-wrap>
-    </sec>
-  </body>
-  <back>
-    <ref-list>
-      <title>References</title>
-      <ref id="ref-ryan2021machine">
-        <element-citation publication-type="book">
-          <person-group person-group-type="author">
-            <name>
-              <surname>McClarren</surname>
-              <given-names>Ryan G..</given-names>
-            </name>
-          </person-group>
-          <source>Machine learning for engineers: Using data to solve problems for physical systems</source>
-          <publisher-name>Springer.</publisher-name>
-          <year iso-8601-date="2021">2021</year>
-        </element-citation>
-      </ref>
-      <ref id="ref-neuer2024machine">
-        <element-citation publication-type="book">
-          <person-group person-group-type="author">
-            <name>
-              <surname>Neuer</surname>
-              <given-names>Marcus J</given-names>
-            </name>
-          </person-group>
-          <source>Machine learning for engineers: Introduction to physics-informed, explainable learning methods for AI in engineering applications</source>
-          <publisher-name>Springer Nature</publisher-name>
-          <year iso-8601-date="2024">2024</year>
-        </element-citation>
-      </ref>
-      <ref id="ref-murphy2012machine">
-        <element-citation publication-type="book">
-          <person-group person-group-type="author">
-            <name>
-              <surname>Murphy</surname>
-              <given-names>Kevin P</given-names>
-            </name>
-          </person-group>
-          <source>Machine learning: A probabilistic perspective</source>
-          <publisher-name>MIT press</publisher-name>
-          <year iso-8601-date="2012">2012</year>
-        </element-citation>
-      </ref>
-      <ref id="ref-bishop2006pattern">
-        <element-citation publication-type="book">
-          <person-group person-group-type="author">
-            <name>
-              <surname>Bishop</surname>
-              <given-names>Christopher M</given-names>
-            </name>
-          </person-group>
-          <source>Pattern recognition and machine learning by christopher m. bishop</source>
-          <publisher-name>Springer Science+ Business Media, LLC Berlin, Germany:</publisher-name>
-          <year iso-8601-date="2006">2006</year>
-          <volume>400</volume>
-        </element-citation>
-      </ref>
-    </ref-list>
-  </back>
-  <sub-article article-type="notebook" id="nb-2-nb-1">
-    <front-stub>
-      <title-group>
-        <article-title>Data Screening</article-title>
-      </title-group>
-      <contrib-group>
-        <contrib contrib-type="author">
-          <contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
-          <name>
-            <surname>Purves</surname>
-            <given-names>Steve</given-names>
-          </name>
-          <string-name>Steve Purves</string-name>
-        </contrib>
-        <contrib contrib-type="author">
-          <name>
-            <surname>Wickham</surname>
-            <given-names>Charlotte</given-names>
-          </name>
-          <string-name>Charlotte Wickham</string-name>
-          <xref ref-type="author-note" rid="auth-note-2-nb-1">2</xref>
-        </contrib>
-      </contrib-group>
-      <author-notes>
-        <fn id="auth-note-2-nb-1" fn-type="author-note" symbol="2">Edited original
+          <td>Bayesian details</td>
+          <td>Ch. 3 Error and Uncertainty</td>
+          <td>Ch. 2 §2.1–2.3 Gaussian distributions &amp; moments</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Representation learning; features vs learned reps</td>
+          <td>Ch. 5.5 Autoencoder (intro &amp; motivation)</td>
+          <td>AE uncertainty extensions</td>
+          <td>Ch. 5 Dimension Reduction</td>
+          <td>Ch. 12 §12.3 Nonlinear PCA / latent variables</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Latent spaces; embeddings</td>
+          <td>Ch. 5.5.1–5.5.3 Autoencoder &amp; Latent Space</td>
+          <td>AE architectures</td>
+          <td>Ch. 5 Dimension Reduction</td>
+          <td>Ch. 12 §12.3–12.4 Latent variable intuition</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Unsupervised learning revisited (objectives)</td>
+          <td>Ch. 5.3 K-Means (objective-based view)</td>
+          <td>t-SNE, advanced clustering</td>
+          <td>Ch. 9 Classification (decision boundaries)</td>
+          <td>Ch. 9 Mixture Models &amp; EM (conceptual only)</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Uncertainty in predictions</td>
+          <td>Ch. 6.4 Stochastic Methods for Uncertainty</td>
+          <td>Advanced stochastic methods</td>
+          <td>Ch. 3 Error and Uncertainty</td>
+          <td>Ch. 3 §3.5 Bayesian regularization (skim)</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Physics-informed &amp; constrained learning</td>
+          <td>Ch. 6.1–6.3 Physics-Informed Learning</td>
+          <td>Semantic technologies</td>
+          <td>Ch. 11 Physics-Informed &amp; Hybrid Models</td>
+          <td>Ch. 1 §1.6 Model complexity &amp; Occam’s razor</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Explainability, limits, scientific trust</td>
+          <td>Ch. 7 Explainability (discussion &amp; outlook)</td>
+          <td>—</td>
+          <td>Ch. 12 Limitations and Outlook</td>
+          <td>Ch. 1 §1.1–1.2 Reflection on model limits</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+</sec>
+<sec id="references">
+  <title>References</title>
+</sec>
+<sec id="week-1-summary-learning-vs-data-analysis-models-loss-functions">
+  <title>3 Week 1 Summary: Learning vs Data Analysis; Models, Loss
+  Functions</title>
+  <sec id="core-concepts">
+    <title>3.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>The Concept of a Model:</bold> Models are simplified
+        representations of reality designed for <bold>prediction</bold>
+        and <bold>explanation</bold>. We distinguish between
+        <bold>First-Principle models</bold> (bottom-up, based on
+        physical laws) and <bold>Data-based models</bold> (top-down,
+        extracted from observations).</p>
+      </list-item>
+      <list-item>
+        <p><bold>Interpretability Spectrum:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>White-Box:</bold> Fully traceable (e.g., physical
+            laws, linear regression).</p>
+          </list-item>
+          <list-item>
+            <p><bold>Grey-Box:</bold> Partially traceable (e.g., Monte
+            Carlo, Physics-Informed Neural Networks).</p>
+          </list-item>
+          <list-item>
+            <p><bold>Black-Box:</bold> Non-traceable internal mechanisms
+            (e.g., deep neural networks), though techniques for
+            <bold>Explainability</bold> aim to move these toward the
+            Grey-Box category.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Types of Learning:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Supervised Learning:</bold> Learning with labeled
+            data. Includes <bold>Regression</bold> (continuous targets)
+            and <bold>Classification</bold> (discrete categories).</p>
+          </list-item>
+          <list-item>
+            <p><bold>Unsupervised Learning:</bold> Finding hidden
+            structure in unlabeled data (clustering, dimensionality
+            reduction, embeddings).</p>
+          </list-item>
+          <list-item>
+            <p><bold>Reinforcement Learning:</bold> Learning optimal
+            actions through trial and error to maximize a reward
+            signal.</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="loss-functions-and-optimization">
+    <title>3.2 Loss Functions and Optimization</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Learning as Optimization:</bold> Machine learning is
+        the process of minimizing a <bold>Loss Function</bold> (w)$ that
+        measures the discrepancy between model predictions and true
+        targets.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Mean Squared Error (MSE):</bold> The standard loss for
+        regression, providing a geometric interpretation of
+        residuals.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Parsimony and Occam’s Razor:</bold> The preference for
+        simpler models. Overly complex models tend to fit noise in the
+        training data, leading to <bold>Overfitting</bold>.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Regularization:</bold> A technique to control
+        complexity by adding a penalty term (e.g., Ridge/Lasso) to the
+        loss function, discouraging large parameter values and wild
+        oscillations.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Generalization:</bold> The central goal of ML—ensuring
+        the model performs well on unseen <bold>test data</bold>, not
+        just the training set.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-2-summary-linear-algebra-refresher-covariance-pcasvd">
+  <title>4 Week 2 Summary: Linear Algebra Refresher; Covariance,
+  PCA/SVD</title>
+  <sec id="core-concepts-1">
+    <title>4.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Eigendecomposition:</bold> The foundation of PCA. For a
+        symmetric covariance matrix $, we can find an orthonormal basis
+        of eigenvectors $ and corresponding eigenvalues
+        <inline-formula><alternatives>
+        <tex-math><![CDATA[\lambda_i]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>λ</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+        such that = _i u_i$.</p>
+      </list-item>
+      <list-item>
+        <p><bold>The Covariance Matrix ($):</bold> Captures the
+        relationships and variability between features. The eigenvectors
+        of $ represent the directions of maximum variance in the data,
+        while the eigenvalues quantify the amount of variance along
+        those directions.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Principal Component Analysis (PCA):</bold> A linear
+        method for dimensionality reduction that projects data onto a
+        lower-dimensional subspace while preserving as much variance
+        (information) as possible.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="pca-theory-and-application">
+    <title>4.2 PCA Theory and Application</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Maximizing Variance:</bold> PCA is derived as a
+        constrained optimization problem: finding directions $ that
+        maximize the projected variance ^T S u$ subject to the unit
+        length constraint <inline-formula><alternatives>
+        <tex-math><![CDATA[\|u\|=1]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="postfix">∥</mml:mo><mml:mi>u</mml:mi><mml:mo stretchy="false" form="postfix">∥</mml:mo><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Explained Variance:</bold> The proportion of total
+        variance captured by $ components is given by the sum of the
+        first $ eigenvalues divided by the total sum of all
+        eigenvalues.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Scree Plots:</bold> A visual diagnostic tool used to
+        determine the intrinsic dimensionality of a dataset by
+        identifying the “elbow” in the eigenvalue spectrum.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Applications in Engineering:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Dimensionality Reduction:</bold> Compressing
+            high-dimensional signals or images (e.g., MNIST,
+            microstructures) into a manageable number of features.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Denoising:</bold> By reconstructing data using only
+            the top principal components, high-frequency noise
+            (typically associated with low-variance eigenvalues) can be
+            filtered out.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Anomaly Detection:</bold> Monitoring data in the
+            latent eigenspace can reveal deviations from “normal”
+            behavior that are hard to see in the original
+            high-dimensional space.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Limitations:</bold> PCA is strictly
+        <bold>linear</bold>. For data with complex non-linear manifolds,
+        extensions like <bold>Kernel PCA</bold> or
+        <bold>Autoencoders</bold> are required.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-3-summary-regression-as-loss-minimization">
+  <title>5 Week 3 Summary: Regression as Loss Minimization</title>
+  <sec id="core-concepts-2">
+    <title>5.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>The Supervised Learning Framework:</bold> Mapping
+        inputs $ to continuous outputs $ to minimize the discrepancy
+        with target labels $. The central objective is finding the
+        optimal parameters $ of a hypothesis function (x)$.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Loss and Cost Functions:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Squared Error Loss:</bold> = ( - y)^2$, penalizing
+            large deviations quadratically.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Cost Function ($):</bold> The Mean Squared Error
+            (MSE) over the training set, serving as the surface we seek
+            to minimize.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Least Squares Optimization:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Ordinary Least Squares (OLS):</bold> The analytical
+            solution = (X^T X)^{-1} X^T y$ that finds the global minimum
+            for linear models.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Gradient Descent:</bold> An iterative optimization
+            strategy where parameters are updated in the direction of
+            the steepest descent: w - ta abla_w J$.</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="expanding-linear-models">
+    <title>5.2 Expanding Linear Models</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>The Linearity Principle:</bold> A model is “linear” if
+        it is linear in its <italic>parameters</italic>, allowing us to
+        model highly non-linear relationships by transforming
+        features.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Basis Functions (<inline-formula><alternatives>
+        <tex-math><![CDATA[\phi]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ϕ</mml:mi></mml:math></alternatives></inline-formula>):</bold>
+        By replacing raw features $ with a vector of transformations
+        <inline-formula><alternatives>
+        <tex-math><![CDATA[\phi(x)]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>ϕ</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+        (e.g., polynomials, sinusoids, radial basis functions), we can
+        use the linear regression framework to fit complex curves.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Polynomial Regression:</bold> A common application of
+        basis functions using powers of $. However, one must be wary of
+        <bold>Runge’s Phenomenon</bold> and overfitting when using
+        high-order polynomials.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Local vs. Global Models:</bold> While global
+        polynomials can be unstable, piecewise polynomials and
+        <bold>Splines</bold> provide a more robust, localized approach
+        to regression by “gluing” simple functions together at
+        knots.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-4-summary-neural-networks-early-neuron-activations">
+  <title>6 Week 4 Summary: Neural Networks Early: Neuron &amp;
+  Activations</title>
+  <sec id="core-concepts-3">
+    <title>6.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>The Artificial Neuron:</bold> A fundamental processing
+        unit that computes a weighted sum of its inputs plus a bias ( =
+        w_i x_i + b$) and passes the result through a non-linear
+        <bold>activation function</bold>. It is the building block of
+        all deep learning architectures.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Non-linear Activations:</bold> The “soul” of the neural
+        network. Without non-linearity, multiple layers would
+        mathematically collapse into a single linear transformation,
+        rendering the network unable to solve complex problems like
+        XOR.</p>
+      </list-item>
+      <list-item>
+        <p><bold>The Multi-Layer Perceptron (MLP):</bold> A feed-forward
+        architecture where neurons are organized into an input layer,
+        one or more hidden layers, and an output layer. Layers are
+        typically fully connected.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="activation-function-taxonomy">
+    <title>6.2 Activation Function Taxonomy</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Sigmoid &amp; Tanh:</bold> Historical standards that
+        map inputs to bounded ranges ((0, 1) and (-1, 1)). They are
+        smooth and differentiable but suffer from <bold>vanishing
+        gradients</bold> in deep networks due to saturation.</p>
+      </list-item>
+      <list-item>
+        <p><bold>ReLU (Rectified Linear Unit):</bold> The modern
+        standard ((x) = (0, x)$). It is computationally efficient and
+        helps mitigate vanishing gradients for positive inputs, enabling
+        the training of much deeper networks.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Leaky ReLU:</bold> A variant that allows a small,
+        non-zero gradient for negative inputs to prevent “dead
+        neurons.”</p>
+      </list-item>
+      <list-item>
+        <p><bold>Softmax:</bold> Typically reserved for the output layer
+        in multi-class classification tasks, as it squashes outputs into
+        a probability distribution that sums to one.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="structural-properties">
+    <title>6.3 Structural Properties</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Universal Approximation Theorem:</bold> A powerful
+        result stating that even a single hidden layer can approximate
+        any continuous function, provided it has a non-linear activation
+        and enough neurons.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Forward Propagation:</bold> The deterministic process
+        of calculating the output of each layer sequentially to produce
+        a final prediction.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Weight-Space Symmetries:</bold> The realization that
+        multiple weight configurations (e.g., swapping hidden units or
+        flipping signs) can result in identical network behavior, which
+        has implications for optimization and Bayesian analysis.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-5-summary-backpropagation-gradient-flow">
+  <title>7 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
+  <sec id="core-concepts-4">
+    <title>7.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Learning as Optimization:</bold> The training of a
+        neural network is an iterative optimization problem aimed at
+        minimizing a cost function $ through gradient descent: w - ta
+        abla_w J$.</p>
+      </list-item>
+      <list-item>
+        <p><bold>The Backpropagation Algorithm:</bold> An efficient
+        implementation of the <bold>chain rule</bold> that calculates
+        the partial derivative of the cost function with respect to
+        every weight and bias in the network. It consists of two
+        passes:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Forward Pass:</bold> Computing activations
+            layer-by-layer and storing intermediate results.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Backward Pass:</bold> Starting from the output
+            error, propagating “error signals”
+            (<inline-formula><alternatives>
+            <tex-math><![CDATA[\delta]]></tex-math>
+            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>δ</mml:mi></mml:math></alternatives></inline-formula>)
+            upstream to compute local gradients.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Computational Efficiency:</bold> Backpropagation allows
+        gradient computation in (W)$ time, where $ is the number of
+        weights, making it feasible to train models with millions of
+        parameters.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="gradient-flow-and-stability">
+    <title>7.2 Gradient Flow and Stability</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Vanishing Gradients:</bold> In deep networks, gradients
+        can become infinitesimally small as they are multiplied by the
+        derivatives of saturating activation functions (like sigmoid or
+        tanh) at each layer. This “signal decay” prevents early layers
+        from learning.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Exploding Gradients:</bold> Conversely, large weights
+        and certain architectures can cause gradients to grow
+        exponentially, leading to numerical instability and
+        divergence.</p>
+      </list-item>
+      <list-item>
+        <p><bold>ReLU and Gradient Flow:</bold> The ReLU activation
+        function (<inline-formula><alternatives>
+        <tex-math><![CDATA[\max(0, x)]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mrow><mml:mi mathvariant="normal">max</mml:mi><mml:mo>&#8289;</mml:mo></mml:mrow><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>)
+        provides a constant gradient of 1 for positive inputs,
+        significantly improving gradient flow in deep architectures and
+        enabling the “Deep Learning” revolution.</p>
+      </list-item>
+      <list-item>
+        <p><bold>The Jacobian Matrix:</bold> Describes how small changes
+        in inputs affect the outputs of a module, providing a unified
+        framework for linking differentiable components in a larger
+        system.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-6-summary-loss-landscapes-optimization-behavior">
+  <title>8 Week 6 Summary: Loss Landscapes &amp; Optimization
+  Behavior</title>
+  <sec id="core-concepts-5">
+    <title>8.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>The Loss Landscape:</bold> A high-dimensional geometric
+        representation of the cost function $ over the parameter space
+        $. Its topography—comprising peaks, valleys, saddle points, and
+        plateaus—determines the ease and success of the training
+        process.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Curvature and the Hessian ($):</bold> While the
+        gradient indicates the direction of steepest descent, the
+        <bold>Hessian matrix</bold> (the matrix of second-order
+        derivatives) describes the <italic>curvature</italic> of the
+        landscape.</p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Eigenvalues of $:</bold> Large eigenvalues indicate
+            steep directions where the gradient changes rapidly, while
+            small eigenvalues correspond to shallow, flat
+            directions.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Conditioning:</bold> Landscapes with widely varying
+            curvature (ill-conditioned) cause standard gradient descent
+            to oscillate wildly or crawl painfully slowly.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Saddle Points:</bold> In high-dimensional spaces, true
+        local minima are rare; most points with zero gradient are saddle
+        points, which can trap or significantly slow down first-order
+        optimizers.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="advanced-optimization-strategies">
+    <title>8.2 Advanced Optimization Strategies</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Momentum:</bold> Inspired by physics, this technique
+        adds a “velocity” component to updates, allowing the optimizer
+        to accumulate speed in consistent directions and dampen
+        oscillations in steep, narrow valleys.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Adaptive Learning Rates:</bold> Algorithms like
+        <bold>AdaGrad</bold>, <bold>RMSProp</bold>, and
+        <bold>ADAM</bold> adjust the learning rate for each individual
+        parameter based on the history of observed gradients. This
+        effectively scales the coordinates to “normalize” the
+        landscape’s curvature.</p>
+      </list-item>
+      <list-item>
+        <p><bold>ADAM (Adaptive Moment Estimation):</bold> Currently the
+        industry standard, combining the benefits of momentum and
+        adaptive scales to provide robust performance across a wide
+        range of architectures and hyperparameter settings.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Flat vs. Sharp Minima:</bold> Research suggests that
+        “flat” minima (regions where the cost remains low over a wide
+        range of parameters) correlate with better
+        <bold>Generalization</bold> on unseen data, as they are less
+        sensitive to small shifts in the data distribution.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-7-summary-generalization-biasvariance-regularization">
+  <title>9 Week 7 Summary: Generalization, Bias–Variance,
+  Regularization</title>
+  <sec id="core-concepts-6">
+    <title>9.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Generalization:</bold> The fundamental objective of
+        machine learning—ensuring that a model learned from a finite
+        training set performs accurately on previously unseen data.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Overfitting vs. Underfitting:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Overfitting:</bold> Occurs when a model captures
+            the random noise in the training data rather than the
+            underlying pattern. This is characterized by low training
+            error but high test error.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Underfitting:</bold> Occurs when a model is too
+            simple to represent the data’s complexity, resulting in high
+            error on both training and test sets.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Bias-Variance Decomposition:</bold> A theoretical
+        framework that decomposes the expected error into three
+        parts:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Bias:</bold> Error due to simplistic assumptions
+            (e.g., modeling a non-linear process with a straight
+            line).</p>
+          </list-item>
+          <list-item>
+            <p><bold>Variance:</bold> Error due to excessive sensitivity
+            to the specific training data.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Intrinsic Noise:</bold> The irreducible error in
+            the data itself (the “Bayes error”).</p>
+          </list-item>
+          <list-item>
+            <p><bold>The Trade-off:</bold> Increasing model complexity
+            generally reduces bias but increases variance. The goal is
+            to find the “sweet spot” that minimizes total error.</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="regularization-and-validation">
+    <title>9.2 Regularization and Validation</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Regularization:</bold> A technique to prevent
+        overfitting by adding a penalty term to the loss function that
+        discourages overly complex models (large parameter values).</p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Ridge Regression ($):</bold> Penalizes the sum of
+            squared weights, shrinking them toward zero.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lasso Regression ($):</bold> Penalizes the sum of
+            absolute weights, promoting <bold>sparsity</bold> by setting
+            less important weights exactly to zero.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Dropout:</bold> A neural network-specific technique
+            that randomly “drops” neurons during training to prevent
+            co-adaptation and improve robustness.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Model Selection:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Cross-Validation:</bold> A robust strategy for
+            evaluating model performance by iteratively splitting the
+            data into $ folds, ensuring every data point serves as both
+            training and test data.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Validation Set:</bold> A subset of data used
+            exclusively for tuning hyperparameters (like the
+            regularization strength <inline-formula><alternatives>
+            <tex-math><![CDATA[\lambda]]></tex-math>
+            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>)
+            to avoid biasing the final test results.</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-8-summary-probabilistic-view-of-learning-noise">
+  <title>10 Week 8 Summary: Probabilistic View of Learning;
+  Noise</title>
+  <sec id="core-concepts-7">
+    <title>10.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Probability as Modeling Tool:</bold> Probability theory
+        provides the formal framework for quantifying uncertainty in
+        both data (noise) and models (parameter uncertainty). Machine
+        learning is viewed as the process of updating probabilistic
+        beliefs in light of new observations.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Taxonomy of Uncertainty:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Aleatory Uncertainty:</bold> Irreducible randomness
+            inherent in the physical process or measurement system
+            (e.g., thermal noise, sensor precision).</p>
+          </list-item>
+          <list-item>
+            <p><bold>Epistemic Uncertainty:</bold> Uncertainty stemming
+            from a lack of data or knowledge. This can, in principle, be
+            reduced by observing more samples or improving model
+            fidelity.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Sampling and Signal Theory:</bold> Digital data
+        collection is a stochastic process governed by the
+        <bold>Nyquist-Shannon Theorem</bold>, which defines the minimum
+        sampling frequency required to fully capture a signal’s
+        dynamics.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="inference-and-uncertainty-quantification">
+    <title>10.2 Inference and Uncertainty Quantification</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Frequentist vs. Bayesian Views:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Maximum Likelihood Estimation (MLE):</bold>
+            Estimates parameters by maximizing the probability of the
+            observed data. Prone to overfitting on small datasets.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Bayesian Inference:</bold> Treats parameters as
+            random variables. By combining a <bold>prior</bold>
+            distribution with the <bold>likelihood</bold>, it yields a
+            <bold>posterior</bold> distribution that represents our
+            updated belief and its associated uncertainty.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Robustness and Outliers:</bold> While the Gaussian
+        distribution is standard, the <bold>Student’s
+        t-distribution</bold> offers better robustness against outliers
+        due to its heavy tails.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Advanced UQ in Neural Networks:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Stochastic Enrichment:</bold> A technique to
+            integrate measurement uncertainty into the training process
+            by augmenting datasets with noisy samples derived from the
+            original points.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Mixture-Density Networks (MDN):</bold> Specialized
+            neural architectures that predict the parameters of a
+            probability distribution (e.g., weights, means, and
+            variances of multiple Gaussians) rather than point values,
+            allowing models to “know what they don’t know.”</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Process Corridors:</bold> Using 2D histograms to model
+        the probability density of temporal data, providing a powerful
+        heuristic for detecting anomalous deviations in engineering
+        systems.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-9-summary-representation-learning-features-vs.-learned-representations">
+  <title>11 Week 9 Summary: Representation Learning; Features
+  vs. Learned Representations</title>
+  <sec id="core-concepts-8">
+    <title>11.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Beyond Handcrafting:</bold> Traditional machine
+        learning relies on experts to manually engineer features (e.g.,
+        Fourier transforms, signal moments). <bold>Representation
+        Learning</bold> shifts this burden to the model, which
+        autonomously discovers the most relevant transformations
+        directly from raw data.</p>
+      </list-item>
+      <list-item>
+        <p><bold>The Manifold Hypothesis:</bold> Real-world
+        high-dimensional data (like images or spectra) typically lies on
+        or near a low-dimensional, non-linear <bold>manifold</bold>. The
+        number of independent parameters needed to describe this
+        manifold represents the data’s true <bold>degrees of
+        freedom</bold>.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Autoencoders (AE):</bold> A class of neural networks
+        designed for unsupervised representation learning. By training a
+        network to perform an identity mapping ((x) pprox x$) through a
+        constrained <bold>bottleneck layer</bold>, the model is forced
+        to capture the most salient features in a compressed
+        <bold>latent space</bold>.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="architectures-and-latent-spaces">
+    <title>11.2 Architectures and Latent Spaces</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Encoder and Decoder:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>The <bold>Encoder</bold> compresses the input into a
+            low-dimensional code.</p>
+          </list-item>
+          <list-item>
+            <p>The <bold>Decoder</bold> reconstructs the original signal
+            from this code.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Non-linearity:</bold> Unlike PCA, which is limited to
+        linear projections, deep autoencoders can learn complex,
+        non-linear manifolds using hierarchical hidden layers and
+        non-linear activations.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Convolutional Autoencoders:</bold> Specialized for
+        spatial data (images, simulations), these use strided
+        convolutions to downsample and transposed convolutions to
+        upsample, preserving geometric structure while reducing
+        dimensionality.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Denoising:</bold> Autoencoders can be trained to
+        recover clean signals from corrupted inputs, effectively
+        learning to project “noisy” points back onto the learned data
+        manifold.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="industrial-and-engineering-applications">
+    <title>11.3 Industrial and Engineering Applications</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Data Compression:</bold> Storing high-fidelity
+        engineering data (e.g., leaf spectra or plasma simulations)
+        using only a fraction of the original storage by keeping only
+        the latent codes and the trained decoder.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Anomaly Detection:</bold> Anomalies can be detected in
+        two ways: (1) high reconstruction error (the model cannot
+        reconstruct what it hasn’t seen) or (2) outliers in the latent
+        space distribution.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Feature Extraction:</bold> Latent codes serve as highly
+        optimized, low-dimensional inputs for downstream supervised
+        tasks like time-series prediction or process optimization.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-10-summary-latent-spaces-embeddings">
+  <title>12 Week 10 Summary: Latent Spaces; Embeddings</title>
+  <sec id="core-concepts-9">
+    <title>12.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Latent Space Definition:</bold> A low-dimensional,
+        continuous vector space that represents the underlying structure
+        of high-dimensional data. In this space, the distance between
+        points reflects their semantic or physical similarity.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Embeddings:</bold> A mapping of high-dimensional, often
+        discrete or sparse data (e.g., categories, words, or crystal
+        structures) into a dense, lower-dimensional latent space where
+        meaningful relationships can be calculated via dot products or
+        Euclidean distance.</p>
+      </list-item>
+      <list-item>
+        <p><bold>The Geometry of Compression:</bold> Latent spaces
+        discovered by autoencoders are non-linear manifolds. Unlike
+        linear PCA, these spaces can disentangle complex factors of
+        variation, such as the position, width, and amplitude of a
+        signal.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="dimensionality-reduction-and-visualization">
+    <title>12.2 Dimensionality Reduction and Visualization</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>t-SNE (t-Distributed Stochastic Neighbor
+        Embedding):</bold> A powerful non-linear technique for
+        visualizing high-dimensional data archipelagos. It matches the
+        neighborhood structure of the high-dimensional space to a 2D or
+        3D map by minimizing the KL-divergence between Gaussian
+        (high-dim) and Student’s t-distributions (low-dim).</p>
+      </list-item>
+      <list-item>
+        <p><bold>The Crowding Problem:</bold> t-SNE uses the
+        heavy-tailed Student’s t-distribution in the low-dimensional
+        space to push moderately distant points further apart,
+        preventing the “crowding” that occurs in high-dimensional
+        Gaussian mappings.</p>
+      </list-item>
+      <list-item>
+        <p><bold>UMAP (Uniform Manifold Approximation and
+        Projection):</bold> A modern, faster alternative to t-SNE based
+        on Riemannian geometry that better preserves global structure
+        and scale across the entire dataset.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Kernel PCA:</bold> An extension of PCA that uses the
+        <bold>Kernel Trick</bold> to project data into an implicit,
+        infinite-dimensional feature space where non-linear patterns
+        become linearly separable.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="analysis-and-trust">
+    <title>12.3 Analysis and Trust</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Interpretability:</bold> Latent neurons can often be
+        mapped back to physical parameters (e.g., material properties),
+        allowing for semi-supervised discovery.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Anomaly Detection:</bold> Monitoring the distribution
+        of “normal” data in latent space allows for the detection of
+        “exotic” cases that fall outside established clusters, even if
+        those anomalies were never seen during training.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Conditional Latent Probability:</bold> Using histograms
+        and conditional distributions (e.g., (A_2|A_1)$) within the
+        latent space provides a statistical basis for quantifying the
+        novelty or reliability of a model’s prediction.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-11-summary-unsupervised-learning-revisited-objectives">
+  <title>13 Week 11 Summary: Unsupervised Learning Revisited
+  (Objectives)</title>
+  <sec id="core-concepts-10">
+    <title>13.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Unsupervised Paradigm:</bold> In many engineering
+        scenarios, labels are missing (e.g., process data without
+        quality metrics). Unsupervised learning uncovers the inherent
+        structure, regimes, and clusters within the data, providing a
+        foundation for both discovery and dimensionality reduction.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Clustering - K-Means:</bold> A robust,
+        non-probabilistic algorithm that partitions data into $ clusters
+        by minimizing the sum of squared distances to cluster centroids.
+        It operates via an iterative assignment-update cycle that is a
+        “hard” version of the EM algorithm.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Gaussian Mixture Models (GMM):</bold> A probabilistic
+        approach that represents data as a weighted sum of multiple
+        Gaussian components. It treats the cluster membership as a
+        <bold>discrete latent variable</bold>, allowing for “soft”
+        assignments where points can belong to multiple clusters with
+        varying degrees of <bold>responsibility</bold>.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="the-em-expectation-maximization-algorithm">
+    <title>13.2 The EM (Expectation-Maximization) Algorithm</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>General Framework:</bold> EM is a powerful iterative
+        strategy for finding maximum likelihood solutions in models with
+        latent variables. It consists of two primary steps:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>E-step (Expectation):</bold> Calculates the
+            posterior distribution of the latent variables
+            (responsibilities) given the current parameters.</p>
+          </list-item>
+          <list-item>
+            <p><bold>M-step (Maximization):</bold> Updates the model
+            parameters by maximizing the expectation of the
+            complete-data log-likelihood.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Lower Bound Maximization:</bold> Mathematically, EM
+        maximizes a lower bound on the log-likelihood function. Each
+        cycle is guaranteed to never decrease the likelihood, ensuring
+        convergence to a local maximum.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Robustness and Variants:</bold> While standard K-Means
+        is sensitive to outliers, <bold>K-Medoids</bold> offers a robust
+        alternative by using actual data points as cluster prototypes.
+        For discrete data, <bold>Bernoulli Mixtures</bold> allow for
+        clustering of binary vectors (e.g., digitized images).</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="applications">
+    <title>13.3 Applications</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Image Segmentation:</bold> Clustering pixels in color
+        or spectral space to identify homogeneous regions or
+        objects.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Vector Quantization:</bold> A lossy compression
+        technique that replaces data points with the index of their
+        nearest cluster centroid (code-book vector).</p>
+      </list-item>
+      <list-item>
+        <p><bold>Regime Identification:</bold> Detecting different
+        physical flow regimes (e.g., oil/water/gas in pipes) or
+        materials states from unlabeled multi-sensor streams.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-12-summary-uncertainty-in-predictions">
+  <title>14 Week 12 Summary: Uncertainty in Predictions</title>
+  <sec id="core-concepts-11">
+    <title>14.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>The Necessity of UQ:</bold> In engineering
+        applications, a single-point prediction is rarely enough.
+        <bold>Uncertainty Quantification (UQ)</bold> allows models to
+        express their confidence, facilitating safer decision-making and
+        efficient out-of-distribution (OOD) detection.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Bayesian Predictive Distribution:</bold> Rather than a
+        single set of weights, Bayesian models maintain a distribution
+        over all possible parameters. The predictive distribution (t|x)$
+        is obtained by integrating over this parameter posterior,
+        resulting in a variance that naturally increases in regions with
+        sparse training data.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Aleatory vs. Epistemic Uncertainty:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Aleatory (Noise):</bold> The irreducible variance
+            due to measurement error or inherent randomness.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Epistemic (Model):</bold> The uncertainty due to
+            lack of data, which Bayesian models quantify via the
+            parameter covariance matrix $.</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="probabilistic-architectures">
+    <title>14.2 Probabilistic Architectures</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>The Evidence Framework:</bold> A hierarchical Bayesian
+        approach that allows for the optimization of hyperparameters
+        (like regularization strength) directly from the training data
+        by maximizing the <bold>Marginal Likelihood</bold>
+        (Evidence).</p>
+      </list-item>
+      <list-item>
+        <p><bold>Effective Number of Parameters
+        (<inline-formula><alternatives>
+        <tex-math><![CDATA[\gamma]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>γ</mml:mi></mml:math></alternatives></inline-formula>):</bold>
+        A metric that quantifies how many model degrees of freedom are
+        actually being utilized to fit the data, as opposed to being
+        suppressed by the prior.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Mixture-Density Networks (MDN):</bold> A specialized
+        neural network architecture that outputs the parameters of a
+        Gaussian mixture model (<inline-formula><alternatives>
+        <tex-math><![CDATA[\pi, \mu, \sigma]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>π</mml:mi><mml:mo>,</mml:mo><mml:mi>μ</mml:mi><mml:mo>,</mml:mo><mml:mi>σ</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>).
+        This allows the network to model complex, multi-modal
+        probability densities where several different outcomes may be
+        physically plausible.</p>
+      </list-item>
+      <list-item>
+        <p><bold>MC Dropout:</bold> A practical heuristic where dropout
+        is kept active during inference to generate an ensemble of
+        predictions, serving as a frequentist approximation to Bayesian
+        uncertainty.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="physics-and-trust">
+    <title>14.3 Physics and Trust</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Stochastic Enrichment:</bold> Probing model stability
+        by augmenting datasets with synthetic noise and observing the
+        variance in the learned results (e.g., centroid movement in
+        K-Means).</p>
+      </list-item>
+      <list-item>
+        <p><bold>Physics-Informed Constraints:</bold> Embedding physical
+        laws (via ODEs/PDEs) into the loss function acts as a powerful
+        regularizer that can significantly reduce epistemic uncertainty,
+        particularly in “data-poor” regions of the parameter space.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-13-summary-physics-informed-constrained-learning">
+  <title>15 Week 13 Summary: Physics-Informed &amp; Constrained
+  Learning</title>
+  <sec id="core-concepts-12">
+    <title>15.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>PINN Philosophy:</bold> Physics-Informed Machine
+        Learning (PIML) seeks to integrate domain expertise and physical
+        laws (priors) directly into the learning process. The goal is to
+        reduce the amount of data required, improve generalization in
+        unseen regions, and ensure physical consistency.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Data Enrichment:</bold> Actively designing input
+        representations by applying known mathematical transformations
+        (e.g., FFT, Wavelets, Derivatives) that highlight the underlying
+        physical dynamics of the system.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Embedding Analytical Expressions:</bold> Utilizing the
+        <bold>Automatic Differentiation</bold> capabilities of modern ML
+        frameworks to enforce physical constraints within the neural
+        network’s loss function.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="mechanics-of-physics-integration">
+    <title>15.2 Mechanics of Physics Integration</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Loss Function Modification:</bold> The objective
+        function is expanded to include a “physics residual” term: =
+        J_{data} + J_{physics}$. The optimizer then searches for a
+        solution that simultaneously fits the observed data and
+        satisfies the governing physical equations (e.g.,
+        ODEs/PDEs).</p>
+      </list-item>
+      <list-item>
+        <p><bold>Boundary Conditions:</bold> Techniques like the
+        <bold>Lagaris substitution</bold> allow for the mathematical
+        enforcement of initial and boundary conditions, ensuring the
+        model’s output is physically valid at the start of the
+        simulation.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Neural Integrators:</bold> Training networks to solve
+        differential equations by minimizing the discrepancy between the
+        network’s gradient and the physical law, effectively using the
+        NN as a flexible surrogate for numerical solvers.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="scientific-trust-and-efficiency">
+    <title>15.3 Scientific Trust and Efficiency</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Occam’s Razor:</bold> Information theory provides a
+        rigorous basis for preferring simpler, more parsimonious models.
+        PIML aligns with this by constraining the model’s search space
+        to physically plausible solutions.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Small Data &amp; Balance:</bold> By providing the model
+        with the “rules of the game,” PINNs can succeed in “data-poor”
+        scenarios where pure black-box models would fail due to
+        overfitting or statistical imbalance.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Explainability:</bold> Models that incorporate physical
+        transformations (like FFT) are inherently more interpretable, as
+        their decisions can be traced back to identifiable physical
+        phenomena like resonance or decay rates.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+<sec id="week-14-summary-explainability-limits-scientific-trust">
+  <title>16 Week 14 Summary: Explainability, Limits, Scientific
+  Trust</title>
+  <sec id="core-concepts-13">
+    <title>16.1 Core Concepts</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>The Trust Mandate:</bold> In scientific and industrial
+        AI, a model’s prediction must be justifiable to human experts.
+        <bold>Explainable AI (XAI)</bold> provides the tools to move
+        beyond “black-box” results toward transparent
+        decision-making.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Semantic Structures:</bold> Digitizing meaning requires
+        more than just storing data points. We use specialized
+        structures to organize knowledge:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Synonyms:</bold> Mapping different technical terms
+            to the same underlying physical concept.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Taxonomies:</bold> Hierarchically ordering objects
+            to enable algorithmic reasoning (e.g., knowing that a
+            specific sensor belongs to a broader class of thermal
+            devices).</p>
+          </list-item>
+          <list-item>
+            <p><bold>Ontologies:</bold> Modeling complex relationships
+            and interactions between components (e.g., understanding how
+            a pump’s failure causally affects a press’s force).</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Levels of Explainability:</bold> A model must provide
+        different levels of explanation depending on the audience, from
+        business-level KPIs for managers to physical consistency checks
+        for process engineers.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="tools-for-model-interpretation">
+    <title>16.2 Tools for Model Interpretation</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Sensitivity Analysis:</bold> A method for probing
+        black-box models by applying small disturbances to input
+        variables and measuring the response. This allows researchers to
+        identify which features (or frequency components) drive the
+        model’s output.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Deductive Reasoning:</bold> By combining sensitivity
+        results with an ontology, we can perform deductive logic—for
+        instance, tracing a detected oscillation back to a specific
+        faulty component in a circuit.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Causality in Process Chains:</bold> Distinguishing
+        between <bold>Detection</bold> (identifying an error after it
+        occurs) and <bold>Prediction</bold> (foreseeing an error early
+        enough to prevent it). The value of an AI solution is directly
+        proportional to how early it can intervene in the causal chain
+        of production.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="reflection-on-model-limits">
+    <title>16.3 Reflection on Model Limits</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>The Data Manifold:</bold> Models are only reliable
+        within the region of the “data manifold” they were trained on.
+        Extrapolating beyond these limits requires the integration of
+        physical laws (PINNs) to maintain scientific validity.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Inductive Bias:</bold> Every model makes assumptions.
+        Trust is built when these assumptions are explicitly aligned
+        with established scientific principles rather than being purely
+        data-driven.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+</body>
+
+<back>
+<ref-list>
+  <title></title>
+  <ref id="ref-ryan2021machine">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>McClarren</surname><given-names>Ryan G..</given-names></name>
+      </person-group>
+      <source>Machine learning for engineers: Using data to solve problems for physical systems</source>
+      <publisher-name>Springer.</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-neuer2024machine">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Neuer</surname><given-names>Marcus J</given-names></name>
+      </person-group>
+      <source>Machine learning for engineers: Introduction to physics-informed, explainable learning methods for AI in engineering applications</source>
+      <publisher-name>Springer Nature</publisher-name>
+      <year iso-8601-date="2024">2024</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-murphy2012machine">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Murphy</surname><given-names>Kevin P</given-names></name>
+      </person-group>
+      <source>Machine learning: A probabilistic perspective</source>
+      <publisher-name>MIT press</publisher-name>
+      <year iso-8601-date="2012">2012</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-bishop2006pattern">
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name><surname>Bishop</surname><given-names>Christopher M</given-names></name>
+      </person-group>
+      <source>Pattern recognition and machine learning by christopher m. bishop</source>
+      <publisher-name>Springer Science+ Business Media, LLC Berlin, Germany:</publisher-name>
+      <year iso-8601-date="2006">2006</year>
+      <volume>400</volume>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+
+<sub-article article-type="notebook" id="nb-4-nb-1">
+<front-stub>
+<title-group>
+<article-title>Data Screening</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
+<name>
+<surname>Purves</surname>
+<given-names>Steve</given-names>
+</name>
+<string-name>Steve Purves</string-name>
+
+</contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Wickham</surname>
+<given-names>Charlotte</given-names>
+</name>
+<string-name>Charlotte Wickham</string-name>
+
+<xref ref-type="author-note" rid="auth-note-2-nb-1">2</xref>
+</contrib>
+</contrib-group>
+<author-notes>
+<fn id="auth-note-2-nb-1" fn-type="author-note" symbol="2">Edited original
 notebook by Steve Purves</fn>
-      </author-notes>
-    </front-stub>
-    <body>
-      <sec id="cell-25276572-nb-1" specific-use="notebook-content">
-        <preformat>import pandas as pd
+</author-notes>
+</front-stub>
+
+<body>
+<sec id="cell-25276572-nb-1" specific-use="notebook-content">
+<preformat>import pandas as pd
 import matplotlib.pyplot as plt</preformat>
-      </sec>
-      <sec id="cell-7f05db89-nb-1" specific-use="notebook-content">
-        <p>Import <monospace>la-palma.csv</monospace> - a clean subset of
+</sec>
+<sec id="cell-7f05db89-nb-1" specific-use="notebook-content">
+<p>Import <monospace>la-palma.csv</monospace> - a clean subset of
 <ext-link ext-link-type="uri" xlink:href="https://github.com/Notebooks-Now/submission-quarto-full/blob/main/data/catalogoComunSV_1663233588717.csv"><monospace>catalogoComunSV_1663233588717.csv</monospace></ext-link>:</p>
-      </sec>
-      <sec id="da2659e5-nb-1" specific-use="notebook-content">
-        <preformat>df = pd.read_csv('la-palma.csv')
+</sec>
+<sec id="da2659e5-nb-1" specific-use="notebook-content">
+<preformat>df = pd.read_csv('la-palma.csv')
 df['DateTime'] = pd.to_datetime(df['DateTime'])
 df = df.sort_values(by=['DateTime'], ascending=True)
 df.head()</preformat>
-        <boxed-text>
-          <table-wrap>
-            <table border="1">
-              <thead>
-                <tr style="text-align: right;">
-                  <th/>
-                  <th>Longitude</th>
-                  <th>Latitude</th>
-                  <th>Depth(km)</th>
-                  <th>Magnitude</th>
-                  <th>DateTime</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>11346</td>
-                  <td>-17.8349</td>
-                  <td>28.5346</td>
-                  <td>26.0</td>
-                  <td>1.6</td>
-                  <td>2017-03-09 23:44:06+00:00</td>
-                </tr>
-                <tr>
-                  <td>11343</td>
-                  <td>-17.8459</td>
-                  <td>28.5491</td>
-                  <td>27.0</td>
-                  <td>2.0</td>
-                  <td>2017-03-10 00:16:10+00:00</td>
-                </tr>
-                <tr>
-                  <td>11344</td>
-                  <td>-17.8863</td>
-                  <td>28.5008</td>
-                  <td>20.0</td>
-                  <td>2.1</td>
-                  <td>2017-03-10 00:16:11+00:00</td>
-                </tr>
-                <tr>
-                  <td>11345</td>
-                  <td>-17.8657</td>
-                  <td>28.5204</td>
-                  <td>30.0</td>
-                  <td>1.6</td>
-                  <td>2017-03-10 03:20:26+00:00</td>
-                </tr>
-                <tr>
-                  <td>11342</td>
-                  <td>-17.7156</td>
-                  <td>28.5985</td>
-                  <td>0.0</td>
-                  <td>1.6</td>
-                  <td>2017-08-21 02:06:55+00:00</td>
-                </tr>
-              </tbody>
-            </table>
-          </table-wrap>
-        </boxed-text>
-      </sec>
-      <sec id="ae1253df-nb-1" specific-use="notebook-content">
-        <preformat>df.describe()</preformat>
-        <boxed-text>
-          <table-wrap>
-            <table border="1">
-              <thead>
-                <tr style="text-align: right;">
-                  <th/>
-                  <th>Longitude</th>
-                  <th>Latitude</th>
-                  <th>Depth(km)</th>
-                  <th>Magnitude</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>count</td>
-                  <td>11347.000000</td>
-                  <td>11347.000000</td>
-                  <td>11347.000000</td>
-                  <td>11347.000000</td>
-                </tr>
-                <tr>
-                  <td>mean</td>
-                  <td>-17.844062</td>
-                  <td>28.568893</td>
-                  <td>14.089345</td>
-                  <td>2.432423</td>
-                </tr>
-                <tr>
-                  <td>std</td>
-                  <td>0.027345</td>
-                  <td>0.021899</td>
-                  <td>8.624787</td>
-                  <td>0.705282</td>
-                </tr>
-                <tr>
-                  <td>min</td>
-                  <td>-17.995800</td>
-                  <td>28.310200</td>
-                  <td>0.000000</td>
-                  <td>0.200000</td>
-                </tr>
-                <tr>
-                  <td>25%</td>
-                  <td>-17.854100</td>
-                  <td>28.558000</td>
-                  <td>10.100000</td>
-                  <td>1.900000</td>
-                </tr>
-                <tr>
-                  <td>50%</td>
-                  <td>-17.838700</td>
-                  <td>28.564000</td>
-                  <td>11.300000</td>
-                  <td>2.600000</td>
-                </tr>
-                <tr>
-                  <td>75%</td>
-                  <td>-17.829700</td>
-                  <td>28.574300</td>
-                  <td>13.900000</td>
-                  <td>2.900000</td>
-                </tr>
-                <tr>
-                  <td>max</td>
-                  <td>-17.705700</td>
-                  <td>28.697800</td>
-                  <td>46.900000</td>
-                  <td>5.100000</td>
-                </tr>
-              </tbody>
-            </table>
-          </table-wrap>
-        </boxed-text>
-      </sec>
-      <sec id="cell-81b4dfb2-nb-1" specific-use="notebook-content">
-        <preformat>df.plot.scatter(x="Longitude", y="Latitude", figsize=(12,12), grid="on");</preformat>
-        <boxed-text>
-          <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-5-output-1.png"/>
-        </boxed-text>
-      </sec>
-      <sec id="cell-19a1ba0d-nb-1" specific-use="notebook-content">
-        <sec id="filter-nb-1">
-          <title>Filter</title>
-          <p>Also some rows seem to be missing depth measurements, (see
+<boxed-text>
+  <table-wrap>
+    <table border="1">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Longitude</th>
+          <th>Latitude</th>
+          <th>Depth(km)</th>
+          <th>Magnitude</th>
+          <th>DateTime</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>11346</td>
+          <td>-17.8349</td>
+          <td>28.5346</td>
+          <td>26.0</td>
+          <td>1.6</td>
+          <td>2017-03-09 23:44:06+00:00</td>
+        </tr>
+        <tr>
+          <td>11343</td>
+          <td>-17.8459</td>
+          <td>28.5491</td>
+          <td>27.0</td>
+          <td>2.0</td>
+          <td>2017-03-10 00:16:10+00:00</td>
+        </tr>
+        <tr>
+          <td>11344</td>
+          <td>-17.8863</td>
+          <td>28.5008</td>
+          <td>20.0</td>
+          <td>2.1</td>
+          <td>2017-03-10 00:16:11+00:00</td>
+        </tr>
+        <tr>
+          <td>11345</td>
+          <td>-17.8657</td>
+          <td>28.5204</td>
+          <td>30.0</td>
+          <td>1.6</td>
+          <td>2017-03-10 03:20:26+00:00</td>
+        </tr>
+        <tr>
+          <td>11342</td>
+          <td>-17.7156</td>
+          <td>28.5985</td>
+          <td>0.0</td>
+          <td>1.6</td>
+          <td>2017-08-21 02:06:55+00:00</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+</boxed-text>
+</sec>
+<sec id="ae1253df-nb-1" specific-use="notebook-content">
+<preformat>df.describe()</preformat>
+<boxed-text>
+  <table-wrap>
+    <table border="1">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Longitude</th>
+          <th>Latitude</th>
+          <th>Depth(km)</th>
+          <th>Magnitude</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>count</td>
+          <td>11347.000000</td>
+          <td>11347.000000</td>
+          <td>11347.000000</td>
+          <td>11347.000000</td>
+        </tr>
+        <tr>
+          <td>mean</td>
+          <td>-17.844062</td>
+          <td>28.568893</td>
+          <td>14.089345</td>
+          <td>2.432423</td>
+        </tr>
+        <tr>
+          <td>std</td>
+          <td>0.027345</td>
+          <td>0.021899</td>
+          <td>8.624787</td>
+          <td>0.705282</td>
+        </tr>
+        <tr>
+          <td>min</td>
+          <td>-17.995800</td>
+          <td>28.310200</td>
+          <td>0.000000</td>
+          <td>0.200000</td>
+        </tr>
+        <tr>
+          <td>25%</td>
+          <td>-17.854100</td>
+          <td>28.558000</td>
+          <td>10.100000</td>
+          <td>1.900000</td>
+        </tr>
+        <tr>
+          <td>50%</td>
+          <td>-17.838700</td>
+          <td>28.564000</td>
+          <td>11.300000</td>
+          <td>2.600000</td>
+        </tr>
+        <tr>
+          <td>75%</td>
+          <td>-17.829700</td>
+          <td>28.574300</td>
+          <td>13.900000</td>
+          <td>2.900000</td>
+        </tr>
+        <tr>
+          <td>max</td>
+          <td>-17.705700</td>
+          <td>28.697800</td>
+          <td>46.900000</td>
+          <td>5.100000</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+</boxed-text>
+</sec>
+<sec id="cell-81b4dfb2-nb-1" specific-use="notebook-content">
+<preformat>df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, figsize=(12,12), grid=&quot;on&quot;);</preformat>
+<boxed-text>
+  <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-5-output-1.png" />
+</boxed-text>
+</sec>
+<sec id="cell-19a1ba0d-nb-1" specific-use="notebook-content">
+<sec id="filter-nb-1">
+  <title>Filter</title>
+  <p>Also some rows seem to be missing depth measurements, (see
   differences in the <bold>count</bold> for columns above) - take only
   rows with valid depths</p>
-        </sec>
-        <sec id="e56a69b3-nb-1" specific-use="notebook-content">
-          <preformat>df = df[df['Depth(km)'].notna()]
+  </sec>
+  <sec id="e56a69b3-nb-1" specific-use="notebook-content">
+  <preformat>df = df[df['Depth(km)'].notna()]
 df.describe()</preformat>
-          <boxed-text>
-            <table-wrap>
-              <table border="1">
-                <thead>
-                  <tr style="text-align: right;">
-                    <th/>
-                    <th>Longitude</th>
-                    <th>Latitude</th>
-                    <th>Depth(km)</th>
-                    <th>Magnitude</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>count</td>
-                    <td>11347.000000</td>
-                    <td>11347.000000</td>
-                    <td>11347.000000</td>
-                    <td>11347.000000</td>
-                  </tr>
-                  <tr>
-                    <td>mean</td>
-                    <td>-17.844062</td>
-                    <td>28.568893</td>
-                    <td>14.089345</td>
-                    <td>2.432423</td>
-                  </tr>
-                  <tr>
-                    <td>std</td>
-                    <td>0.027345</td>
-                    <td>0.021899</td>
-                    <td>8.624787</td>
-                    <td>0.705282</td>
-                  </tr>
-                  <tr>
-                    <td>min</td>
-                    <td>-17.995800</td>
-                    <td>28.310200</td>
-                    <td>0.000000</td>
-                    <td>0.200000</td>
-                  </tr>
-                  <tr>
-                    <td>25%</td>
-                    <td>-17.854100</td>
-                    <td>28.558000</td>
-                    <td>10.100000</td>
-                    <td>1.900000</td>
-                  </tr>
-                  <tr>
-                    <td>50%</td>
-                    <td>-17.838700</td>
-                    <td>28.564000</td>
-                    <td>11.300000</td>
-                    <td>2.600000</td>
-                  </tr>
-                  <tr>
-                    <td>75%</td>
-                    <td>-17.829700</td>
-                    <td>28.574300</td>
-                    <td>13.900000</td>
-                    <td>2.900000</td>
-                  </tr>
-                  <tr>
-                    <td>max</td>
-                    <td>-17.705700</td>
-                    <td>28.697800</td>
-                    <td>46.900000</td>
-                    <td>5.100000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </table-wrap>
-          </boxed-text>
-        </sec>
-        <sec id="cell-1368822d-nb-1" specific-use="notebook-content">
-          <preformat>plt.figure(figsize=(20,6))
+  <boxed-text>
+    <table-wrap>
+      <table border="1">
+        <thead>
+          <tr style="text-align: right;">
+            <th></th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>Depth(km)</th>
+            <th>Magnitude</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>count</td>
+            <td>11347.000000</td>
+            <td>11347.000000</td>
+            <td>11347.000000</td>
+            <td>11347.000000</td>
+          </tr>
+          <tr>
+            <td>mean</td>
+            <td>-17.844062</td>
+            <td>28.568893</td>
+            <td>14.089345</td>
+            <td>2.432423</td>
+          </tr>
+          <tr>
+            <td>std</td>
+            <td>0.027345</td>
+            <td>0.021899</td>
+            <td>8.624787</td>
+            <td>0.705282</td>
+          </tr>
+          <tr>
+            <td>min</td>
+            <td>-17.995800</td>
+            <td>28.310200</td>
+            <td>0.000000</td>
+            <td>0.200000</td>
+          </tr>
+          <tr>
+            <td>25%</td>
+            <td>-17.854100</td>
+            <td>28.558000</td>
+            <td>10.100000</td>
+            <td>1.900000</td>
+          </tr>
+          <tr>
+            <td>50%</td>
+            <td>-17.838700</td>
+            <td>28.564000</td>
+            <td>11.300000</td>
+            <td>2.600000</td>
+          </tr>
+          <tr>
+            <td>75%</td>
+            <td>-17.829700</td>
+            <td>28.574300</td>
+            <td>13.900000</td>
+            <td>2.900000</td>
+          </tr>
+          <tr>
+            <td>max</td>
+            <td>-17.705700</td>
+            <td>28.697800</td>
+            <td>46.900000</td>
+            <td>5.100000</td>
+          </tr>
+        </tbody>
+      </table>
+    </table-wrap>
+  </boxed-text>
+  </sec>
+  <sec id="cell-1368822d-nb-1" specific-use="notebook-content">
+  <preformat>plt.figure(figsize=(20,6))
 plt.subplot(1,3,1)
-df["Latitude"].plot.hist(bins=20, density=True)
+df[&quot;Latitude&quot;].plot.hist(bins=20, density=True)
 plt.subplot(1,3,2)
-df["Longitude"].plot.hist(bins=20, density=True)
+df[&quot;Longitude&quot;].plot.hist(bins=20, density=True)
 plt.subplot(1,3,3)
-df["Depth(km)"].plot.hist(bins=50, density=True)</preformat>
-          <boxed-text>
-            <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-7-output-1.png"/>
-          </boxed-text>
-        </sec>
-        <sec id="da7ad095-nb-1" specific-use="notebook-content">
+df[&quot;Depth(km)&quot;].plot.hist(bins=50, density=True)</preformat>
+  <boxed-text>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-7-output-1.png" />
+  </boxed-text>
+  </sec>
+  <sec id="da7ad095-nb-1" specific-use="notebook-content">
 </sec>
-        <sec id="spatial-plot-nb-1">
-          <title>Spatial Plot</title>
-          <p>Scatter plot the spatial locations of events</p>
-        </sec>
-        <sec id="cell-fig-spatial-plot-nb-1" specific-use="notebook-content">
-          <preformat>#| label: fig-spatial-plot
+<sec id="spatial-plot-nb-1">
+  <title>Spatial Plot</title>
+  <p>Scatter plot the spatial locations of events</p>
+  </sec>
+  <sec id="cell-fig-spatial-plot-nb-1" specific-use="notebook-content">
+  <preformat>#| label: fig-spatial-plot
 #| fig-cap: Locations of earthquakes on La Palma since 2017.
 #| fig-alt: A scatterplot of earthquake locations plotting latitude against longitude.
 from matplotlib import colormaps
 cmap = colormaps['viridis_r']
-ax = df.plot.scatter(x="Longitude", y="Latitude", 
-                     s=47-df["Depth(km)"], c=df["Magnitude"], 
-                     figsize=(12,10), grid="on", cmap=cmap)
+ax = df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, 
+                     s=47-df[&quot;Depth(km)&quot;], c=df[&quot;Magnitude&quot;], 
+                     figsize=(12,10), grid=&quot;on&quot;, cmap=cmap)
 colorbar = ax.collections[0].colorbar
-colorbar.set_label("Magnitude")
+colorbar.set_label(&quot;Magnitude&quot;)
 
 plt.show()</preformat>
-          <boxed-text>
-            <fig id="fig-spatial-plot-nb-1">
-              <caption>
-                <p>Locations of earthquakes on La Palma since
-      2017.</p>
-              </caption>
-              <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/fig-spatial-plot-output-1.png"/>
-            </fig>
-          </boxed-text>
-        </sec>
-        <sec id="cell-22ac5ce7-nb-1" specific-use="notebook-content">
-          <sec id="timeline-plot-nb-1">
-            <title>Timeline Plot</title>
-            <p>Scatter plot the event time series and look for any quantization
+  <boxed-text>
+    <fig id="fig-spatial-plot-nb-1">
+      <caption><p>Locations of earthquakes on La Palma since
+      2017.</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/fig-spatial-plot-output-1.png" />
+    </fig>
+  </boxed-text>
+  </sec>
+  <sec id="cell-22ac5ce7-nb-1" specific-use="notebook-content">
+  <sec id="timeline-plot-nb-1">
+    <title>Timeline Plot</title>
+    <p>Scatter plot the event time series and look for any quantization
     issues. Have times &amp; dates been loaded correctly?</p>
-            <p>ax = df.plot.scatter(x=‘DateTime’, y=‘Depth(km)’, figsize=(20,8))
+    <p>ax = df.plot.scatter(x=‘DateTime’, y=‘Depth(km)’, figsize=(20,8))
     ax.set_ylim(50,0);</p>
-          </sec>
-        </sec>
-      </sec>
-    </body>
-    <back>
+    </sec>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
 </back>
-  </sub-article>
+
+
+</sub-article>
+
 </article>
