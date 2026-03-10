@@ -86,3 +86,259 @@ Tangentially, we also recommend the following books:
 
 ::: {#refs}
 :::
+## Week 1 Summary: Learning vs Data Analysis; Models, Loss Functions
+
+### Core Concepts
+- **The Concept of a Model:** Models are simplified representations of reality designed for **prediction** and **explanation**. We distinguish between **First-Principle models** (bottom-up, based on physical laws) and **Data-based models** (top-down, extracted from observations).
+- **Interpretability Spectrum:**
+    - **White-Box:** Fully traceable (e.g., physical laws, linear regression).
+    - **Grey-Box:** Partially traceable (e.g., Monte Carlo, Physics-Informed Neural Networks).
+    - **Black-Box:** Non-traceable internal mechanisms (e.g., deep neural networks), though techniques for **Explainability** aim to move these toward the Grey-Box category.
+- **Types of Learning:**
+    - **Supervised Learning:** Learning with labeled data. Includes **Regression** (continuous targets) and **Classification** (discrete categories).
+    - **Unsupervised Learning:** Finding hidden structure in unlabeled data (clustering, dimensionality reduction, embeddings).
+    - **Reinforcement Learning:** Learning optimal actions through trial and error to maximize a reward signal.
+
+### Loss Functions and Optimization
+- **Learning as Optimization:** Machine learning is the process of minimizing a **Loss Function** (w)$ that measures the discrepancy between model predictions and true targets.
+- **Mean Squared Error (MSE):** The standard loss for regression, providing a geometric interpretation of residuals.
+- **Parsimony and Occam's Razor:** The preference for simpler models. Overly complex models tend to fit noise in the training data, leading to **Overfitting**.
+- **Regularization:** A technique to control complexity by adding a penalty term (e.g., Ridge/Lasso) to the loss function, discouraging large parameter values and wild oscillations.
+- **Generalization:** The central goal of ML—ensuring the model performs well on unseen **test data**, not just the training set.
+
+## Week 2 Summary: Linear Algebra Refresher; Covariance, PCA/SVD
+
+### Core Concepts
+- **Eigendecomposition:** The foundation of PCA. For a symmetric covariance matrix $, we can find an orthonormal basis of eigenvectors $ and corresponding eigenvalues $\lambda_i$ such that  = \lambda_i u_i$.
+- **The Covariance Matrix ($):** Captures the relationships and variability between features. The eigenvectors of $ represent the directions of maximum variance in the data, while the eigenvalues quantify the amount of variance along those directions.
+- **Principal Component Analysis (PCA):** A linear method for dimensionality reduction that projects data onto a lower-dimensional subspace while preserving as much variance (information) as possible.
+
+### PCA Theory and Application
+- **Maximizing Variance:** PCA is derived as a constrained optimization problem: finding directions $ that maximize the projected variance ^T S u$ subject to the unit length constraint $\|u\|=1$.
+- **Explained Variance:** The proportion of total variance captured by $ components is given by the sum of the first $ eigenvalues divided by the total sum of all eigenvalues. 
+- **Scree Plots:** A visual diagnostic tool used to determine the intrinsic dimensionality of a dataset by identifying the "elbow" in the eigenvalue spectrum.
+- **Applications in Engineering:** 
+    - **Dimensionality Reduction:** Compressing high-dimensional signals or images (e.g., MNIST, microstructures) into a manageable number of features.
+    - **Denoising:** By reconstructing data using only the top principal components, high-frequency noise (typically associated with low-variance eigenvalues) can be filtered out.
+    - **Anomaly Detection:** Monitoring data in the latent eigenspace can reveal deviations from "normal" behavior that are hard to see in the original high-dimensional space.
+- **Limitations:** PCA is strictly **linear**. For data with complex non-linear manifolds, extensions like **Kernel PCA** or **Autoencoders** are required.
+
+## Week 3 Summary: Regression as Loss Minimization
+
+### Core Concepts
+- **The Supervised Learning Framework:** Mapping inputs $ to continuous outputs $ to minimize the discrepancy with target labels $. The central objective is finding the optimal parameters $ of a hypothesis function (x)$.
+- **Loss and Cost Functions:** 
+    - **Squared Error Loss:**  = (\hat{y} - y)^2$, penalizing large deviations quadratically.
+    - **Cost Function ($):** The Mean Squared Error (MSE) over the training set, serving as the surface we seek to minimize.
+- **Least Squares Optimization:**
+    - **Ordinary Least Squares (OLS):** The analytical solution  = (X^T X)^{-1} X^T y$ that finds the global minimum for linear models.
+    - **Gradient Descent:** An iterative optimization strategy where parameters are updated in the direction of the steepest descent:  \leftarrow w - ta 
+abla_w J$.
+
+### Expanding Linear Models
+- **The Linearity Principle:** A model is "linear" if it is linear in its *parameters*, allowing us to model highly non-linear relationships by transforming features.
+- **Basis Functions ($\phi$):** By replacing raw features $ with a vector of transformations $\phi(x)$ (e.g., polynomials, sinusoids, radial basis functions), we can use the linear regression framework to fit complex curves.
+- **Polynomial Regression:** A common application of basis functions using powers of $. However, one must be wary of **Runge's Phenomenon** and overfitting when using high-order polynomials.
+- **Local vs. Global Models:** While global polynomials can be unstable, piecewise polynomials and **Splines** provide a more robust, localized approach to regression by "gluing" simple functions together at knots.
+
+## Week 4 Summary: Neural Networks Early: Neuron & Activations
+
+### Core Concepts
+- **The Artificial Neuron:** A fundamental processing unit that computes a weighted sum of its inputs plus a bias ( = \sum w_i x_i + b$) and passes the result through a non-linear **activation function**. It is the building block of all deep learning architectures.
+- **Non-linear Activations:** The "soul" of the neural network. Without non-linearity, multiple layers would mathematically collapse into a single linear transformation, rendering the network unable to solve complex problems like XOR.
+- **The Multi-Layer Perceptron (MLP):** A feed-forward architecture where neurons are organized into an input layer, one or more hidden layers, and an output layer. Layers are typically fully connected.
+
+### Activation Function Taxonomy
+- **Sigmoid & Tanh:** Historical standards that map inputs to bounded ranges ((0, 1) and (-1, 1)). They are smooth and differentiable but suffer from **vanishing gradients** in deep networks due to saturation.
+- **ReLU (Rectified Linear Unit):** The modern standard ((x) = \max(0, x)$). It is computationally efficient and helps mitigate vanishing gradients for positive inputs, enabling the training of much deeper networks.
+- **Leaky ReLU:** A variant that allows a small, non-zero gradient for negative inputs to prevent "dead neurons."
+- **Softmax:** Typically reserved for the output layer in multi-class classification tasks, as it squashes outputs into a probability distribution that sums to one.
+
+### Structural Properties
+- **Universal Approximation Theorem:** A powerful result stating that even a single hidden layer can approximate any continuous function, provided it has a non-linear activation and enough neurons.
+- **Forward Propagation:** The deterministic process of calculating the output of each layer sequentially to produce a final prediction.
+- **Weight-Space Symmetries:** The realization that multiple weight configurations (e.g., swapping hidden units or flipping signs) can result in identical network behavior, which has implications for optimization and Bayesian analysis.
+
+## Week 5 Summary: Backpropagation & Gradient Flow
+
+### Core Concepts
+- **Learning as Optimization:** The training of a neural network is an iterative optimization problem aimed at minimizing a cost function $ through gradient descent:  \leftarrow w - ta 
+abla_w J$.
+- **The Backpropagation Algorithm:** An efficient implementation of the **chain rule** that calculates the partial derivative of the cost function with respect to every weight and bias in the network. It consists of two passes:
+    - **Forward Pass:** Computing activations layer-by-layer and storing intermediate results.
+    - **Backward Pass:** Starting from the output error, propagating "error signals" ($\delta$) upstream to compute local gradients.
+- **Computational Efficiency:** Backpropagation allows gradient computation in (W)$ time, where $ is the number of weights, making it feasible to train models with millions of parameters.
+
+### Gradient Flow and Stability
+- **Vanishing Gradients:** In deep networks, gradients can become infinitesimally small as they are multiplied by the derivatives of saturating activation functions (like sigmoid or tanh) at each layer. This "signal decay" prevents early layers from learning.
+- **Exploding Gradients:** Conversely, large weights and certain architectures can cause gradients to grow exponentially, leading to numerical instability and divergence.
+- **ReLU and Gradient Flow:** The ReLU activation function ($\max(0, x)$) provides a constant gradient of 1 for positive inputs, significantly improving gradient flow in deep architectures and enabling the "Deep Learning" revolution.
+- **The Jacobian Matrix:** Describes how small changes in inputs affect the outputs of a module, providing a unified framework for linking differentiable components in a larger system.
+
+## Week 6 Summary: Loss Landscapes & Optimization Behavior
+
+### Core Concepts
+- **The Loss Landscape:** A high-dimensional geometric representation of the cost function $ over the parameter space $. Its topography—comprising peaks, valleys, saddle points, and plateaus—determines the ease and success of the training process.
+- **Curvature and the Hessian ($):** While the gradient indicates the direction of steepest descent, the **Hessian matrix** (the matrix of second-order derivatives) describes the *curvature* of the landscape. 
+    - **Eigenvalues of $:** Large eigenvalues indicate steep directions where the gradient changes rapidly, while small eigenvalues correspond to shallow, flat directions.
+    - **Conditioning:** Landscapes with widely varying curvature (ill-conditioned) cause standard gradient descent to oscillate wildly or crawl painfully slowly.
+- **Saddle Points:** In high-dimensional spaces, true local minima are rare; most points with zero gradient are saddle points, which can trap or significantly slow down first-order optimizers.
+
+### Advanced Optimization Strategies
+- **Momentum:** Inspired by physics, this technique adds a "velocity" component to updates, allowing the optimizer to accumulate speed in consistent directions and dampen oscillations in steep, narrow valleys.
+- **Adaptive Learning Rates:** Algorithms like **AdaGrad**, **RMSProp**, and **ADAM** adjust the learning rate for each individual parameter based on the history of observed gradients. This effectively scales the coordinates to "normalize" the landscape's curvature.
+- **ADAM (Adaptive Moment Estimation):** Currently the industry standard, combining the benefits of momentum and adaptive scales to provide robust performance across a wide range of architectures and hyperparameter settings.
+- **Flat vs. Sharp Minima:** Research suggests that "flat" minima (regions where the cost remains low over a wide range of parameters) correlate with better **Generalization** on unseen data, as they are less sensitive to small shifts in the data distribution.
+
+## Week 7 Summary: Generalization, Bias–Variance, Regularization
+
+### Core Concepts
+- **Generalization:** The fundamental objective of machine learning—ensuring that a model learned from a finite training set performs accurately on previously unseen data.
+- **Overfitting vs. Underfitting:** 
+    - **Overfitting:** Occurs when a model captures the random noise in the training data rather than the underlying pattern. This is characterized by low training error but high test error.
+    - **Underfitting:** Occurs when a model is too simple to represent the data's complexity, resulting in high error on both training and test sets.
+- **Bias-Variance Decomposition:** A theoretical framework that decomposes the expected error into three parts:
+    - **Bias:** Error due to simplistic assumptions (e.g., modeling a non-linear process with a straight line).
+    - **Variance:** Error due to excessive sensitivity to the specific training data.
+    - **Intrinsic Noise:** The irreducible error in the data itself (the "Bayes error").
+    - **The Trade-off:** Increasing model complexity generally reduces bias but increases variance. The goal is to find the "sweet spot" that minimizes total error.
+
+### Regularization and Validation
+- **Regularization:** A technique to prevent overfitting by adding a penalty term to the loss function that discourages overly complex models (large parameter values).
+    - **Ridge Regression ($):** Penalizes the sum of squared weights, shrinking them toward zero.
+    - **Lasso Regression ($):** Penalizes the sum of absolute weights, promoting **sparsity** by setting less important weights exactly to zero.
+    - **Dropout:** A neural network-specific technique that randomly "drops" neurons during training to prevent co-adaptation and improve robustness.
+- **Model Selection:**
+    - **Cross-Validation:** A robust strategy for evaluating model performance by iteratively splitting the data into $ folds, ensuring every data point serves as both training and test data.
+    - **Validation Set:** A subset of data used exclusively for tuning hyperparameters (like the regularization strength $\lambda$) to avoid biasing the final test results.
+
+## Week 8 Summary: Probabilistic View of Learning; Noise
+
+### Core Concepts
+- **Probability as Modeling Tool:** Probability theory provides the formal framework for quantifying uncertainty in both data (noise) and models (parameter uncertainty). Machine learning is viewed as the process of updating probabilistic beliefs in light of new observations.
+- **Taxonomy of Uncertainty:**
+    - **Aleatory Uncertainty:** Irreducible randomness inherent in the physical process or measurement system (e.g., thermal noise, sensor precision).
+    - **Epistemic Uncertainty:** Uncertainty stemming from a lack of data or knowledge. This can, in principle, be reduced by observing more samples or improving model fidelity.
+- **Sampling and Signal Theory:** Digital data collection is a stochastic process governed by the **Nyquist-Shannon Theorem**, which defines the minimum sampling frequency required to fully capture a signal's dynamics.
+
+### Inference and Uncertainty Quantification
+- **Frequentist vs. Bayesian Views:**
+    - **Maximum Likelihood Estimation (MLE):** Estimates parameters by maximizing the probability of the observed data. Prone to overfitting on small datasets.
+    - **Bayesian Inference:** Treats parameters as random variables. By combining a **prior** distribution with the **likelihood**, it yields a **posterior** distribution that represents our updated belief and its associated uncertainty.
+- **Robustness and Outliers:** While the Gaussian distribution is standard, the **Student's t-distribution** offers better robustness against outliers due to its heavy tails.
+- **Advanced UQ in Neural Networks:**
+    - **Stochastic Enrichment:** A technique to integrate measurement uncertainty into the training process by augmenting datasets with noisy samples derived from the original points.
+    - **Mixture-Density Networks (MDN):** Specialized neural architectures that predict the parameters of a probability distribution (e.g., weights, means, and variances of multiple Gaussians) rather than point values, allowing models to "know what they don't know."
+- **Process Corridors:** Using 2D histograms to model the probability density of temporal data, providing a powerful heuristic for detecting anomalous deviations in engineering systems.
+
+## Week 9 Summary: Representation Learning; Features vs. Learned Representations
+
+### Core Concepts
+- **Beyond Handcrafting:** Traditional machine learning relies on experts to manually engineer features (e.g., Fourier transforms, signal moments). **Representation Learning** shifts this burden to the model, which autonomously discovers the most relevant transformations directly from raw data.
+- **The Manifold Hypothesis:** Real-world high-dimensional data (like images or spectra) typically lies on or near a low-dimensional, non-linear **manifold**. The number of independent parameters needed to describe this manifold represents the data's true **degrees of freedom**.
+- **Autoencoders (AE):** A class of neural networks designed for unsupervised representation learning. By training a network to perform an identity mapping ((x) pprox x$) through a constrained **bottleneck layer**, the model is forced to capture the most salient features in a compressed **latent space**.
+
+### Architectures and Latent Spaces
+- **Encoder and Decoder:** 
+    - The **Encoder** compresses the input into a low-dimensional code.
+    - The **Decoder** reconstructs the original signal from this code.
+- **Non-linearity:** Unlike PCA, which is limited to linear projections, deep autoencoders can learn complex, non-linear manifolds using hierarchical hidden layers and non-linear activations.
+- **Convolutional Autoencoders:** Specialized for spatial data (images, simulations), these use strided convolutions to downsample and transposed convolutions to upsample, preserving geometric structure while reducing dimensionality.
+- **Denoising:** Autoencoders can be trained to recover clean signals from corrupted inputs, effectively learning to project "noisy" points back onto the learned data manifold.
+
+### Industrial and Engineering Applications
+- **Data Compression:** Storing high-fidelity engineering data (e.g., leaf spectra or plasma simulations) using only a fraction of the original storage by keeping only the latent codes and the trained decoder.
+- **Anomaly Detection:** Anomalies can be detected in two ways: (1) high reconstruction error (the model cannot reconstruct what it hasn't seen) or (2) outliers in the latent space distribution.
+- **Feature Extraction:** Latent codes serve as highly optimized, low-dimensional inputs for downstream supervised tasks like time-series prediction or process optimization.
+
+## Week 10 Summary: Latent Spaces; Embeddings
+
+### Core Concepts
+- **Latent Space Definition:** A low-dimensional, continuous vector space that represents the underlying structure of high-dimensional data. In this space, the distance between points reflects their semantic or physical similarity.
+- **Embeddings:** A mapping of high-dimensional, often discrete or sparse data (e.g., categories, words, or crystal structures) into a dense, lower-dimensional latent space where meaningful relationships can be calculated via dot products or Euclidean distance.
+- **The Geometry of Compression:** Latent spaces discovered by autoencoders are non-linear manifolds. Unlike linear PCA, these spaces can disentangle complex factors of variation, such as the position, width, and amplitude of a signal.
+
+### Dimensionality Reduction and Visualization
+- **t-SNE (t-Distributed Stochastic Neighbor Embedding):** A powerful non-linear technique for visualizing high-dimensional data archipelagos. It matches the neighborhood structure of the high-dimensional space to a 2D or 3D map by minimizing the KL-divergence between Gaussian (high-dim) and Student's t-distributions (low-dim).
+- **The Crowding Problem:** t-SNE uses the heavy-tailed Student's t-distribution in the low-dimensional space to push moderately distant points further apart, preventing the "crowding" that occurs in high-dimensional Gaussian mappings.
+- **UMAP (Uniform Manifold Approximation and Projection):** A modern, faster alternative to t-SNE based on Riemannian geometry that better preserves global structure and scale across the entire dataset.
+- **Kernel PCA:** An extension of PCA that uses the **Kernel Trick** to project data into an implicit, infinite-dimensional feature space where non-linear patterns become linearly separable.
+
+### Analysis and Trust
+- **Interpretability:** Latent neurons can often be mapped back to physical parameters (e.g., material properties), allowing for semi-supervised discovery.
+- **Anomaly Detection:** Monitoring the distribution of "normal" data in latent space allows for the detection of "exotic" cases that fall outside established clusters, even if those anomalies were never seen during training.
+- **Conditional Latent Probability:** Using histograms and conditional distributions (e.g., (A_2|A_1)$) within the latent space provides a statistical basis for quantifying the novelty or reliability of a model's prediction.
+
+## Week 11 Summary: Unsupervised Learning Revisited (Objectives)
+
+### Core Concepts
+- **Unsupervised Paradigm:** In many engineering scenarios, labels are missing (e.g., process data without quality metrics). Unsupervised learning uncovers the inherent structure, regimes, and clusters within the data, providing a foundation for both discovery and dimensionality reduction.
+- **Clustering - K-Means:** A robust, non-probabilistic algorithm that partitions data into $ clusters by minimizing the sum of squared distances to cluster centroids. It operates via an iterative assignment-update cycle that is a "hard" version of the EM algorithm.
+- **Gaussian Mixture Models (GMM):** A probabilistic approach that represents data as a weighted sum of multiple Gaussian components. It treats the cluster membership as a **discrete latent variable**, allowing for "soft" assignments where points can belong to multiple clusters with varying degrees of **responsibility**.
+
+### The EM (Expectation-Maximization) Algorithm
+- **General Framework:** EM is a powerful iterative strategy for finding maximum likelihood solutions in models with latent variables. It consists of two primary steps:
+    - **E-step (Expectation):** Calculates the posterior distribution of the latent variables (responsibilities) given the current parameters.
+    - **M-step (Maximization):** Updates the model parameters by maximizing the expectation of the complete-data log-likelihood.
+- **Lower Bound Maximization:** Mathematically, EM maximizes a lower bound on the log-likelihood function. Each cycle is guaranteed to never decrease the likelihood, ensuring convergence to a local maximum.
+- **Robustness and Variants:** While standard K-Means is sensitive to outliers, **K-Medoids** offers a robust alternative by using actual data points as cluster prototypes. For discrete data, **Bernoulli Mixtures** allow for clustering of binary vectors (e.g., digitized images).
+
+### Applications
+- **Image Segmentation:** Clustering pixels in color or spectral space to identify homogeneous regions or objects.
+- **Vector Quantization:** A lossy compression technique that replaces data points with the index of their nearest cluster centroid (code-book vector).
+- **Regime Identification:** Detecting different physical flow regimes (e.g., oil/water/gas in pipes) or materials states from unlabeled multi-sensor streams.
+
+## Week 12 Summary: Uncertainty in Predictions
+
+### Core Concepts
+- **The Necessity of UQ:** In engineering applications, a single-point prediction is rarely enough. **Uncertainty Quantification (UQ)** allows models to express their confidence, facilitating safer decision-making and efficient out-of-distribution (OOD) detection.
+- **Bayesian Predictive Distribution:** Rather than a single set of weights, Bayesian models maintain a distribution over all possible parameters. The predictive distribution (t|x)$ is obtained by integrating over this parameter posterior, resulting in a variance that naturally increases in regions with sparse training data.
+- **Aleatory vs. Epistemic Uncertainty:**
+    - **Aleatory (Noise):** The irreducible variance due to measurement error or inherent randomness.
+    - **Epistemic (Model):** The uncertainty due to lack of data, which Bayesian models quantify via the parameter covariance matrix $.
+
+### Probabilistic Architectures
+- **The Evidence Framework:** A hierarchical Bayesian approach that allows for the optimization of hyperparameters (like regularization strength) directly from the training data by maximizing the **Marginal Likelihood** (Evidence).
+- **Effective Number of Parameters ($\gamma$):** A metric that quantifies how many model degrees of freedom are actually being utilized to fit the data, as opposed to being suppressed by the prior.
+- **Mixture-Density Networks (MDN):** A specialized neural network architecture that outputs the parameters of a Gaussian mixture model ($\pi, \mu, \sigma$). This allows the network to model complex, multi-modal probability densities where several different outcomes may be physically plausible.
+- **MC Dropout:** A practical heuristic where dropout is kept active during inference to generate an ensemble of predictions, serving as a frequentist approximation to Bayesian uncertainty.
+
+### Physics and Trust
+- **Stochastic Enrichment:** Probing model stability by augmenting datasets with synthetic noise and observing the variance in the learned results (e.g., centroid movement in K-Means).
+- **Physics-Informed Constraints:** Embedding physical laws (via ODEs/PDEs) into the loss function acts as a powerful regularizer that can significantly reduce epistemic uncertainty, particularly in "data-poor" regions of the parameter space.
+
+## Week 13 Summary: Physics-Informed & Constrained Learning
+
+### Core Concepts
+- **PINN Philosophy:** Physics-Informed Machine Learning (PIML) seeks to integrate domain expertise and physical laws (priors) directly into the learning process. The goal is to reduce the amount of data required, improve generalization in unseen regions, and ensure physical consistency.
+- **Data Enrichment:** Actively designing input representations by applying known mathematical transformations (e.g., FFT, Wavelets, Derivatives) that highlight the underlying physical dynamics of the system.
+- **Embedding Analytical Expressions:** Utilizing the **Automatic Differentiation** capabilities of modern ML frameworks to enforce physical constraints within the neural network's loss function.
+
+### Mechanics of Physics Integration
+- **Loss Function Modification:** The objective function is expanded to include a "physics residual" term:  = J_{data} + \lambda J_{physics}$. The optimizer then searches for a solution that simultaneously fits the observed data and satisfies the governing physical equations (e.g., ODEs/PDEs).
+- **Boundary Conditions:** Techniques like the **Lagaris substitution** allow for the mathematical enforcement of initial and boundary conditions, ensuring the model's output is physically valid at the start of the simulation.
+- **Neural Integrators:** Training networks to solve differential equations by minimizing the discrepancy between the network's gradient and the physical law, effectively using the NN as a flexible surrogate for numerical solvers.
+
+### Scientific Trust and Efficiency
+- **Occam's Razor:** Information theory provides a rigorous basis for preferring simpler, more parsimonious models. PIML aligns with this by constraining the model's search space to physically plausible solutions.
+- **Small Data & Balance:** By providing the model with the "rules of the game," PINNs can succeed in "data-poor" scenarios where pure black-box models would fail due to overfitting or statistical imbalance.
+- **Explainability:** Models that incorporate physical transformations (like FFT) are inherently more interpretable, as their decisions can be traced back to identifiable physical phenomena like resonance or decay rates.
+
+## Week 14 Summary: Explainability, Limits, Scientific Trust
+
+### Core Concepts
+- **The Trust Mandate:** In scientific and industrial AI, a model's prediction must be justifiable to human experts. **Explainable AI (XAI)** provides the tools to move beyond "black-box" results toward transparent decision-making.
+- **Semantic Structures:** Digitizing meaning requires more than just storing data points. We use specialized structures to organize knowledge:
+    - **Synonyms:** Mapping different technical terms to the same underlying physical concept.
+    - **Taxonomies:** Hierarchically ordering objects to enable algorithmic reasoning (e.g., knowing that a specific sensor belongs to a broader class of thermal devices).
+    - **Ontologies:** Modeling complex relationships and interactions between components (e.g., understanding how a pump's failure causally affects a press's force).
+- **Levels of Explainability:** A model must provide different levels of explanation depending on the audience, from business-level KPIs for managers to physical consistency checks for process engineers.
+
+### Tools for Model Interpretation
+- **Sensitivity Analysis:** A method for probing black-box models by applying small disturbances to input variables and measuring the response. This allows researchers to identify which features (or frequency components) drive the model's output.
+- **Deductive Reasoning:** By combining sensitivity results with an ontology, we can perform deductive logic—for instance, tracing a detected oscillation back to a specific faulty component in a circuit.
+- **Causality in Process Chains:** Distinguishing between **Detection** (identifying an error after it occurs) and **Prediction** (foreseeing an error early enough to prevent it). The value of an AI solution is directly proportional to how early it can intervene in the causal chain of production.
+
+### Reflection on Model Limits
+- **The Data Manifold:** Models are only reliable within the region of the "data manifold" they were trained on. Extrapolating beyond these limits requires the integration of physical laws (PINNs) to maintain scientific validity.
+- **Inductive Bias:** Every model makes assumptions. Trust is built when these assumptions are explicitly aligned with established scientific principles rather than being purely data-driven.
