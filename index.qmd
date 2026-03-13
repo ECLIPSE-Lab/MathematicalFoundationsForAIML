@@ -3,6 +3,7 @@ title: Mathematical Foundations of AI & ML
 author:
   - name: Philipp Pelz
     email: philipp.pelz@fau.de
+  - name: Stefan Hiemer
 keywords:
   - Machine Learning
   - Artificial Intelligence
@@ -39,6 +40,11 @@ jupyter: python3
 :::
 
 ::::
+## Instructors
+
+- Philipp Pelz
+- Stefan Hiemer
+
 ## Mathematical Foundations of AI & ML – Unified Syllabus Overview (with ML-PC & MG)
 **Legend**
 
