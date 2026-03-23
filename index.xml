@@ -24,6 +24,14 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 <email>philipp.pelz@fau.de</email>
 </contrib>
+<contrib contrib-type="author">
+<name>
+<surname>Hiemer</surname>
+<given-names>Stefan</given-names>
+</name>
+<string-name>Stefan Hiemer</string-name>
+
+</contrib>
 </contrib-group>
 
 
@@ -54,8 +62,24 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </front>
 
 <body>
+<p><ext-link ext-link-type="uri" xlink:href="https://pelzlab.science"><inline-graphic mimetype="image" mime-subtype="png" xlink:href="images/eclipse_header.png" /></ext-link></p>
+<p><ext-link ext-link-type="uri" xlink:href="https://github.com/ECLIPSE-Lab/MathematicalFoundationsForAIML"><inline-graphic mimetype="image" mime-subtype="jpeg" xlink:href="images/github.jpeg" /></ext-link></p>
+<p><bold>Github Code</bold></p>
+<p><ext-link ext-link-type="uri" xlink:href="https://www.studon.fau.de/"><inline-graphic mimetype="image" mime-subtype="jpeg" xlink:href="images/studon.jpeg" /></ext-link></p>
+<p><bold>Studon Link</bold></p>
+<sec id="instructors">
+  <title>1 Instructors</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>Philipp Pelz</p>
+    </list-item>
+    <list-item>
+      <p>Stefan Hiemer</p>
+    </list-item>
+  </list>
+</sec>
 <sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg">
-  <title>1 Mathematical Foundations of AI &amp; ML – Unified Syllabus
+  <title>2 Mathematical Foundations of AI &amp; ML – Unified Syllabus
   Overview (with ML-PC &amp; MG)</title>
   <p><bold>Legend</bold></p>
   <list list-type="bullet">
@@ -247,7 +271,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </table-wrap>
 </sec>
 <sec id="recommended-readings">
-  <title>2 Recommended readings</title>
+  <title>3 Recommended readings</title>
   <p>We base much of the lecture on the following books:</p>
   <list list-type="bullet">
     <list-item>
@@ -422,10 +446,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   <title>References</title>
 </sec>
 <sec id="week-1-summary-learning-vs-data-analysis-models-loss-functions">
-  <title>3 Week 1 Summary: Learning vs Data Analysis; Models, Loss
+  <title>4 Week 1 Summary: Learning vs Data Analysis; Models, Loss
   Functions</title>
   <sec id="core-concepts">
-    <title>3.1 Core Concepts</title>
+    <title>4.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Concept of a Model:</bold> Models are simplified
@@ -477,7 +501,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="loss-functions-and-optimization">
-    <title>3.2 Loss Functions and Optimization</title>
+    <title>4.2 Loss Functions and Optimization</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Learning as Optimization:</bold> Machine learning is
@@ -510,10 +534,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-2-summary-linear-algebra-refresher-covariance-pcasvd">
-  <title>4 Week 2 Summary: Linear Algebra Refresher; Covariance,
+  <title>5 Week 2 Summary: Linear Algebra Refresher; Covariance,
   PCA/SVD</title>
   <sec id="core-concepts-1">
-    <title>4.1 Core Concepts</title>
+    <title>5.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Eigendecomposition:</bold> The foundation of PCA. For a
@@ -540,7 +564,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="pca-theory-and-application">
-    <title>4.2 PCA Theory and Application</title>
+    <title>5.2 PCA Theory and Application</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Maximizing Variance:</bold> PCA is derived as a
@@ -593,9 +617,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-3-summary-regression-as-loss-minimization">
-  <title>5 Week 3 Summary: Regression as Loss Minimization</title>
+  <title>6 Week 3 Summary: Regression as Loss Minimization</title>
   <sec id="core-concepts-2">
-    <title>5.1 Core Concepts</title>
+    <title>6.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Supervised Learning Framework:</bold> Mapping
@@ -635,7 +659,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="expanding-linear-models">
-    <title>5.2 Expanding Linear Models</title>
+    <title>6.2 Expanding Linear Models</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Linearity Principle:</bold> A model is “linear” if
@@ -671,10 +695,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-4-summary-neural-networks-early-neuron-activations">
-  <title>6 Week 4 Summary: Neural Networks Early: Neuron &amp;
+  <title>7 Week 4 Summary: Neural Networks Early: Neuron &amp;
   Activations</title>
   <sec id="core-concepts-3">
-    <title>6.1 Core Concepts</title>
+    <title>7.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Artificial Neuron:</bold> A fundamental processing
@@ -699,7 +723,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="activation-function-taxonomy">
-    <title>6.2 Activation Function Taxonomy</title>
+    <title>7.2 Activation Function Taxonomy</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Sigmoid &amp; Tanh:</bold> Historical standards that
@@ -726,7 +750,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="structural-properties">
-    <title>6.3 Structural Properties</title>
+    <title>7.3 Structural Properties</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Universal Approximation Theorem:</bold> A powerful
@@ -749,9 +773,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-5-summary-backpropagation-gradient-flow">
-  <title>7 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
+  <title>8 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
   <sec id="core-concepts-4">
-    <title>7.1 Core Concepts</title>
+    <title>8.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Learning as Optimization:</bold> The training of a
@@ -789,7 +813,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="gradient-flow-and-stability">
-    <title>7.2 Gradient Flow and Stability</title>
+    <title>8.2 Gradient Flow and Stability</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Vanishing Gradients:</bold> In deep networks, gradients
@@ -823,10 +847,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-6-summary-loss-landscapes-optimization-behavior">
-  <title>8 Week 6 Summary: Loss Landscapes &amp; Optimization
+  <title>9 Week 6 Summary: Loss Landscapes &amp; Optimization
   Behavior</title>
   <sec id="core-concepts-5">
-    <title>8.1 Core Concepts</title>
+    <title>9.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Loss Landscape:</bold> A high-dimensional geometric
@@ -864,7 +888,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="advanced-optimization-strategies">
-    <title>8.2 Advanced Optimization Strategies</title>
+    <title>9.2 Advanced Optimization Strategies</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Momentum:</bold> Inspired by physics, this technique
@@ -897,10 +921,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-7-summary-generalization-biasvariance-regularization">
-  <title>9 Week 7 Summary: Generalization, Bias–Variance,
+  <title>10 Week 7 Summary: Generalization, Bias–Variance,
   Regularization</title>
   <sec id="core-concepts-6">
-    <title>9.1 Core Concepts</title>
+    <title>10.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Generalization:</bold> The fundamental objective of
@@ -951,7 +975,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="regularization-and-validation">
-    <title>9.2 Regularization and Validation</title>
+    <title>10.2 Regularization and Validation</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Regularization:</bold> A technique to prevent
@@ -997,10 +1021,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-8-summary-probabilistic-view-of-learning-noise">
-  <title>10 Week 8 Summary: Probabilistic View of Learning;
+  <title>11 Week 8 Summary: Probabilistic View of Learning;
   Noise</title>
   <sec id="core-concepts-7">
-    <title>10.1 Core Concepts</title>
+    <title>11.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Probability as Modeling Tool:</bold> Probability theory
@@ -1035,7 +1059,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="inference-and-uncertainty-quantification">
-    <title>10.2 Inference and Uncertainty Quantification</title>
+    <title>11.2 Inference and Uncertainty Quantification</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Frequentist vs. Bayesian Views:</bold></p>
@@ -1088,10 +1112,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-9-summary-representation-learning-features-vs.-learned-representations">
-  <title>11 Week 9 Summary: Representation Learning; Features
+  <title>12 Week 9 Summary: Representation Learning; Features
   vs. Learned Representations</title>
   <sec id="core-concepts-8">
-    <title>11.1 Core Concepts</title>
+    <title>12.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Beyond Handcrafting:</bold> Traditional machine
@@ -1120,7 +1144,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="architectures-and-latent-spaces">
-    <title>11.2 Architectures and Latent Spaces</title>
+    <title>12.2 Architectures and Latent Spaces</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Encoder and Decoder:</bold></p>
@@ -1157,7 +1181,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="industrial-and-engineering-applications">
-    <title>11.3 Industrial and Engineering Applications</title>
+    <title>12.3 Industrial and Engineering Applications</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Data Compression:</bold> Storing high-fidelity
@@ -1180,9 +1204,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-10-summary-latent-spaces-embeddings">
-  <title>12 Week 10 Summary: Latent Spaces; Embeddings</title>
+  <title>13 Week 10 Summary: Latent Spaces; Embeddings</title>
   <sec id="core-concepts-9">
-    <title>12.1 Core Concepts</title>
+    <title>13.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Latent Space Definition:</bold> A low-dimensional,
@@ -1207,7 +1231,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="dimensionality-reduction-and-visualization">
-    <title>12.2 Dimensionality Reduction and Visualization</title>
+    <title>13.2 Dimensionality Reduction and Visualization</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>t-SNE (t-Distributed Stochastic Neighbor
@@ -1239,7 +1263,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="analysis-and-trust">
-    <title>12.3 Analysis and Trust</title>
+    <title>13.3 Analysis and Trust</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Interpretability:</bold> Latent neurons can often be
@@ -1262,10 +1286,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-11-summary-unsupervised-learning-revisited-objectives">
-  <title>13 Week 11 Summary: Unsupervised Learning Revisited
+  <title>14 Week 11 Summary: Unsupervised Learning Revisited
   (Objectives)</title>
   <sec id="core-concepts-10">
-    <title>13.1 Core Concepts</title>
+    <title>14.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Unsupervised Paradigm:</bold> In many engineering
@@ -1292,7 +1316,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="the-em-expectation-maximization-algorithm">
-    <title>13.2 The EM (Expectation-Maximization) Algorithm</title>
+    <title>14.2 The EM (Expectation-Maximization) Algorithm</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>General Framework:</bold> EM is a powerful iterative
@@ -1327,7 +1351,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="applications">
-    <title>13.3 Applications</title>
+    <title>14.3 Applications</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Image Segmentation:</bold> Clustering pixels in color
@@ -1348,9 +1372,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-12-summary-uncertainty-in-predictions">
-  <title>14 Week 12 Summary: Uncertainty in Predictions</title>
+  <title>15 Week 12 Summary: Uncertainty in Predictions</title>
   <sec id="core-concepts-11">
-    <title>14.1 Core Concepts</title>
+    <title>15.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Necessity of UQ:</bold> In engineering
@@ -1384,7 +1408,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="probabilistic-architectures">
-    <title>14.2 Probabilistic Architectures</title>
+    <title>15.2 Probabilistic Architectures</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Evidence Framework:</bold> A hierarchical Bayesian
@@ -1421,7 +1445,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="physics-and-trust">
-    <title>14.3 Physics and Trust</title>
+    <title>15.3 Physics and Trust</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Stochastic Enrichment:</bold> Probing model stability
@@ -1439,10 +1463,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-13-summary-physics-informed-constrained-learning">
-  <title>15 Week 13 Summary: Physics-Informed &amp; Constrained
+  <title>16 Week 13 Summary: Physics-Informed &amp; Constrained
   Learning</title>
   <sec id="core-concepts-12">
-    <title>15.1 Core Concepts</title>
+    <title>16.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>PINN Philosophy:</bold> Physics-Informed Machine
@@ -1466,7 +1490,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="mechanics-of-physics-integration">
-    <title>15.2 Mechanics of Physics Integration</title>
+    <title>16.2 Mechanics of Physics Integration</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Loss Function Modification:</bold> The objective
@@ -1492,7 +1516,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="scientific-trust-and-efficiency">
-    <title>15.3 Scientific Trust and Efficiency</title>
+    <title>16.3 Scientific Trust and Efficiency</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Occam’s Razor:</bold> Information theory provides a
@@ -1516,10 +1540,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-14-summary-explainability-limits-scientific-trust">
-  <title>16 Week 14 Summary: Explainability, Limits, Scientific
+  <title>17 Week 14 Summary: Explainability, Limits, Scientific
   Trust</title>
   <sec id="core-concepts-13">
-    <title>16.1 Core Concepts</title>
+    <title>17.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Trust Mandate:</bold> In scientific and industrial
@@ -1559,7 +1583,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="tools-for-model-interpretation">
-    <title>16.2 Tools for Model Interpretation</title>
+    <title>17.2 Tools for Model Interpretation</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Sensitivity Analysis:</bold> A method for probing
@@ -1585,7 +1609,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="reflection-on-model-limits">
-    <title>16.3 Reflection on Model Limits</title>
+    <title>17.3 Reflection on Model Limits</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Data Manifold:</bold> Models are only reliable
