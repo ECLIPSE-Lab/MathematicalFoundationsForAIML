@@ -183,6 +183,8 @@ Tangentially, we also recommend the following books:
 :::
 ## Week 1 Summary: Learning vs Data Analysis; Models, Loss Functions
 
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html)
+
 ### Core Concepts
 - **The Concept of a Model:** Models are simplified representations of reality designed for **prediction** and **explanation**. We distinguish between **First-Principle models** (bottom-up, based on physical laws) and **Data-based models** (top-down, extracted from observations).
 - **Interpretability Spectrum:**
@@ -202,6 +204,8 @@ Tangentially, we also recommend the following books:
 - **Generalization:** The central goal of ML—ensuring the model performs well on unseen **test data**, not just the training set.
 
 ## Week 2 Summary: Linear Algebra Refresher; Covariance, PCA/SVD
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html)
 
 ### Core Concepts
 - **Eigendecomposition:** The foundation of PCA. For a symmetric covariance matrix $, we can find an orthonormal basis of eigenvectors $ and corresponding eigenvalues $\lambda_i$ such that  = \lambda_i u_i$.

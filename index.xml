@@ -443,6 +443,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-1-summary-learning-vs-data-analysis-models-loss-functions">
   <title>4 Week 1 Summary: Learning vs Data Analysis; Models, Loss
   Functions</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html">Open</ext-link></p>
   <sec id="core-concepts">
     <title>4.1 Core Concepts</title>
     <list list-type="bullet">
@@ -531,6 +533,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-2-summary-linear-algebra-refresher-covariance-pcasvd">
   <title>5 Week 2 Summary: Linear Algebra Refresher; Covariance,
   PCA/SVD</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html">Open</ext-link></p>
   <sec id="core-concepts-1">
     <title>5.1 Core Concepts</title>
     <list list-type="bullet">
@@ -2078,6 +2082,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-1-summary-learning-vs-data-analysis-models-loss-functions-nb-article">
   <title>4 Week 1 Summary: Learning vs Data Analysis; Models, Loss
   Functions</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html">Open</ext-link></p>
   <sec id="core-concepts-nb-article">
     <title>4.1 Core Concepts</title>
     <list list-type="bullet">
@@ -2166,6 +2172,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-2-summary-linear-algebra-refresher-covariance-pcasvd-nb-article">
   <title>5 Week 2 Summary: Linear Algebra Refresher; Covariance,
   PCA/SVD</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html">Open</ext-link></p>
   <sec id="core-concepts-1-nb-article">
     <title>5.1 Core Concepts</title>
     <list list-type="bullet">
