@@ -97,7 +97,7 @@ jupyter: python3
     <div class="course-meta-item" style="grid-column: 1 / -1;"><div class="course-meta-label">Prerequisites</div><div class="course-meta-value">Linear algebra, calculus, and basic Python recommended</div></div>
   </div>
   <div class="course-actions">
-    <a href="https://www.studon.fau.de/" class="btn btn-primary">StudOn</a>
+    <a href="https://www.studon.fau.de/campo/course/541829" class="btn btn-primary">StudOn</a>
     <a href="https://github.com/ECLIPSE-Lab/MathematicalFoundationsForAIML" class="btn btn-outline-secondary">GitHub / Materials</a>
     <a href="https://pelzlab.science/teaching.html" class="btn btn-outline-secondary">All Teaching</a>
     <a href="https://www.mat.studium.fau.de/studiengaenge/neu-ki-materialtechnologie/" class="btn btn-outline-secondary">KI in Materialtechnologie</a>
@@ -113,33 +113,7 @@ jupyter: python3
 - Philipp Pelz
 - Stefan Hiemer
 
-## Mathematical Foundations of AI & ML – Unified Syllabus Overview (with ML-PC & MG)
-**Legend**
 
-- **★** First serious use — concept must be introduced in MFML *before* being used in ML-PC or MG  
-- **◎** Reinforcement / application — concept is applied or deepened, but not introduced  
-- **(R)** Refresher — topic was covered in a prior course and is only briefly revisited  
-- **MFML** Mathematical Foundations of AI & ML  
-- **ML-PC** Machine Learning in Materials Processing & Characterization  
-- **MG** Materials Genomics
-
-
-| Week | MFML – Mathematical Foundations (revised) | ML-PC – ML in Materials Processing & Characterization (revised) | MG – Materials Genomics (revised) | Exercise (90 min, Python-based) | Dependency Logic |
-|---|---|---|---|---|---|
-| 1 | Learning vs data analysis; models, loss functions, prediction vs explanation | Role of ML in processing & characterization; ML vs physics models | Role of ML in materials discovery; databases & targets | NumPy refresher; vectors, dot products, simple loss (MSE) | MFML defines “learning” as optimization, not statistics |
-| 2 | Linear algebra refresher for learning: covariance, PCA/SVD (R) | PCA as a tool for spectra & images (◎) | PCA & low-D structure in materials spaces (◎) | PCA refresher on known dataset; visualize variance directions | PCA assumed known; MFML aligns notation & geometry |
-| 3 | Regression as loss minimization; linear models revisited | Regression as surrogate modeling for processes & properties (★) | Regression & correlation in materials datasets (★) | Linear regression from scratch via loss minimization | Regression reframed explicitly as learning problem |
-| 4 | Neural networks early: neuron, activations, universal approximation | NN regression for materials properties (★) | NN models for structure–property relations (★) | Single-neuron + activation functions (manual forward pass) | MFML must precede any NN usage |
-| 5 | Backpropagation, gradients, training dynamics | NN training stability & convergence (★) | NN training pitfalls in materials data (◎) | Manual backprop for shallow NN | MFML supplies chain rule & gradient flow |
-| 6 | Loss landscapes, conditioning, optimization behavior | Hyperparameters, robustness, convergence issues (★) | Model robustness & sensitivity (◎) | Gradient descent experiments: learning rate & conditioning | Optimization treated as learning dynamics |
-| 7 | Generalization, bias–variance, regularization | Overfitting control in models (★) | Limits of high-D regression (★) | Overfitting demo: polynomial vs NN models | Critical conceptual gate for both applied courses |
-| 8 | Probabilistic view of learning: noise & likelihood | Noise-aware modeling & error propagation (◎) | Noise & uncertainty in materials datasets (★) | Noise injection; likelihood vs MSE comparison | MFML reframes probability for ML |
-| 9 | Representation learning: learned vs engineered features | Feature learning in signals & images (★) | Descriptor learning vs hand-crafted features (★) | Feature learning with simple NN | Transition from classical descriptors |
-| 10 | Latent spaces: autoencoders & embeddings | Compression & anomaly detection in processes (★) | Latent materials spaces & embeddings (★) | Autoencoder with framework (PyTorch/Keras) | Core week for Materials Genomics |
-| 11 | Unsupervised learning revisited (objectives, not algorithms) | Clustering & process drift detection (◎) | Clustering vs discovery in materials space (◎) | Compare clustering vs AE embeddings | Students reinterpret known clustering methods |
-| 12 | Uncertainty in predictions (aleatoric vs epistemic); Gaussian Processes (conceptual) | Trust & confidence in ML-assisted decisions; surrogate models (★) | Discovery & screening with uncertainty; exploration vs exploitation (★) | Predictive uncertainty: GP regression vs NN ensembles | Enables responsible ML & accelerator concepts |
-| 13 | Physics-informed & constrained learning | Physics-informed ML for processes & characterization (★) | Physical constraints in materials ML (◎) | Constrained NN / penalty-based PINN demo | MFML leads constraints & PINN concepts |
-| 14 | Explainability, limits, scientific trust | Integrated case studies & failure modes | Limits & ethics of data-driven discovery | Mini end-to-end synthesis project | All courses converge conceptually |
 
 
 
@@ -157,22 +131,22 @@ Tangentially, we also recommend the following books:
 - @bishop2006pattern,  Pattern Recognition and Machine Learning. Springer Science+ Business Media, LLC Berlin, Germany.
 
 
-| MFML Week | MFML Lecture Focus (Revised) | Neuer – Required Reading | Neuer – Optional / Skim | McClarren – Contextual / Optional | Bishop – Targeted Depth (Optional) |
+| MFML Week | MFML Lecture Focus (Revised) | Neuer ? Required Reading | Neuer ? Optional / Skim | McClarren ? Contextual / Optional | Bishop ? Targeted Depth (Optional) |
 |---|---|---|---|---|---|
-| 1 | Learning vs data analysis; models, loss functions | Ch. 1.1 Data-Based Modeling; 1.1.1 Concept of Model | 1.1.3 Criticism of Data-Based Modeling | Ch. 1 Introduction (ML in physical systems) | Ch. 1 §1.1–1.2 (what is a model, pattern recognition view) |
-| 2 | Linear algebra refresher; covariance, PCA/SVD (R) | Ch. 5.2 PCA (skim, notation & geometry only) | PCA implementation details | Ch. 5 Dimension Reduction (ROM intuition) | Ch. 12 §12.1–12.2 PCA derivation (selective) |
-| 3 | Regression as loss minimization | Ch. 4.2.2 Regression; Ch. 4.4.1 LMS theory | LMS algorithm variants | Ch. 4 Regression (physical meaning of regression) | Ch. 3 §3.1–3.3 Linear regression, least squares geometry |
-| 4 | Neural networks early: neuron & activations | Ch. 4.5.1 Neuron; 4.5.3 Activation Functions | Framework-specific NN sections | Ch. 8 Neural Networks (surrogate perspective) | Ch. 5 §5.1–5.2 Neural network basics |
-| 5 | Backpropagation & gradient flow | Ch. 4.5.4 Training of Neural Networks | Advanced NN variants | Ch. 7 Optimization (inverse-problem framing) | Ch. 5 §5.3 Backpropagation (conceptual) |
-| 6 | Loss landscapes & optimization behavior | Ch. 4.4.6 Hyperparameters; Ch. 4.5.5 Optimization | Detailed optimizer variants | Ch. 7 Optimization | Ch. 3 §3.4 Regularization; §3.5 Bayesian view (skim) |
-| 7 | Generalization, bias–variance, regularization | Ch. 4.5.9 Overfitting & Cross-Validation | — | Ch. 6 Model Selection & Validation | Ch. 3 §3.2 Bias–variance decomposition |
-| 8 | Probabilistic view of learning; noise | Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4 Uncertainty | Bayesian details | Ch. 3 Error and Uncertainty | Ch. 2 §2.1–2.3 Gaussian distributions & moments |
-| 9 | Representation learning; features vs learned reps | Ch. 5.5 Autoencoder (intro & motivation) | AE uncertainty extensions | Ch. 5 Dimension Reduction | Ch. 12 §12.3 Nonlinear PCA / latent variables |
-|10 | Latent spaces; embeddings | Ch. 5.5.1–5.5.3 Autoencoder & Latent Space | AE architectures | Ch. 5 Dimension Reduction | Ch. 12 §12.3–12.4 Latent variable intuition |
+| 1 | Learning vs data analysis; models, loss functions | Ch. 1.1 Data-Based Modeling; 1.1.1 Concept of Model | 1.1.3 Criticism of Data-Based Modeling | Ch. 1 Introduction (ML in physical systems) | Ch. 1 �1.1?1.2 (what is a model, pattern recognition view) |
+| 2 | Linear algebra refresher; covariance, PCA/SVD (R) | Ch. 5.2 PCA (skim, notation & geometry only) | PCA implementation details | Ch. 5 Dimension Reduction (ROM intuition) | Ch. 12 �12.1?12.2 PCA derivation (selective) |
+| 3 | Regression as loss minimization | Ch. 4.2.2 Regression; Ch. 4.4.1 LMS theory | LMS algorithm variants | Ch. 4 Regression (physical meaning of regression) | Ch. 3 �3.1?3.3 Linear regression, least squares geometry |
+| 4 | Neural networks early: neuron & activations | Ch. 4.5.1 Neuron; 4.5.3 Activation Functions | Framework-specific NN sections | Ch. 8 Neural Networks (surrogate perspective) | Ch. 5 �5.1?5.2 Neural network basics |
+| 5 | Backpropagation & gradient flow | Ch. 4.5.4 Training of Neural Networks | Advanced NN variants | Ch. 7 Optimization (inverse-problem framing) | Ch. 5 �5.3 Backpropagation (conceptual) |
+| 6 | Loss landscapes & optimization behavior | Ch. 4.4.6 Hyperparameters; Ch. 4.5.5 Optimization | Detailed optimizer variants | Ch. 7 Optimization | Ch. 3 �3.4 Regularization; �3.5 Bayesian view (skim) |
+| 7 | Generalization, bias?variance, regularization | Ch. 4.5.9 Overfitting & Cross-Validation | ? | Ch. 6 Model Selection & Validation | Ch. 3 �3.2 Bias?variance decomposition |
+| 8 | Probabilistic view of learning; noise | Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4 Uncertainty | Bayesian details | Ch. 3 Error and Uncertainty | Ch. 2 �2.1?2.3 Gaussian distributions & moments |
+| 9 | Representation learning; features vs learned reps | Ch. 5.5 Autoencoder (intro & motivation) | AE uncertainty extensions | Ch. 5 Dimension Reduction | Ch. 12 �12.3 Nonlinear PCA / latent variables |
+|10 | Latent spaces; embeddings | Ch. 5.5.1?5.5.3 Autoencoder & Latent Space | AE architectures | Ch. 5 Dimension Reduction | Ch. 12 �12.3?12.4 Latent variable intuition |
 |11 | Unsupervised learning revisited (objectives) | Ch. 5.3 K-Means (objective-based view) | t-SNE, advanced clustering | Ch. 9 Classification (decision boundaries) | Ch. 9 Mixture Models & EM (conceptual only) |
-|12 | Uncertainty in predictions | Ch. 6.4 Stochastic Methods for Uncertainty | Advanced stochastic methods | Ch. 3 Error and Uncertainty | Ch. 3 §3.5 Bayesian regularization (skim) |
-|13 | Physics-informed & constrained learning | Ch. 6.1–6.3 Physics-Informed Learning | Semantic technologies | Ch. 11 Physics-Informed & Hybrid Models | Ch. 1 §1.6 Model complexity & Occam’s razor |
-|14 | Explainability, limits, scientific trust | Ch. 7 Explainability (discussion & outlook) | — | Ch. 12 Limitations and Outlook | Ch. 1 §1.1–1.2 Reflection on model limits |
+|12 | Uncertainty in predictions | Ch. 6.4 Stochastic Methods for Uncertainty | Advanced stochastic methods | Ch. 3 Error and Uncertainty | Ch. 3 �3.5 Bayesian regularization (skim) |
+|13 | Physics-informed & constrained learning | Ch. 6.1?6.3 Physics-Informed Learning | Semantic technologies | Ch. 11 Physics-Informed & Hybrid Models | Ch. 1 �1.6 Model complexity & Occam?s razor |
+|14 | Explainability, limits, scientific trust | Ch. 7 Explainability (discussion & outlook) | ? | Ch. 12 Limitations and Outlook | Ch. 1 �1.1?1.2 Reflection on model limits |
 
 
 
@@ -201,7 +175,7 @@ Tangentially, we also recommend the following books:
 - **Mean Squared Error (MSE):** The standard loss for regression, providing a geometric interpretation of residuals.
 - **Parsimony and Occam's Razor:** The preference for simpler models. Overly complex models tend to fit noise in the training data, leading to **Overfitting**.
 - **Regularization:** A technique to control complexity by adding a penalty term (e.g., Ridge/Lasso) to the loss function, discouraging large parameter values and wild oscillations.
-- **Generalization:** The central goal of ML—ensuring the model performs well on unseen **test data**, not just the training set.
+- **Generalization:** The central goal of ML?ensuring the model performs well on unseen **test data**, not just the training set.
 
 ## Week 2 Summary: Linear Algebra Refresher; Covariance, PCA/SVD
 
@@ -277,7 +251,7 @@ abla_w J$.
 ## Week 6 Summary: Loss Landscapes & Optimization Behavior
 
 ### Core Concepts
-- **The Loss Landscape:** A high-dimensional geometric representation of the cost function $ over the parameter space $. Its topography—comprising peaks, valleys, saddle points, and plateaus—determines the ease and success of the training process.
+- **The Loss Landscape:** A high-dimensional geometric representation of the cost function $ over the parameter space $. Its topography?comprising peaks, valleys, saddle points, and plateaus?determines the ease and success of the training process.
 - **Curvature and the Hessian ($):** While the gradient indicates the direction of steepest descent, the **Hessian matrix** (the matrix of second-order derivatives) describes the *curvature* of the landscape. 
     - **Eigenvalues of $:** Large eigenvalues indicate steep directions where the gradient changes rapidly, while small eigenvalues correspond to shallow, flat directions.
     - **Conditioning:** Landscapes with widely varying curvature (ill-conditioned) cause standard gradient descent to oscillate wildly or crawl painfully slowly.
@@ -289,10 +263,10 @@ abla_w J$.
 - **ADAM (Adaptive Moment Estimation):** Currently the industry standard, combining the benefits of momentum and adaptive scales to provide robust performance across a wide range of architectures and hyperparameter settings.
 - **Flat vs. Sharp Minima:** Research suggests that "flat" minima (regions where the cost remains low over a wide range of parameters) correlate with better **Generalization** on unseen data, as they are less sensitive to small shifts in the data distribution.
 
-## Week 7 Summary: Generalization, Bias–Variance, Regularization
+## Week 7 Summary: Generalization, Bias?Variance, Regularization
 
 ### Core Concepts
-- **Generalization:** The fundamental objective of machine learning—ensuring that a model learned from a finite training set performs accurately on previously unseen data.
+- **Generalization:** The fundamental objective of machine learning?ensuring that a model learned from a finite training set performs accurately on previously unseen data.
 - **Overfitting vs. Underfitting:** 
     - **Overfitting:** Occurs when a model captures the random noise in the training data rather than the underlying pattern. This is characterized by low training error but high test error.
     - **Underfitting:** Occurs when a model is too simple to represent the data's complexity, resulting in high error on both training and test sets.
@@ -435,9 +409,37 @@ abla_w J$.
 
 ### Tools for Model Interpretation
 - **Sensitivity Analysis:** A method for probing black-box models by applying small disturbances to input variables and measuring the response. This allows researchers to identify which features (or frequency components) drive the model's output.
-- **Deductive Reasoning:** By combining sensitivity results with an ontology, we can perform deductive logic—for instance, tracing a detected oscillation back to a specific faulty component in a circuit.
+- **Deductive Reasoning:** By combining sensitivity results with an ontology, we can perform deductive logic?for instance, tracing a detected oscillation back to a specific faulty component in a circuit.
 - **Causality in Process Chains:** Distinguishing between **Detection** (identifying an error after it occurs) and **Prediction** (foreseeing an error early enough to prevent it). The value of an AI solution is directly proportional to how early it can intervene in the causal chain of production.
 
 ### Reflection on Model Limits
 - **The Data Manifold:** Models are only reliable within the region of the "data manifold" they were trained on. Extrapolating beyond these limits requires the integration of physical laws (PINNs) to maintain scientific validity.
 - **Inductive Bias:** Every model makes assumptions. Trust is built when these assumptions are explicitly aligned with established scientific principles rather than being purely data-driven.
+
+## Mathematical Foundations of AI & ML ? Unified Syllabus Overview (with ML-PC & MG)
+**Legend**
+
+- **?** First serious use ? concept must be introduced in MFML *before* being used in ML-PC or MG  
+- **?** Reinforcement / application ? concept is applied or deepened, but not introduced  
+- **(R)** Refresher ? topic was covered in a prior course and is only briefly revisited  
+- **MFML** Mathematical Foundations of AI & ML  
+- **ML-PC** Machine Learning in Materials Processing & Characterization  
+- **MG** Materials Genomics
+
+
+| Week | MFML ? Mathematical Foundations (revised) | ML-PC ? ML in Materials Processing & Characterization (revised) | MG ? Materials Genomics (revised) | Exercise (90 min, Python-based) | Dependency Logic |
+|---|---|---|---|---|---|
+| 1 | Learning vs data analysis; models, loss functions, prediction vs explanation | Role of ML in processing & characterization; ML vs physics models | Role of ML in materials discovery; databases & targets | NumPy refresher; vectors, dot products, simple loss (MSE) | MFML defines ?learning? as optimization, not statistics |
+| 2 | Linear algebra refresher for learning: covariance, PCA/SVD (R) | PCA as a tool for spectra & images (?) | PCA & low-D structure in materials spaces (?) | PCA refresher on known dataset; visualize variance directions | PCA assumed known; MFML aligns notation & geometry |
+| 3 | Regression as loss minimization; linear models revisited | Regression as surrogate modeling for processes & properties (?) | Regression & correlation in materials datasets (?) | Linear regression from scratch via loss minimization | Regression reframed explicitly as learning problem |
+| 4 | Neural networks early: neuron, activations, universal approximation | NN regression for materials properties (?) | NN models for structure?property relations (?) | Single-neuron + activation functions (manual forward pass) | MFML must precede any NN usage |
+| 5 | Backpropagation, gradients, training dynamics | NN training stability & convergence (?) | NN training pitfalls in materials data (?) | Manual backprop for shallow NN | MFML supplies chain rule & gradient flow |
+| 6 | Loss landscapes, conditioning, optimization behavior | Hyperparameters, robustness, convergence issues (?) | Model robustness & sensitivity (?) | Gradient descent experiments: learning rate & conditioning | Optimization treated as learning dynamics |
+| 7 | Generalization, bias?variance, regularization | Overfitting control in models (?) | Limits of high-D regression (?) | Overfitting demo: polynomial vs NN models | Critical conceptual gate for both applied courses |
+| 8 | Probabilistic view of learning: noise & likelihood | Noise-aware modeling & error propagation (?) | Noise & uncertainty in materials datasets (?) | Noise injection; likelihood vs MSE comparison | MFML reframes probability for ML |
+| 9 | Representation learning: learned vs engineered features | Feature learning in signals & images (?) | Descriptor learning vs hand-crafted features (?) | Feature learning with simple NN | Transition from classical descriptors |
+| 10 | Latent spaces: autoencoders & embeddings | Compression & anomaly detection in processes (?) | Latent materials spaces & embeddings (?) | Autoencoder with framework (PyTorch/Keras) | Core week for Materials Genomics |
+| 11 | Unsupervised learning revisited (objectives, not algorithms) | Clustering & process drift detection (?) | Clustering vs discovery in materials space (?) | Compare clustering vs AE embeddings | Students reinterpret known clustering methods |
+| 12 | Uncertainty in predictions (aleatoric vs epistemic); Gaussian Processes (conceptual) | Trust & confidence in ML-assisted decisions; surrogate models (?) | Discovery & screening with uncertainty; exploration vs exploitation (?) | Predictive uncertainty: GP regression vs NN ensembles | Enables responsible ML & accelerator concepts |
+| 13 | Physics-informed & constrained learning | Physics-informed ML for processes & characterization (?) | Physical constraints in materials ML (?) | Constrained NN / penalty-based PINN demo | MFML leads constraints & PINN concepts |
+| 14 | Explainability, limits, scientific trust | Integrated case studies & failure modes | Limits & ethics of data-driven discovery | Mini end-to-end synthesis project | All courses converge conceptually |

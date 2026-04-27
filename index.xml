@@ -73,200 +73,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg">
-  <title>2 Mathematical Foundations of AI &amp; ML – Unified Syllabus
-  Overview (with ML-PC &amp; MG)</title>
-  <p><bold>Legend</bold></p>
-  <list list-type="bullet">
-    <list-item>
-      <p><bold>★</bold> First serious use — concept must be introduced
-      in MFML <italic>before</italic> being used in ML-PC or MG
-      </p>
-    </list-item>
-    <list-item>
-      <p><bold>◎</bold> Reinforcement / application — concept is applied
-      or deepened, but not introduced
-      </p>
-    </list-item>
-    <list-item>
-      <p><bold>(R)</bold> Refresher — topic was covered in a prior
-      course and is only briefly revisited
-      </p>
-    </list-item>
-    <list-item>
-      <p><bold>MFML</bold> Mathematical Foundations of AI &amp; ML
-      </p>
-    </list-item>
-    <list-item>
-      <p><bold>ML-PC</bold> Machine Learning in Materials Processing
-      &amp; Characterization
-      </p>
-    </list-item>
-    <list-item>
-      <p><bold>MG</bold> Materials Genomics</p>
-    </list-item>
-  </list>
-  <table-wrap>
-    <table>
-      <colgroup>
-        <col width="17%" />
-        <col width="17%" />
-        <col width="17%" />
-        <col width="17%" />
-        <col width="17%" />
-        <col width="17%" />
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Week</th>
-          <th>MFML – Mathematical Foundations (revised)</th>
-          <th>ML-PC – ML in Materials Processing &amp; Characterization
-          (revised)</th>
-          <th>MG – Materials Genomics (revised)</th>
-          <th>Exercise (90 min, Python-based)</th>
-          <th>Dependency Logic</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Learning vs data analysis; models, loss functions,
-          prediction vs explanation</td>
-          <td>Role of ML in processing &amp; characterization; ML vs
-          physics models</td>
-          <td>Role of ML in materials discovery; databases &amp;
-          targets</td>
-          <td>NumPy refresher; vectors, dot products, simple loss
-          (MSE)</td>
-          <td>MFML defines “learning” as optimization, not
-          statistics</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Linear algebra refresher for learning: covariance, PCA/SVD
-          (R)</td>
-          <td>PCA as a tool for spectra &amp; images (◎)</td>
-          <td>PCA &amp; low-D structure in materials spaces (◎)</td>
-          <td>PCA refresher on known dataset; visualize variance
-          directions</td>
-          <td>PCA assumed known; MFML aligns notation &amp;
-          geometry</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Regression as loss minimization; linear models
-          revisited</td>
-          <td>Regression as surrogate modeling for processes &amp;
-          properties (★)</td>
-          <td>Regression &amp; correlation in materials datasets
-          (★)</td>
-          <td>Linear regression from scratch via loss minimization</td>
-          <td>Regression reframed explicitly as learning problem</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Neural networks early: neuron, activations, universal
-          approximation</td>
-          <td>NN regression for materials properties (★)</td>
-          <td>NN models for structure–property relations (★)</td>
-          <td>Single-neuron + activation functions (manual forward
-          pass)</td>
-          <td>MFML must precede any NN usage</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Backpropagation, gradients, training dynamics</td>
-          <td>NN training stability &amp; convergence (★)</td>
-          <td>NN training pitfalls in materials data (◎)</td>
-          <td>Manual backprop for shallow NN</td>
-          <td>MFML supplies chain rule &amp; gradient flow</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Loss landscapes, conditioning, optimization behavior</td>
-          <td>Hyperparameters, robustness, convergence issues (★)</td>
-          <td>Model robustness &amp; sensitivity (◎)</td>
-          <td>Gradient descent experiments: learning rate &amp;
-          conditioning</td>
-          <td>Optimization treated as learning dynamics</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Generalization, bias–variance, regularization</td>
-          <td>Overfitting control in models (★)</td>
-          <td>Limits of high-D regression (★)</td>
-          <td>Overfitting demo: polynomial vs NN models</td>
-          <td>Critical conceptual gate for both applied courses</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Probabilistic view of learning: noise &amp;
-          likelihood</td>
-          <td>Noise-aware modeling &amp; error propagation (◎)</td>
-          <td>Noise &amp; uncertainty in materials datasets (★)</td>
-          <td>Noise injection; likelihood vs MSE comparison</td>
-          <td>MFML reframes probability for ML</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Representation learning: learned vs engineered
-          features</td>
-          <td>Feature learning in signals &amp; images (★)</td>
-          <td>Descriptor learning vs hand-crafted features (★)</td>
-          <td>Feature learning with simple NN</td>
-          <td>Transition from classical descriptors</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>Latent spaces: autoencoders &amp; embeddings</td>
-          <td>Compression &amp; anomaly detection in processes (★)</td>
-          <td>Latent materials spaces &amp; embeddings (★)</td>
-          <td>Autoencoder with framework (PyTorch/Keras)</td>
-          <td>Core week for Materials Genomics</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Unsupervised learning revisited (objectives, not
-          algorithms)</td>
-          <td>Clustering &amp; process drift detection (◎)</td>
-          <td>Clustering vs discovery in materials space (◎)</td>
-          <td>Compare clustering vs AE embeddings</td>
-          <td>Students reinterpret known clustering methods</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>Uncertainty in predictions (aleatoric vs epistemic);
-          Gaussian Processes (conceptual)</td>
-          <td>Trust &amp; confidence in ML-assisted decisions; surrogate
-          models (★)</td>
-          <td>Discovery &amp; screening with uncertainty; exploration vs
-          exploitation (★)</td>
-          <td>Predictive uncertainty: GP regression vs NN ensembles</td>
-          <td>Enables responsible ML &amp; accelerator concepts</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>Physics-informed &amp; constrained learning</td>
-          <td>Physics-informed ML for processes &amp; characterization
-          (★)</td>
-          <td>Physical constraints in materials ML (◎)</td>
-          <td>Constrained NN / penalty-based PINN demo</td>
-          <td>MFML leads constraints &amp; PINN concepts</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>Explainability, limits, scientific trust</td>
-          <td>Integrated case studies &amp; failure modes</td>
-          <td>Limits &amp; ethics of data-driven discovery</td>
-          <td>Mini end-to-end synthesis project</td>
-          <td>All courses converge conceptually</td>
-        </tr>
-      </tbody>
-    </table>
-  </table-wrap>
-</sec>
 <sec id="recommended-readings">
-  <title>3 Recommended readings</title>
+  <title>2 Recommended readings</title>
   <p>We base much of the lecture on the following books:</p>
   <list list-type="bullet">
     <list-item>
@@ -311,10 +119,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         <tr>
           <th>MFML Week</th>
           <th>MFML Lecture Focus (Revised)</th>
-          <th>Neuer – Required Reading</th>
-          <th>Neuer – Optional / Skim</th>
-          <th>McClarren – Contextual / Optional</th>
-          <th>Bishop – Targeted Depth (Optional)</th>
+          <th>Neuer ? Required Reading</th>
+          <th>Neuer ? Optional / Skim</th>
+          <th>McClarren ? Contextual / Optional</th>
+          <th>Bishop ? Targeted Depth (Optional)</th>
         </tr>
       </thead>
       <tbody>
@@ -324,7 +132,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 1.1 Data-Based Modeling; 1.1.1 Concept of Model</td>
           <td>1.1.3 Criticism of Data-Based Modeling</td>
           <td>Ch. 1 Introduction (ML in physical systems)</td>
-          <td>Ch. 1 §1.1–1.2 (what is a model, pattern recognition
+          <td>Ch. 1 �1.1?1.2 (what is a model, pattern recognition
           view)</td>
         </tr>
         <tr>
@@ -333,7 +141,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 5.2 PCA (skim, notation &amp; geometry only)</td>
           <td>PCA implementation details</td>
           <td>Ch. 5 Dimension Reduction (ROM intuition)</td>
-          <td>Ch. 12 §12.1–12.2 PCA derivation (selective)</td>
+          <td>Ch. 12 �12.1?12.2 PCA derivation (selective)</td>
         </tr>
         <tr>
           <td>3</td>
@@ -341,7 +149,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 4.2.2 Regression; Ch. 4.4.1 LMS theory</td>
           <td>LMS algorithm variants</td>
           <td>Ch. 4 Regression (physical meaning of regression)</td>
-          <td>Ch. 3 §3.1–3.3 Linear regression, least squares
+          <td>Ch. 3 �3.1?3.3 Linear regression, least squares
           geometry</td>
         </tr>
         <tr>
@@ -350,7 +158,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 4.5.1 Neuron; 4.5.3 Activation Functions</td>
           <td>Framework-specific NN sections</td>
           <td>Ch. 8 Neural Networks (surrogate perspective)</td>
-          <td>Ch. 5 §5.1–5.2 Neural network basics</td>
+          <td>Ch. 5 �5.1?5.2 Neural network basics</td>
         </tr>
         <tr>
           <td>5</td>
@@ -358,7 +166,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 4.5.4 Training of Neural Networks</td>
           <td>Advanced NN variants</td>
           <td>Ch. 7 Optimization (inverse-problem framing)</td>
-          <td>Ch. 5 §5.3 Backpropagation (conceptual)</td>
+          <td>Ch. 5 �5.3 Backpropagation (conceptual)</td>
         </tr>
         <tr>
           <td>6</td>
@@ -366,15 +174,15 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 4.4.6 Hyperparameters; Ch. 4.5.5 Optimization</td>
           <td>Detailed optimizer variants</td>
           <td>Ch. 7 Optimization</td>
-          <td>Ch. 3 §3.4 Regularization; §3.5 Bayesian view (skim)</td>
+          <td>Ch. 3 �3.4 Regularization; �3.5 Bayesian view (skim)</td>
         </tr>
         <tr>
           <td>7</td>
-          <td>Generalization, bias–variance, regularization</td>
+          <td>Generalization, bias?variance, regularization</td>
           <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
-          <td>—</td>
+          <td>?</td>
           <td>Ch. 6 Model Selection &amp; Validation</td>
-          <td>Ch. 3 §3.2 Bias–variance decomposition</td>
+          <td>Ch. 3 �3.2 Bias?variance decomposition</td>
         </tr>
         <tr>
           <td>8</td>
@@ -383,7 +191,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           Uncertainty</td>
           <td>Bayesian details</td>
           <td>Ch. 3 Error and Uncertainty</td>
-          <td>Ch. 2 §2.1–2.3 Gaussian distributions &amp; moments</td>
+          <td>Ch. 2 �2.1?2.3 Gaussian distributions &amp; moments</td>
         </tr>
         <tr>
           <td>9</td>
@@ -391,15 +199,15 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 5.5 Autoencoder (intro &amp; motivation)</td>
           <td>AE uncertainty extensions</td>
           <td>Ch. 5 Dimension Reduction</td>
-          <td>Ch. 12 §12.3 Nonlinear PCA / latent variables</td>
+          <td>Ch. 12 �12.3 Nonlinear PCA / latent variables</td>
         </tr>
         <tr>
           <td>10</td>
           <td>Latent spaces; embeddings</td>
-          <td>Ch. 5.5.1–5.5.3 Autoencoder &amp; Latent Space</td>
+          <td>Ch. 5.5.1?5.5.3 Autoencoder &amp; Latent Space</td>
           <td>AE architectures</td>
           <td>Ch. 5 Dimension Reduction</td>
-          <td>Ch. 12 §12.3–12.4 Latent variable intuition</td>
+          <td>Ch. 12 �12.3?12.4 Latent variable intuition</td>
         </tr>
         <tr>
           <td>11</td>
@@ -415,23 +223,23 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 6.4 Stochastic Methods for Uncertainty</td>
           <td>Advanced stochastic methods</td>
           <td>Ch. 3 Error and Uncertainty</td>
-          <td>Ch. 3 §3.5 Bayesian regularization (skim)</td>
+          <td>Ch. 3 �3.5 Bayesian regularization (skim)</td>
         </tr>
         <tr>
           <td>13</td>
           <td>Physics-informed &amp; constrained learning</td>
-          <td>Ch. 6.1–6.3 Physics-Informed Learning</td>
+          <td>Ch. 6.1?6.3 Physics-Informed Learning</td>
           <td>Semantic technologies</td>
           <td>Ch. 11 Physics-Informed &amp; Hybrid Models</td>
-          <td>Ch. 1 §1.6 Model complexity &amp; Occam’s razor</td>
+          <td>Ch. 1 �1.6 Model complexity &amp; Occam?s razor</td>
         </tr>
         <tr>
           <td>14</td>
           <td>Explainability, limits, scientific trust</td>
           <td>Ch. 7 Explainability (discussion &amp; outlook)</td>
-          <td>—</td>
+          <td>?</td>
           <td>Ch. 12 Limitations and Outlook</td>
-          <td>Ch. 1 §1.1–1.2 Reflection on model limits</td>
+          <td>Ch. 1 �1.1?1.2 Reflection on model limits</td>
         </tr>
       </tbody>
     </table>
@@ -441,12 +249,12 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   <title>References</title>
 </sec>
 <sec id="week-1-summary-learning-vs-data-analysis-models-loss-functions">
-  <title>4 Week 1 Summary: Learning vs Data Analysis; Models, Loss
+  <title>3 Week 1 Summary: Learning vs Data Analysis; Models, Loss
   Functions</title>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html">Open</ext-link></p>
   <sec id="core-concepts">
-    <title>4.1 Core Concepts</title>
+    <title>3.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Concept of a Model:</bold> Models are simplified
@@ -498,7 +306,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="loss-functions-and-optimization">
-    <title>4.2 Loss Functions and Optimization</title>
+    <title>3.2 Loss Functions and Optimization</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Learning as Optimization:</bold> Machine learning is
@@ -523,7 +331,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         oscillations.</p>
       </list-item>
       <list-item>
-        <p><bold>Generalization:</bold> The central goal of ML—ensuring
+        <p><bold>Generalization:</bold> The central goal of ML?ensuring
         the model performs well on unseen <bold>test data</bold>, not
         just the training set.</p>
       </list-item>
@@ -531,12 +339,12 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-2-summary-linear-algebra-refresher-covariance-pcasvd">
-  <title>5 Week 2 Summary: Linear Algebra Refresher; Covariance,
+  <title>4 Week 2 Summary: Linear Algebra Refresher; Covariance,
   PCA/SVD</title>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html">Open</ext-link></p>
   <sec id="core-concepts-1">
-    <title>5.1 Core Concepts</title>
+    <title>4.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Eigendecomposition:</bold> The foundation of PCA. For a
@@ -563,7 +371,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="pca-theory-and-application">
-    <title>5.2 PCA Theory and Application</title>
+    <title>4.2 PCA Theory and Application</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Maximizing Variance:</bold> PCA is derived as a
@@ -616,9 +424,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-3-summary-regression-as-loss-minimization">
-  <title>6 Week 3 Summary: Regression as Loss Minimization</title>
+  <title>5 Week 3 Summary: Regression as Loss Minimization</title>
   <sec id="core-concepts-2">
-    <title>6.1 Core Concepts</title>
+    <title>5.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Supervised Learning Framework:</bold> Mapping
@@ -658,7 +466,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="expanding-linear-models">
-    <title>6.2 Expanding Linear Models</title>
+    <title>5.2 Expanding Linear Models</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Linearity Principle:</bold> A model is “linear” if
@@ -694,10 +502,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-4-summary-neural-networks-early-neuron-activations">
-  <title>7 Week 4 Summary: Neural Networks Early: Neuron &amp;
+  <title>6 Week 4 Summary: Neural Networks Early: Neuron &amp;
   Activations</title>
   <sec id="core-concepts-3">
-    <title>7.1 Core Concepts</title>
+    <title>6.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Artificial Neuron:</bold> A fundamental processing
@@ -722,7 +530,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="activation-function-taxonomy">
-    <title>7.2 Activation Function Taxonomy</title>
+    <title>6.2 Activation Function Taxonomy</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Sigmoid &amp; Tanh:</bold> Historical standards that
@@ -749,7 +557,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="structural-properties">
-    <title>7.3 Structural Properties</title>
+    <title>6.3 Structural Properties</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Universal Approximation Theorem:</bold> A powerful
@@ -772,9 +580,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-5-summary-backpropagation-gradient-flow">
-  <title>8 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
+  <title>7 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
   <sec id="core-concepts-4">
-    <title>8.1 Core Concepts</title>
+    <title>7.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Learning as Optimization:</bold> The training of a
@@ -812,7 +620,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="gradient-flow-and-stability">
-    <title>8.2 Gradient Flow and Stability</title>
+    <title>7.2 Gradient Flow and Stability</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Vanishing Gradients:</bold> In deep networks, gradients
@@ -846,16 +654,16 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-6-summary-loss-landscapes-optimization-behavior">
-  <title>9 Week 6 Summary: Loss Landscapes &amp; Optimization
+  <title>8 Week 6 Summary: Loss Landscapes &amp; Optimization
   Behavior</title>
   <sec id="core-concepts-5">
-    <title>9.1 Core Concepts</title>
+    <title>8.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Loss Landscape:</bold> A high-dimensional geometric
         representation of the cost function $ over the parameter space
-        $. Its topography—comprising peaks, valleys, saddle points, and
-        plateaus—determines the ease and success of the training
+        $. Its topography?comprising peaks, valleys, saddle points, and
+        plateaus?determines the ease and success of the training
         process.</p>
       </list-item>
       <list-item>
@@ -887,7 +695,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="advanced-optimization-strategies">
-    <title>9.2 Advanced Optimization Strategies</title>
+    <title>8.2 Advanced Optimization Strategies</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Momentum:</bold> Inspired by physics, this technique
@@ -920,14 +728,14 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-7-summary-generalization-biasvariance-regularization">
-  <title>10 Week 7 Summary: Generalization, Bias–Variance,
+  <title>9 Week 7 Summary: Generalization, Bias?Variance,
   Regularization</title>
   <sec id="core-concepts-6">
-    <title>10.1 Core Concepts</title>
+    <title>9.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Generalization:</bold> The fundamental objective of
-        machine learning—ensuring that a model learned from a finite
+        machine learning?ensuring that a model learned from a finite
         training set performs accurately on previously unseen data.</p>
       </list-item>
       <list-item>
@@ -974,7 +782,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="regularization-and-validation">
-    <title>10.2 Regularization and Validation</title>
+    <title>9.2 Regularization and Validation</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Regularization:</bold> A technique to prevent
@@ -1020,10 +828,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-8-summary-probabilistic-view-of-learning-noise">
-  <title>11 Week 8 Summary: Probabilistic View of Learning;
+  <title>10 Week 8 Summary: Probabilistic View of Learning;
   Noise</title>
   <sec id="core-concepts-7">
-    <title>11.1 Core Concepts</title>
+    <title>10.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Probability as Modeling Tool:</bold> Probability theory
@@ -1058,7 +866,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="inference-and-uncertainty-quantification">
-    <title>11.2 Inference and Uncertainty Quantification</title>
+    <title>10.2 Inference and Uncertainty Quantification</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Frequentist vs. Bayesian Views:</bold></p>
@@ -1111,10 +919,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-9-summary-representation-learning-features-vs.-learned-representations">
-  <title>12 Week 9 Summary: Representation Learning; Features
+  <title>11 Week 9 Summary: Representation Learning; Features
   vs. Learned Representations</title>
   <sec id="core-concepts-8">
-    <title>12.1 Core Concepts</title>
+    <title>11.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Beyond Handcrafting:</bold> Traditional machine
@@ -1143,7 +951,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="architectures-and-latent-spaces">
-    <title>12.2 Architectures and Latent Spaces</title>
+    <title>11.2 Architectures and Latent Spaces</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Encoder and Decoder:</bold></p>
@@ -1180,7 +988,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="industrial-and-engineering-applications">
-    <title>12.3 Industrial and Engineering Applications</title>
+    <title>11.3 Industrial and Engineering Applications</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Data Compression:</bold> Storing high-fidelity
@@ -1203,9 +1011,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-10-summary-latent-spaces-embeddings">
-  <title>13 Week 10 Summary: Latent Spaces; Embeddings</title>
+  <title>12 Week 10 Summary: Latent Spaces; Embeddings</title>
   <sec id="core-concepts-9">
-    <title>13.1 Core Concepts</title>
+    <title>12.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Latent Space Definition:</bold> A low-dimensional,
@@ -1230,7 +1038,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="dimensionality-reduction-and-visualization">
-    <title>13.2 Dimensionality Reduction and Visualization</title>
+    <title>12.2 Dimensionality Reduction and Visualization</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>t-SNE (t-Distributed Stochastic Neighbor
@@ -1262,7 +1070,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="analysis-and-trust">
-    <title>13.3 Analysis and Trust</title>
+    <title>12.3 Analysis and Trust</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Interpretability:</bold> Latent neurons can often be
@@ -1285,10 +1093,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-11-summary-unsupervised-learning-revisited-objectives">
-  <title>14 Week 11 Summary: Unsupervised Learning Revisited
+  <title>13 Week 11 Summary: Unsupervised Learning Revisited
   (Objectives)</title>
   <sec id="core-concepts-10">
-    <title>14.1 Core Concepts</title>
+    <title>13.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Unsupervised Paradigm:</bold> In many engineering
@@ -1315,7 +1123,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="the-em-expectation-maximization-algorithm">
-    <title>14.2 The EM (Expectation-Maximization) Algorithm</title>
+    <title>13.2 The EM (Expectation-Maximization) Algorithm</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>General Framework:</bold> EM is a powerful iterative
@@ -1350,7 +1158,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="applications">
-    <title>14.3 Applications</title>
+    <title>13.3 Applications</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Image Segmentation:</bold> Clustering pixels in color
@@ -1371,9 +1179,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-12-summary-uncertainty-in-predictions">
-  <title>15 Week 12 Summary: Uncertainty in Predictions</title>
+  <title>14 Week 12 Summary: Uncertainty in Predictions</title>
   <sec id="core-concepts-11">
-    <title>15.1 Core Concepts</title>
+    <title>14.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Necessity of UQ:</bold> In engineering
@@ -1407,7 +1215,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="probabilistic-architectures">
-    <title>15.2 Probabilistic Architectures</title>
+    <title>14.2 Probabilistic Architectures</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Evidence Framework:</bold> A hierarchical Bayesian
@@ -1444,7 +1252,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="physics-and-trust">
-    <title>15.3 Physics and Trust</title>
+    <title>14.3 Physics and Trust</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Stochastic Enrichment:</bold> Probing model stability
@@ -1462,10 +1270,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-13-summary-physics-informed-constrained-learning">
-  <title>16 Week 13 Summary: Physics-Informed &amp; Constrained
+  <title>15 Week 13 Summary: Physics-Informed &amp; Constrained
   Learning</title>
   <sec id="core-concepts-12">
-    <title>16.1 Core Concepts</title>
+    <title>15.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>PINN Philosophy:</bold> Physics-Informed Machine
@@ -1489,7 +1297,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="mechanics-of-physics-integration">
-    <title>16.2 Mechanics of Physics Integration</title>
+    <title>15.2 Mechanics of Physics Integration</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Loss Function Modification:</bold> The objective
@@ -1515,7 +1323,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="scientific-trust-and-efficiency">
-    <title>16.3 Scientific Trust and Efficiency</title>
+    <title>15.3 Scientific Trust and Efficiency</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Occam’s Razor:</bold> Information theory provides a
@@ -1539,10 +1347,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-14-summary-explainability-limits-scientific-trust">
-  <title>17 Week 14 Summary: Explainability, Limits, Scientific
+  <title>16 Week 14 Summary: Explainability, Limits, Scientific
   Trust</title>
   <sec id="core-concepts-13">
-    <title>17.1 Core Concepts</title>
+    <title>16.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Trust Mandate:</bold> In scientific and industrial
@@ -1582,7 +1390,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="tools-for-model-interpretation">
-    <title>17.2 Tools for Model Interpretation</title>
+    <title>16.2 Tools for Model Interpretation</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Sensitivity Analysis:</bold> A method for probing
@@ -1593,7 +1401,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       </list-item>
       <list-item>
         <p><bold>Deductive Reasoning:</bold> By combining sensitivity
-        results with an ontology, we can perform deductive logic—for
+        results with an ontology, we can perform deductive logic?for
         instance, tracing a detected oscillation back to a specific
         faulty component in a circuit.</p>
       </list-item>
@@ -1608,7 +1416,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="reflection-on-model-limits">
-    <title>17.3 Reflection on Model Limits</title>
+    <title>16.3 Reflection on Model Limits</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Data Manifold:</bold> Models are only reliable
@@ -1624,6 +1432,198 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       </list-item>
     </list>
   </sec>
+</sec>
+<sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg">
+  <title>17 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
+  Overview (with ML-PC &amp; MG)</title>
+  <p><bold>Legend</bold></p>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>?</bold> First serious use ? concept must be introduced
+      in MFML <italic>before</italic> being used in ML-PC or MG
+      </p>
+    </list-item>
+    <list-item>
+      <p><bold>?</bold> Reinforcement / application ? concept is applied
+      or deepened, but not introduced
+      </p>
+    </list-item>
+    <list-item>
+      <p><bold>(R)</bold> Refresher ? topic was covered in a prior
+      course and is only briefly revisited
+      </p>
+    </list-item>
+    <list-item>
+      <p><bold>MFML</bold> Mathematical Foundations of AI &amp; ML
+      </p>
+    </list-item>
+    <list-item>
+      <p><bold>ML-PC</bold> Machine Learning in Materials Processing
+      &amp; Characterization
+      </p>
+    </list-item>
+    <list-item>
+      <p><bold>MG</bold> Materials Genomics</p>
+    </list-item>
+  </list>
+  <table-wrap>
+    <table>
+      <colgroup>
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>MFML ? Mathematical Foundations (revised)</th>
+          <th>ML-PC ? ML in Materials Processing &amp; Characterization
+          (revised)</th>
+          <th>MG ? Materials Genomics (revised)</th>
+          <th>Exercise (90 min, Python-based)</th>
+          <th>Dependency Logic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Learning vs data analysis; models, loss functions,
+          prediction vs explanation</td>
+          <td>Role of ML in processing &amp; characterization; ML vs
+          physics models</td>
+          <td>Role of ML in materials discovery; databases &amp;
+          targets</td>
+          <td>NumPy refresher; vectors, dot products, simple loss
+          (MSE)</td>
+          <td>MFML defines ?learning? as optimization, not
+          statistics</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Linear algebra refresher for learning: covariance, PCA/SVD
+          (R)</td>
+          <td>PCA as a tool for spectra &amp; images (?)</td>
+          <td>PCA &amp; low-D structure in materials spaces (?)</td>
+          <td>PCA refresher on known dataset; visualize variance
+          directions</td>
+          <td>PCA assumed known; MFML aligns notation &amp;
+          geometry</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Regression as loss minimization; linear models
+          revisited</td>
+          <td>Regression as surrogate modeling for processes &amp;
+          properties (?)</td>
+          <td>Regression &amp; correlation in materials datasets
+          (?)</td>
+          <td>Linear regression from scratch via loss minimization</td>
+          <td>Regression reframed explicitly as learning problem</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Neural networks early: neuron, activations, universal
+          approximation</td>
+          <td>NN regression for materials properties (?)</td>
+          <td>NN models for structure?property relations (?)</td>
+          <td>Single-neuron + activation functions (manual forward
+          pass)</td>
+          <td>MFML must precede any NN usage</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Backpropagation, gradients, training dynamics</td>
+          <td>NN training stability &amp; convergence (?)</td>
+          <td>NN training pitfalls in materials data (?)</td>
+          <td>Manual backprop for shallow NN</td>
+          <td>MFML supplies chain rule &amp; gradient flow</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Loss landscapes, conditioning, optimization behavior</td>
+          <td>Hyperparameters, robustness, convergence issues (?)</td>
+          <td>Model robustness &amp; sensitivity (?)</td>
+          <td>Gradient descent experiments: learning rate &amp;
+          conditioning</td>
+          <td>Optimization treated as learning dynamics</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Generalization, bias?variance, regularization</td>
+          <td>Overfitting control in models (?)</td>
+          <td>Limits of high-D regression (?)</td>
+          <td>Overfitting demo: polynomial vs NN models</td>
+          <td>Critical conceptual gate for both applied courses</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Probabilistic view of learning: noise &amp;
+          likelihood</td>
+          <td>Noise-aware modeling &amp; error propagation (?)</td>
+          <td>Noise &amp; uncertainty in materials datasets (?)</td>
+          <td>Noise injection; likelihood vs MSE comparison</td>
+          <td>MFML reframes probability for ML</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Representation learning: learned vs engineered
+          features</td>
+          <td>Feature learning in signals &amp; images (?)</td>
+          <td>Descriptor learning vs hand-crafted features (?)</td>
+          <td>Feature learning with simple NN</td>
+          <td>Transition from classical descriptors</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Latent spaces: autoencoders &amp; embeddings</td>
+          <td>Compression &amp; anomaly detection in processes (?)</td>
+          <td>Latent materials spaces &amp; embeddings (?)</td>
+          <td>Autoencoder with framework (PyTorch/Keras)</td>
+          <td>Core week for Materials Genomics</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Unsupervised learning revisited (objectives, not
+          algorithms)</td>
+          <td>Clustering &amp; process drift detection (?)</td>
+          <td>Clustering vs discovery in materials space (?)</td>
+          <td>Compare clustering vs AE embeddings</td>
+          <td>Students reinterpret known clustering methods</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Uncertainty in predictions (aleatoric vs epistemic);
+          Gaussian Processes (conceptual)</td>
+          <td>Trust &amp; confidence in ML-assisted decisions; surrogate
+          models (?)</td>
+          <td>Discovery &amp; screening with uncertainty; exploration vs
+          exploitation (?)</td>
+          <td>Predictive uncertainty: GP regression vs NN ensembles</td>
+          <td>Enables responsible ML &amp; accelerator concepts</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Physics-informed &amp; constrained learning</td>
+          <td>Physics-informed ML for processes &amp; characterization
+          (?)</td>
+          <td>Physical constraints in materials ML (?)</td>
+          <td>Constrained NN / penalty-based PINN demo</td>
+          <td>MFML leads constraints &amp; PINN concepts</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Explainability, limits, scientific trust</td>
+          <td>Integrated case studies &amp; failure modes</td>
+          <td>Limits &amp; ethics of data-driven discovery</td>
+          <td>Mini end-to-end synthesis project</td>
+          <td>All courses converge conceptually</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
 </sec>
 </body>
 
@@ -1712,200 +1712,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg-nb-article">
-  <title>2 Mathematical Foundations of AI &amp; ML – Unified Syllabus
-  Overview (with ML-PC &amp; MG)</title>
-  <p><bold>Legend</bold></p>
-  <list list-type="bullet">
-    <list-item>
-      <p><bold>★</bold> First serious use — concept must be introduced
-      in MFML <italic>before</italic> being used in ML-PC or MG
-      </p>
-    </list-item>
-    <list-item>
-      <p><bold>◎</bold> Reinforcement / application — concept is applied
-      or deepened, but not introduced
-      </p>
-    </list-item>
-    <list-item>
-      <p><bold>(R)</bold> Refresher — topic was covered in a prior
-      course and is only briefly revisited
-      </p>
-    </list-item>
-    <list-item>
-      <p><bold>MFML</bold> Mathematical Foundations of AI &amp; ML
-      </p>
-    </list-item>
-    <list-item>
-      <p><bold>ML-PC</bold> Machine Learning in Materials Processing
-      &amp; Characterization
-      </p>
-    </list-item>
-    <list-item>
-      <p><bold>MG</bold> Materials Genomics</p>
-    </list-item>
-  </list>
-  <table-wrap>
-    <table>
-      <colgroup>
-        <col width="17%" />
-        <col width="17%" />
-        <col width="17%" />
-        <col width="17%" />
-        <col width="17%" />
-        <col width="17%" />
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Week</th>
-          <th>MFML – Mathematical Foundations (revised)</th>
-          <th>ML-PC – ML in Materials Processing &amp; Characterization
-          (revised)</th>
-          <th>MG – Materials Genomics (revised)</th>
-          <th>Exercise (90 min, Python-based)</th>
-          <th>Dependency Logic</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Learning vs data analysis; models, loss functions,
-          prediction vs explanation</td>
-          <td>Role of ML in processing &amp; characterization; ML vs
-          physics models</td>
-          <td>Role of ML in materials discovery; databases &amp;
-          targets</td>
-          <td>NumPy refresher; vectors, dot products, simple loss
-          (MSE)</td>
-          <td>MFML defines “learning” as optimization, not
-          statistics</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Linear algebra refresher for learning: covariance, PCA/SVD
-          (R)</td>
-          <td>PCA as a tool for spectra &amp; images (◎)</td>
-          <td>PCA &amp; low-D structure in materials spaces (◎)</td>
-          <td>PCA refresher on known dataset; visualize variance
-          directions</td>
-          <td>PCA assumed known; MFML aligns notation &amp;
-          geometry</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Regression as loss minimization; linear models
-          revisited</td>
-          <td>Regression as surrogate modeling for processes &amp;
-          properties (★)</td>
-          <td>Regression &amp; correlation in materials datasets
-          (★)</td>
-          <td>Linear regression from scratch via loss minimization</td>
-          <td>Regression reframed explicitly as learning problem</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Neural networks early: neuron, activations, universal
-          approximation</td>
-          <td>NN regression for materials properties (★)</td>
-          <td>NN models for structure–property relations (★)</td>
-          <td>Single-neuron + activation functions (manual forward
-          pass)</td>
-          <td>MFML must precede any NN usage</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Backpropagation, gradients, training dynamics</td>
-          <td>NN training stability &amp; convergence (★)</td>
-          <td>NN training pitfalls in materials data (◎)</td>
-          <td>Manual backprop for shallow NN</td>
-          <td>MFML supplies chain rule &amp; gradient flow</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Loss landscapes, conditioning, optimization behavior</td>
-          <td>Hyperparameters, robustness, convergence issues (★)</td>
-          <td>Model robustness &amp; sensitivity (◎)</td>
-          <td>Gradient descent experiments: learning rate &amp;
-          conditioning</td>
-          <td>Optimization treated as learning dynamics</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Generalization, bias–variance, regularization</td>
-          <td>Overfitting control in models (★)</td>
-          <td>Limits of high-D regression (★)</td>
-          <td>Overfitting demo: polynomial vs NN models</td>
-          <td>Critical conceptual gate for both applied courses</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Probabilistic view of learning: noise &amp;
-          likelihood</td>
-          <td>Noise-aware modeling &amp; error propagation (◎)</td>
-          <td>Noise &amp; uncertainty in materials datasets (★)</td>
-          <td>Noise injection; likelihood vs MSE comparison</td>
-          <td>MFML reframes probability for ML</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Representation learning: learned vs engineered
-          features</td>
-          <td>Feature learning in signals &amp; images (★)</td>
-          <td>Descriptor learning vs hand-crafted features (★)</td>
-          <td>Feature learning with simple NN</td>
-          <td>Transition from classical descriptors</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>Latent spaces: autoencoders &amp; embeddings</td>
-          <td>Compression &amp; anomaly detection in processes (★)</td>
-          <td>Latent materials spaces &amp; embeddings (★)</td>
-          <td>Autoencoder with framework (PyTorch/Keras)</td>
-          <td>Core week for Materials Genomics</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Unsupervised learning revisited (objectives, not
-          algorithms)</td>
-          <td>Clustering &amp; process drift detection (◎)</td>
-          <td>Clustering vs discovery in materials space (◎)</td>
-          <td>Compare clustering vs AE embeddings</td>
-          <td>Students reinterpret known clustering methods</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>Uncertainty in predictions (aleatoric vs epistemic);
-          Gaussian Processes (conceptual)</td>
-          <td>Trust &amp; confidence in ML-assisted decisions; surrogate
-          models (★)</td>
-          <td>Discovery &amp; screening with uncertainty; exploration vs
-          exploitation (★)</td>
-          <td>Predictive uncertainty: GP regression vs NN ensembles</td>
-          <td>Enables responsible ML &amp; accelerator concepts</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>Physics-informed &amp; constrained learning</td>
-          <td>Physics-informed ML for processes &amp; characterization
-          (★)</td>
-          <td>Physical constraints in materials ML (◎)</td>
-          <td>Constrained NN / penalty-based PINN demo</td>
-          <td>MFML leads constraints &amp; PINN concepts</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>Explainability, limits, scientific trust</td>
-          <td>Integrated case studies &amp; failure modes</td>
-          <td>Limits &amp; ethics of data-driven discovery</td>
-          <td>Mini end-to-end synthesis project</td>
-          <td>All courses converge conceptually</td>
-        </tr>
-      </tbody>
-    </table>
-  </table-wrap>
-</sec>
 <sec id="recommended-readings-nb-article">
-  <title>3 Recommended readings</title>
+  <title>2 Recommended readings</title>
   <p>We base much of the lecture on the following books:</p>
   <list list-type="bullet">
     <list-item>
@@ -1950,10 +1758,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         <tr>
           <th>MFML Week</th>
           <th>MFML Lecture Focus (Revised)</th>
-          <th>Neuer – Required Reading</th>
-          <th>Neuer – Optional / Skim</th>
-          <th>McClarren – Contextual / Optional</th>
-          <th>Bishop – Targeted Depth (Optional)</th>
+          <th>Neuer ? Required Reading</th>
+          <th>Neuer ? Optional / Skim</th>
+          <th>McClarren ? Contextual / Optional</th>
+          <th>Bishop ? Targeted Depth (Optional)</th>
         </tr>
       </thead>
       <tbody>
@@ -1963,7 +1771,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 1.1 Data-Based Modeling; 1.1.1 Concept of Model</td>
           <td>1.1.3 Criticism of Data-Based Modeling</td>
           <td>Ch. 1 Introduction (ML in physical systems)</td>
-          <td>Ch. 1 §1.1–1.2 (what is a model, pattern recognition
+          <td>Ch. 1 �1.1?1.2 (what is a model, pattern recognition
           view)</td>
         </tr>
         <tr>
@@ -1972,7 +1780,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 5.2 PCA (skim, notation &amp; geometry only)</td>
           <td>PCA implementation details</td>
           <td>Ch. 5 Dimension Reduction (ROM intuition)</td>
-          <td>Ch. 12 §12.1–12.2 PCA derivation (selective)</td>
+          <td>Ch. 12 �12.1?12.2 PCA derivation (selective)</td>
         </tr>
         <tr>
           <td>3</td>
@@ -1980,7 +1788,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 4.2.2 Regression; Ch. 4.4.1 LMS theory</td>
           <td>LMS algorithm variants</td>
           <td>Ch. 4 Regression (physical meaning of regression)</td>
-          <td>Ch. 3 §3.1–3.3 Linear regression, least squares
+          <td>Ch. 3 �3.1?3.3 Linear regression, least squares
           geometry</td>
         </tr>
         <tr>
@@ -1989,7 +1797,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 4.5.1 Neuron; 4.5.3 Activation Functions</td>
           <td>Framework-specific NN sections</td>
           <td>Ch. 8 Neural Networks (surrogate perspective)</td>
-          <td>Ch. 5 §5.1–5.2 Neural network basics</td>
+          <td>Ch. 5 �5.1?5.2 Neural network basics</td>
         </tr>
         <tr>
           <td>5</td>
@@ -1997,7 +1805,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 4.5.4 Training of Neural Networks</td>
           <td>Advanced NN variants</td>
           <td>Ch. 7 Optimization (inverse-problem framing)</td>
-          <td>Ch. 5 §5.3 Backpropagation (conceptual)</td>
+          <td>Ch. 5 �5.3 Backpropagation (conceptual)</td>
         </tr>
         <tr>
           <td>6</td>
@@ -2005,15 +1813,15 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 4.4.6 Hyperparameters; Ch. 4.5.5 Optimization</td>
           <td>Detailed optimizer variants</td>
           <td>Ch. 7 Optimization</td>
-          <td>Ch. 3 §3.4 Regularization; §3.5 Bayesian view (skim)</td>
+          <td>Ch. 3 �3.4 Regularization; �3.5 Bayesian view (skim)</td>
         </tr>
         <tr>
           <td>7</td>
-          <td>Generalization, bias–variance, regularization</td>
+          <td>Generalization, bias?variance, regularization</td>
           <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
-          <td>—</td>
+          <td>?</td>
           <td>Ch. 6 Model Selection &amp; Validation</td>
-          <td>Ch. 3 §3.2 Bias–variance decomposition</td>
+          <td>Ch. 3 �3.2 Bias?variance decomposition</td>
         </tr>
         <tr>
           <td>8</td>
@@ -2022,7 +1830,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           Uncertainty</td>
           <td>Bayesian details</td>
           <td>Ch. 3 Error and Uncertainty</td>
-          <td>Ch. 2 §2.1–2.3 Gaussian distributions &amp; moments</td>
+          <td>Ch. 2 �2.1?2.3 Gaussian distributions &amp; moments</td>
         </tr>
         <tr>
           <td>9</td>
@@ -2030,15 +1838,15 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 5.5 Autoencoder (intro &amp; motivation)</td>
           <td>AE uncertainty extensions</td>
           <td>Ch. 5 Dimension Reduction</td>
-          <td>Ch. 12 §12.3 Nonlinear PCA / latent variables</td>
+          <td>Ch. 12 �12.3 Nonlinear PCA / latent variables</td>
         </tr>
         <tr>
           <td>10</td>
           <td>Latent spaces; embeddings</td>
-          <td>Ch. 5.5.1–5.5.3 Autoencoder &amp; Latent Space</td>
+          <td>Ch. 5.5.1?5.5.3 Autoencoder &amp; Latent Space</td>
           <td>AE architectures</td>
           <td>Ch. 5 Dimension Reduction</td>
-          <td>Ch. 12 §12.3–12.4 Latent variable intuition</td>
+          <td>Ch. 12 �12.3?12.4 Latent variable intuition</td>
         </tr>
         <tr>
           <td>11</td>
@@ -2054,23 +1862,23 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           <td>Ch. 6.4 Stochastic Methods for Uncertainty</td>
           <td>Advanced stochastic methods</td>
           <td>Ch. 3 Error and Uncertainty</td>
-          <td>Ch. 3 §3.5 Bayesian regularization (skim)</td>
+          <td>Ch. 3 �3.5 Bayesian regularization (skim)</td>
         </tr>
         <tr>
           <td>13</td>
           <td>Physics-informed &amp; constrained learning</td>
-          <td>Ch. 6.1–6.3 Physics-Informed Learning</td>
+          <td>Ch. 6.1?6.3 Physics-Informed Learning</td>
           <td>Semantic technologies</td>
           <td>Ch. 11 Physics-Informed &amp; Hybrid Models</td>
-          <td>Ch. 1 §1.6 Model complexity &amp; Occam’s razor</td>
+          <td>Ch. 1 �1.6 Model complexity &amp; Occam?s razor</td>
         </tr>
         <tr>
           <td>14</td>
           <td>Explainability, limits, scientific trust</td>
           <td>Ch. 7 Explainability (discussion &amp; outlook)</td>
-          <td>—</td>
+          <td>?</td>
           <td>Ch. 12 Limitations and Outlook</td>
-          <td>Ch. 1 §1.1–1.2 Reflection on model limits</td>
+          <td>Ch. 1 �1.1?1.2 Reflection on model limits</td>
         </tr>
       </tbody>
     </table>
@@ -2080,12 +1888,12 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   <title>References</title>
 </sec>
 <sec id="week-1-summary-learning-vs-data-analysis-models-loss-functions-nb-article">
-  <title>4 Week 1 Summary: Learning vs Data Analysis; Models, Loss
+  <title>3 Week 1 Summary: Learning vs Data Analysis; Models, Loss
   Functions</title>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html">Open</ext-link></p>
   <sec id="core-concepts-nb-article">
-    <title>4.1 Core Concepts</title>
+    <title>3.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Concept of a Model:</bold> Models are simplified
@@ -2137,7 +1945,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="loss-functions-and-optimization-nb-article">
-    <title>4.2 Loss Functions and Optimization</title>
+    <title>3.2 Loss Functions and Optimization</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Learning as Optimization:</bold> Machine learning is
@@ -2162,7 +1970,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         oscillations.</p>
       </list-item>
       <list-item>
-        <p><bold>Generalization:</bold> The central goal of ML—ensuring
+        <p><bold>Generalization:</bold> The central goal of ML?ensuring
         the model performs well on unseen <bold>test data</bold>, not
         just the training set.</p>
       </list-item>
@@ -2170,12 +1978,12 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-2-summary-linear-algebra-refresher-covariance-pcasvd-nb-article">
-  <title>5 Week 2 Summary: Linear Algebra Refresher; Covariance,
+  <title>4 Week 2 Summary: Linear Algebra Refresher; Covariance,
   PCA/SVD</title>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html">Open</ext-link></p>
   <sec id="core-concepts-1-nb-article">
-    <title>5.1 Core Concepts</title>
+    <title>4.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Eigendecomposition:</bold> The foundation of PCA. For a
@@ -2202,7 +2010,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="pca-theory-and-application-nb-article">
-    <title>5.2 PCA Theory and Application</title>
+    <title>4.2 PCA Theory and Application</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Maximizing Variance:</bold> PCA is derived as a
@@ -2255,9 +2063,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-3-summary-regression-as-loss-minimization-nb-article">
-  <title>6 Week 3 Summary: Regression as Loss Minimization</title>
+  <title>5 Week 3 Summary: Regression as Loss Minimization</title>
   <sec id="core-concepts-2-nb-article">
-    <title>6.1 Core Concepts</title>
+    <title>5.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Supervised Learning Framework:</bold> Mapping
@@ -2297,7 +2105,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="expanding-linear-models-nb-article">
-    <title>6.2 Expanding Linear Models</title>
+    <title>5.2 Expanding Linear Models</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Linearity Principle:</bold> A model is “linear” if
@@ -2333,10 +2141,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-4-summary-neural-networks-early-neuron-activations-nb-article">
-  <title>7 Week 4 Summary: Neural Networks Early: Neuron &amp;
+  <title>6 Week 4 Summary: Neural Networks Early: Neuron &amp;
   Activations</title>
   <sec id="core-concepts-3-nb-article">
-    <title>7.1 Core Concepts</title>
+    <title>6.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Artificial Neuron:</bold> A fundamental processing
@@ -2361,7 +2169,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="activation-function-taxonomy-nb-article">
-    <title>7.2 Activation Function Taxonomy</title>
+    <title>6.2 Activation Function Taxonomy</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Sigmoid &amp; Tanh:</bold> Historical standards that
@@ -2388,7 +2196,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="structural-properties-nb-article">
-    <title>7.3 Structural Properties</title>
+    <title>6.3 Structural Properties</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Universal Approximation Theorem:</bold> A powerful
@@ -2411,9 +2219,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-5-summary-backpropagation-gradient-flow-nb-article">
-  <title>8 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
+  <title>7 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
   <sec id="core-concepts-4-nb-article">
-    <title>8.1 Core Concepts</title>
+    <title>7.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Learning as Optimization:</bold> The training of a
@@ -2451,7 +2259,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="gradient-flow-and-stability-nb-article">
-    <title>8.2 Gradient Flow and Stability</title>
+    <title>7.2 Gradient Flow and Stability</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Vanishing Gradients:</bold> In deep networks, gradients
@@ -2485,16 +2293,16 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-6-summary-loss-landscapes-optimization-behavior-nb-article">
-  <title>9 Week 6 Summary: Loss Landscapes &amp; Optimization
+  <title>8 Week 6 Summary: Loss Landscapes &amp; Optimization
   Behavior</title>
   <sec id="core-concepts-5-nb-article">
-    <title>9.1 Core Concepts</title>
+    <title>8.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Loss Landscape:</bold> A high-dimensional geometric
         representation of the cost function $ over the parameter space
-        $. Its topography—comprising peaks, valleys, saddle points, and
-        plateaus—determines the ease and success of the training
+        $. Its topography?comprising peaks, valleys, saddle points, and
+        plateaus?determines the ease and success of the training
         process.</p>
       </list-item>
       <list-item>
@@ -2526,7 +2334,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="advanced-optimization-strategies-nb-article">
-    <title>9.2 Advanced Optimization Strategies</title>
+    <title>8.2 Advanced Optimization Strategies</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Momentum:</bold> Inspired by physics, this technique
@@ -2559,14 +2367,14 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-7-summary-generalization-biasvariance-regularization-nb-article">
-  <title>10 Week 7 Summary: Generalization, Bias–Variance,
+  <title>9 Week 7 Summary: Generalization, Bias?Variance,
   Regularization</title>
   <sec id="core-concepts-6-nb-article">
-    <title>10.1 Core Concepts</title>
+    <title>9.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Generalization:</bold> The fundamental objective of
-        machine learning—ensuring that a model learned from a finite
+        machine learning?ensuring that a model learned from a finite
         training set performs accurately on previously unseen data.</p>
       </list-item>
       <list-item>
@@ -2613,7 +2421,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="regularization-and-validation-nb-article">
-    <title>10.2 Regularization and Validation</title>
+    <title>9.2 Regularization and Validation</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Regularization:</bold> A technique to prevent
@@ -2659,10 +2467,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-8-summary-probabilistic-view-of-learning-noise-nb-article">
-  <title>11 Week 8 Summary: Probabilistic View of Learning;
+  <title>10 Week 8 Summary: Probabilistic View of Learning;
   Noise</title>
   <sec id="core-concepts-7-nb-article">
-    <title>11.1 Core Concepts</title>
+    <title>10.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Probability as Modeling Tool:</bold> Probability theory
@@ -2697,7 +2505,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="inference-and-uncertainty-quantification-nb-article">
-    <title>11.2 Inference and Uncertainty Quantification</title>
+    <title>10.2 Inference and Uncertainty Quantification</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Frequentist vs. Bayesian Views:</bold></p>
@@ -2750,10 +2558,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-9-summary-representation-learning-features-vs.-learned-representations-nb-article">
-  <title>12 Week 9 Summary: Representation Learning; Features
+  <title>11 Week 9 Summary: Representation Learning; Features
   vs. Learned Representations</title>
   <sec id="core-concepts-8-nb-article">
-    <title>12.1 Core Concepts</title>
+    <title>11.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Beyond Handcrafting:</bold> Traditional machine
@@ -2782,7 +2590,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="architectures-and-latent-spaces-nb-article">
-    <title>12.2 Architectures and Latent Spaces</title>
+    <title>11.2 Architectures and Latent Spaces</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Encoder and Decoder:</bold></p>
@@ -2819,7 +2627,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="industrial-and-engineering-applications-nb-article">
-    <title>12.3 Industrial and Engineering Applications</title>
+    <title>11.3 Industrial and Engineering Applications</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Data Compression:</bold> Storing high-fidelity
@@ -2842,9 +2650,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-10-summary-latent-spaces-embeddings-nb-article">
-  <title>13 Week 10 Summary: Latent Spaces; Embeddings</title>
+  <title>12 Week 10 Summary: Latent Spaces; Embeddings</title>
   <sec id="core-concepts-9-nb-article">
-    <title>13.1 Core Concepts</title>
+    <title>12.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Latent Space Definition:</bold> A low-dimensional,
@@ -2869,7 +2677,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="dimensionality-reduction-and-visualization-nb-article">
-    <title>13.2 Dimensionality Reduction and Visualization</title>
+    <title>12.2 Dimensionality Reduction and Visualization</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>t-SNE (t-Distributed Stochastic Neighbor
@@ -2901,7 +2709,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="analysis-and-trust-nb-article">
-    <title>13.3 Analysis and Trust</title>
+    <title>12.3 Analysis and Trust</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Interpretability:</bold> Latent neurons can often be
@@ -2924,10 +2732,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-11-summary-unsupervised-learning-revisited-objectives-nb-article">
-  <title>14 Week 11 Summary: Unsupervised Learning Revisited
+  <title>13 Week 11 Summary: Unsupervised Learning Revisited
   (Objectives)</title>
   <sec id="core-concepts-10-nb-article">
-    <title>14.1 Core Concepts</title>
+    <title>13.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Unsupervised Paradigm:</bold> In many engineering
@@ -2954,7 +2762,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="the-em-expectation-maximization-algorithm-nb-article">
-    <title>14.2 The EM (Expectation-Maximization) Algorithm</title>
+    <title>13.2 The EM (Expectation-Maximization) Algorithm</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>General Framework:</bold> EM is a powerful iterative
@@ -2989,7 +2797,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="applications-nb-article">
-    <title>14.3 Applications</title>
+    <title>13.3 Applications</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Image Segmentation:</bold> Clustering pixels in color
@@ -3010,9 +2818,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-12-summary-uncertainty-in-predictions-nb-article">
-  <title>15 Week 12 Summary: Uncertainty in Predictions</title>
+  <title>14 Week 12 Summary: Uncertainty in Predictions</title>
   <sec id="core-concepts-11-nb-article">
-    <title>15.1 Core Concepts</title>
+    <title>14.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Necessity of UQ:</bold> In engineering
@@ -3046,7 +2854,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="probabilistic-architectures-nb-article">
-    <title>15.2 Probabilistic Architectures</title>
+    <title>14.2 Probabilistic Architectures</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Evidence Framework:</bold> A hierarchical Bayesian
@@ -3083,7 +2891,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="physics-and-trust-nb-article">
-    <title>15.3 Physics and Trust</title>
+    <title>14.3 Physics and Trust</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Stochastic Enrichment:</bold> Probing model stability
@@ -3101,10 +2909,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-13-summary-physics-informed-constrained-learning-nb-article">
-  <title>16 Week 13 Summary: Physics-Informed &amp; Constrained
+  <title>15 Week 13 Summary: Physics-Informed &amp; Constrained
   Learning</title>
   <sec id="core-concepts-12-nb-article">
-    <title>16.1 Core Concepts</title>
+    <title>15.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>PINN Philosophy:</bold> Physics-Informed Machine
@@ -3128,7 +2936,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="mechanics-of-physics-integration-nb-article">
-    <title>16.2 Mechanics of Physics Integration</title>
+    <title>15.2 Mechanics of Physics Integration</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Loss Function Modification:</bold> The objective
@@ -3154,7 +2962,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="scientific-trust-and-efficiency-nb-article">
-    <title>16.3 Scientific Trust and Efficiency</title>
+    <title>15.3 Scientific Trust and Efficiency</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Occam’s Razor:</bold> Information theory provides a
@@ -3178,10 +2986,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </sec>
 </sec>
 <sec id="week-14-summary-explainability-limits-scientific-trust-nb-article">
-  <title>17 Week 14 Summary: Explainability, Limits, Scientific
+  <title>16 Week 14 Summary: Explainability, Limits, Scientific
   Trust</title>
   <sec id="core-concepts-13-nb-article">
-    <title>17.1 Core Concepts</title>
+    <title>16.1 Core Concepts</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Trust Mandate:</bold> In scientific and industrial
@@ -3221,7 +3029,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="tools-for-model-interpretation-nb-article">
-    <title>17.2 Tools for Model Interpretation</title>
+    <title>16.2 Tools for Model Interpretation</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>Sensitivity Analysis:</bold> A method for probing
@@ -3232,7 +3040,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       </list-item>
       <list-item>
         <p><bold>Deductive Reasoning:</bold> By combining sensitivity
-        results with an ontology, we can perform deductive logic—for
+        results with an ontology, we can perform deductive logic?for
         instance, tracing a detected oscillation back to a specific
         faulty component in a circuit.</p>
       </list-item>
@@ -3247,7 +3055,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list>
   </sec>
   <sec id="reflection-on-model-limits-nb-article">
-    <title>17.3 Reflection on Model Limits</title>
+    <title>16.3 Reflection on Model Limits</title>
     <list list-type="bullet">
       <list-item>
         <p><bold>The Data Manifold:</bold> Models are only reliable
@@ -3263,6 +3071,198 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       </list-item>
     </list>
   </sec>
+</sec>
+<sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg-nb-article">
+  <title>17 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
+  Overview (with ML-PC &amp; MG)</title>
+  <p><bold>Legend</bold></p>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>?</bold> First serious use ? concept must be introduced
+      in MFML <italic>before</italic> being used in ML-PC or MG
+      </p>
+    </list-item>
+    <list-item>
+      <p><bold>?</bold> Reinforcement / application ? concept is applied
+      or deepened, but not introduced
+      </p>
+    </list-item>
+    <list-item>
+      <p><bold>(R)</bold> Refresher ? topic was covered in a prior
+      course and is only briefly revisited
+      </p>
+    </list-item>
+    <list-item>
+      <p><bold>MFML</bold> Mathematical Foundations of AI &amp; ML
+      </p>
+    </list-item>
+    <list-item>
+      <p><bold>ML-PC</bold> Machine Learning in Materials Processing
+      &amp; Characterization
+      </p>
+    </list-item>
+    <list-item>
+      <p><bold>MG</bold> Materials Genomics</p>
+    </list-item>
+  </list>
+  <table-wrap>
+    <table>
+      <colgroup>
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+        <col width="17%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>MFML ? Mathematical Foundations (revised)</th>
+          <th>ML-PC ? ML in Materials Processing &amp; Characterization
+          (revised)</th>
+          <th>MG ? Materials Genomics (revised)</th>
+          <th>Exercise (90 min, Python-based)</th>
+          <th>Dependency Logic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Learning vs data analysis; models, loss functions,
+          prediction vs explanation</td>
+          <td>Role of ML in processing &amp; characterization; ML vs
+          physics models</td>
+          <td>Role of ML in materials discovery; databases &amp;
+          targets</td>
+          <td>NumPy refresher; vectors, dot products, simple loss
+          (MSE)</td>
+          <td>MFML defines ?learning? as optimization, not
+          statistics</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Linear algebra refresher for learning: covariance, PCA/SVD
+          (R)</td>
+          <td>PCA as a tool for spectra &amp; images (?)</td>
+          <td>PCA &amp; low-D structure in materials spaces (?)</td>
+          <td>PCA refresher on known dataset; visualize variance
+          directions</td>
+          <td>PCA assumed known; MFML aligns notation &amp;
+          geometry</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Regression as loss minimization; linear models
+          revisited</td>
+          <td>Regression as surrogate modeling for processes &amp;
+          properties (?)</td>
+          <td>Regression &amp; correlation in materials datasets
+          (?)</td>
+          <td>Linear regression from scratch via loss minimization</td>
+          <td>Regression reframed explicitly as learning problem</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Neural networks early: neuron, activations, universal
+          approximation</td>
+          <td>NN regression for materials properties (?)</td>
+          <td>NN models for structure?property relations (?)</td>
+          <td>Single-neuron + activation functions (manual forward
+          pass)</td>
+          <td>MFML must precede any NN usage</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Backpropagation, gradients, training dynamics</td>
+          <td>NN training stability &amp; convergence (?)</td>
+          <td>NN training pitfalls in materials data (?)</td>
+          <td>Manual backprop for shallow NN</td>
+          <td>MFML supplies chain rule &amp; gradient flow</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Loss landscapes, conditioning, optimization behavior</td>
+          <td>Hyperparameters, robustness, convergence issues (?)</td>
+          <td>Model robustness &amp; sensitivity (?)</td>
+          <td>Gradient descent experiments: learning rate &amp;
+          conditioning</td>
+          <td>Optimization treated as learning dynamics</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Generalization, bias?variance, regularization</td>
+          <td>Overfitting control in models (?)</td>
+          <td>Limits of high-D regression (?)</td>
+          <td>Overfitting demo: polynomial vs NN models</td>
+          <td>Critical conceptual gate for both applied courses</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Probabilistic view of learning: noise &amp;
+          likelihood</td>
+          <td>Noise-aware modeling &amp; error propagation (?)</td>
+          <td>Noise &amp; uncertainty in materials datasets (?)</td>
+          <td>Noise injection; likelihood vs MSE comparison</td>
+          <td>MFML reframes probability for ML</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Representation learning: learned vs engineered
+          features</td>
+          <td>Feature learning in signals &amp; images (?)</td>
+          <td>Descriptor learning vs hand-crafted features (?)</td>
+          <td>Feature learning with simple NN</td>
+          <td>Transition from classical descriptors</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Latent spaces: autoencoders &amp; embeddings</td>
+          <td>Compression &amp; anomaly detection in processes (?)</td>
+          <td>Latent materials spaces &amp; embeddings (?)</td>
+          <td>Autoencoder with framework (PyTorch/Keras)</td>
+          <td>Core week for Materials Genomics</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Unsupervised learning revisited (objectives, not
+          algorithms)</td>
+          <td>Clustering &amp; process drift detection (?)</td>
+          <td>Clustering vs discovery in materials space (?)</td>
+          <td>Compare clustering vs AE embeddings</td>
+          <td>Students reinterpret known clustering methods</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Uncertainty in predictions (aleatoric vs epistemic);
+          Gaussian Processes (conceptual)</td>
+          <td>Trust &amp; confidence in ML-assisted decisions; surrogate
+          models (?)</td>
+          <td>Discovery &amp; screening with uncertainty; exploration vs
+          exploitation (?)</td>
+          <td>Predictive uncertainty: GP regression vs NN ensembles</td>
+          <td>Enables responsible ML &amp; accelerator concepts</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Physics-informed &amp; constrained learning</td>
+          <td>Physics-informed ML for processes &amp; characterization
+          (?)</td>
+          <td>Physical constraints in materials ML (?)</td>
+          <td>Constrained NN / penalty-based PINN demo</td>
+          <td>MFML leads constraints &amp; PINN concepts</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Explainability, limits, scientific trust</td>
+          <td>Integrated case studies &amp; failure modes</td>
+          <td>Limits &amp; ethics of data-driven discovery</td>
+          <td>Mini end-to-end synthesis project</td>
+          <td>All courses converge conceptually</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
 </sec>
 </body>
 

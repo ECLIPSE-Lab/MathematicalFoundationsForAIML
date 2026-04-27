@@ -7,7 +7,7 @@
 
     <meta name="author" content="Philipp Pelz">
     <meta name="author" content="Stefan Hiemer">
-    <meta name="dcterms.date" content="2026-04-23">
+    <meta name="dcterms.date" content="2026-04-27">
     <meta name="keywords" content="Machine Learning, Artificial Intelligence, Mathematics, Linear Algebra, Probability, Optimization">
     <meta name="description" content="Lecture materials for Mathematical Foundations of AI &amp; ML, covering core mathematical concepts including linear algebra, probability, optimization, and their applications in machine learning.">
 
@@ -149,7 +149,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cf814142979c788ba0b05941e22f7da9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-58678528f02177bed1400fe3ccbb0fa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
      <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -161,10 +161,10 @@
 <meta name="citation_keywords" content="Machine Learning,Artificial Intelligence,Mathematics,Linear Algebra,Probability,Optimization">
 <meta name="citation_author" content="Philipp Pelz">
 <meta name="citation_author" content="Stefan Hiemer">
-<meta name="citation_publication_date" content="2026-04-23">
-<meta name="citation_cover_date" content="2026-04-23">
+<meta name="citation_publication_date" content="2026-04-27">
+<meta name="citation_cover_date" content="2026-04-27">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-04-23">
+<meta name="citation_online_date" content="2026-04-27">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Machine learning for engineers: Using data to solve problems for physical systems;,citation_author=Ryan G.. McClarren;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;">
 <meta name="citation_reference" content="citation_title=Machine learning for engineers: Introduction to physics-informed, explainable learning methods for AI in engineering applications;,citation_author=Marcus J Neuer;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;">
@@ -204,7 +204,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">April 23, 2026</p>
+              <p class="date">April 27, 2026</p>
             </div>
           </div>
           
@@ -232,86 +232,86 @@
    
   <ul>
   <li><a href="#instructors" id="toc-instructors" class="nav-link active" data-scroll-target="#instructors"><span class="header-section-number">1</span> Instructors</a></li>
-  <li><a href="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" id="toc-mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="nav-link" data-scroll-target="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">2</span> Mathematical Foundations of AI &amp; ML – Unified Syllabus Overview (with ML-PC &amp; MG)</a></li>
-  <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings"><span class="header-section-number">3</span> Recommended readings</a></li>
+  <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings"><span class="header-section-number">2</span> Recommended readings</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  <li><a href="#week-1-summary-learning-vs-data-analysis-models-loss-functions" id="toc-week-1-summary-learning-vs-data-analysis-models-loss-functions" class="nav-link" data-scroll-target="#week-1-summary-learning-vs-data-analysis-models-loss-functions"><span class="header-section-number">4</span> Week 1 Summary: Learning vs Data Analysis; Models, Loss Functions</a>
+  <li><a href="#week-1-summary-learning-vs-data-analysis-models-loss-functions" id="toc-week-1-summary-learning-vs-data-analysis-models-loss-functions" class="nav-link" data-scroll-target="#week-1-summary-learning-vs-data-analysis-models-loss-functions"><span class="header-section-number">3</span> Week 1 Summary: Learning vs Data Analysis; Models, Loss Functions</a>
   <ul class="collapse">
-  <li><a href="#core-concepts" id="toc-core-concepts" class="nav-link" data-scroll-target="#core-concepts"><span class="header-section-number">4.1</span> Core Concepts</a></li>
-  <li><a href="#loss-functions-and-optimization" id="toc-loss-functions-and-optimization" class="nav-link" data-scroll-target="#loss-functions-and-optimization"><span class="header-section-number">4.2</span> Loss Functions and Optimization</a></li>
+  <li><a href="#core-concepts" id="toc-core-concepts" class="nav-link" data-scroll-target="#core-concepts"><span class="header-section-number">3.1</span> Core Concepts</a></li>
+  <li><a href="#loss-functions-and-optimization" id="toc-loss-functions-and-optimization" class="nav-link" data-scroll-target="#loss-functions-and-optimization"><span class="header-section-number">3.2</span> Loss Functions and Optimization</a></li>
   </ul></li>
-  <li><a href="#week-2-summary-linear-algebra-refresher-covariance-pcasvd" id="toc-week-2-summary-linear-algebra-refresher-covariance-pcasvd" class="nav-link" data-scroll-target="#week-2-summary-linear-algebra-refresher-covariance-pcasvd"><span class="header-section-number">5</span> Week 2 Summary: Linear Algebra Refresher; Covariance, PCA/SVD</a>
+  <li><a href="#week-2-summary-linear-algebra-refresher-covariance-pcasvd" id="toc-week-2-summary-linear-algebra-refresher-covariance-pcasvd" class="nav-link" data-scroll-target="#week-2-summary-linear-algebra-refresher-covariance-pcasvd"><span class="header-section-number">4</span> Week 2 Summary: Linear Algebra Refresher; Covariance, PCA/SVD</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-1" id="toc-core-concepts-1" class="nav-link" data-scroll-target="#core-concepts-1"><span class="header-section-number">5.1</span> Core Concepts</a></li>
-  <li><a href="#pca-theory-and-application" id="toc-pca-theory-and-application" class="nav-link" data-scroll-target="#pca-theory-and-application"><span class="header-section-number">5.2</span> PCA Theory and Application</a></li>
+  <li><a href="#core-concepts-1" id="toc-core-concepts-1" class="nav-link" data-scroll-target="#core-concepts-1"><span class="header-section-number">4.1</span> Core Concepts</a></li>
+  <li><a href="#pca-theory-and-application" id="toc-pca-theory-and-application" class="nav-link" data-scroll-target="#pca-theory-and-application"><span class="header-section-number">4.2</span> PCA Theory and Application</a></li>
   </ul></li>
-  <li><a href="#week-3-summary-regression-as-loss-minimization" id="toc-week-3-summary-regression-as-loss-minimization" class="nav-link" data-scroll-target="#week-3-summary-regression-as-loss-minimization"><span class="header-section-number">6</span> Week 3 Summary: Regression as Loss Minimization</a>
+  <li><a href="#week-3-summary-regression-as-loss-minimization" id="toc-week-3-summary-regression-as-loss-minimization" class="nav-link" data-scroll-target="#week-3-summary-regression-as-loss-minimization"><span class="header-section-number">5</span> Week 3 Summary: Regression as Loss Minimization</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-2" id="toc-core-concepts-2" class="nav-link" data-scroll-target="#core-concepts-2"><span class="header-section-number">6.1</span> Core Concepts</a></li>
-  <li><a href="#expanding-linear-models" id="toc-expanding-linear-models" class="nav-link" data-scroll-target="#expanding-linear-models"><span class="header-section-number">6.2</span> Expanding Linear Models</a></li>
+  <li><a href="#core-concepts-2" id="toc-core-concepts-2" class="nav-link" data-scroll-target="#core-concepts-2"><span class="header-section-number">5.1</span> Core Concepts</a></li>
+  <li><a href="#expanding-linear-models" id="toc-expanding-linear-models" class="nav-link" data-scroll-target="#expanding-linear-models"><span class="header-section-number">5.2</span> Expanding Linear Models</a></li>
   </ul></li>
-  <li><a href="#week-4-summary-neural-networks-early-neuron-activations" id="toc-week-4-summary-neural-networks-early-neuron-activations" class="nav-link" data-scroll-target="#week-4-summary-neural-networks-early-neuron-activations"><span class="header-section-number">7</span> Week 4 Summary: Neural Networks Early: Neuron &amp; Activations</a>
+  <li><a href="#week-4-summary-neural-networks-early-neuron-activations" id="toc-week-4-summary-neural-networks-early-neuron-activations" class="nav-link" data-scroll-target="#week-4-summary-neural-networks-early-neuron-activations"><span class="header-section-number">6</span> Week 4 Summary: Neural Networks Early: Neuron &amp; Activations</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-3" id="toc-core-concepts-3" class="nav-link" data-scroll-target="#core-concepts-3"><span class="header-section-number">7.1</span> Core Concepts</a></li>
-  <li><a href="#activation-function-taxonomy" id="toc-activation-function-taxonomy" class="nav-link" data-scroll-target="#activation-function-taxonomy"><span class="header-section-number">7.2</span> Activation Function Taxonomy</a></li>
-  <li><a href="#structural-properties" id="toc-structural-properties" class="nav-link" data-scroll-target="#structural-properties"><span class="header-section-number">7.3</span> Structural Properties</a></li>
+  <li><a href="#core-concepts-3" id="toc-core-concepts-3" class="nav-link" data-scroll-target="#core-concepts-3"><span class="header-section-number">6.1</span> Core Concepts</a></li>
+  <li><a href="#activation-function-taxonomy" id="toc-activation-function-taxonomy" class="nav-link" data-scroll-target="#activation-function-taxonomy"><span class="header-section-number">6.2</span> Activation Function Taxonomy</a></li>
+  <li><a href="#structural-properties" id="toc-structural-properties" class="nav-link" data-scroll-target="#structural-properties"><span class="header-section-number">6.3</span> Structural Properties</a></li>
   </ul></li>
-  <li><a href="#week-5-summary-backpropagation-gradient-flow" id="toc-week-5-summary-backpropagation-gradient-flow" class="nav-link" data-scroll-target="#week-5-summary-backpropagation-gradient-flow"><span class="header-section-number">8</span> Week 5 Summary: Backpropagation &amp; Gradient Flow</a>
+  <li><a href="#week-5-summary-backpropagation-gradient-flow" id="toc-week-5-summary-backpropagation-gradient-flow" class="nav-link" data-scroll-target="#week-5-summary-backpropagation-gradient-flow"><span class="header-section-number">7</span> Week 5 Summary: Backpropagation &amp; Gradient Flow</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-4" id="toc-core-concepts-4" class="nav-link" data-scroll-target="#core-concepts-4"><span class="header-section-number">8.1</span> Core Concepts</a></li>
-  <li><a href="#gradient-flow-and-stability" id="toc-gradient-flow-and-stability" class="nav-link" data-scroll-target="#gradient-flow-and-stability"><span class="header-section-number">8.2</span> Gradient Flow and Stability</a></li>
+  <li><a href="#core-concepts-4" id="toc-core-concepts-4" class="nav-link" data-scroll-target="#core-concepts-4"><span class="header-section-number">7.1</span> Core Concepts</a></li>
+  <li><a href="#gradient-flow-and-stability" id="toc-gradient-flow-and-stability" class="nav-link" data-scroll-target="#gradient-flow-and-stability"><span class="header-section-number">7.2</span> Gradient Flow and Stability</a></li>
   </ul></li>
-  <li><a href="#week-6-summary-loss-landscapes-optimization-behavior" id="toc-week-6-summary-loss-landscapes-optimization-behavior" class="nav-link" data-scroll-target="#week-6-summary-loss-landscapes-optimization-behavior"><span class="header-section-number">9</span> Week 6 Summary: Loss Landscapes &amp; Optimization Behavior</a>
+  <li><a href="#week-6-summary-loss-landscapes-optimization-behavior" id="toc-week-6-summary-loss-landscapes-optimization-behavior" class="nav-link" data-scroll-target="#week-6-summary-loss-landscapes-optimization-behavior"><span class="header-section-number">8</span> Week 6 Summary: Loss Landscapes &amp; Optimization Behavior</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-5" id="toc-core-concepts-5" class="nav-link" data-scroll-target="#core-concepts-5"><span class="header-section-number">9.1</span> Core Concepts</a></li>
-  <li><a href="#advanced-optimization-strategies" id="toc-advanced-optimization-strategies" class="nav-link" data-scroll-target="#advanced-optimization-strategies"><span class="header-section-number">9.2</span> Advanced Optimization Strategies</a></li>
+  <li><a href="#core-concepts-5" id="toc-core-concepts-5" class="nav-link" data-scroll-target="#core-concepts-5"><span class="header-section-number">8.1</span> Core Concepts</a></li>
+  <li><a href="#advanced-optimization-strategies" id="toc-advanced-optimization-strategies" class="nav-link" data-scroll-target="#advanced-optimization-strategies"><span class="header-section-number">8.2</span> Advanced Optimization Strategies</a></li>
   </ul></li>
-  <li><a href="#week-7-summary-generalization-biasvariance-regularization" id="toc-week-7-summary-generalization-biasvariance-regularization" class="nav-link" data-scroll-target="#week-7-summary-generalization-biasvariance-regularization"><span class="header-section-number">10</span> Week 7 Summary: Generalization, Bias–Variance, Regularization</a>
+  <li><a href="#week-7-summary-generalization-biasvariance-regularization" id="toc-week-7-summary-generalization-biasvariance-regularization" class="nav-link" data-scroll-target="#week-7-summary-generalization-biasvariance-regularization"><span class="header-section-number">9</span> Week 7 Summary: Generalization, Bias?Variance, Regularization</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-6" id="toc-core-concepts-6" class="nav-link" data-scroll-target="#core-concepts-6"><span class="header-section-number">10.1</span> Core Concepts</a></li>
-  <li><a href="#regularization-and-validation" id="toc-regularization-and-validation" class="nav-link" data-scroll-target="#regularization-and-validation"><span class="header-section-number">10.2</span> Regularization and Validation</a></li>
+  <li><a href="#core-concepts-6" id="toc-core-concepts-6" class="nav-link" data-scroll-target="#core-concepts-6"><span class="header-section-number">9.1</span> Core Concepts</a></li>
+  <li><a href="#regularization-and-validation" id="toc-regularization-and-validation" class="nav-link" data-scroll-target="#regularization-and-validation"><span class="header-section-number">9.2</span> Regularization and Validation</a></li>
   </ul></li>
-  <li><a href="#week-8-summary-probabilistic-view-of-learning-noise" id="toc-week-8-summary-probabilistic-view-of-learning-noise" class="nav-link" data-scroll-target="#week-8-summary-probabilistic-view-of-learning-noise"><span class="header-section-number">11</span> Week 8 Summary: Probabilistic View of Learning; Noise</a>
+  <li><a href="#week-8-summary-probabilistic-view-of-learning-noise" id="toc-week-8-summary-probabilistic-view-of-learning-noise" class="nav-link" data-scroll-target="#week-8-summary-probabilistic-view-of-learning-noise"><span class="header-section-number">10</span> Week 8 Summary: Probabilistic View of Learning; Noise</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-7" id="toc-core-concepts-7" class="nav-link" data-scroll-target="#core-concepts-7"><span class="header-section-number">11.1</span> Core Concepts</a></li>
-  <li><a href="#inference-and-uncertainty-quantification" id="toc-inference-and-uncertainty-quantification" class="nav-link" data-scroll-target="#inference-and-uncertainty-quantification"><span class="header-section-number">11.2</span> Inference and Uncertainty Quantification</a></li>
+  <li><a href="#core-concepts-7" id="toc-core-concepts-7" class="nav-link" data-scroll-target="#core-concepts-7"><span class="header-section-number">10.1</span> Core Concepts</a></li>
+  <li><a href="#inference-and-uncertainty-quantification" id="toc-inference-and-uncertainty-quantification" class="nav-link" data-scroll-target="#inference-and-uncertainty-quantification"><span class="header-section-number">10.2</span> Inference and Uncertainty Quantification</a></li>
   </ul></li>
-  <li><a href="#week-9-summary-representation-learning-features-vs.-learned-representations" id="toc-week-9-summary-representation-learning-features-vs.-learned-representations" class="nav-link" data-scroll-target="#week-9-summary-representation-learning-features-vs.-learned-representations"><span class="header-section-number">12</span> Week 9 Summary: Representation Learning; Features vs.&nbsp;Learned Representations</a>
+  <li><a href="#week-9-summary-representation-learning-features-vs.-learned-representations" id="toc-week-9-summary-representation-learning-features-vs.-learned-representations" class="nav-link" data-scroll-target="#week-9-summary-representation-learning-features-vs.-learned-representations"><span class="header-section-number">11</span> Week 9 Summary: Representation Learning; Features vs.&nbsp;Learned Representations</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-8" id="toc-core-concepts-8" class="nav-link" data-scroll-target="#core-concepts-8"><span class="header-section-number">12.1</span> Core Concepts</a></li>
-  <li><a href="#architectures-and-latent-spaces" id="toc-architectures-and-latent-spaces" class="nav-link" data-scroll-target="#architectures-and-latent-spaces"><span class="header-section-number">12.2</span> Architectures and Latent Spaces</a></li>
-  <li><a href="#industrial-and-engineering-applications" id="toc-industrial-and-engineering-applications" class="nav-link" data-scroll-target="#industrial-and-engineering-applications"><span class="header-section-number">12.3</span> Industrial and Engineering Applications</a></li>
+  <li><a href="#core-concepts-8" id="toc-core-concepts-8" class="nav-link" data-scroll-target="#core-concepts-8"><span class="header-section-number">11.1</span> Core Concepts</a></li>
+  <li><a href="#architectures-and-latent-spaces" id="toc-architectures-and-latent-spaces" class="nav-link" data-scroll-target="#architectures-and-latent-spaces"><span class="header-section-number">11.2</span> Architectures and Latent Spaces</a></li>
+  <li><a href="#industrial-and-engineering-applications" id="toc-industrial-and-engineering-applications" class="nav-link" data-scroll-target="#industrial-and-engineering-applications"><span class="header-section-number">11.3</span> Industrial and Engineering Applications</a></li>
   </ul></li>
-  <li><a href="#week-10-summary-latent-spaces-embeddings" id="toc-week-10-summary-latent-spaces-embeddings" class="nav-link" data-scroll-target="#week-10-summary-latent-spaces-embeddings"><span class="header-section-number">13</span> Week 10 Summary: Latent Spaces; Embeddings</a>
+  <li><a href="#week-10-summary-latent-spaces-embeddings" id="toc-week-10-summary-latent-spaces-embeddings" class="nav-link" data-scroll-target="#week-10-summary-latent-spaces-embeddings"><span class="header-section-number">12</span> Week 10 Summary: Latent Spaces; Embeddings</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-9" id="toc-core-concepts-9" class="nav-link" data-scroll-target="#core-concepts-9"><span class="header-section-number">13.1</span> Core Concepts</a></li>
-  <li><a href="#dimensionality-reduction-and-visualization" id="toc-dimensionality-reduction-and-visualization" class="nav-link" data-scroll-target="#dimensionality-reduction-and-visualization"><span class="header-section-number">13.2</span> Dimensionality Reduction and Visualization</a></li>
-  <li><a href="#analysis-and-trust" id="toc-analysis-and-trust" class="nav-link" data-scroll-target="#analysis-and-trust"><span class="header-section-number">13.3</span> Analysis and Trust</a></li>
+  <li><a href="#core-concepts-9" id="toc-core-concepts-9" class="nav-link" data-scroll-target="#core-concepts-9"><span class="header-section-number">12.1</span> Core Concepts</a></li>
+  <li><a href="#dimensionality-reduction-and-visualization" id="toc-dimensionality-reduction-and-visualization" class="nav-link" data-scroll-target="#dimensionality-reduction-and-visualization"><span class="header-section-number">12.2</span> Dimensionality Reduction and Visualization</a></li>
+  <li><a href="#analysis-and-trust" id="toc-analysis-and-trust" class="nav-link" data-scroll-target="#analysis-and-trust"><span class="header-section-number">12.3</span> Analysis and Trust</a></li>
   </ul></li>
-  <li><a href="#week-11-summary-unsupervised-learning-revisited-objectives" id="toc-week-11-summary-unsupervised-learning-revisited-objectives" class="nav-link" data-scroll-target="#week-11-summary-unsupervised-learning-revisited-objectives"><span class="header-section-number">14</span> Week 11 Summary: Unsupervised Learning Revisited (Objectives)</a>
+  <li><a href="#week-11-summary-unsupervised-learning-revisited-objectives" id="toc-week-11-summary-unsupervised-learning-revisited-objectives" class="nav-link" data-scroll-target="#week-11-summary-unsupervised-learning-revisited-objectives"><span class="header-section-number">13</span> Week 11 Summary: Unsupervised Learning Revisited (Objectives)</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-10" id="toc-core-concepts-10" class="nav-link" data-scroll-target="#core-concepts-10"><span class="header-section-number">14.1</span> Core Concepts</a></li>
-  <li><a href="#the-em-expectation-maximization-algorithm" id="toc-the-em-expectation-maximization-algorithm" class="nav-link" data-scroll-target="#the-em-expectation-maximization-algorithm"><span class="header-section-number">14.2</span> The EM (Expectation-Maximization) Algorithm</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">14.3</span> Applications</a></li>
+  <li><a href="#core-concepts-10" id="toc-core-concepts-10" class="nav-link" data-scroll-target="#core-concepts-10"><span class="header-section-number">13.1</span> Core Concepts</a></li>
+  <li><a href="#the-em-expectation-maximization-algorithm" id="toc-the-em-expectation-maximization-algorithm" class="nav-link" data-scroll-target="#the-em-expectation-maximization-algorithm"><span class="header-section-number">13.2</span> The EM (Expectation-Maximization) Algorithm</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">13.3</span> Applications</a></li>
   </ul></li>
-  <li><a href="#week-12-summary-uncertainty-in-predictions" id="toc-week-12-summary-uncertainty-in-predictions" class="nav-link" data-scroll-target="#week-12-summary-uncertainty-in-predictions"><span class="header-section-number">15</span> Week 12 Summary: Uncertainty in Predictions</a>
+  <li><a href="#week-12-summary-uncertainty-in-predictions" id="toc-week-12-summary-uncertainty-in-predictions" class="nav-link" data-scroll-target="#week-12-summary-uncertainty-in-predictions"><span class="header-section-number">14</span> Week 12 Summary: Uncertainty in Predictions</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-11" id="toc-core-concepts-11" class="nav-link" data-scroll-target="#core-concepts-11"><span class="header-section-number">15.1</span> Core Concepts</a></li>
-  <li><a href="#probabilistic-architectures" id="toc-probabilistic-architectures" class="nav-link" data-scroll-target="#probabilistic-architectures"><span class="header-section-number">15.2</span> Probabilistic Architectures</a></li>
-  <li><a href="#physics-and-trust" id="toc-physics-and-trust" class="nav-link" data-scroll-target="#physics-and-trust"><span class="header-section-number">15.3</span> Physics and Trust</a></li>
+  <li><a href="#core-concepts-11" id="toc-core-concepts-11" class="nav-link" data-scroll-target="#core-concepts-11"><span class="header-section-number">14.1</span> Core Concepts</a></li>
+  <li><a href="#probabilistic-architectures" id="toc-probabilistic-architectures" class="nav-link" data-scroll-target="#probabilistic-architectures"><span class="header-section-number">14.2</span> Probabilistic Architectures</a></li>
+  <li><a href="#physics-and-trust" id="toc-physics-and-trust" class="nav-link" data-scroll-target="#physics-and-trust"><span class="header-section-number">14.3</span> Physics and Trust</a></li>
   </ul></li>
-  <li><a href="#week-13-summary-physics-informed-constrained-learning" id="toc-week-13-summary-physics-informed-constrained-learning" class="nav-link" data-scroll-target="#week-13-summary-physics-informed-constrained-learning"><span class="header-section-number">16</span> Week 13 Summary: Physics-Informed &amp; Constrained Learning</a>
+  <li><a href="#week-13-summary-physics-informed-constrained-learning" id="toc-week-13-summary-physics-informed-constrained-learning" class="nav-link" data-scroll-target="#week-13-summary-physics-informed-constrained-learning"><span class="header-section-number">15</span> Week 13 Summary: Physics-Informed &amp; Constrained Learning</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-12" id="toc-core-concepts-12" class="nav-link" data-scroll-target="#core-concepts-12"><span class="header-section-number">16.1</span> Core Concepts</a></li>
-  <li><a href="#mechanics-of-physics-integration" id="toc-mechanics-of-physics-integration" class="nav-link" data-scroll-target="#mechanics-of-physics-integration"><span class="header-section-number">16.2</span> Mechanics of Physics Integration</a></li>
-  <li><a href="#scientific-trust-and-efficiency" id="toc-scientific-trust-and-efficiency" class="nav-link" data-scroll-target="#scientific-trust-and-efficiency"><span class="header-section-number">16.3</span> Scientific Trust and Efficiency</a></li>
+  <li><a href="#core-concepts-12" id="toc-core-concepts-12" class="nav-link" data-scroll-target="#core-concepts-12"><span class="header-section-number">15.1</span> Core Concepts</a></li>
+  <li><a href="#mechanics-of-physics-integration" id="toc-mechanics-of-physics-integration" class="nav-link" data-scroll-target="#mechanics-of-physics-integration"><span class="header-section-number">15.2</span> Mechanics of Physics Integration</a></li>
+  <li><a href="#scientific-trust-and-efficiency" id="toc-scientific-trust-and-efficiency" class="nav-link" data-scroll-target="#scientific-trust-and-efficiency"><span class="header-section-number">15.3</span> Scientific Trust and Efficiency</a></li>
   </ul></li>
-  <li><a href="#week-14-summary-explainability-limits-scientific-trust" id="toc-week-14-summary-explainability-limits-scientific-trust" class="nav-link" data-scroll-target="#week-14-summary-explainability-limits-scientific-trust"><span class="header-section-number">17</span> Week 14 Summary: Explainability, Limits, Scientific Trust</a>
+  <li><a href="#week-14-summary-explainability-limits-scientific-trust" id="toc-week-14-summary-explainability-limits-scientific-trust" class="nav-link" data-scroll-target="#week-14-summary-explainability-limits-scientific-trust"><span class="header-section-number">16</span> Week 14 Summary: Explainability, Limits, Scientific Trust</a>
   <ul class="collapse">
-  <li><a href="#core-concepts-13" id="toc-core-concepts-13" class="nav-link" data-scroll-target="#core-concepts-13"><span class="header-section-number">17.1</span> Core Concepts</a></li>
-  <li><a href="#tools-for-model-interpretation" id="toc-tools-for-model-interpretation" class="nav-link" data-scroll-target="#tools-for-model-interpretation"><span class="header-section-number">17.2</span> Tools for Model Interpretation</a></li>
-  <li><a href="#reflection-on-model-limits" id="toc-reflection-on-model-limits" class="nav-link" data-scroll-target="#reflection-on-model-limits"><span class="header-section-number">17.3</span> Reflection on Model Limits</a></li>
+  <li><a href="#core-concepts-13" id="toc-core-concepts-13" class="nav-link" data-scroll-target="#core-concepts-13"><span class="header-section-number">16.1</span> Core Concepts</a></li>
+  <li><a href="#tools-for-model-interpretation" id="toc-tools-for-model-interpretation" class="nav-link" data-scroll-target="#tools-for-model-interpretation"><span class="header-section-number">16.2</span> Tools for Model Interpretation</a></li>
+  <li><a href="#reflection-on-model-limits" id="toc-reflection-on-model-limits" class="nav-link" data-scroll-target="#reflection-on-model-limits"><span class="header-section-number">16.3</span> Reflection on Model Limits</a></li>
   </ul></li>
+  <li><a href="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" id="toc-mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="nav-link" data-scroll-target="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">17</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</a></li>
   </ul>
 </nav>
 </div>
@@ -385,7 +385,7 @@
     <div class="course-meta-item" style="grid-column: 1 / -1;"><div class="course-meta-label">Prerequisites</div><div class="course-meta-value">Linear algebra, calculus, and basic Python recommended</div></div>
   </div>
   <div class="course-actions">
-    <a href="https://www.studon.fau.de/" class="btn btn-primary">StudOn</a>
+    <a href="https://www.studon.fau.de/campo/course/541829" class="btn btn-primary">StudOn</a>
     <a href="https://github.com/ECLIPSE-Lab/MathematicalFoundationsForAIML" class="btn btn-outline-secondary">GitHub / Materials</a>
     <a href="https://pelzlab.science/teaching.html" class="btn btn-outline-secondary">All Teaching</a>
     <a href="https://www.mat.studium.fau.de/studiengaenge/neu-ki-materialtechnologie/" class="btn btn-outline-secondary">KI in Materialtechnologie</a>
@@ -401,159 +401,8 @@
 <li>Stefan Hiemer</li>
 </ul>
 </section>
-<section id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">2</span> Mathematical Foundations of AI &amp; ML – Unified Syllabus Overview (with ML-PC &amp; MG)</h2>
-<p><strong>Legend</strong></p>
-<ul>
-<li><strong>★</strong> First serious use — concept must be introduced in MFML <em>before</em> being used in ML-PC or MG<br>
-</li>
-<li><strong>◎</strong> Reinforcement / application — concept is applied or deepened, but not introduced<br>
-</li>
-<li><strong>(R)</strong> Refresher — topic was covered in a prior course and is only briefly revisited<br>
-</li>
-<li><strong>MFML</strong> Mathematical Foundations of AI &amp; ML<br>
-</li>
-<li><strong>ML-PC</strong> Machine Learning in Materials Processing &amp; Characterization<br>
-</li>
-<li><strong>MG</strong> Materials Genomics</li>
-</ul>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Week</th>
-<th>MFML – Mathematical Foundations (revised)</th>
-<th>ML-PC – ML in Materials Processing &amp; Characterization (revised)</th>
-<th>MG – Materials Genomics (revised)</th>
-<th>Exercise (90 min, Python-based)</th>
-<th>Dependency Logic</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Learning vs data analysis; models, loss functions, prediction vs explanation</td>
-<td>Role of ML in processing &amp; characterization; ML vs physics models</td>
-<td>Role of ML in materials discovery; databases &amp; targets</td>
-<td>NumPy refresher; vectors, dot products, simple loss (MSE)</td>
-<td>MFML defines “learning” as optimization, not statistics</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>Linear algebra refresher for learning: covariance, PCA/SVD (R)</td>
-<td>PCA as a tool for spectra &amp; images (◎)</td>
-<td>PCA &amp; low-D structure in materials spaces (◎)</td>
-<td>PCA refresher on known dataset; visualize variance directions</td>
-<td>PCA assumed known; MFML aligns notation &amp; geometry</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Regression as loss minimization; linear models revisited</td>
-<td>Regression as surrogate modeling for processes &amp; properties (★)</td>
-<td>Regression &amp; correlation in materials datasets (★)</td>
-<td>Linear regression from scratch via loss minimization</td>
-<td>Regression reframed explicitly as learning problem</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Neural networks early: neuron, activations, universal approximation</td>
-<td>NN regression for materials properties (★)</td>
-<td>NN models for structure–property relations (★)</td>
-<td>Single-neuron + activation functions (manual forward pass)</td>
-<td>MFML must precede any NN usage</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Backpropagation, gradients, training dynamics</td>
-<td>NN training stability &amp; convergence (★)</td>
-<td>NN training pitfalls in materials data (◎)</td>
-<td>Manual backprop for shallow NN</td>
-<td>MFML supplies chain rule &amp; gradient flow</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>Loss landscapes, conditioning, optimization behavior</td>
-<td>Hyperparameters, robustness, convergence issues (★)</td>
-<td>Model robustness &amp; sensitivity (◎)</td>
-<td>Gradient descent experiments: learning rate &amp; conditioning</td>
-<td>Optimization treated as learning dynamics</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>Generalization, bias–variance, regularization</td>
-<td>Overfitting control in models (★)</td>
-<td>Limits of high-D regression (★)</td>
-<td>Overfitting demo: polynomial vs NN models</td>
-<td>Critical conceptual gate for both applied courses</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>Probabilistic view of learning: noise &amp; likelihood</td>
-<td>Noise-aware modeling &amp; error propagation (◎)</td>
-<td>Noise &amp; uncertainty in materials datasets (★)</td>
-<td>Noise injection; likelihood vs MSE comparison</td>
-<td>MFML reframes probability for ML</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>Representation learning: learned vs engineered features</td>
-<td>Feature learning in signals &amp; images (★)</td>
-<td>Descriptor learning vs hand-crafted features (★)</td>
-<td>Feature learning with simple NN</td>
-<td>Transition from classical descriptors</td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>Latent spaces: autoencoders &amp; embeddings</td>
-<td>Compression &amp; anomaly detection in processes (★)</td>
-<td>Latent materials spaces &amp; embeddings (★)</td>
-<td>Autoencoder with framework (PyTorch/Keras)</td>
-<td>Core week for Materials Genomics</td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>Unsupervised learning revisited (objectives, not algorithms)</td>
-<td>Clustering &amp; process drift detection (◎)</td>
-<td>Clustering vs discovery in materials space (◎)</td>
-<td>Compare clustering vs AE embeddings</td>
-<td>Students reinterpret known clustering methods</td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>Uncertainty in predictions (aleatoric vs epistemic); Gaussian Processes (conceptual)</td>
-<td>Trust &amp; confidence in ML-assisted decisions; surrogate models (★)</td>
-<td>Discovery &amp; screening with uncertainty; exploration vs exploitation (★)</td>
-<td>Predictive uncertainty: GP regression vs NN ensembles</td>
-<td>Enables responsible ML &amp; accelerator concepts</td>
-</tr>
-<tr class="odd">
-<td>13</td>
-<td>Physics-informed &amp; constrained learning</td>
-<td>Physics-informed ML for processes &amp; characterization (★)</td>
-<td>Physical constraints in materials ML (◎)</td>
-<td>Constrained NN / penalty-based PINN demo</td>
-<td>MFML leads constraints &amp; PINN concepts</td>
-</tr>
-<tr class="even">
-<td>14</td>
-<td>Explainability, limits, scientific trust</td>
-<td>Integrated case studies &amp; failure modes</td>
-<td>Limits &amp; ethics of data-driven discovery</td>
-<td>Mini end-to-end synthesis project</td>
-<td>All courses converge conceptually</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="recommended-readings" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="recommended-readings"><span class="header-section-number">3</span> Recommended readings</h2>
+<section id="recommended-readings" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="recommended-readings"><span class="header-section-number">2</span> Recommended readings</h2>
 <p>We base much of the lecture on the following books:</p>
 <ul>
 <li><span class="citation" data-cites="neuer2024machine">Neuer (<a href="#ref-neuer2024machine" role="doc-biblioref">2024</a>)</span>, Machine Learning for Engineers: Introduction to Physics-Informed, Explainable Learning Methods for AI in Engineering Applications. Springer Nature.</li>
@@ -577,10 +426,10 @@
 <tr class="header">
 <th>MFML Week</th>
 <th>MFML Lecture Focus (Revised)</th>
-<th>Neuer – Required Reading</th>
-<th>Neuer – Optional / Skim</th>
-<th>McClarren – Contextual / Optional</th>
-<th>Bishop – Targeted Depth (Optional)</th>
+<th>Neuer ? Required Reading</th>
+<th>Neuer ? Optional / Skim</th>
+<th>McClarren ? Contextual / Optional</th>
+<th>Bishop ? Targeted Depth (Optional)</th>
 </tr>
 </thead>
 <tbody>
@@ -590,7 +439,7 @@
 <td>Ch. 1.1 Data-Based Modeling; 1.1.1 Concept of Model</td>
 <td>1.1.3 Criticism of Data-Based Modeling</td>
 <td>Ch. 1 Introduction (ML in physical systems)</td>
-<td>Ch. 1 §1.1–1.2 (what is a model, pattern recognition view)</td>
+<td>Ch. 1 �1.1?1.2 (what is a model, pattern recognition view)</td>
 </tr>
 <tr class="even">
 <td>2</td>
@@ -598,7 +447,7 @@
 <td>Ch. 5.2 PCA (skim, notation &amp; geometry only)</td>
 <td>PCA implementation details</td>
 <td>Ch. 5 Dimension Reduction (ROM intuition)</td>
-<td>Ch. 12 §12.1–12.2 PCA derivation (selective)</td>
+<td>Ch. 12 �12.1?12.2 PCA derivation (selective)</td>
 </tr>
 <tr class="odd">
 <td>3</td>
@@ -606,7 +455,7 @@
 <td>Ch. 4.2.2 Regression; Ch. 4.4.1 LMS theory</td>
 <td>LMS algorithm variants</td>
 <td>Ch. 4 Regression (physical meaning of regression)</td>
-<td>Ch. 3 §3.1–3.3 Linear regression, least squares geometry</td>
+<td>Ch. 3 �3.1?3.3 Linear regression, least squares geometry</td>
 </tr>
 <tr class="even">
 <td>4</td>
@@ -614,7 +463,7 @@
 <td>Ch. 4.5.1 Neuron; 4.5.3 Activation Functions</td>
 <td>Framework-specific NN sections</td>
 <td>Ch. 8 Neural Networks (surrogate perspective)</td>
-<td>Ch. 5 §5.1–5.2 Neural network basics</td>
+<td>Ch. 5 �5.1?5.2 Neural network basics</td>
 </tr>
 <tr class="odd">
 <td>5</td>
@@ -622,7 +471,7 @@
 <td>Ch. 4.5.4 Training of Neural Networks</td>
 <td>Advanced NN variants</td>
 <td>Ch. 7 Optimization (inverse-problem framing)</td>
-<td>Ch. 5 §5.3 Backpropagation (conceptual)</td>
+<td>Ch. 5 �5.3 Backpropagation (conceptual)</td>
 </tr>
 <tr class="even">
 <td>6</td>
@@ -630,15 +479,15 @@
 <td>Ch. 4.4.6 Hyperparameters; Ch. 4.5.5 Optimization</td>
 <td>Detailed optimizer variants</td>
 <td>Ch. 7 Optimization</td>
-<td>Ch. 3 §3.4 Regularization; §3.5 Bayesian view (skim)</td>
+<td>Ch. 3 �3.4 Regularization; �3.5 Bayesian view (skim)</td>
 </tr>
 <tr class="odd">
 <td>7</td>
-<td>Generalization, bias–variance, regularization</td>
+<td>Generalization, bias?variance, regularization</td>
 <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
-<td>—</td>
+<td>?</td>
 <td>Ch. 6 Model Selection &amp; Validation</td>
-<td>Ch. 3 §3.2 Bias–variance decomposition</td>
+<td>Ch. 3 �3.2 Bias?variance decomposition</td>
 </tr>
 <tr class="even">
 <td>8</td>
@@ -646,7 +495,7 @@
 <td>Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4 Uncertainty</td>
 <td>Bayesian details</td>
 <td>Ch. 3 Error and Uncertainty</td>
-<td>Ch. 2 §2.1–2.3 Gaussian distributions &amp; moments</td>
+<td>Ch. 2 �2.1?2.3 Gaussian distributions &amp; moments</td>
 </tr>
 <tr class="odd">
 <td>9</td>
@@ -654,15 +503,15 @@
 <td>Ch. 5.5 Autoencoder (intro &amp; motivation)</td>
 <td>AE uncertainty extensions</td>
 <td>Ch. 5 Dimension Reduction</td>
-<td>Ch. 12 §12.3 Nonlinear PCA / latent variables</td>
+<td>Ch. 12 �12.3 Nonlinear PCA / latent variables</td>
 </tr>
 <tr class="even">
 <td>10</td>
 <td>Latent spaces; embeddings</td>
-<td>Ch. 5.5.1–5.5.3 Autoencoder &amp; Latent Space</td>
+<td>Ch. 5.5.1?5.5.3 Autoencoder &amp; Latent Space</td>
 <td>AE architectures</td>
 <td>Ch. 5 Dimension Reduction</td>
-<td>Ch. 12 §12.3–12.4 Latent variable intuition</td>
+<td>Ch. 12 �12.3?12.4 Latent variable intuition</td>
 </tr>
 <tr class="odd">
 <td>11</td>
@@ -678,23 +527,23 @@
 <td>Ch. 6.4 Stochastic Methods for Uncertainty</td>
 <td>Advanced stochastic methods</td>
 <td>Ch. 3 Error and Uncertainty</td>
-<td>Ch. 3 §3.5 Bayesian regularization (skim)</td>
+<td>Ch. 3 �3.5 Bayesian regularization (skim)</td>
 </tr>
 <tr class="odd">
 <td>13</td>
 <td>Physics-informed &amp; constrained learning</td>
-<td>Ch. 6.1–6.3 Physics-Informed Learning</td>
+<td>Ch. 6.1?6.3 Physics-Informed Learning</td>
 <td>Semantic technologies</td>
 <td>Ch. 11 Physics-Informed &amp; Hybrid Models</td>
-<td>Ch. 1 §1.6 Model complexity &amp; Occam’s razor</td>
+<td>Ch. 1 �1.6 Model complexity &amp; Occam?s razor</td>
 </tr>
 <tr class="even">
 <td>14</td>
 <td>Explainability, limits, scientific trust</td>
 <td>Ch. 7 Explainability (discussion &amp; outlook)</td>
-<td>—</td>
+<td>?</td>
 <td>Ch. 12 Limitations and Outlook</td>
-<td>Ch. 1 §1.1–1.2 Reflection on model limits</td>
+<td>Ch. 1 �1.1?1.2 Reflection on model limits</td>
 </tr>
 </tbody>
 </table>
@@ -716,11 +565,11 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </div>
 </div>
 </section>
-<section id="week-1-summary-learning-vs-data-analysis-models-loss-functions" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="week-1-summary-learning-vs-data-analysis-models-loss-functions"><span class="header-section-number">4</span> Week 1 Summary: Learning vs Data Analysis; Models, Loss Functions</h2>
+<section id="week-1-summary-learning-vs-data-analysis-models-loss-functions" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="week-1-summary-learning-vs-data-analysis-models-loss-functions"><span class="header-section-number">3</span> Week 1 Summary: Learning vs Data Analysis; Models, Loss Functions</h2>
 <p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html">Open</a></p>
-<section id="core-concepts" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="core-concepts"><span class="header-section-number">4.1</span> Core Concepts</h3>
+<section id="core-concepts" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="core-concepts"><span class="header-section-number">3.1</span> Core Concepts</h3>
 <ul>
 <li><strong>The Concept of a Model:</strong> Models are simplified representations of reality designed for <strong>prediction</strong> and <strong>explanation</strong>. We distinguish between <strong>First-Principle models</strong> (bottom-up, based on physical laws) and <strong>Data-based models</strong> (top-down, extracted from observations).</li>
 <li><strong>Interpretability Spectrum:</strong>
@@ -737,30 +586,30 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul></li>
 </ul>
 </section>
-<section id="loss-functions-and-optimization" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="loss-functions-and-optimization"><span class="header-section-number">4.2</span> Loss Functions and Optimization</h3>
+<section id="loss-functions-and-optimization" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="loss-functions-and-optimization"><span class="header-section-number">3.2</span> Loss Functions and Optimization</h3>
 <ul>
 <li><strong>Learning as Optimization:</strong> Machine learning is the process of minimizing a <strong>Loss Function</strong> (w)$ that measures the discrepancy between model predictions and true targets.</li>
 <li><strong>Mean Squared Error (MSE):</strong> The standard loss for regression, providing a geometric interpretation of residuals.</li>
 <li><strong>Parsimony and Occam’s Razor:</strong> The preference for simpler models. Overly complex models tend to fit noise in the training data, leading to <strong>Overfitting</strong>.</li>
 <li><strong>Regularization:</strong> A technique to control complexity by adding a penalty term (e.g., Ridge/Lasso) to the loss function, discouraging large parameter values and wild oscillations.</li>
-<li><strong>Generalization:</strong> The central goal of ML—ensuring the model performs well on unseen <strong>test data</strong>, not just the training set.</li>
+<li><strong>Generalization:</strong> The central goal of ML?ensuring the model performs well on unseen <strong>test data</strong>, not just the training set.</li>
 </ul>
 </section>
 </section>
-<section id="week-2-summary-linear-algebra-refresher-covariance-pcasvd" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="week-2-summary-linear-algebra-refresher-covariance-pcasvd"><span class="header-section-number">5</span> Week 2 Summary: Linear Algebra Refresher; Covariance, PCA/SVD</h2>
+<section id="week-2-summary-linear-algebra-refresher-covariance-pcasvd" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="week-2-summary-linear-algebra-refresher-covariance-pcasvd"><span class="header-section-number">4</span> Week 2 Summary: Linear Algebra Refresher; Covariance, PCA/SVD</h2>
 <p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html">Open</a></p>
-<section id="core-concepts-1" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="core-concepts-1"><span class="header-section-number">5.1</span> Core Concepts</h3>
+<section id="core-concepts-1" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="core-concepts-1"><span class="header-section-number">4.1</span> Core Concepts</h3>
 <ul>
 <li><strong>Eigendecomposition:</strong> The foundation of PCA. For a symmetric covariance matrix $, we can find an orthonormal basis of eigenvectors $ and corresponding eigenvalues <span class="math inline">\(\lambda_i\)</span> such that = _i u_i$.</li>
 <li><strong>The Covariance Matrix ($):</strong> Captures the relationships and variability between features. The eigenvectors of $ represent the directions of maximum variance in the data, while the eigenvalues quantify the amount of variance along those directions.</li>
 <li><strong>Principal Component Analysis (PCA):</strong> A linear method for dimensionality reduction that projects data onto a lower-dimensional subspace while preserving as much variance (information) as possible.</li>
 </ul>
 </section>
-<section id="pca-theory-and-application" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="pca-theory-and-application"><span class="header-section-number">5.2</span> PCA Theory and Application</h3>
+<section id="pca-theory-and-application" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="pca-theory-and-application"><span class="header-section-number">4.2</span> PCA Theory and Application</h3>
 <ul>
 <li><strong>Maximizing Variance:</strong> PCA is derived as a constrained optimization problem: finding directions $ that maximize the projected variance ^T S u$ subject to the unit length constraint <span class="math inline">\(\|u\|=1\)</span>.</li>
 <li><strong>Explained Variance:</strong> The proportion of total variance captured by $ components is given by the sum of the first $ eigenvalues divided by the total sum of all eigenvalues.</li>
@@ -775,10 +624,10 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-3-summary-regression-as-loss-minimization" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="week-3-summary-regression-as-loss-minimization"><span class="header-section-number">6</span> Week 3 Summary: Regression as Loss Minimization</h2>
-<section id="core-concepts-2" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="core-concepts-2"><span class="header-section-number">6.1</span> Core Concepts</h3>
+<section id="week-3-summary-regression-as-loss-minimization" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="week-3-summary-regression-as-loss-minimization"><span class="header-section-number">5</span> Week 3 Summary: Regression as Loss Minimization</h2>
+<section id="core-concepts-2" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="core-concepts-2"><span class="header-section-number">5.1</span> Core Concepts</h3>
 <ul>
 <li><strong>The Supervised Learning Framework:</strong> Mapping inputs $ to continuous outputs $ to minimize the discrepancy with target labels $. The central objective is finding the optimal parameters $ of a hypothesis function (x)$.</li>
 <li><strong>Loss and Cost Functions:</strong>
@@ -793,8 +642,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul></li>
 </ul>
 </section>
-<section id="expanding-linear-models" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="expanding-linear-models"><span class="header-section-number">6.2</span> Expanding Linear Models</h3>
+<section id="expanding-linear-models" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="expanding-linear-models"><span class="header-section-number">5.2</span> Expanding Linear Models</h3>
 <ul>
 <li><strong>The Linearity Principle:</strong> A model is “linear” if it is linear in its <em>parameters</em>, allowing us to model highly non-linear relationships by transforming features.</li>
 <li><strong>Basis Functions (<span class="math inline">\(\phi\)</span>):</strong> By replacing raw features $ with a vector of transformations <span class="math inline">\(\phi(x)\)</span> (e.g., polynomials, sinusoids, radial basis functions), we can use the linear regression framework to fit complex curves.</li>
@@ -803,18 +652,18 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-4-summary-neural-networks-early-neuron-activations" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="week-4-summary-neural-networks-early-neuron-activations"><span class="header-section-number">7</span> Week 4 Summary: Neural Networks Early: Neuron &amp; Activations</h2>
-<section id="core-concepts-3" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="core-concepts-3"><span class="header-section-number">7.1</span> Core Concepts</h3>
+<section id="week-4-summary-neural-networks-early-neuron-activations" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="week-4-summary-neural-networks-early-neuron-activations"><span class="header-section-number">6</span> Week 4 Summary: Neural Networks Early: Neuron &amp; Activations</h2>
+<section id="core-concepts-3" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="core-concepts-3"><span class="header-section-number">6.1</span> Core Concepts</h3>
 <ul>
 <li><strong>The Artificial Neuron:</strong> A fundamental processing unit that computes a weighted sum of its inputs plus a bias ( = w_i x_i + b$) and passes the result through a non-linear <strong>activation function</strong>. It is the building block of all deep learning architectures.</li>
 <li><strong>Non-linear Activations:</strong> The “soul” of the neural network. Without non-linearity, multiple layers would mathematically collapse into a single linear transformation, rendering the network unable to solve complex problems like XOR.</li>
 <li><strong>The Multi-Layer Perceptron (MLP):</strong> A feed-forward architecture where neurons are organized into an input layer, one or more hidden layers, and an output layer. Layers are typically fully connected.</li>
 </ul>
 </section>
-<section id="activation-function-taxonomy" class="level3" data-number="7.2">
-<h3 data-number="7.2" class="anchored" data-anchor-id="activation-function-taxonomy"><span class="header-section-number">7.2</span> Activation Function Taxonomy</h3>
+<section id="activation-function-taxonomy" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="activation-function-taxonomy"><span class="header-section-number">6.2</span> Activation Function Taxonomy</h3>
 <ul>
 <li><strong>Sigmoid &amp; Tanh:</strong> Historical standards that map inputs to bounded ranges ((0, 1) and (-1, 1)). They are smooth and differentiable but suffer from <strong>vanishing gradients</strong> in deep networks due to saturation.</li>
 <li><strong>ReLU (Rectified Linear Unit):</strong> The modern standard ((x) = (0, x)$). It is computationally efficient and helps mitigate vanishing gradients for positive inputs, enabling the training of much deeper networks.</li>
@@ -822,8 +671,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Softmax:</strong> Typically reserved for the output layer in multi-class classification tasks, as it squashes outputs into a probability distribution that sums to one.</li>
 </ul>
 </section>
-<section id="structural-properties" class="level3" data-number="7.3">
-<h3 data-number="7.3" class="anchored" data-anchor-id="structural-properties"><span class="header-section-number">7.3</span> Structural Properties</h3>
+<section id="structural-properties" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="structural-properties"><span class="header-section-number">6.3</span> Structural Properties</h3>
 <ul>
 <li><strong>Universal Approximation Theorem:</strong> A powerful result stating that even a single hidden layer can approximate any continuous function, provided it has a non-linear activation and enough neurons.</li>
 <li><strong>Forward Propagation:</strong> The deterministic process of calculating the output of each layer sequentially to produce a final prediction.</li>
@@ -831,10 +680,10 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-5-summary-backpropagation-gradient-flow" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="week-5-summary-backpropagation-gradient-flow"><span class="header-section-number">8</span> Week 5 Summary: Backpropagation &amp; Gradient Flow</h2>
-<section id="core-concepts-4" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="core-concepts-4"><span class="header-section-number">8.1</span> Core Concepts</h3>
+<section id="week-5-summary-backpropagation-gradient-flow" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="week-5-summary-backpropagation-gradient-flow"><span class="header-section-number">7</span> Week 5 Summary: Backpropagation &amp; Gradient Flow</h2>
+<section id="core-concepts-4" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="core-concepts-4"><span class="header-section-number">7.1</span> Core Concepts</h3>
 <ul>
 <li><strong>Learning as Optimization:</strong> The training of a neural network is an iterative optimization problem aimed at minimizing a cost function $ through gradient descent: w - ta abla_w J$.</li>
 <li><strong>The Backpropagation Algorithm:</strong> An efficient implementation of the <strong>chain rule</strong> that calculates the partial derivative of the cost function with respect to every weight and bias in the network. It consists of two passes:
@@ -845,8 +694,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Computational Efficiency:</strong> Backpropagation allows gradient computation in (W)$ time, where $ is the number of weights, making it feasible to train models with millions of parameters.</li>
 </ul>
 </section>
-<section id="gradient-flow-and-stability" class="level3" data-number="8.2">
-<h3 data-number="8.2" class="anchored" data-anchor-id="gradient-flow-and-stability"><span class="header-section-number">8.2</span> Gradient Flow and Stability</h3>
+<section id="gradient-flow-and-stability" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="gradient-flow-and-stability"><span class="header-section-number">7.2</span> Gradient Flow and Stability</h3>
 <ul>
 <li><strong>Vanishing Gradients:</strong> In deep networks, gradients can become infinitesimally small as they are multiplied by the derivatives of saturating activation functions (like sigmoid or tanh) at each layer. This “signal decay” prevents early layers from learning.</li>
 <li><strong>Exploding Gradients:</strong> Conversely, large weights and certain architectures can cause gradients to grow exponentially, leading to numerical instability and divergence.</li>
@@ -855,12 +704,12 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-6-summary-loss-landscapes-optimization-behavior" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="week-6-summary-loss-landscapes-optimization-behavior"><span class="header-section-number">9</span> Week 6 Summary: Loss Landscapes &amp; Optimization Behavior</h2>
-<section id="core-concepts-5" class="level3" data-number="9.1">
-<h3 data-number="9.1" class="anchored" data-anchor-id="core-concepts-5"><span class="header-section-number">9.1</span> Core Concepts</h3>
+<section id="week-6-summary-loss-landscapes-optimization-behavior" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="week-6-summary-loss-landscapes-optimization-behavior"><span class="header-section-number">8</span> Week 6 Summary: Loss Landscapes &amp; Optimization Behavior</h2>
+<section id="core-concepts-5" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="core-concepts-5"><span class="header-section-number">8.1</span> Core Concepts</h3>
 <ul>
-<li><strong>The Loss Landscape:</strong> A high-dimensional geometric representation of the cost function $ over the parameter space $. Its topography—comprising peaks, valleys, saddle points, and plateaus—determines the ease and success of the training process.</li>
+<li><strong>The Loss Landscape:</strong> A high-dimensional geometric representation of the cost function $ over the parameter space $. Its topography?comprising peaks, valleys, saddle points, and plateaus?determines the ease and success of the training process.</li>
 <li><strong>Curvature and the Hessian ($):</strong> While the gradient indicates the direction of steepest descent, the <strong>Hessian matrix</strong> (the matrix of second-order derivatives) describes the <em>curvature</em> of the landscape.
 <ul>
 <li><strong>Eigenvalues of $:</strong> Large eigenvalues indicate steep directions where the gradient changes rapidly, while small eigenvalues correspond to shallow, flat directions.</li>
@@ -869,8 +718,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Saddle Points:</strong> In high-dimensional spaces, true local minima are rare; most points with zero gradient are saddle points, which can trap or significantly slow down first-order optimizers.</li>
 </ul>
 </section>
-<section id="advanced-optimization-strategies" class="level3" data-number="9.2">
-<h3 data-number="9.2" class="anchored" data-anchor-id="advanced-optimization-strategies"><span class="header-section-number">9.2</span> Advanced Optimization Strategies</h3>
+<section id="advanced-optimization-strategies" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="advanced-optimization-strategies"><span class="header-section-number">8.2</span> Advanced Optimization Strategies</h3>
 <ul>
 <li><strong>Momentum:</strong> Inspired by physics, this technique adds a “velocity” component to updates, allowing the optimizer to accumulate speed in consistent directions and dampen oscillations in steep, narrow valleys.</li>
 <li><strong>Adaptive Learning Rates:</strong> Algorithms like <strong>AdaGrad</strong>, <strong>RMSProp</strong>, and <strong>ADAM</strong> adjust the learning rate for each individual parameter based on the history of observed gradients. This effectively scales the coordinates to “normalize” the landscape’s curvature.</li>
@@ -879,12 +728,12 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-7-summary-generalization-biasvariance-regularization" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="week-7-summary-generalization-biasvariance-regularization"><span class="header-section-number">10</span> Week 7 Summary: Generalization, Bias–Variance, Regularization</h2>
-<section id="core-concepts-6" class="level3" data-number="10.1">
-<h3 data-number="10.1" class="anchored" data-anchor-id="core-concepts-6"><span class="header-section-number">10.1</span> Core Concepts</h3>
+<section id="week-7-summary-generalization-biasvariance-regularization" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="week-7-summary-generalization-biasvariance-regularization"><span class="header-section-number">9</span> Week 7 Summary: Generalization, Bias?Variance, Regularization</h2>
+<section id="core-concepts-6" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="core-concepts-6"><span class="header-section-number">9.1</span> Core Concepts</h3>
 <ul>
-<li><strong>Generalization:</strong> The fundamental objective of machine learning—ensuring that a model learned from a finite training set performs accurately on previously unseen data.</li>
+<li><strong>Generalization:</strong> The fundamental objective of machine learning?ensuring that a model learned from a finite training set performs accurately on previously unseen data.</li>
 <li><strong>Overfitting vs.&nbsp;Underfitting:</strong>
 <ul>
 <li><strong>Overfitting:</strong> Occurs when a model captures the random noise in the training data rather than the underlying pattern. This is characterized by low training error but high test error.</li>
@@ -899,8 +748,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul></li>
 </ul>
 </section>
-<section id="regularization-and-validation" class="level3" data-number="10.2">
-<h3 data-number="10.2" class="anchored" data-anchor-id="regularization-and-validation"><span class="header-section-number">10.2</span> Regularization and Validation</h3>
+<section id="regularization-and-validation" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="regularization-and-validation"><span class="header-section-number">9.2</span> Regularization and Validation</h3>
 <ul>
 <li><strong>Regularization:</strong> A technique to prevent overfitting by adding a penalty term to the loss function that discourages overly complex models (large parameter values).
 <ul>
@@ -916,10 +765,10 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-8-summary-probabilistic-view-of-learning-noise" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="week-8-summary-probabilistic-view-of-learning-noise"><span class="header-section-number">11</span> Week 8 Summary: Probabilistic View of Learning; Noise</h2>
-<section id="core-concepts-7" class="level3" data-number="11.1">
-<h3 data-number="11.1" class="anchored" data-anchor-id="core-concepts-7"><span class="header-section-number">11.1</span> Core Concepts</h3>
+<section id="week-8-summary-probabilistic-view-of-learning-noise" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="week-8-summary-probabilistic-view-of-learning-noise"><span class="header-section-number">10</span> Week 8 Summary: Probabilistic View of Learning; Noise</h2>
+<section id="core-concepts-7" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="core-concepts-7"><span class="header-section-number">10.1</span> Core Concepts</h3>
 <ul>
 <li><strong>Probability as Modeling Tool:</strong> Probability theory provides the formal framework for quantifying uncertainty in both data (noise) and models (parameter uncertainty). Machine learning is viewed as the process of updating probabilistic beliefs in light of new observations.</li>
 <li><strong>Taxonomy of Uncertainty:</strong>
@@ -930,8 +779,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Sampling and Signal Theory:</strong> Digital data collection is a stochastic process governed by the <strong>Nyquist-Shannon Theorem</strong>, which defines the minimum sampling frequency required to fully capture a signal’s dynamics.</li>
 </ul>
 </section>
-<section id="inference-and-uncertainty-quantification" class="level3" data-number="11.2">
-<h3 data-number="11.2" class="anchored" data-anchor-id="inference-and-uncertainty-quantification"><span class="header-section-number">11.2</span> Inference and Uncertainty Quantification</h3>
+<section id="inference-and-uncertainty-quantification" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="inference-and-uncertainty-quantification"><span class="header-section-number">10.2</span> Inference and Uncertainty Quantification</h3>
 <ul>
 <li><strong>Frequentist vs.&nbsp;Bayesian Views:</strong>
 <ul>
@@ -948,18 +797,18 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-9-summary-representation-learning-features-vs.-learned-representations" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="week-9-summary-representation-learning-features-vs.-learned-representations"><span class="header-section-number">12</span> Week 9 Summary: Representation Learning; Features vs.&nbsp;Learned Representations</h2>
-<section id="core-concepts-8" class="level3" data-number="12.1">
-<h3 data-number="12.1" class="anchored" data-anchor-id="core-concepts-8"><span class="header-section-number">12.1</span> Core Concepts</h3>
+<section id="week-9-summary-representation-learning-features-vs.-learned-representations" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="week-9-summary-representation-learning-features-vs.-learned-representations"><span class="header-section-number">11</span> Week 9 Summary: Representation Learning; Features vs.&nbsp;Learned Representations</h2>
+<section id="core-concepts-8" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="core-concepts-8"><span class="header-section-number">11.1</span> Core Concepts</h3>
 <ul>
 <li><strong>Beyond Handcrafting:</strong> Traditional machine learning relies on experts to manually engineer features (e.g., Fourier transforms, signal moments). <strong>Representation Learning</strong> shifts this burden to the model, which autonomously discovers the most relevant transformations directly from raw data.</li>
 <li><strong>The Manifold Hypothesis:</strong> Real-world high-dimensional data (like images or spectra) typically lies on or near a low-dimensional, non-linear <strong>manifold</strong>. The number of independent parameters needed to describe this manifold represents the data’s true <strong>degrees of freedom</strong>.</li>
 <li><strong>Autoencoders (AE):</strong> A class of neural networks designed for unsupervised representation learning. By training a network to perform an identity mapping ((x) pprox x$) through a constrained <strong>bottleneck layer</strong>, the model is forced to capture the most salient features in a compressed <strong>latent space</strong>.</li>
 </ul>
 </section>
-<section id="architectures-and-latent-spaces" class="level3" data-number="12.2">
-<h3 data-number="12.2" class="anchored" data-anchor-id="architectures-and-latent-spaces"><span class="header-section-number">12.2</span> Architectures and Latent Spaces</h3>
+<section id="architectures-and-latent-spaces" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored" data-anchor-id="architectures-and-latent-spaces"><span class="header-section-number">11.2</span> Architectures and Latent Spaces</h3>
 <ul>
 <li><strong>Encoder and Decoder:</strong>
 <ul>
@@ -971,8 +820,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Denoising:</strong> Autoencoders can be trained to recover clean signals from corrupted inputs, effectively learning to project “noisy” points back onto the learned data manifold.</li>
 </ul>
 </section>
-<section id="industrial-and-engineering-applications" class="level3" data-number="12.3">
-<h3 data-number="12.3" class="anchored" data-anchor-id="industrial-and-engineering-applications"><span class="header-section-number">12.3</span> Industrial and Engineering Applications</h3>
+<section id="industrial-and-engineering-applications" class="level3" data-number="11.3">
+<h3 data-number="11.3" class="anchored" data-anchor-id="industrial-and-engineering-applications"><span class="header-section-number">11.3</span> Industrial and Engineering Applications</h3>
 <ul>
 <li><strong>Data Compression:</strong> Storing high-fidelity engineering data (e.g., leaf spectra or plasma simulations) using only a fraction of the original storage by keeping only the latent codes and the trained decoder.</li>
 <li><strong>Anomaly Detection:</strong> Anomalies can be detected in two ways: (1) high reconstruction error (the model cannot reconstruct what it hasn’t seen) or (2) outliers in the latent space distribution.</li>
@@ -980,18 +829,18 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-10-summary-latent-spaces-embeddings" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="week-10-summary-latent-spaces-embeddings"><span class="header-section-number">13</span> Week 10 Summary: Latent Spaces; Embeddings</h2>
-<section id="core-concepts-9" class="level3" data-number="13.1">
-<h3 data-number="13.1" class="anchored" data-anchor-id="core-concepts-9"><span class="header-section-number">13.1</span> Core Concepts</h3>
+<section id="week-10-summary-latent-spaces-embeddings" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="week-10-summary-latent-spaces-embeddings"><span class="header-section-number">12</span> Week 10 Summary: Latent Spaces; Embeddings</h2>
+<section id="core-concepts-9" class="level3" data-number="12.1">
+<h3 data-number="12.1" class="anchored" data-anchor-id="core-concepts-9"><span class="header-section-number">12.1</span> Core Concepts</h3>
 <ul>
 <li><strong>Latent Space Definition:</strong> A low-dimensional, continuous vector space that represents the underlying structure of high-dimensional data. In this space, the distance between points reflects their semantic or physical similarity.</li>
 <li><strong>Embeddings:</strong> A mapping of high-dimensional, often discrete or sparse data (e.g., categories, words, or crystal structures) into a dense, lower-dimensional latent space where meaningful relationships can be calculated via dot products or Euclidean distance.</li>
 <li><strong>The Geometry of Compression:</strong> Latent spaces discovered by autoencoders are non-linear manifolds. Unlike linear PCA, these spaces can disentangle complex factors of variation, such as the position, width, and amplitude of a signal.</li>
 </ul>
 </section>
-<section id="dimensionality-reduction-and-visualization" class="level3" data-number="13.2">
-<h3 data-number="13.2" class="anchored" data-anchor-id="dimensionality-reduction-and-visualization"><span class="header-section-number">13.2</span> Dimensionality Reduction and Visualization</h3>
+<section id="dimensionality-reduction-and-visualization" class="level3" data-number="12.2">
+<h3 data-number="12.2" class="anchored" data-anchor-id="dimensionality-reduction-and-visualization"><span class="header-section-number">12.2</span> Dimensionality Reduction and Visualization</h3>
 <ul>
 <li><strong>t-SNE (t-Distributed Stochastic Neighbor Embedding):</strong> A powerful non-linear technique for visualizing high-dimensional data archipelagos. It matches the neighborhood structure of the high-dimensional space to a 2D or 3D map by minimizing the KL-divergence between Gaussian (high-dim) and Student’s t-distributions (low-dim).</li>
 <li><strong>The Crowding Problem:</strong> t-SNE uses the heavy-tailed Student’s t-distribution in the low-dimensional space to push moderately distant points further apart, preventing the “crowding” that occurs in high-dimensional Gaussian mappings.</li>
@@ -999,8 +848,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Kernel PCA:</strong> An extension of PCA that uses the <strong>Kernel Trick</strong> to project data into an implicit, infinite-dimensional feature space where non-linear patterns become linearly separable.</li>
 </ul>
 </section>
-<section id="analysis-and-trust" class="level3" data-number="13.3">
-<h3 data-number="13.3" class="anchored" data-anchor-id="analysis-and-trust"><span class="header-section-number">13.3</span> Analysis and Trust</h3>
+<section id="analysis-and-trust" class="level3" data-number="12.3">
+<h3 data-number="12.3" class="anchored" data-anchor-id="analysis-and-trust"><span class="header-section-number">12.3</span> Analysis and Trust</h3>
 <ul>
 <li><strong>Interpretability:</strong> Latent neurons can often be mapped back to physical parameters (e.g., material properties), allowing for semi-supervised discovery.</li>
 <li><strong>Anomaly Detection:</strong> Monitoring the distribution of “normal” data in latent space allows for the detection of “exotic” cases that fall outside established clusters, even if those anomalies were never seen during training.</li>
@@ -1008,18 +857,18 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-11-summary-unsupervised-learning-revisited-objectives" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="week-11-summary-unsupervised-learning-revisited-objectives"><span class="header-section-number">14</span> Week 11 Summary: Unsupervised Learning Revisited (Objectives)</h2>
-<section id="core-concepts-10" class="level3" data-number="14.1">
-<h3 data-number="14.1" class="anchored" data-anchor-id="core-concepts-10"><span class="header-section-number">14.1</span> Core Concepts</h3>
+<section id="week-11-summary-unsupervised-learning-revisited-objectives" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="week-11-summary-unsupervised-learning-revisited-objectives"><span class="header-section-number">13</span> Week 11 Summary: Unsupervised Learning Revisited (Objectives)</h2>
+<section id="core-concepts-10" class="level3" data-number="13.1">
+<h3 data-number="13.1" class="anchored" data-anchor-id="core-concepts-10"><span class="header-section-number">13.1</span> Core Concepts</h3>
 <ul>
 <li><strong>Unsupervised Paradigm:</strong> In many engineering scenarios, labels are missing (e.g., process data without quality metrics). Unsupervised learning uncovers the inherent structure, regimes, and clusters within the data, providing a foundation for both discovery and dimensionality reduction.</li>
 <li><strong>Clustering - K-Means:</strong> A robust, non-probabilistic algorithm that partitions data into $ clusters by minimizing the sum of squared distances to cluster centroids. It operates via an iterative assignment-update cycle that is a “hard” version of the EM algorithm.</li>
 <li><strong>Gaussian Mixture Models (GMM):</strong> A probabilistic approach that represents data as a weighted sum of multiple Gaussian components. It treats the cluster membership as a <strong>discrete latent variable</strong>, allowing for “soft” assignments where points can belong to multiple clusters with varying degrees of <strong>responsibility</strong>.</li>
 </ul>
 </section>
-<section id="the-em-expectation-maximization-algorithm" class="level3" data-number="14.2">
-<h3 data-number="14.2" class="anchored" data-anchor-id="the-em-expectation-maximization-algorithm"><span class="header-section-number">14.2</span> The EM (Expectation-Maximization) Algorithm</h3>
+<section id="the-em-expectation-maximization-algorithm" class="level3" data-number="13.2">
+<h3 data-number="13.2" class="anchored" data-anchor-id="the-em-expectation-maximization-algorithm"><span class="header-section-number">13.2</span> The EM (Expectation-Maximization) Algorithm</h3>
 <ul>
 <li><strong>General Framework:</strong> EM is a powerful iterative strategy for finding maximum likelihood solutions in models with latent variables. It consists of two primary steps:
 <ul>
@@ -1030,8 +879,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Robustness and Variants:</strong> While standard K-Means is sensitive to outliers, <strong>K-Medoids</strong> offers a robust alternative by using actual data points as cluster prototypes. For discrete data, <strong>Bernoulli Mixtures</strong> allow for clustering of binary vectors (e.g., digitized images).</li>
 </ul>
 </section>
-<section id="applications" class="level3" data-number="14.3">
-<h3 data-number="14.3" class="anchored" data-anchor-id="applications"><span class="header-section-number">14.3</span> Applications</h3>
+<section id="applications" class="level3" data-number="13.3">
+<h3 data-number="13.3" class="anchored" data-anchor-id="applications"><span class="header-section-number">13.3</span> Applications</h3>
 <ul>
 <li><strong>Image Segmentation:</strong> Clustering pixels in color or spectral space to identify homogeneous regions or objects.</li>
 <li><strong>Vector Quantization:</strong> A lossy compression technique that replaces data points with the index of their nearest cluster centroid (code-book vector).</li>
@@ -1039,10 +888,10 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-12-summary-uncertainty-in-predictions" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="week-12-summary-uncertainty-in-predictions"><span class="header-section-number">15</span> Week 12 Summary: Uncertainty in Predictions</h2>
-<section id="core-concepts-11" class="level3" data-number="15.1">
-<h3 data-number="15.1" class="anchored" data-anchor-id="core-concepts-11"><span class="header-section-number">15.1</span> Core Concepts</h3>
+<section id="week-12-summary-uncertainty-in-predictions" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="week-12-summary-uncertainty-in-predictions"><span class="header-section-number">14</span> Week 12 Summary: Uncertainty in Predictions</h2>
+<section id="core-concepts-11" class="level3" data-number="14.1">
+<h3 data-number="14.1" class="anchored" data-anchor-id="core-concepts-11"><span class="header-section-number">14.1</span> Core Concepts</h3>
 <ul>
 <li><strong>The Necessity of UQ:</strong> In engineering applications, a single-point prediction is rarely enough. <strong>Uncertainty Quantification (UQ)</strong> allows models to express their confidence, facilitating safer decision-making and efficient out-of-distribution (OOD) detection.</li>
 <li><strong>Bayesian Predictive Distribution:</strong> Rather than a single set of weights, Bayesian models maintain a distribution over all possible parameters. The predictive distribution (t|x)$ is obtained by integrating over this parameter posterior, resulting in a variance that naturally increases in regions with sparse training data.</li>
@@ -1053,8 +902,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul></li>
 </ul>
 </section>
-<section id="probabilistic-architectures" class="level3" data-number="15.2">
-<h3 data-number="15.2" class="anchored" data-anchor-id="probabilistic-architectures"><span class="header-section-number">15.2</span> Probabilistic Architectures</h3>
+<section id="probabilistic-architectures" class="level3" data-number="14.2">
+<h3 data-number="14.2" class="anchored" data-anchor-id="probabilistic-architectures"><span class="header-section-number">14.2</span> Probabilistic Architectures</h3>
 <ul>
 <li><strong>The Evidence Framework:</strong> A hierarchical Bayesian approach that allows for the optimization of hyperparameters (like regularization strength) directly from the training data by maximizing the <strong>Marginal Likelihood</strong> (Evidence).</li>
 <li><strong>Effective Number of Parameters (<span class="math inline">\(\gamma\)</span>):</strong> A metric that quantifies how many model degrees of freedom are actually being utilized to fit the data, as opposed to being suppressed by the prior.</li>
@@ -1062,34 +911,34 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>MC Dropout:</strong> A practical heuristic where dropout is kept active during inference to generate an ensemble of predictions, serving as a frequentist approximation to Bayesian uncertainty.</li>
 </ul>
 </section>
-<section id="physics-and-trust" class="level3" data-number="15.3">
-<h3 data-number="15.3" class="anchored" data-anchor-id="physics-and-trust"><span class="header-section-number">15.3</span> Physics and Trust</h3>
+<section id="physics-and-trust" class="level3" data-number="14.3">
+<h3 data-number="14.3" class="anchored" data-anchor-id="physics-and-trust"><span class="header-section-number">14.3</span> Physics and Trust</h3>
 <ul>
 <li><strong>Stochastic Enrichment:</strong> Probing model stability by augmenting datasets with synthetic noise and observing the variance in the learned results (e.g., centroid movement in K-Means).</li>
 <li><strong>Physics-Informed Constraints:</strong> Embedding physical laws (via ODEs/PDEs) into the loss function acts as a powerful regularizer that can significantly reduce epistemic uncertainty, particularly in “data-poor” regions of the parameter space.</li>
 </ul>
 </section>
 </section>
-<section id="week-13-summary-physics-informed-constrained-learning" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="week-13-summary-physics-informed-constrained-learning"><span class="header-section-number">16</span> Week 13 Summary: Physics-Informed &amp; Constrained Learning</h2>
-<section id="core-concepts-12" class="level3" data-number="16.1">
-<h3 data-number="16.1" class="anchored" data-anchor-id="core-concepts-12"><span class="header-section-number">16.1</span> Core Concepts</h3>
+<section id="week-13-summary-physics-informed-constrained-learning" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="week-13-summary-physics-informed-constrained-learning"><span class="header-section-number">15</span> Week 13 Summary: Physics-Informed &amp; Constrained Learning</h2>
+<section id="core-concepts-12" class="level3" data-number="15.1">
+<h3 data-number="15.1" class="anchored" data-anchor-id="core-concepts-12"><span class="header-section-number">15.1</span> Core Concepts</h3>
 <ul>
 <li><strong>PINN Philosophy:</strong> Physics-Informed Machine Learning (PIML) seeks to integrate domain expertise and physical laws (priors) directly into the learning process. The goal is to reduce the amount of data required, improve generalization in unseen regions, and ensure physical consistency.</li>
 <li><strong>Data Enrichment:</strong> Actively designing input representations by applying known mathematical transformations (e.g., FFT, Wavelets, Derivatives) that highlight the underlying physical dynamics of the system.</li>
 <li><strong>Embedding Analytical Expressions:</strong> Utilizing the <strong>Automatic Differentiation</strong> capabilities of modern ML frameworks to enforce physical constraints within the neural network’s loss function.</li>
 </ul>
 </section>
-<section id="mechanics-of-physics-integration" class="level3" data-number="16.2">
-<h3 data-number="16.2" class="anchored" data-anchor-id="mechanics-of-physics-integration"><span class="header-section-number">16.2</span> Mechanics of Physics Integration</h3>
+<section id="mechanics-of-physics-integration" class="level3" data-number="15.2">
+<h3 data-number="15.2" class="anchored" data-anchor-id="mechanics-of-physics-integration"><span class="header-section-number">15.2</span> Mechanics of Physics Integration</h3>
 <ul>
 <li><strong>Loss Function Modification:</strong> The objective function is expanded to include a “physics residual” term: = J_{data} + J_{physics}$. The optimizer then searches for a solution that simultaneously fits the observed data and satisfies the governing physical equations (e.g., ODEs/PDEs).</li>
 <li><strong>Boundary Conditions:</strong> Techniques like the <strong>Lagaris substitution</strong> allow for the mathematical enforcement of initial and boundary conditions, ensuring the model’s output is physically valid at the start of the simulation.</li>
 <li><strong>Neural Integrators:</strong> Training networks to solve differential equations by minimizing the discrepancy between the network’s gradient and the physical law, effectively using the NN as a flexible surrogate for numerical solvers.</li>
 </ul>
 </section>
-<section id="scientific-trust-and-efficiency" class="level3" data-number="16.3">
-<h3 data-number="16.3" class="anchored" data-anchor-id="scientific-trust-and-efficiency"><span class="header-section-number">16.3</span> Scientific Trust and Efficiency</h3>
+<section id="scientific-trust-and-efficiency" class="level3" data-number="15.3">
+<h3 data-number="15.3" class="anchored" data-anchor-id="scientific-trust-and-efficiency"><span class="header-section-number">15.3</span> Scientific Trust and Efficiency</h3>
 <ul>
 <li><strong>Occam’s Razor:</strong> Information theory provides a rigorous basis for preferring simpler, more parsimonious models. PIML aligns with this by constraining the model’s search space to physically plausible solutions.</li>
 <li><strong>Small Data &amp; Balance:</strong> By providing the model with the “rules of the game,” PINNs can succeed in “data-poor” scenarios where pure black-box models would fail due to overfitting or statistical imbalance.</li>
@@ -1097,10 +946,10 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul>
 </section>
 </section>
-<section id="week-14-summary-explainability-limits-scientific-trust" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="week-14-summary-explainability-limits-scientific-trust"><span class="header-section-number">17</span> Week 14 Summary: Explainability, Limits, Scientific Trust</h2>
-<section id="core-concepts-13" class="level3" data-number="17.1">
-<h3 data-number="17.1" class="anchored" data-anchor-id="core-concepts-13"><span class="header-section-number">17.1</span> Core Concepts</h3>
+<section id="week-14-summary-explainability-limits-scientific-trust" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="week-14-summary-explainability-limits-scientific-trust"><span class="header-section-number">16</span> Week 14 Summary: Explainability, Limits, Scientific Trust</h2>
+<section id="core-concepts-13" class="level3" data-number="16.1">
+<h3 data-number="16.1" class="anchored" data-anchor-id="core-concepts-13"><span class="header-section-number">16.1</span> Core Concepts</h3>
 <ul>
 <li><strong>The Trust Mandate:</strong> In scientific and industrial AI, a model’s prediction must be justifiable to human experts. <strong>Explainable AI (XAI)</strong> provides the tools to move beyond “black-box” results toward transparent decision-making.</li>
 <li><strong>Semantic Structures:</strong> Digitizing meaning requires more than just storing data points. We use specialized structures to organize knowledge:
@@ -1112,21 +961,172 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Levels of Explainability:</strong> A model must provide different levels of explanation depending on the audience, from business-level KPIs for managers to physical consistency checks for process engineers.</li>
 </ul>
 </section>
-<section id="tools-for-model-interpretation" class="level3" data-number="17.2">
-<h3 data-number="17.2" class="anchored" data-anchor-id="tools-for-model-interpretation"><span class="header-section-number">17.2</span> Tools for Model Interpretation</h3>
+<section id="tools-for-model-interpretation" class="level3" data-number="16.2">
+<h3 data-number="16.2" class="anchored" data-anchor-id="tools-for-model-interpretation"><span class="header-section-number">16.2</span> Tools for Model Interpretation</h3>
 <ul>
 <li><strong>Sensitivity Analysis:</strong> A method for probing black-box models by applying small disturbances to input variables and measuring the response. This allows researchers to identify which features (or frequency components) drive the model’s output.</li>
-<li><strong>Deductive Reasoning:</strong> By combining sensitivity results with an ontology, we can perform deductive logic—for instance, tracing a detected oscillation back to a specific faulty component in a circuit.</li>
+<li><strong>Deductive Reasoning:</strong> By combining sensitivity results with an ontology, we can perform deductive logic?for instance, tracing a detected oscillation back to a specific faulty component in a circuit.</li>
 <li><strong>Causality in Process Chains:</strong> Distinguishing between <strong>Detection</strong> (identifying an error after it occurs) and <strong>Prediction</strong> (foreseeing an error early enough to prevent it). The value of an AI solution is directly proportional to how early it can intervene in the causal chain of production.</li>
 </ul>
 </section>
-<section id="reflection-on-model-limits" class="level3" data-number="17.3">
-<h3 data-number="17.3" class="anchored" data-anchor-id="reflection-on-model-limits"><span class="header-section-number">17.3</span> Reflection on Model Limits</h3>
+<section id="reflection-on-model-limits" class="level3" data-number="16.3">
+<h3 data-number="16.3" class="anchored" data-anchor-id="reflection-on-model-limits"><span class="header-section-number">16.3</span> Reflection on Model Limits</h3>
 <ul>
 <li><strong>The Data Manifold:</strong> Models are only reliable within the region of the “data manifold” they were trained on. Extrapolating beyond these limits requires the integration of physical laws (PINNs) to maintain scientific validity.</li>
 <li><strong>Inductive Bias:</strong> Every model makes assumptions. Trust is built when these assumptions are explicitly aligned with established scientific principles rather than being purely data-driven.</li>
 </ul>
 </section>
+</section>
+<section id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">17</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</h2>
+<p><strong>Legend</strong></p>
+<ul>
+<li><strong>?</strong> First serious use ? concept must be introduced in MFML <em>before</em> being used in ML-PC or MG<br>
+</li>
+<li><strong>?</strong> Reinforcement / application ? concept is applied or deepened, but not introduced<br>
+</li>
+<li><strong>(R)</strong> Refresher ? topic was covered in a prior course and is only briefly revisited<br>
+</li>
+<li><strong>MFML</strong> Mathematical Foundations of AI &amp; ML<br>
+</li>
+<li><strong>ML-PC</strong> Machine Learning in Materials Processing &amp; Characterization<br>
+</li>
+<li><strong>MG</strong> Materials Genomics</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>MFML ? Mathematical Foundations (revised)</th>
+<th>ML-PC ? ML in Materials Processing &amp; Characterization (revised)</th>
+<th>MG ? Materials Genomics (revised)</th>
+<th>Exercise (90 min, Python-based)</th>
+<th>Dependency Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Learning vs data analysis; models, loss functions, prediction vs explanation</td>
+<td>Role of ML in processing &amp; characterization; ML vs physics models</td>
+<td>Role of ML in materials discovery; databases &amp; targets</td>
+<td>NumPy refresher; vectors, dot products, simple loss (MSE)</td>
+<td>MFML defines ?learning? as optimization, not statistics</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Linear algebra refresher for learning: covariance, PCA/SVD (R)</td>
+<td>PCA as a tool for spectra &amp; images (?)</td>
+<td>PCA &amp; low-D structure in materials spaces (?)</td>
+<td>PCA refresher on known dataset; visualize variance directions</td>
+<td>PCA assumed known; MFML aligns notation &amp; geometry</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Regression as loss minimization; linear models revisited</td>
+<td>Regression as surrogate modeling for processes &amp; properties (?)</td>
+<td>Regression &amp; correlation in materials datasets (?)</td>
+<td>Linear regression from scratch via loss minimization</td>
+<td>Regression reframed explicitly as learning problem</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Neural networks early: neuron, activations, universal approximation</td>
+<td>NN regression for materials properties (?)</td>
+<td>NN models for structure?property relations (?)</td>
+<td>Single-neuron + activation functions (manual forward pass)</td>
+<td>MFML must precede any NN usage</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Backpropagation, gradients, training dynamics</td>
+<td>NN training stability &amp; convergence (?)</td>
+<td>NN training pitfalls in materials data (?)</td>
+<td>Manual backprop for shallow NN</td>
+<td>MFML supplies chain rule &amp; gradient flow</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Loss landscapes, conditioning, optimization behavior</td>
+<td>Hyperparameters, robustness, convergence issues (?)</td>
+<td>Model robustness &amp; sensitivity (?)</td>
+<td>Gradient descent experiments: learning rate &amp; conditioning</td>
+<td>Optimization treated as learning dynamics</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Generalization, bias?variance, regularization</td>
+<td>Overfitting control in models (?)</td>
+<td>Limits of high-D regression (?)</td>
+<td>Overfitting demo: polynomial vs NN models</td>
+<td>Critical conceptual gate for both applied courses</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Probabilistic view of learning: noise &amp; likelihood</td>
+<td>Noise-aware modeling &amp; error propagation (?)</td>
+<td>Noise &amp; uncertainty in materials datasets (?)</td>
+<td>Noise injection; likelihood vs MSE comparison</td>
+<td>MFML reframes probability for ML</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Representation learning: learned vs engineered features</td>
+<td>Feature learning in signals &amp; images (?)</td>
+<td>Descriptor learning vs hand-crafted features (?)</td>
+<td>Feature learning with simple NN</td>
+<td>Transition from classical descriptors</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Latent spaces: autoencoders &amp; embeddings</td>
+<td>Compression &amp; anomaly detection in processes (?)</td>
+<td>Latent materials spaces &amp; embeddings (?)</td>
+<td>Autoencoder with framework (PyTorch/Keras)</td>
+<td>Core week for Materials Genomics</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Unsupervised learning revisited (objectives, not algorithms)</td>
+<td>Clustering &amp; process drift detection (?)</td>
+<td>Clustering vs discovery in materials space (?)</td>
+<td>Compare clustering vs AE embeddings</td>
+<td>Students reinterpret known clustering methods</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Uncertainty in predictions (aleatoric vs epistemic); Gaussian Processes (conceptual)</td>
+<td>Trust &amp; confidence in ML-assisted decisions; surrogate models (?)</td>
+<td>Discovery &amp; screening with uncertainty; exploration vs exploitation (?)</td>
+<td>Predictive uncertainty: GP regression vs NN ensembles</td>
+<td>Enables responsible ML &amp; accelerator concepts</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Physics-informed &amp; constrained learning</td>
+<td>Physics-informed ML for processes &amp; characterization (?)</td>
+<td>Physical constraints in materials ML (?)</td>
+<td>Constrained NN / penalty-based PINN demo</td>
+<td>MFML leads constraints &amp; PINN concepts</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Explainability, limits, scientific trust</td>
+<td>Integrated case studies &amp; failure modes</td>
+<td>Limits &amp; ethics of data-driven discovery</td>
+<td>Mini end-to-end synthesis project</td>
+<td>All courses converge conceptually</td>
+</tr>
+</tbody>
+</table>
 </section>
      </main>
 <!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
