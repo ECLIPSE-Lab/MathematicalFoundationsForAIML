@@ -154,19 +154,19 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>4</td>
-          <td>Neural networks early: neuron &amp; activations</td>
-          <td>Ch. 4.5.1 Neuron; 4.5.3 Activation Functions</td>
+          <td>Neural networks early: neuron, activations, backprop</td>
+          <td>Ch. 4.5.1 Neuron; 4.5.3 Activations; 4.5.4 Training</td>
           <td>Framework-specific NN sections</td>
           <td>Ch. 8 Neural Networks (surrogate perspective)</td>
-          <td>Ch. 5 �5.1?5.2 Neural network basics</td>
+          <td>Ch. 5 §5.1–5.3 NN basics &amp; Backpropagation</td>
         </tr>
         <tr>
           <td>5</td>
-          <td>Backpropagation &amp; gradient flow</td>
-          <td>Ch. 4.5.4 Training of Neural Networks</td>
-          <td>Advanced NN variants</td>
-          <td>Ch. 7 Optimization (inverse-problem framing)</td>
-          <td>Ch. 5 �5.3 Backpropagation (conceptual)</td>
+          <td>Clustering &amp; Autoencoders</td>
+          <td>Ch. 5.3 K-Means; Ch. 5.5 Autoencoder</td>
+          <td>Advanced clustering</td>
+          <td>Ch. 5 Dimension Reduction</td>
+          <td>Ch. 9 Mixture Models; Ch. 12.3 Nonlinear PCA</td>
         </tr>
         <tr>
           <td>6</td>
@@ -1525,21 +1525,20 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>4</td>
-          <td>Neural networks early: neuron, activations, universal
-          approximation</td>
+          <td>Neural networks early: neuron, activations, backprop</td>
           <td>NN regression for materials properties (?)</td>
-          <td>NN models for structure?property relations (?)</td>
-          <td>Single-neuron + activation functions (manual forward
+          <td>NN models for structure-property relations (?)</td>
+          <td>Single-neuron + backprop (manual forward/backward
           pass)</td>
           <td>MFML must precede any NN usage</td>
         </tr>
         <tr>
           <td>5</td>
-          <td>Backpropagation, gradients, training dynamics</td>
-          <td>NN training stability &amp; convergence (?)</td>
-          <td>NN training pitfalls in materials data (?)</td>
-          <td>Manual backprop for shallow NN</td>
-          <td>MFML supplies chain rule &amp; gradient flow</td>
+          <td>Clustering &amp; Autoencoders</td>
+          <td>Clustering &amp; process drift detection (?)</td>
+          <td>Clustering vs discovery in materials space (?)</td>
+          <td>K-Means &amp; simple Autoencoder implementation</td>
+          <td>MFML supplies unsupervised models</td>
         </tr>
         <tr>
           <td>6</td>
@@ -1674,7 +1673,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </ref-list>
 </back>
 
-<sub-article article-type="notebook" id="nb-8-nb-article">
+<sub-article article-type="notebook" id="nb-11-nb-article">
 <front-stub>
 <title-group>
 <article-title>Mathematical Foundations of AI &amp; ML</article-title>
@@ -1793,19 +1792,19 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>4</td>
-          <td>Neural networks early: neuron &amp; activations</td>
-          <td>Ch. 4.5.1 Neuron; 4.5.3 Activation Functions</td>
+          <td>Neural networks early: neuron, activations, backprop</td>
+          <td>Ch. 4.5.1 Neuron; 4.5.3 Activations; 4.5.4 Training</td>
           <td>Framework-specific NN sections</td>
           <td>Ch. 8 Neural Networks (surrogate perspective)</td>
-          <td>Ch. 5 �5.1?5.2 Neural network basics</td>
+          <td>Ch. 5 §5.1–5.3 NN basics &amp; Backpropagation</td>
         </tr>
         <tr>
           <td>5</td>
-          <td>Backpropagation &amp; gradient flow</td>
-          <td>Ch. 4.5.4 Training of Neural Networks</td>
-          <td>Advanced NN variants</td>
-          <td>Ch. 7 Optimization (inverse-problem framing)</td>
-          <td>Ch. 5 �5.3 Backpropagation (conceptual)</td>
+          <td>Clustering &amp; Autoencoders</td>
+          <td>Ch. 5.3 K-Means; Ch. 5.5 Autoencoder</td>
+          <td>Advanced clustering</td>
+          <td>Ch. 5 Dimension Reduction</td>
+          <td>Ch. 9 Mixture Models; Ch. 12.3 Nonlinear PCA</td>
         </tr>
         <tr>
           <td>6</td>
@@ -3164,21 +3163,20 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>4</td>
-          <td>Neural networks early: neuron, activations, universal
-          approximation</td>
+          <td>Neural networks early: neuron, activations, backprop</td>
           <td>NN regression for materials properties (?)</td>
-          <td>NN models for structure?property relations (?)</td>
-          <td>Single-neuron + activation functions (manual forward
+          <td>NN models for structure-property relations (?)</td>
+          <td>Single-neuron + backprop (manual forward/backward
           pass)</td>
           <td>MFML must precede any NN usage</td>
         </tr>
         <tr>
           <td>5</td>
-          <td>Backpropagation, gradients, training dynamics</td>
-          <td>NN training stability &amp; convergence (?)</td>
-          <td>NN training pitfalls in materials data (?)</td>
-          <td>Manual backprop for shallow NN</td>
-          <td>MFML supplies chain rule &amp; gradient flow</td>
+          <td>Clustering &amp; Autoencoders</td>
+          <td>Clustering &amp; process drift detection (?)</td>
+          <td>Clustering vs discovery in materials space (?)</td>
+          <td>K-Means &amp; simple Autoencoder implementation</td>
+          <td>MFML supplies unsupervised models</td>
         </tr>
         <tr>
           <td>6</td>
@@ -3317,7 +3315,71 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-4-nb-1">
+<sub-article article-type="notebook" id="nb-3-nb-1">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="lecture-plan-clustering-autoencoders-math-05-nb-1">
+  <title>Lecture Plan: Clustering &amp; Autoencoders (Math 05)</title>
+  <sec id="overview-nb-1">
+    <title>Overview</title>
+    <p>This lecture focuses exclusively on unsupervised learning,
+    transitioning from traditional clustering methods to
+    deep-learning-based non-linear dimensionality reduction.</p>
+  </sec>
+  <sec id="part-1-clustering-foundations-45-mins-nb-1">
+    <title>Part 1: Clustering Foundations (45 mins)</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Unsupervised Learning Intro:</bold> Finding hidden
+        structure when labels are missing.</p>
+      </list-item>
+      <list-item>
+        <p><bold>K-Means:</bold> Optimization problem (minimizing
+        variance/distances), iterative assignment-update cycle.</p>
+      </list-item>
+      <list-item>
+        <p><bold>K-Medoids:</bold> Robustness to outliers by using
+        actual data points as prototypes.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Gaussian Mixture Models (GMMs):</bold> Probabilistic
+        clustering, “soft” cluster assignments, and a conceptual
+        introduction to Expectation-Maximization (EM).</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="part-2-autoencoders-and-dimensionality-reduction-45-mins-nb-1">
+    <title>Part 2: Autoencoders and Dimensionality Reduction (45
+    mins)</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Non-linear Dimensionality Reduction:</bold> Briefly
+        recap why linear methods like PCA fail on complex manifolds.</p>
+      </list-item>
+      <list-item>
+        <p><bold>The Encoder-Decoder Architecture:</bold> Explaining the
+        “information bottleneck” and reconstruction loss.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Latent Spaces:</bold> How Autoencoders serve as
+        “non-linear PCA” by utilizing backpropagation to learn highly
+        efficient continuous representations.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-7-nb-2">
 <front-stub>
 <title-group>
 <article-title>Data Screening</article-title>
@@ -3339,25 +3401,25 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </name>
 <string-name>Charlotte Wickham</string-name>
 
-<xref ref-type="author-note" rid="auth-note-2-nb-1">2</xref>
+<xref ref-type="author-note" rid="auth-note-2-nb-2">2</xref>
 </contrib>
 </contrib-group>
 <author-notes>
-<fn id="auth-note-2-nb-1" fn-type="author-note" symbol="2">Edited original
+<fn id="auth-note-2-nb-2" fn-type="author-note" symbol="2">Edited original
 notebook by Steve Purves</fn>
 </author-notes>
 </front-stub>
 
 <body>
-<sec id="cell-25276572-nb-1" specific-use="notebook-content">
+<sec id="cell-25276572-nb-2" specific-use="notebook-content">
 <preformat>import pandas as pd
 import matplotlib.pyplot as plt</preformat>
 </sec>
-<sec id="cell-7f05db89-nb-1" specific-use="notebook-content">
+<sec id="cell-7f05db89-nb-2" specific-use="notebook-content">
 <p>Import <monospace>la-palma.csv</monospace> - a clean subset of
 <ext-link ext-link-type="uri" xlink:href="https://github.com/Notebooks-Now/submission-quarto-full/blob/main/data/catalogoComunSV_1663233588717.csv"><monospace>catalogoComunSV_1663233588717.csv</monospace></ext-link>:</p>
 </sec>
-<sec id="da2659e5-nb-1" specific-use="notebook-content">
+<sec id="da2659e5-nb-2" specific-use="notebook-content">
 <preformat>df = pd.read_csv('la-palma.csv')
 df['DateTime'] = pd.to_datetime(df['DateTime'])
 df = df.sort_values(by=['DateTime'], ascending=True)
@@ -3421,7 +3483,7 @@ df.head()</preformat>
   </table-wrap>
 </boxed-text>
 </sec>
-<sec id="ae1253df-nb-1" specific-use="notebook-content">
+<sec id="ae1253df-nb-2" specific-use="notebook-content">
 <preformat>df.describe()</preformat>
 <boxed-text>
   <table-wrap>
@@ -3497,20 +3559,20 @@ df.head()</preformat>
   </table-wrap>
 </boxed-text>
 </sec>
-<sec id="cell-81b4dfb2-nb-1" specific-use="notebook-content">
+<sec id="cell-81b4dfb2-nb-2" specific-use="notebook-content">
 <preformat>df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, figsize=(12,12), grid=&quot;on&quot;);</preformat>
 <boxed-text>
   <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-5-output-1.png" />
 </boxed-text>
 </sec>
-<sec id="cell-19a1ba0d-nb-1" specific-use="notebook-content">
-<sec id="filter-nb-1">
+<sec id="cell-19a1ba0d-nb-2" specific-use="notebook-content">
+<sec id="filter-nb-2">
   <title>Filter</title>
   <p>Also some rows seem to be missing depth measurements, (see
   differences in the <bold>count</bold> for columns above) - take only
   rows with valid depths</p>
   </sec>
-  <sec id="e56a69b3-nb-1" specific-use="notebook-content">
+  <sec id="e56a69b3-nb-2" specific-use="notebook-content">
   <preformat>df = df[df['Depth(km)'].notna()]
 df.describe()</preformat>
   <boxed-text>
@@ -3587,7 +3649,7 @@ df.describe()</preformat>
     </table-wrap>
   </boxed-text>
   </sec>
-  <sec id="cell-1368822d-nb-1" specific-use="notebook-content">
+  <sec id="cell-1368822d-nb-2" specific-use="notebook-content">
   <preformat>plt.figure(figsize=(20,6))
 plt.subplot(1,3,1)
 df[&quot;Latitude&quot;].plot.hist(bins=20, density=True)
@@ -3599,13 +3661,13 @@ df[&quot;Depth(km)&quot;].plot.hist(bins=50, density=True)</preformat>
     <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-7-output-1.png" />
   </boxed-text>
   </sec>
-  <sec id="da7ad095-nb-1" specific-use="notebook-content">
+  <sec id="da7ad095-nb-2" specific-use="notebook-content">
 </sec>
-<sec id="spatial-plot-nb-1">
+<sec id="spatial-plot-nb-2">
   <title>Spatial Plot</title>
   <p>Scatter plot the spatial locations of events</p>
   </sec>
-  <sec id="cell-fig-spatial-plot-nb-1" specific-use="notebook-content">
+  <sec id="cell-fig-spatial-plot-nb-2" specific-use="notebook-content">
   <preformat>#| label: fig-spatial-plot
 #| fig-cap: Locations of earthquakes on La Palma since 2017.
 #| fig-alt: A scatterplot of earthquake locations plotting latitude against longitude.
@@ -3619,15 +3681,15 @@ colorbar.set_label(&quot;Magnitude&quot;)
 
 plt.show()</preformat>
   <boxed-text>
-    <fig id="fig-spatial-plot-nb-1">
+    <fig id="fig-spatial-plot-nb-2">
       <caption><p>Locations of earthquakes on La Palma since
       2017.</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/fig-spatial-plot-output-1.png" />
     </fig>
   </boxed-text>
   </sec>
-  <sec id="cell-22ac5ce7-nb-1" specific-use="notebook-content">
-  <sec id="timeline-plot-nb-1">
+  <sec id="cell-22ac5ce7-nb-2" specific-use="notebook-content">
+  <sec id="timeline-plot-nb-2">
     <title>Timeline Plot</title>
     <p>Scatter plot the event time series and look for any quantization
     issues. Have times &amp; dates been loaded correctly?</p>

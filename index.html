@@ -8,7 +8,7 @@
 
 <meta name="author" content="Philipp Pelz">
 <meta name="author" content="Stefan Hiemer">
-<meta name="dcterms.date" content="2026-04-27">
+<meta name="dcterms.date" content="2026-05-02">
 <meta name="keywords" content="Machine Learning, Artificial Intelligence, Mathematics, Linear Algebra, Probability, Optimization">
 <meta name="description" content="Lecture materials for Mathematical Foundations of AI &amp; ML, covering core mathematical concepts including linear algebra, probability, optimization, and their applications in machine learning.">
 
@@ -103,10 +103,10 @@ window.Quarto = {
 <meta name="citation_keywords" content="Machine Learning,Artificial Intelligence,Mathematics,Linear Algebra,Probability,Optimization">
 <meta name="citation_author" content="Philipp Pelz">
 <meta name="citation_author" content="Stefan Hiemer">
-<meta name="citation_publication_date" content="2026-04-27">
-<meta name="citation_cover_date" content="2026-04-27">
+<meta name="citation_publication_date" content="2026-05-02">
+<meta name="citation_cover_date" content="2026-05-02">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-04-27">
+<meta name="citation_online_date" content="2026-05-02">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Machine learning for engineers: Using data to solve problems for physical systems;,citation_author=Ryan G.. McClarren;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;">
 <meta name="citation_reference" content="citation_title=Machine learning for engineers: Introduction to physics-informed, explainable learning methods for AI in engineering applications;,citation_author=Marcus J Neuer;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;">
@@ -139,7 +139,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">April 27, 2026</p>
+              <p class="date">May 2, 2026</p>
             </div>
           </div>
           
@@ -248,7 +248,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" id="toc-mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="nav-link" data-scroll-target="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">17</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/data-screening-preview.html"><i class="bi bi-journal-code"></i>Data Screening</a></li></ul></div></nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/data-screening-preview.html"><i class="bi bi-journal-code"></i>Data Screening</a></li><li><a href="unit05_plan_gemini-preview.html"><i class="bi bi-journal-code"></i>Lecture Plan: Clustering &amp; Autoencoders (Math 05)</a></li></ul></div></nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
@@ -399,19 +399,19 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td>4</td>
-<td>Neural networks early: neuron &amp; activations</td>
-<td>Ch. 4.5.1 Neuron; 4.5.3 Activation Functions</td>
+<td>Neural networks early: neuron, activations, backprop</td>
+<td>Ch. 4.5.1 Neuron; 4.5.3 Activations; 4.5.4 Training</td>
 <td>Framework-specific NN sections</td>
 <td>Ch. 8 Neural Networks (surrogate perspective)</td>
-<td>Ch. 5 �5.1?5.2 Neural network basics</td>
+<td>Ch. 5 §5.1–5.3 NN basics &amp; Backpropagation</td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>Backpropagation &amp; gradient flow</td>
-<td>Ch. 4.5.4 Training of Neural Networks</td>
-<td>Advanced NN variants</td>
-<td>Ch. 7 Optimization (inverse-problem framing)</td>
-<td>Ch. 5 �5.3 Backpropagation (conceptual)</td>
+<td>Clustering &amp; Autoencoders</td>
+<td>Ch. 5.3 K-Means; Ch. 5.5 Autoencoder</td>
+<td>Advanced clustering</td>
+<td>Ch. 5 Dimension Reduction</td>
+<td>Ch. 9 Mixture Models; Ch. 12.3 Nonlinear PCA</td>
 </tr>
 <tr class="even">
 <td>6</td>
@@ -979,19 +979,19 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </tr>
 <tr class="even">
 <td>4</td>
-<td>Neural networks early: neuron, activations, universal approximation</td>
+<td>Neural networks early: neuron, activations, backprop</td>
 <td>NN regression for materials properties (?)</td>
-<td>NN models for structure?property relations (?)</td>
-<td>Single-neuron + activation functions (manual forward pass)</td>
+<td>NN models for structure-property relations (?)</td>
+<td>Single-neuron + backprop (manual forward/backward pass)</td>
 <td>MFML must precede any NN usage</td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>Backpropagation, gradients, training dynamics</td>
-<td>NN training stability &amp; convergence (?)</td>
-<td>NN training pitfalls in materials data (?)</td>
-<td>Manual backprop for shallow NN</td>
-<td>MFML supplies chain rule &amp; gradient flow</td>
+<td>Clustering &amp; Autoencoders</td>
+<td>Clustering &amp; process drift detection (?)</td>
+<td>Clustering vs discovery in materials space (?)</td>
+<td>K-Means &amp; simple Autoencoder implementation</td>
+<td>MFML supplies unsupervised models</td>
 </tr>
 <tr class="even">
 <td>6</td>
