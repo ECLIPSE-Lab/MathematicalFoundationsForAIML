@@ -251,1187 +251,307 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-1-summary-learning-vs-data-analysis-models-loss-functions">
   <title>3 Week 1 Summary: Learning vs Data Analysis; Models, Loss
   Functions</title>
-  <p><bold>Slides:</bold>
-  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html">Open</ext-link></p>
-  <sec id="core-concepts">
-    <title>3.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Concept of a Model:</bold> Models are simplified
-        representations of reality designed for <bold>prediction</bold>
-        and <bold>explanation</bold>. We distinguish between
-        <bold>First-Principle models</bold> (bottom-up, based on
-        physical laws) and <bold>Data-based models</bold> (top-down,
-        extracted from observations).</p>
-      </list-item>
-      <list-item>
-        <p><bold>Interpretability Spectrum:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>White-Box:</bold> Fully traceable (e.g., physical
-            laws, linear regression).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Grey-Box:</bold> Partially traceable (e.g., Monte
-            Carlo, Physics-Informed Neural Networks).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Black-Box:</bold> Non-traceable internal mechanisms
-            (e.g., deep neural networks), though techniques for
-            <bold>Explainability</bold> aim to move these toward the
-            Grey-Box category.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Types of Learning:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Supervised Learning:</bold> Learning with labeled
-            data. Includes <bold>Regression</bold> (continuous targets)
-            and <bold>Classification</bold> (discrete categories).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Unsupervised Learning:</bold> Finding hidden
-            structure in unlabeled data (clustering, dimensionality
-            reduction, embeddings).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Reinforcement Learning:</bold> Learning optimal
-            actions through trial and error to maximize a reward
-            signal.</p>
-          </list-item>
-        </list>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="loss-functions-and-optimization">
-    <title>3.2 Loss Functions and Optimization</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Learning as Optimization:</bold> Machine learning is
-        the process of minimizing a <bold>Loss Function</bold> (w)$ that
-        measures the discrepancy between model predictions and true
-        targets.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Mean Squared Error (MSE):</bold> The standard loss for
-        regression, providing a geometric interpretation of
-        residuals.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Parsimony and Occam’s Razor:</bold> The preference for
-        simpler models. Overly complex models tend to fit noise in the
-        training data, leading to <bold>Overfitting</bold>.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Regularization:</bold> A technique to control
-        complexity by adding a penalty term (e.g., Ridge/Lasso) to the
-        loss function, discouraging large parameter values and wild
-        oscillations.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Generalization:</bold> The central goal of ML?ensuring
-        the model performs well on unseen <bold>test data</bold>, not
-        just the training set.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Models:</bold> Simplified representations for
+      prediction/explanation (White, Grey, Black-Box).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Learning Types:</bold> Supervised
+      (Regression/Classification), Unsupervised, Reinforcement.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Loss Functions:</bold> ML minimizes a loss function
+      (e.g., MSE) to match predictions to targets.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Complexity:</bold> Occam’s Razor prefers simpler models
+      to avoid overfitting; regularization helps control it.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-2-summary-linear-algebra-refresher-covariance-pcasvd">
   <title>4 Week 2 Summary: Linear Algebra Refresher; Covariance,
   PCA/SVD</title>
-  <p><bold>Slides:</bold>
-  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html">Open</ext-link></p>
-  <sec id="core-concepts-1">
-    <title>4.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Eigendecomposition:</bold> The foundation of PCA. For a
-        symmetric covariance matrix $, we can find an orthonormal basis
-        of eigenvectors $ and corresponding eigenvalues
-        <inline-formula><alternatives>
-        <tex-math><![CDATA[\lambda_i]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>λ</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
-        such that = _i u_i$.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Covariance Matrix ($):</bold> Captures the
-        relationships and variability between features. The eigenvectors
-        of $ represent the directions of maximum variance in the data,
-        while the eigenvalues quantify the amount of variance along
-        those directions.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Principal Component Analysis (PCA):</bold> A linear
-        method for dimensionality reduction that projects data onto a
-        lower-dimensional subspace while preserving as much variance
-        (information) as possible.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="pca-theory-and-application">
-    <title>4.2 PCA Theory and Application</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Maximizing Variance:</bold> PCA is derived as a
-        constrained optimization problem: finding directions $ that
-        maximize the projected variance ^T S u$ subject to the unit
-        length constraint <inline-formula><alternatives>
-        <tex-math><![CDATA[\|u\|=1]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="postfix">∥</mml:mo><mml:mi>u</mml:mi><mml:mo stretchy="false" form="postfix">∥</mml:mo><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Explained Variance:</bold> The proportion of total
-        variance captured by $ components is given by the sum of the
-        first $ eigenvalues divided by the total sum of all
-        eigenvalues.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Scree Plots:</bold> A visual diagnostic tool used to
-        determine the intrinsic dimensionality of a dataset by
-        identifying the “elbow” in the eigenvalue spectrum.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Applications in Engineering:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Dimensionality Reduction:</bold> Compressing
-            high-dimensional signals or images (e.g., MNIST,
-            microstructures) into a manageable number of features.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Denoising:</bold> By reconstructing data using only
-            the top principal components, high-frequency noise
-            (typically associated with low-variance eigenvalues) can be
-            filtered out.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Anomaly Detection:</bold> Monitoring data in the
-            latent eigenspace can reveal deviations from “normal”
-            behavior that are hard to see in the original
-            high-dimensional space.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Limitations:</bold> PCA is strictly
-        <bold>linear</bold>. For data with complex non-linear manifolds,
-        extensions like <bold>Kernel PCA</bold> or
-        <bold>Autoencoders</bold> are required.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Eigendecomposition:</bold> Finding eigenvectors (variance
+      directions) and eigenvalues (variance amount) of a covariance
+      matrix.</p>
+    </list-item>
+    <list-item>
+      <p><bold>PCA:</bold> Linear dimensionality reduction maximizing
+      variance and compressing data.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Scree Plots:</bold> Diagnostics to find intrinsic
+      dimensionality (“elbow”).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Engineering Uses:</bold> Denoising, anomaly detection,
+      and compression (limited to linear manifolds).</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-3-summary-regression-as-loss-minimization">
   <title>5 Week 3 Summary: Regression as Loss Minimization</title>
-  <sec id="core-concepts-2">
-    <title>5.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Supervised Learning Framework:</bold> Mapping
-        inputs $ to continuous outputs $ to minimize the discrepancy
-        with target labels $. The central objective is finding the
-        optimal parameters $ of a hypothesis function (x)$.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Loss and Cost Functions:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Squared Error Loss:</bold> = ( - y)^2$, penalizing
-            large deviations quadratically.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Cost Function ($):</bold> The Mean Squared Error
-            (MSE) over the training set, serving as the surface we seek
-            to minimize.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Least Squares Optimization:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Ordinary Least Squares (OLS):</bold> The analytical
-            solution = (X^T X)^{-1} X^T y$ that finds the global minimum
-            for linear models.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Gradient Descent:</bold> An iterative optimization
-            strategy where parameters are updated in the direction of
-            the steepest descent: w - ta abla_w J$.</p>
-          </list-item>
-        </list>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="expanding-linear-models">
-    <title>5.2 Expanding Linear Models</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Linearity Principle:</bold> A model is “linear” if
-        it is linear in its <italic>parameters</italic>, allowing us to
-        model highly non-linear relationships by transforming
-        features.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Basis Functions (<inline-formula><alternatives>
-        <tex-math><![CDATA[\phi]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ϕ</mml:mi></mml:math></alternatives></inline-formula>):</bold>
-        By replacing raw features $ with a vector of transformations
-        <inline-formula><alternatives>
-        <tex-math><![CDATA[\phi(x)]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>ϕ</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
-        (e.g., polynomials, sinusoids, radial basis functions), we can
-        use the linear regression framework to fit complex curves.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Polynomial Regression:</bold> A common application of
-        basis functions using powers of $. However, one must be wary of
-        <bold>Runge’s Phenomenon</bold> and overfitting when using
-        high-order polynomials.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Local vs. Global Models:</bold> While global
-        polynomials can be unstable, piecewise polynomials and
-        <bold>Splines</bold> provide a more robust, localized approach
-        to regression by “gluing” simple functions together at
-        knots.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Supervised Framework:</bold> Minimizing a cost function
+      (MSE) to find optimal parameters.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Optimization:</bold> Analytical (Ordinary Least Squares)
+      vs. Iterative (Gradient Descent).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Basis Functions:</bold> Expanding linear models to fit
+      non-linear data using transformations (polynomials, splines).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Runge’s Phenomenon:</bold> Overfitting risk with
+      high-order global polynomials.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-4-summary-neural-networks-early-neuron-activations">
   <title>6 Week 4 Summary: Neural Networks Early: Neuron &amp;
   Activations</title>
-  <sec id="core-concepts-3">
-    <title>6.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Artificial Neuron:</bold> A fundamental processing
-        unit that computes a weighted sum of its inputs plus a bias ( =
-        w_i x_i + b$) and passes the result through a non-linear
-        <bold>activation function</bold>. It is the building block of
-        all deep learning architectures.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Non-linear Activations:</bold> The “soul” of the neural
-        network. Without non-linearity, multiple layers would
-        mathematically collapse into a single linear transformation,
-        rendering the network unable to solve complex problems like
-        XOR.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Multi-Layer Perceptron (MLP):</bold> A feed-forward
-        architecture where neurons are organized into an input layer,
-        one or more hidden layers, and an output layer. Layers are
-        typically fully connected.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="activation-function-taxonomy">
-    <title>6.2 Activation Function Taxonomy</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Sigmoid &amp; Tanh:</bold> Historical standards that
-        map inputs to bounded ranges ((0, 1) and (-1, 1)). They are
-        smooth and differentiable but suffer from <bold>vanishing
-        gradients</bold> in deep networks due to saturation.</p>
-      </list-item>
-      <list-item>
-        <p><bold>ReLU (Rectified Linear Unit):</bold> The modern
-        standard ((x) = (0, x)$). It is computationally efficient and
-        helps mitigate vanishing gradients for positive inputs, enabling
-        the training of much deeper networks.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Leaky ReLU:</bold> A variant that allows a small,
-        non-zero gradient for negative inputs to prevent “dead
-        neurons.”</p>
-      </list-item>
-      <list-item>
-        <p><bold>Softmax:</bold> Typically reserved for the output layer
-        in multi-class classification tasks, as it squashes outputs into
-        a probability distribution that sums to one.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="structural-properties">
-    <title>6.3 Structural Properties</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Universal Approximation Theorem:</bold> A powerful
-        result stating that even a single hidden layer can approximate
-        any continuous function, provided it has a non-linear activation
-        and enough neurons.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Forward Propagation:</bold> The deterministic process
-        of calculating the output of each layer sequentially to produce
-        a final prediction.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Weight-Space Symmetries:</bold> The realization that
-        multiple weight configurations (e.g., swapping hidden units or
-        flipping signs) can result in identical network behavior, which
-        has implications for optimization and Bayesian analysis.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Artificial Neuron:</bold> Weighted sum plus a non-linear
+      activation function.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Activations:</bold> Non-linearity (ReLU, Sigmoid, Tanh)
+      is essential for complex problem-solving.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Universal Approximation:</bold> A single hidden layer can
+      approximate any continuous function.</p>
+    </list-item>
+    <list-item>
+      <p><bold>MLP Architecture:</bold> Feed-forward network with input,
+      hidden, and output layers.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-5-summary-backpropagation-gradient-flow">
   <title>7 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
-  <sec id="core-concepts-4">
-    <title>7.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Learning as Optimization:</bold> The training of a
-        neural network is an iterative optimization problem aimed at
-        minimizing a cost function $ through gradient descent: w - ta
-        abla_w J$.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Backpropagation Algorithm:</bold> An efficient
-        implementation of the <bold>chain rule</bold> that calculates
-        the partial derivative of the cost function with respect to
-        every weight and bias in the network. It consists of two
-        passes:</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Forward Pass:</bold> Computing activations
-            layer-by-layer and storing intermediate results.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Backward Pass:</bold> Starting from the output
-            error, propagating “error signals”
-            (<inline-formula><alternatives>
-            <tex-math><![CDATA[\delta]]></tex-math>
-            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>δ</mml:mi></mml:math></alternatives></inline-formula>)
-            upstream to compute local gradients.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Computational Efficiency:</bold> Backpropagation allows
-        gradient computation in (W)$ time, where $ is the number of
-        weights, making it feasible to train models with millions of
-        parameters.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="gradient-flow-and-stability">
-    <title>7.2 Gradient Flow and Stability</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Vanishing Gradients:</bold> In deep networks, gradients
-        can become infinitesimally small as they are multiplied by the
-        derivatives of saturating activation functions (like sigmoid or
-        tanh) at each layer. This “signal decay” prevents early layers
-        from learning.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Exploding Gradients:</bold> Conversely, large weights
-        and certain architectures can cause gradients to grow
-        exponentially, leading to numerical instability and
-        divergence.</p>
-      </list-item>
-      <list-item>
-        <p><bold>ReLU and Gradient Flow:</bold> The ReLU activation
-        function (<inline-formula><alternatives>
-        <tex-math><![CDATA[\max(0, x)]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mrow><mml:mi mathvariant="normal">max</mml:mi><mml:mo>&#8289;</mml:mo></mml:mrow><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>)
-        provides a constant gradient of 1 for positive inputs,
-        significantly improving gradient flow in deep architectures and
-        enabling the “Deep Learning” revolution.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Jacobian Matrix:</bold> Describes how small changes
-        in inputs affect the outputs of a module, providing a unified
-        framework for linking differentiable components in a larger
-        system.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Backpropagation:</bold> Two-pass chain rule application
+      to efficiently compute gradients.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Vanishing/Exploding Gradients:</bold> Deep networks
+      struggle with signal decay or instability.</p>
+    </list-item>
+    <list-item>
+      <p><bold>ReLU:</bold> Improves gradient flow for deep
+      architectures by providing a constant positive gradient.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Jacobian Matrix:</bold> Links differentiable components
+      for system-wide optimization.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-6-summary-loss-landscapes-optimization-behavior">
   <title>8 Week 6 Summary: Loss Landscapes &amp; Optimization
   Behavior</title>
-  <sec id="core-concepts-5">
-    <title>8.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Loss Landscape:</bold> A high-dimensional geometric
-        representation of the cost function $ over the parameter space
-        $. Its topography?comprising peaks, valleys, saddle points, and
-        plateaus?determines the ease and success of the training
-        process.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Curvature and the Hessian ($):</bold> While the
-        gradient indicates the direction of steepest descent, the
-        <bold>Hessian matrix</bold> (the matrix of second-order
-        derivatives) describes the <italic>curvature</italic> of the
-        landscape.</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Eigenvalues of $:</bold> Large eigenvalues indicate
-            steep directions where the gradient changes rapidly, while
-            small eigenvalues correspond to shallow, flat
-            directions.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Conditioning:</bold> Landscapes with widely varying
-            curvature (ill-conditioned) cause standard gradient descent
-            to oscillate wildly or crawl painfully slowly.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Saddle Points:</bold> In high-dimensional spaces, true
-        local minima are rare; most points with zero gradient are saddle
-        points, which can trap or significantly slow down first-order
-        optimizers.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="advanced-optimization-strategies">
-    <title>8.2 Advanced Optimization Strategies</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Momentum:</bold> Inspired by physics, this technique
-        adds a “velocity” component to updates, allowing the optimizer
-        to accumulate speed in consistent directions and dampen
-        oscillations in steep, narrow valleys.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Adaptive Learning Rates:</bold> Algorithms like
-        <bold>AdaGrad</bold>, <bold>RMSProp</bold>, and
-        <bold>ADAM</bold> adjust the learning rate for each individual
-        parameter based on the history of observed gradients. This
-        effectively scales the coordinates to “normalize” the
-        landscape’s curvature.</p>
-      </list-item>
-      <list-item>
-        <p><bold>ADAM (Adaptive Moment Estimation):</bold> Currently the
-        industry standard, combining the benefits of momentum and
-        adaptive scales to provide robust performance across a wide
-        range of architectures and hyperparameter settings.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Flat vs. Sharp Minima:</bold> Research suggests that
-        “flat” minima (regions where the cost remains low over a wide
-        range of parameters) correlate with better
-        <bold>Generalization</bold> on unseen data, as they are less
-        sensitive to small shifts in the data distribution.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Loss Landscape:</bold> High-dimensional topography
+      determining optimization success.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Curvature:</bold> Hessian matrix dictates steepness;
+      ill-conditioned landscapes slow descent.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Saddle Points:</bold> Common traps in high dimensions
+      that hinder optimizers.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Advanced Optimizers:</bold> Momentum and adaptive
+      learning rates (ADAM) navigate complex landscapes robustly.</p>
+    </list-item>
+  </list>
 </sec>
-<sec id="week-7-summary-generalization-biasvariance-regularization">
-  <title>9 Week 7 Summary: Generalization, Bias?Variance,
+<sec id="week-7-summary-generalization-bias-variance-regularization">
+  <title>9 Week 7 Summary: Generalization, Bias-Variance,
   Regularization</title>
-  <sec id="core-concepts-6">
-    <title>9.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Generalization:</bold> The fundamental objective of
-        machine learning?ensuring that a model learned from a finite
-        training set performs accurately on previously unseen data.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Overfitting vs. Underfitting:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Overfitting:</bold> Occurs when a model captures
-            the random noise in the training data rather than the
-            underlying pattern. This is characterized by low training
-            error but high test error.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Underfitting:</bold> Occurs when a model is too
-            simple to represent the data’s complexity, resulting in high
-            error on both training and test sets.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Bias-Variance Decomposition:</bold> A theoretical
-        framework that decomposes the expected error into three
-        parts:</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Bias:</bold> Error due to simplistic assumptions
-            (e.g., modeling a non-linear process with a straight
-            line).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Variance:</bold> Error due to excessive sensitivity
-            to the specific training data.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Intrinsic Noise:</bold> The irreducible error in
-            the data itself (the “Bayes error”).</p>
-          </list-item>
-          <list-item>
-            <p><bold>The Trade-off:</bold> Increasing model complexity
-            generally reduces bias but increases variance. The goal is
-            to find the “sweet spot” that minimizes total error.</p>
-          </list-item>
-        </list>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="regularization-and-validation">
-    <title>9.2 Regularization and Validation</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Regularization:</bold> A technique to prevent
-        overfitting by adding a penalty term to the loss function that
-        discourages overly complex models (large parameter values).</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Ridge Regression ($):</bold> Penalizes the sum of
-            squared weights, shrinking them toward zero.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Lasso Regression ($):</bold> Penalizes the sum of
-            absolute weights, promoting <bold>sparsity</bold> by setting
-            less important weights exactly to zero.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Dropout:</bold> A neural network-specific technique
-            that randomly “drops” neurons during training to prevent
-            co-adaptation and improve robustness.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Model Selection:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Cross-Validation:</bold> A robust strategy for
-            evaluating model performance by iteratively splitting the
-            data into $ folds, ensuring every data point serves as both
-            training and test data.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Validation Set:</bold> A subset of data used
-            exclusively for tuning hyperparameters (like the
-            regularization strength <inline-formula><alternatives>
-            <tex-math><![CDATA[\lambda]]></tex-math>
-            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>)
-            to avoid biasing the final test results.</p>
-          </list-item>
-        </list>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Generalization:</bold> Ensuring accurate performance on
+      unseen test data.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Bias-Variance Tradeoff:</bold> Balancing underfitting
+      (high bias) and overfitting (high variance).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Regularization:</bold> L2 (Ridge), L1 (Lasso), and
+      Dropout penalize complexity to improve robustness.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Validation:</bold> Cross-validation is essential for
+      unbiased hyperparameter tuning.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-8-summary-probabilistic-view-of-learning-noise">
   <title>10 Week 8 Summary: Probabilistic View of Learning;
   Noise</title>
-  <sec id="core-concepts-7">
-    <title>10.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Probability as Modeling Tool:</bold> Probability theory
-        provides the formal framework for quantifying uncertainty in
-        both data (noise) and models (parameter uncertainty). Machine
-        learning is viewed as the process of updating probabilistic
-        beliefs in light of new observations.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Taxonomy of Uncertainty:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Aleatory Uncertainty:</bold> Irreducible randomness
-            inherent in the physical process or measurement system
-            (e.g., thermal noise, sensor precision).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Epistemic Uncertainty:</bold> Uncertainty stemming
-            from a lack of data or knowledge. This can, in principle, be
-            reduced by observing more samples or improving model
-            fidelity.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Sampling and Signal Theory:</bold> Digital data
-        collection is a stochastic process governed by the
-        <bold>Nyquist-Shannon Theorem</bold>, which defines the minimum
-        sampling frequency required to fully capture a signal’s
-        dynamics.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="inference-and-uncertainty-quantification">
-    <title>10.2 Inference and Uncertainty Quantification</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Frequentist vs. Bayesian Views:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Maximum Likelihood Estimation (MLE):</bold>
-            Estimates parameters by maximizing the probability of the
-            observed data. Prone to overfitting on small datasets.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Bayesian Inference:</bold> Treats parameters as
-            random variables. By combining a <bold>prior</bold>
-            distribution with the <bold>likelihood</bold>, it yields a
-            <bold>posterior</bold> distribution that represents our
-            updated belief and its associated uncertainty.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Robustness and Outliers:</bold> While the Gaussian
-        distribution is standard, the <bold>Student’s
-        t-distribution</bold> offers better robustness against outliers
-        due to its heavy tails.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Advanced UQ in Neural Networks:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Stochastic Enrichment:</bold> A technique to
-            integrate measurement uncertainty into the training process
-            by augmenting datasets with noisy samples derived from the
-            original points.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Mixture-Density Networks (MDN):</bold> Specialized
-            neural architectures that predict the parameters of a
-            probability distribution (e.g., weights, means, and
-            variances of multiple Gaussians) rather than point values,
-            allowing models to “know what they don’t know.”</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Process Corridors:</bold> Using 2D histograms to model
-        the probability density of temporal data, providing a powerful
-        heuristic for detecting anomalous deviations in engineering
-        systems.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Taxonomy of Uncertainty:</bold> Aleatory (inherent noise)
+      vs. Epistemic (lack of data).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Inference Views:</bold> Frequentist (Maximum Likelihood)
+      vs. Bayesian (Posterior updates).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Robustness:</bold> Student’s t-distribution mitigates
+      outlier impacts better than Gaussian.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Advanced UQ:</bold> Stochastic enrichment and
+      Mixture-Density Networks capture uncertainty.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-9-summary-representation-learning-features-vs.-learned-representations">
   <title>11 Week 9 Summary: Representation Learning; Features
   vs. Learned Representations</title>
-  <sec id="core-concepts-8">
-    <title>11.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Beyond Handcrafting:</bold> Traditional machine
-        learning relies on experts to manually engineer features (e.g.,
-        Fourier transforms, signal moments). <bold>Representation
-        Learning</bold> shifts this burden to the model, which
-        autonomously discovers the most relevant transformations
-        directly from raw data.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Manifold Hypothesis:</bold> Real-world
-        high-dimensional data (like images or spectra) typically lies on
-        or near a low-dimensional, non-linear <bold>manifold</bold>. The
-        number of independent parameters needed to describe this
-        manifold represents the data’s true <bold>degrees of
-        freedom</bold>.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Autoencoders (AE):</bold> A class of neural networks
-        designed for unsupervised representation learning. By training a
-        network to perform an identity mapping ((x) pprox x$) through a
-        constrained <bold>bottleneck layer</bold>, the model is forced
-        to capture the most salient features in a compressed
-        <bold>latent space</bold>.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="architectures-and-latent-spaces">
-    <title>11.2 Architectures and Latent Spaces</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Encoder and Decoder:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p>The <bold>Encoder</bold> compresses the input into a
-            low-dimensional code.</p>
-          </list-item>
-          <list-item>
-            <p>The <bold>Decoder</bold> reconstructs the original signal
-            from this code.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Non-linearity:</bold> Unlike PCA, which is limited to
-        linear projections, deep autoencoders can learn complex,
-        non-linear manifolds using hierarchical hidden layers and
-        non-linear activations.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Convolutional Autoencoders:</bold> Specialized for
-        spatial data (images, simulations), these use strided
-        convolutions to downsample and transposed convolutions to
-        upsample, preserving geometric structure while reducing
-        dimensionality.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Denoising:</bold> Autoencoders can be trained to
-        recover clean signals from corrupted inputs, effectively
-        learning to project “noisy” points back onto the learned data
-        manifold.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="industrial-and-engineering-applications">
-    <title>11.3 Industrial and Engineering Applications</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Data Compression:</bold> Storing high-fidelity
-        engineering data (e.g., leaf spectra or plasma simulations)
-        using only a fraction of the original storage by keeping only
-        the latent codes and the trained decoder.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Anomaly Detection:</bold> Anomalies can be detected in
-        two ways: (1) high reconstruction error (the model cannot
-        reconstruct what it hasn’t seen) or (2) outliers in the latent
-        space distribution.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Feature Extraction:</bold> Latent codes serve as highly
-        optimized, low-dimensional inputs for downstream supervised
-        tasks like time-series prediction or process optimization.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Manifold Hypothesis:</bold> High-dimensional data lies on
+      a lower-dimensional non-linear manifold.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Autoencoders (AE):</bold> Unsupervised neural networks
+      compressing data into a latent bottleneck.</p>
+    </list-item>
+    <list-item>
+      <p><bold>AE Architectures:</bold> Encoders compress, decoders
+      reconstruct; CNNs handle spatial data.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Applications:</bold> Data compression, feature
+      extraction, and anomaly detection.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-10-summary-latent-spaces-embeddings">
   <title>12 Week 10 Summary: Latent Spaces; Embeddings</title>
-  <sec id="core-concepts-9">
-    <title>12.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Latent Space Definition:</bold> A low-dimensional,
-        continuous vector space that represents the underlying structure
-        of high-dimensional data. In this space, the distance between
-        points reflects their semantic or physical similarity.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Embeddings:</bold> A mapping of high-dimensional, often
-        discrete or sparse data (e.g., categories, words, or crystal
-        structures) into a dense, lower-dimensional latent space where
-        meaningful relationships can be calculated via dot products or
-        Euclidean distance.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Geometry of Compression:</bold> Latent spaces
-        discovered by autoencoders are non-linear manifolds. Unlike
-        linear PCA, these spaces can disentangle complex factors of
-        variation, such as the position, width, and amplitude of a
-        signal.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="dimensionality-reduction-and-visualization">
-    <title>12.2 Dimensionality Reduction and Visualization</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>t-SNE (t-Distributed Stochastic Neighbor
-        Embedding):</bold> A powerful non-linear technique for
-        visualizing high-dimensional data archipelagos. It matches the
-        neighborhood structure of the high-dimensional space to a 2D or
-        3D map by minimizing the KL-divergence between Gaussian
-        (high-dim) and Student’s t-distributions (low-dim).</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Crowding Problem:</bold> t-SNE uses the
-        heavy-tailed Student’s t-distribution in the low-dimensional
-        space to push moderately distant points further apart,
-        preventing the “crowding” that occurs in high-dimensional
-        Gaussian mappings.</p>
-      </list-item>
-      <list-item>
-        <p><bold>UMAP (Uniform Manifold Approximation and
-        Projection):</bold> A modern, faster alternative to t-SNE based
-        on Riemannian geometry that better preserves global structure
-        and scale across the entire dataset.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Kernel PCA:</bold> An extension of PCA that uses the
-        <bold>Kernel Trick</bold> to project data into an implicit,
-        infinite-dimensional feature space where non-linear patterns
-        become linearly separable.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="analysis-and-trust">
-    <title>12.3 Analysis and Trust</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Interpretability:</bold> Latent neurons can often be
-        mapped back to physical parameters (e.g., material properties),
-        allowing for semi-supervised discovery.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Anomaly Detection:</bold> Monitoring the distribution
-        of “normal” data in latent space allows for the detection of
-        “exotic” cases that fall outside established clusters, even if
-        those anomalies were never seen during training.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Conditional Latent Probability:</bold> Using histograms
-        and conditional distributions (e.g., (A_2|A_1)$) within the
-        latent space provides a statistical basis for quantifying the
-        novelty or reliability of a model’s prediction.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Latent Spaces:</bold> Low-dimensional vectors where
+      distance reflects semantic/physical similarity.</p>
+    </list-item>
+    <list-item>
+      <p><bold>t-SNE &amp; UMAP:</bold> Non-linear visualization tools
+      to map high-dimensional clusters to 2D/3D.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Crowding Problem:</bold> Addressed by heavy-tailed
+      distributions in lower dimensions.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Interpretability:</bold> Mapping latent neurons to
+      physical parameters builds trust.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-11-summary-unsupervised-learning-revisited-objectives">
   <title>13 Week 11 Summary: Unsupervised Learning Revisited
   (Objectives)</title>
-  <sec id="core-concepts-10">
-    <title>13.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Unsupervised Paradigm:</bold> In many engineering
-        scenarios, labels are missing (e.g., process data without
-        quality metrics). Unsupervised learning uncovers the inherent
-        structure, regimes, and clusters within the data, providing a
-        foundation for both discovery and dimensionality reduction.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Clustering - K-Means:</bold> A robust,
-        non-probabilistic algorithm that partitions data into $ clusters
-        by minimizing the sum of squared distances to cluster centroids.
-        It operates via an iterative assignment-update cycle that is a
-        “hard” version of the EM algorithm.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Gaussian Mixture Models (GMM):</bold> A probabilistic
-        approach that represents data as a weighted sum of multiple
-        Gaussian components. It treats the cluster membership as a
-        <bold>discrete latent variable</bold>, allowing for “soft”
-        assignments where points can belong to multiple clusters with
-        varying degrees of <bold>responsibility</bold>.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="the-em-expectation-maximization-algorithm">
-    <title>13.2 The EM (Expectation-Maximization) Algorithm</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>General Framework:</bold> EM is a powerful iterative
-        strategy for finding maximum likelihood solutions in models with
-        latent variables. It consists of two primary steps:</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>E-step (Expectation):</bold> Calculates the
-            posterior distribution of the latent variables
-            (responsibilities) given the current parameters.</p>
-          </list-item>
-          <list-item>
-            <p><bold>M-step (Maximization):</bold> Updates the model
-            parameters by maximizing the expectation of the
-            complete-data log-likelihood.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Lower Bound Maximization:</bold> Mathematically, EM
-        maximizes a lower bound on the log-likelihood function. Each
-        cycle is guaranteed to never decrease the likelihood, ensuring
-        convergence to a local maximum.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Robustness and Variants:</bold> While standard K-Means
-        is sensitive to outliers, <bold>K-Medoids</bold> offers a robust
-        alternative by using actual data points as cluster prototypes.
-        For discrete data, <bold>Bernoulli Mixtures</bold> allow for
-        clustering of binary vectors (e.g., digitized images).</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="applications">
-    <title>13.3 Applications</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Image Segmentation:</bold> Clustering pixels in color
-        or spectral space to identify homogeneous regions or
-        objects.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Vector Quantization:</bold> A lossy compression
-        technique that replaces data points with the index of their
-        nearest cluster centroid (code-book vector).</p>
-      </list-item>
-      <list-item>
-        <p><bold>Regime Identification:</bold> Detecting different
-        physical flow regimes (e.g., oil/water/gas in pipes) or
-        materials states from unlabeled multi-sensor streams.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Unsupervised Paradigm:</bold> Uncovering regimes and
+      clusters in unlabeled process data.</p>
+    </list-item>
+    <list-item>
+      <p><bold>K-Means &amp; K-Medoids:</bold> Hard clustering
+      minimizing distance to centroids/prototypes.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Gaussian Mixture Models (GMM):</bold> Probabilistic
+      clustering with soft assignments (responsibilities).</p>
+    </list-item>
+    <list-item>
+      <p><bold>EM Algorithm:</bold> Iterative E-step and M-step to find
+      maximum likelihood in latent variable models.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-12-summary-uncertainty-in-predictions">
   <title>14 Week 12 Summary: Uncertainty in Predictions</title>
-  <sec id="core-concepts-11">
-    <title>14.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Necessity of UQ:</bold> In engineering
-        applications, a single-point prediction is rarely enough.
-        <bold>Uncertainty Quantification (UQ)</bold> allows models to
-        express their confidence, facilitating safer decision-making and
-        efficient out-of-distribution (OOD) detection.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Bayesian Predictive Distribution:</bold> Rather than a
-        single set of weights, Bayesian models maintain a distribution
-        over all possible parameters. The predictive distribution (t|x)$
-        is obtained by integrating over this parameter posterior,
-        resulting in a variance that naturally increases in regions with
-        sparse training data.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Aleatory vs. Epistemic Uncertainty:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Aleatory (Noise):</bold> The irreducible variance
-            due to measurement error or inherent randomness.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Epistemic (Model):</bold> The uncertainty due to
-            lack of data, which Bayesian models quantify via the
-            parameter covariance matrix $.</p>
-          </list-item>
-        </list>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="probabilistic-architectures">
-    <title>14.2 Probabilistic Architectures</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Evidence Framework:</bold> A hierarchical Bayesian
-        approach that allows for the optimization of hyperparameters
-        (like regularization strength) directly from the training data
-        by maximizing the <bold>Marginal Likelihood</bold>
-        (Evidence).</p>
-      </list-item>
-      <list-item>
-        <p><bold>Effective Number of Parameters
-        (<inline-formula><alternatives>
-        <tex-math><![CDATA[\gamma]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>γ</mml:mi></mml:math></alternatives></inline-formula>):</bold>
-        A metric that quantifies how many model degrees of freedom are
-        actually being utilized to fit the data, as opposed to being
-        suppressed by the prior.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Mixture-Density Networks (MDN):</bold> A specialized
-        neural network architecture that outputs the parameters of a
-        Gaussian mixture model (<inline-formula><alternatives>
-        <tex-math><![CDATA[\pi, \mu, \sigma]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>π</mml:mi><mml:mo>,</mml:mo><mml:mi>μ</mml:mi><mml:mo>,</mml:mo><mml:mi>σ</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>).
-        This allows the network to model complex, multi-modal
-        probability densities where several different outcomes may be
-        physically plausible.</p>
-      </list-item>
-      <list-item>
-        <p><bold>MC Dropout:</bold> A practical heuristic where dropout
-        is kept active during inference to generate an ensemble of
-        predictions, serving as a frequentist approximation to Bayesian
-        uncertainty.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="physics-and-trust">
-    <title>14.3 Physics and Trust</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Stochastic Enrichment:</bold> Probing model stability
-        by augmenting datasets with synthetic noise and observing the
-        variance in the learned results (e.g., centroid movement in
-        K-Means).</p>
-      </list-item>
-      <list-item>
-        <p><bold>Physics-Informed Constraints:</bold> Embedding physical
-        laws (via ODEs/PDEs) into the loss function acts as a powerful
-        regularizer that can significantly reduce epistemic uncertainty,
-        particularly in “data-poor” regions of the parameter space.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Uncertainty Quantification (UQ):</bold> Crucial for safe
+      out-of-distribution engineering decisions.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Bayesian Predictive Distribution:</bold> Integrating over
+      parameter posteriors for robust variance estimates.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Evidence Framework:</bold> Optimizing hyperparameters via
+      Marginal Likelihood maximization.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Physics Constraints:</bold> Embedding ODEs/PDEs reduces
+      epistemic uncertainty in data-poor regions.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-13-summary-physics-informed-constrained-learning">
-  <title>15 Week 13 Summary: Physics-Informed &amp; Constrained
+  <title>15 Week 13 Summary: Physics-informed &amp; Constrained
   Learning</title>
-  <sec id="core-concepts-12">
-    <title>15.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>PINN Philosophy:</bold> Physics-Informed Machine
-        Learning (PIML) seeks to integrate domain expertise and physical
-        laws (priors) directly into the learning process. The goal is to
-        reduce the amount of data required, improve generalization in
-        unseen regions, and ensure physical consistency.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Data Enrichment:</bold> Actively designing input
-        representations by applying known mathematical transformations
-        (e.g., FFT, Wavelets, Derivatives) that highlight the underlying
-        physical dynamics of the system.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Embedding Analytical Expressions:</bold> Utilizing the
-        <bold>Automatic Differentiation</bold> capabilities of modern ML
-        frameworks to enforce physical constraints within the neural
-        network’s loss function.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="mechanics-of-physics-integration">
-    <title>15.2 Mechanics of Physics Integration</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Loss Function Modification:</bold> The objective
-        function is expanded to include a “physics residual” term: =
-        J_{data} + J_{physics}$. The optimizer then searches for a
-        solution that simultaneously fits the observed data and
-        satisfies the governing physical equations (e.g.,
-        ODEs/PDEs).</p>
-      </list-item>
-      <list-item>
-        <p><bold>Boundary Conditions:</bold> Techniques like the
-        <bold>Lagaris substitution</bold> allow for the mathematical
-        enforcement of initial and boundary conditions, ensuring the
-        model’s output is physically valid at the start of the
-        simulation.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Neural Integrators:</bold> Training networks to solve
-        differential equations by minimizing the discrepancy between the
-        network’s gradient and the physical law, effectively using the
-        NN as a flexible surrogate for numerical solvers.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="scientific-trust-and-efficiency">
-    <title>15.3 Scientific Trust and Efficiency</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Occam’s Razor:</bold> Information theory provides a
-        rigorous basis for preferring simpler, more parsimonious models.
-        PIML aligns with this by constraining the model’s search space
-        to physically plausible solutions.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Small Data &amp; Balance:</bold> By providing the model
-        with the “rules of the game,” PINNs can succeed in “data-poor”
-        scenarios where pure black-box models would fail due to
-        overfitting or statistical imbalance.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Explainability:</bold> Models that incorporate physical
-        transformations (like FFT) are inherently more interpretable, as
-        their decisions can be traced back to identifiable physical
-        phenomena like resonance or decay rates.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>PINNs:</bold> Integrating physical laws directly into the
+      loss function to reduce data needs.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Data Enrichment:</bold> Applying known mathematical
+      transformations (FFT, derivatives).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Neural Integrators:</bold> Using NNs with automatic
+      differentiation as flexible differential equation solvers.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Scientific Trust:</bold> Physics constraints act as
+      powerful regularizers promoting Occam’s Razor.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-14-summary-explainability-limits-scientific-trust">
   <title>16 Week 14 Summary: Explainability, Limits, Scientific
   Trust</title>
-  <sec id="core-concepts-13">
-    <title>16.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Trust Mandate:</bold> In scientific and industrial
-        AI, a model’s prediction must be justifiable to human experts.
-        <bold>Explainable AI (XAI)</bold> provides the tools to move
-        beyond “black-box” results toward transparent
-        decision-making.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Semantic Structures:</bold> Digitizing meaning requires
-        more than just storing data points. We use specialized
-        structures to organize knowledge:</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Synonyms:</bold> Mapping different technical terms
-            to the same underlying physical concept.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Taxonomies:</bold> Hierarchically ordering objects
-            to enable algorithmic reasoning (e.g., knowing that a
-            specific sensor belongs to a broader class of thermal
-            devices).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Ontologies:</bold> Modeling complex relationships
-            and interactions between components (e.g., understanding how
-            a pump’s failure causally affects a press’s force).</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Levels of Explainability:</bold> A model must provide
-        different levels of explanation depending on the audience, from
-        business-level KPIs for managers to physical consistency checks
-        for process engineers.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="tools-for-model-interpretation">
-    <title>16.2 Tools for Model Interpretation</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Sensitivity Analysis:</bold> A method for probing
-        black-box models by applying small disturbances to input
-        variables and measuring the response. This allows researchers to
-        identify which features (or frequency components) drive the
-        model’s output.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Deductive Reasoning:</bold> By combining sensitivity
-        results with an ontology, we can perform deductive logic?for
-        instance, tracing a detected oscillation back to a specific
-        faulty component in a circuit.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Causality in Process Chains:</bold> Distinguishing
-        between <bold>Detection</bold> (identifying an error after it
-        occurs) and <bold>Prediction</bold> (foreseeing an error early
-        enough to prevent it). The value of an AI solution is directly
-        proportional to how early it can intervene in the causal chain
-        of production.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="reflection-on-model-limits">
-    <title>16.3 Reflection on Model Limits</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Data Manifold:</bold> Models are only reliable
-        within the region of the “data manifold” they were trained on.
-        Extrapolating beyond these limits requires the integration of
-        physical laws (PINNs) to maintain scientific validity.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Inductive Bias:</bold> Every model makes assumptions.
-        Trust is built when these assumptions are explicitly aligned
-        with established scientific principles rather than being purely
-        data-driven.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Explainable AI (XAI):</bold> Transitioning from black-box
+      to transparent, justifiable decision-making.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Interpretation Tools:</bold> Sensitivity analysis and
+      deductive reasoning using ontologies.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Causality:</bold> Moving from late detection to early
+      prediction via causal process chains.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Limits:</bold> Addressing data bias, extrapolation risks,
+      and AI hallucinations while keeping experts in the loop.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg">
   <title>17 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
@@ -1889,1187 +1009,307 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-1-summary-learning-vs-data-analysis-models-loss-functions-nb-article">
   <title>3 Week 1 Summary: Learning vs Data Analysis; Models, Loss
   Functions</title>
-  <p><bold>Slides:</bold>
-  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html">Open</ext-link></p>
-  <sec id="core-concepts-nb-article">
-    <title>3.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Concept of a Model:</bold> Models are simplified
-        representations of reality designed for <bold>prediction</bold>
-        and <bold>explanation</bold>. We distinguish between
-        <bold>First-Principle models</bold> (bottom-up, based on
-        physical laws) and <bold>Data-based models</bold> (top-down,
-        extracted from observations).</p>
-      </list-item>
-      <list-item>
-        <p><bold>Interpretability Spectrum:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>White-Box:</bold> Fully traceable (e.g., physical
-            laws, linear regression).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Grey-Box:</bold> Partially traceable (e.g., Monte
-            Carlo, Physics-Informed Neural Networks).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Black-Box:</bold> Non-traceable internal mechanisms
-            (e.g., deep neural networks), though techniques for
-            <bold>Explainability</bold> aim to move these toward the
-            Grey-Box category.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Types of Learning:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Supervised Learning:</bold> Learning with labeled
-            data. Includes <bold>Regression</bold> (continuous targets)
-            and <bold>Classification</bold> (discrete categories).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Unsupervised Learning:</bold> Finding hidden
-            structure in unlabeled data (clustering, dimensionality
-            reduction, embeddings).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Reinforcement Learning:</bold> Learning optimal
-            actions through trial and error to maximize a reward
-            signal.</p>
-          </list-item>
-        </list>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="loss-functions-and-optimization-nb-article">
-    <title>3.2 Loss Functions and Optimization</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Learning as Optimization:</bold> Machine learning is
-        the process of minimizing a <bold>Loss Function</bold> (w)$ that
-        measures the discrepancy between model predictions and true
-        targets.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Mean Squared Error (MSE):</bold> The standard loss for
-        regression, providing a geometric interpretation of
-        residuals.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Parsimony and Occam’s Razor:</bold> The preference for
-        simpler models. Overly complex models tend to fit noise in the
-        training data, leading to <bold>Overfitting</bold>.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Regularization:</bold> A technique to control
-        complexity by adding a penalty term (e.g., Ridge/Lasso) to the
-        loss function, discouraging large parameter values and wild
-        oscillations.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Generalization:</bold> The central goal of ML?ensuring
-        the model performs well on unseen <bold>test data</bold>, not
-        just the training set.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Models:</bold> Simplified representations for
+      prediction/explanation (White, Grey, Black-Box).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Learning Types:</bold> Supervised
+      (Regression/Classification), Unsupervised, Reinforcement.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Loss Functions:</bold> ML minimizes a loss function
+      (e.g., MSE) to match predictions to targets.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Complexity:</bold> Occam’s Razor prefers simpler models
+      to avoid overfitting; regularization helps control it.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-2-summary-linear-algebra-refresher-covariance-pcasvd-nb-article">
   <title>4 Week 2 Summary: Linear Algebra Refresher; Covariance,
   PCA/SVD</title>
-  <p><bold>Slides:</bold>
-  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html">Open</ext-link></p>
-  <sec id="core-concepts-1-nb-article">
-    <title>4.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Eigendecomposition:</bold> The foundation of PCA. For a
-        symmetric covariance matrix $, we can find an orthonormal basis
-        of eigenvectors $ and corresponding eigenvalues
-        <inline-formula><alternatives>
-        <tex-math><![CDATA[\lambda_i]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>λ</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
-        such that = _i u_i$.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Covariance Matrix ($):</bold> Captures the
-        relationships and variability between features. The eigenvectors
-        of $ represent the directions of maximum variance in the data,
-        while the eigenvalues quantify the amount of variance along
-        those directions.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Principal Component Analysis (PCA):</bold> A linear
-        method for dimensionality reduction that projects data onto a
-        lower-dimensional subspace while preserving as much variance
-        (information) as possible.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="pca-theory-and-application-nb-article">
-    <title>4.2 PCA Theory and Application</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Maximizing Variance:</bold> PCA is derived as a
-        constrained optimization problem: finding directions $ that
-        maximize the projected variance ^T S u$ subject to the unit
-        length constraint <inline-formula><alternatives>
-        <tex-math><![CDATA[\|u\|=1]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mo stretchy="false" form="postfix">∥</mml:mo><mml:mi>u</mml:mi><mml:mo stretchy="false" form="postfix">∥</mml:mo><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Explained Variance:</bold> The proportion of total
-        variance captured by $ components is given by the sum of the
-        first $ eigenvalues divided by the total sum of all
-        eigenvalues.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Scree Plots:</bold> A visual diagnostic tool used to
-        determine the intrinsic dimensionality of a dataset by
-        identifying the “elbow” in the eigenvalue spectrum.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Applications in Engineering:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Dimensionality Reduction:</bold> Compressing
-            high-dimensional signals or images (e.g., MNIST,
-            microstructures) into a manageable number of features.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Denoising:</bold> By reconstructing data using only
-            the top principal components, high-frequency noise
-            (typically associated with low-variance eigenvalues) can be
-            filtered out.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Anomaly Detection:</bold> Monitoring data in the
-            latent eigenspace can reveal deviations from “normal”
-            behavior that are hard to see in the original
-            high-dimensional space.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Limitations:</bold> PCA is strictly
-        <bold>linear</bold>. For data with complex non-linear manifolds,
-        extensions like <bold>Kernel PCA</bold> or
-        <bold>Autoencoders</bold> are required.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Eigendecomposition:</bold> Finding eigenvectors (variance
+      directions) and eigenvalues (variance amount) of a covariance
+      matrix.</p>
+    </list-item>
+    <list-item>
+      <p><bold>PCA:</bold> Linear dimensionality reduction maximizing
+      variance and compressing data.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Scree Plots:</bold> Diagnostics to find intrinsic
+      dimensionality (“elbow”).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Engineering Uses:</bold> Denoising, anomaly detection,
+      and compression (limited to linear manifolds).</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-3-summary-regression-as-loss-minimization-nb-article">
   <title>5 Week 3 Summary: Regression as Loss Minimization</title>
-  <sec id="core-concepts-2-nb-article">
-    <title>5.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Supervised Learning Framework:</bold> Mapping
-        inputs $ to continuous outputs $ to minimize the discrepancy
-        with target labels $. The central objective is finding the
-        optimal parameters $ of a hypothesis function (x)$.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Loss and Cost Functions:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Squared Error Loss:</bold> = ( - y)^2$, penalizing
-            large deviations quadratically.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Cost Function ($):</bold> The Mean Squared Error
-            (MSE) over the training set, serving as the surface we seek
-            to minimize.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Least Squares Optimization:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Ordinary Least Squares (OLS):</bold> The analytical
-            solution = (X^T X)^{-1} X^T y$ that finds the global minimum
-            for linear models.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Gradient Descent:</bold> An iterative optimization
-            strategy where parameters are updated in the direction of
-            the steepest descent: w - ta abla_w J$.</p>
-          </list-item>
-        </list>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="expanding-linear-models-nb-article">
-    <title>5.2 Expanding Linear Models</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Linearity Principle:</bold> A model is “linear” if
-        it is linear in its <italic>parameters</italic>, allowing us to
-        model highly non-linear relationships by transforming
-        features.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Basis Functions (<inline-formula><alternatives>
-        <tex-math><![CDATA[\phi]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ϕ</mml:mi></mml:math></alternatives></inline-formula>):</bold>
-        By replacing raw features $ with a vector of transformations
-        <inline-formula><alternatives>
-        <tex-math><![CDATA[\phi(x)]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>ϕ</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
-        (e.g., polynomials, sinusoids, radial basis functions), we can
-        use the linear regression framework to fit complex curves.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Polynomial Regression:</bold> A common application of
-        basis functions using powers of $. However, one must be wary of
-        <bold>Runge’s Phenomenon</bold> and overfitting when using
-        high-order polynomials.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Local vs. Global Models:</bold> While global
-        polynomials can be unstable, piecewise polynomials and
-        <bold>Splines</bold> provide a more robust, localized approach
-        to regression by “gluing” simple functions together at
-        knots.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Supervised Framework:</bold> Minimizing a cost function
+      (MSE) to find optimal parameters.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Optimization:</bold> Analytical (Ordinary Least Squares)
+      vs. Iterative (Gradient Descent).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Basis Functions:</bold> Expanding linear models to fit
+      non-linear data using transformations (polynomials, splines).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Runge’s Phenomenon:</bold> Overfitting risk with
+      high-order global polynomials.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-4-summary-neural-networks-early-neuron-activations-nb-article">
   <title>6 Week 4 Summary: Neural Networks Early: Neuron &amp;
   Activations</title>
-  <sec id="core-concepts-3-nb-article">
-    <title>6.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Artificial Neuron:</bold> A fundamental processing
-        unit that computes a weighted sum of its inputs plus a bias ( =
-        w_i x_i + b$) and passes the result through a non-linear
-        <bold>activation function</bold>. It is the building block of
-        all deep learning architectures.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Non-linear Activations:</bold> The “soul” of the neural
-        network. Without non-linearity, multiple layers would
-        mathematically collapse into a single linear transformation,
-        rendering the network unable to solve complex problems like
-        XOR.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Multi-Layer Perceptron (MLP):</bold> A feed-forward
-        architecture where neurons are organized into an input layer,
-        one or more hidden layers, and an output layer. Layers are
-        typically fully connected.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="activation-function-taxonomy-nb-article">
-    <title>6.2 Activation Function Taxonomy</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Sigmoid &amp; Tanh:</bold> Historical standards that
-        map inputs to bounded ranges ((0, 1) and (-1, 1)). They are
-        smooth and differentiable but suffer from <bold>vanishing
-        gradients</bold> in deep networks due to saturation.</p>
-      </list-item>
-      <list-item>
-        <p><bold>ReLU (Rectified Linear Unit):</bold> The modern
-        standard ((x) = (0, x)$). It is computationally efficient and
-        helps mitigate vanishing gradients for positive inputs, enabling
-        the training of much deeper networks.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Leaky ReLU:</bold> A variant that allows a small,
-        non-zero gradient for negative inputs to prevent “dead
-        neurons.”</p>
-      </list-item>
-      <list-item>
-        <p><bold>Softmax:</bold> Typically reserved for the output layer
-        in multi-class classification tasks, as it squashes outputs into
-        a probability distribution that sums to one.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="structural-properties-nb-article">
-    <title>6.3 Structural Properties</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Universal Approximation Theorem:</bold> A powerful
-        result stating that even a single hidden layer can approximate
-        any continuous function, provided it has a non-linear activation
-        and enough neurons.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Forward Propagation:</bold> The deterministic process
-        of calculating the output of each layer sequentially to produce
-        a final prediction.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Weight-Space Symmetries:</bold> The realization that
-        multiple weight configurations (e.g., swapping hidden units or
-        flipping signs) can result in identical network behavior, which
-        has implications for optimization and Bayesian analysis.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Artificial Neuron:</bold> Weighted sum plus a non-linear
+      activation function.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Activations:</bold> Non-linearity (ReLU, Sigmoid, Tanh)
+      is essential for complex problem-solving.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Universal Approximation:</bold> A single hidden layer can
+      approximate any continuous function.</p>
+    </list-item>
+    <list-item>
+      <p><bold>MLP Architecture:</bold> Feed-forward network with input,
+      hidden, and output layers.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-5-summary-backpropagation-gradient-flow-nb-article">
   <title>7 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
-  <sec id="core-concepts-4-nb-article">
-    <title>7.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Learning as Optimization:</bold> The training of a
-        neural network is an iterative optimization problem aimed at
-        minimizing a cost function $ through gradient descent: w - ta
-        abla_w J$.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Backpropagation Algorithm:</bold> An efficient
-        implementation of the <bold>chain rule</bold> that calculates
-        the partial derivative of the cost function with respect to
-        every weight and bias in the network. It consists of two
-        passes:</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Forward Pass:</bold> Computing activations
-            layer-by-layer and storing intermediate results.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Backward Pass:</bold> Starting from the output
-            error, propagating “error signals”
-            (<inline-formula><alternatives>
-            <tex-math><![CDATA[\delta]]></tex-math>
-            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>δ</mml:mi></mml:math></alternatives></inline-formula>)
-            upstream to compute local gradients.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Computational Efficiency:</bold> Backpropagation allows
-        gradient computation in (W)$ time, where $ is the number of
-        weights, making it feasible to train models with millions of
-        parameters.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="gradient-flow-and-stability-nb-article">
-    <title>7.2 Gradient Flow and Stability</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Vanishing Gradients:</bold> In deep networks, gradients
-        can become infinitesimally small as they are multiplied by the
-        derivatives of saturating activation functions (like sigmoid or
-        tanh) at each layer. This “signal decay” prevents early layers
-        from learning.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Exploding Gradients:</bold> Conversely, large weights
-        and certain architectures can cause gradients to grow
-        exponentially, leading to numerical instability and
-        divergence.</p>
-      </list-item>
-      <list-item>
-        <p><bold>ReLU and Gradient Flow:</bold> The ReLU activation
-        function (<inline-formula><alternatives>
-        <tex-math><![CDATA[\max(0, x)]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mrow><mml:mi mathvariant="normal">max</mml:mi><mml:mo>&#8289;</mml:mo></mml:mrow><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>)
-        provides a constant gradient of 1 for positive inputs,
-        significantly improving gradient flow in deep architectures and
-        enabling the “Deep Learning” revolution.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Jacobian Matrix:</bold> Describes how small changes
-        in inputs affect the outputs of a module, providing a unified
-        framework for linking differentiable components in a larger
-        system.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Backpropagation:</bold> Two-pass chain rule application
+      to efficiently compute gradients.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Vanishing/Exploding Gradients:</bold> Deep networks
+      struggle with signal decay or instability.</p>
+    </list-item>
+    <list-item>
+      <p><bold>ReLU:</bold> Improves gradient flow for deep
+      architectures by providing a constant positive gradient.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Jacobian Matrix:</bold> Links differentiable components
+      for system-wide optimization.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-6-summary-loss-landscapes-optimization-behavior-nb-article">
   <title>8 Week 6 Summary: Loss Landscapes &amp; Optimization
   Behavior</title>
-  <sec id="core-concepts-5-nb-article">
-    <title>8.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Loss Landscape:</bold> A high-dimensional geometric
-        representation of the cost function $ over the parameter space
-        $. Its topography?comprising peaks, valleys, saddle points, and
-        plateaus?determines the ease and success of the training
-        process.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Curvature and the Hessian ($):</bold> While the
-        gradient indicates the direction of steepest descent, the
-        <bold>Hessian matrix</bold> (the matrix of second-order
-        derivatives) describes the <italic>curvature</italic> of the
-        landscape.</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Eigenvalues of $:</bold> Large eigenvalues indicate
-            steep directions where the gradient changes rapidly, while
-            small eigenvalues correspond to shallow, flat
-            directions.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Conditioning:</bold> Landscapes with widely varying
-            curvature (ill-conditioned) cause standard gradient descent
-            to oscillate wildly or crawl painfully slowly.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Saddle Points:</bold> In high-dimensional spaces, true
-        local minima are rare; most points with zero gradient are saddle
-        points, which can trap or significantly slow down first-order
-        optimizers.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="advanced-optimization-strategies-nb-article">
-    <title>8.2 Advanced Optimization Strategies</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Momentum:</bold> Inspired by physics, this technique
-        adds a “velocity” component to updates, allowing the optimizer
-        to accumulate speed in consistent directions and dampen
-        oscillations in steep, narrow valleys.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Adaptive Learning Rates:</bold> Algorithms like
-        <bold>AdaGrad</bold>, <bold>RMSProp</bold>, and
-        <bold>ADAM</bold> adjust the learning rate for each individual
-        parameter based on the history of observed gradients. This
-        effectively scales the coordinates to “normalize” the
-        landscape’s curvature.</p>
-      </list-item>
-      <list-item>
-        <p><bold>ADAM (Adaptive Moment Estimation):</bold> Currently the
-        industry standard, combining the benefits of momentum and
-        adaptive scales to provide robust performance across a wide
-        range of architectures and hyperparameter settings.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Flat vs. Sharp Minima:</bold> Research suggests that
-        “flat” minima (regions where the cost remains low over a wide
-        range of parameters) correlate with better
-        <bold>Generalization</bold> on unseen data, as they are less
-        sensitive to small shifts in the data distribution.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Loss Landscape:</bold> High-dimensional topography
+      determining optimization success.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Curvature:</bold> Hessian matrix dictates steepness;
+      ill-conditioned landscapes slow descent.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Saddle Points:</bold> Common traps in high dimensions
+      that hinder optimizers.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Advanced Optimizers:</bold> Momentum and adaptive
+      learning rates (ADAM) navigate complex landscapes robustly.</p>
+    </list-item>
+  </list>
 </sec>
-<sec id="week-7-summary-generalization-biasvariance-regularization-nb-article">
-  <title>9 Week 7 Summary: Generalization, Bias?Variance,
+<sec id="week-7-summary-generalization-bias-variance-regularization-nb-article">
+  <title>9 Week 7 Summary: Generalization, Bias-Variance,
   Regularization</title>
-  <sec id="core-concepts-6-nb-article">
-    <title>9.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Generalization:</bold> The fundamental objective of
-        machine learning?ensuring that a model learned from a finite
-        training set performs accurately on previously unseen data.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Overfitting vs. Underfitting:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Overfitting:</bold> Occurs when a model captures
-            the random noise in the training data rather than the
-            underlying pattern. This is characterized by low training
-            error but high test error.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Underfitting:</bold> Occurs when a model is too
-            simple to represent the data’s complexity, resulting in high
-            error on both training and test sets.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Bias-Variance Decomposition:</bold> A theoretical
-        framework that decomposes the expected error into three
-        parts:</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Bias:</bold> Error due to simplistic assumptions
-            (e.g., modeling a non-linear process with a straight
-            line).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Variance:</bold> Error due to excessive sensitivity
-            to the specific training data.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Intrinsic Noise:</bold> The irreducible error in
-            the data itself (the “Bayes error”).</p>
-          </list-item>
-          <list-item>
-            <p><bold>The Trade-off:</bold> Increasing model complexity
-            generally reduces bias but increases variance. The goal is
-            to find the “sweet spot” that minimizes total error.</p>
-          </list-item>
-        </list>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="regularization-and-validation-nb-article">
-    <title>9.2 Regularization and Validation</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Regularization:</bold> A technique to prevent
-        overfitting by adding a penalty term to the loss function that
-        discourages overly complex models (large parameter values).</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Ridge Regression ($):</bold> Penalizes the sum of
-            squared weights, shrinking them toward zero.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Lasso Regression ($):</bold> Penalizes the sum of
-            absolute weights, promoting <bold>sparsity</bold> by setting
-            less important weights exactly to zero.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Dropout:</bold> A neural network-specific technique
-            that randomly “drops” neurons during training to prevent
-            co-adaptation and improve robustness.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Model Selection:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Cross-Validation:</bold> A robust strategy for
-            evaluating model performance by iteratively splitting the
-            data into $ folds, ensuring every data point serves as both
-            training and test data.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Validation Set:</bold> A subset of data used
-            exclusively for tuning hyperparameters (like the
-            regularization strength <inline-formula><alternatives>
-            <tex-math><![CDATA[\lambda]]></tex-math>
-            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>)
-            to avoid biasing the final test results.</p>
-          </list-item>
-        </list>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Generalization:</bold> Ensuring accurate performance on
+      unseen test data.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Bias-Variance Tradeoff:</bold> Balancing underfitting
+      (high bias) and overfitting (high variance).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Regularization:</bold> L2 (Ridge), L1 (Lasso), and
+      Dropout penalize complexity to improve robustness.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Validation:</bold> Cross-validation is essential for
+      unbiased hyperparameter tuning.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-8-summary-probabilistic-view-of-learning-noise-nb-article">
   <title>10 Week 8 Summary: Probabilistic View of Learning;
   Noise</title>
-  <sec id="core-concepts-7-nb-article">
-    <title>10.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Probability as Modeling Tool:</bold> Probability theory
-        provides the formal framework for quantifying uncertainty in
-        both data (noise) and models (parameter uncertainty). Machine
-        learning is viewed as the process of updating probabilistic
-        beliefs in light of new observations.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Taxonomy of Uncertainty:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Aleatory Uncertainty:</bold> Irreducible randomness
-            inherent in the physical process or measurement system
-            (e.g., thermal noise, sensor precision).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Epistemic Uncertainty:</bold> Uncertainty stemming
-            from a lack of data or knowledge. This can, in principle, be
-            reduced by observing more samples or improving model
-            fidelity.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Sampling and Signal Theory:</bold> Digital data
-        collection is a stochastic process governed by the
-        <bold>Nyquist-Shannon Theorem</bold>, which defines the minimum
-        sampling frequency required to fully capture a signal’s
-        dynamics.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="inference-and-uncertainty-quantification-nb-article">
-    <title>10.2 Inference and Uncertainty Quantification</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Frequentist vs. Bayesian Views:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Maximum Likelihood Estimation (MLE):</bold>
-            Estimates parameters by maximizing the probability of the
-            observed data. Prone to overfitting on small datasets.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Bayesian Inference:</bold> Treats parameters as
-            random variables. By combining a <bold>prior</bold>
-            distribution with the <bold>likelihood</bold>, it yields a
-            <bold>posterior</bold> distribution that represents our
-            updated belief and its associated uncertainty.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Robustness and Outliers:</bold> While the Gaussian
-        distribution is standard, the <bold>Student’s
-        t-distribution</bold> offers better robustness against outliers
-        due to its heavy tails.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Advanced UQ in Neural Networks:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Stochastic Enrichment:</bold> A technique to
-            integrate measurement uncertainty into the training process
-            by augmenting datasets with noisy samples derived from the
-            original points.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Mixture-Density Networks (MDN):</bold> Specialized
-            neural architectures that predict the parameters of a
-            probability distribution (e.g., weights, means, and
-            variances of multiple Gaussians) rather than point values,
-            allowing models to “know what they don’t know.”</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Process Corridors:</bold> Using 2D histograms to model
-        the probability density of temporal data, providing a powerful
-        heuristic for detecting anomalous deviations in engineering
-        systems.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Taxonomy of Uncertainty:</bold> Aleatory (inherent noise)
+      vs. Epistemic (lack of data).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Inference Views:</bold> Frequentist (Maximum Likelihood)
+      vs. Bayesian (Posterior updates).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Robustness:</bold> Student’s t-distribution mitigates
+      outlier impacts better than Gaussian.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Advanced UQ:</bold> Stochastic enrichment and
+      Mixture-Density Networks capture uncertainty.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-9-summary-representation-learning-features-vs.-learned-representations-nb-article">
   <title>11 Week 9 Summary: Representation Learning; Features
   vs. Learned Representations</title>
-  <sec id="core-concepts-8-nb-article">
-    <title>11.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Beyond Handcrafting:</bold> Traditional machine
-        learning relies on experts to manually engineer features (e.g.,
-        Fourier transforms, signal moments). <bold>Representation
-        Learning</bold> shifts this burden to the model, which
-        autonomously discovers the most relevant transformations
-        directly from raw data.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Manifold Hypothesis:</bold> Real-world
-        high-dimensional data (like images or spectra) typically lies on
-        or near a low-dimensional, non-linear <bold>manifold</bold>. The
-        number of independent parameters needed to describe this
-        manifold represents the data’s true <bold>degrees of
-        freedom</bold>.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Autoencoders (AE):</bold> A class of neural networks
-        designed for unsupervised representation learning. By training a
-        network to perform an identity mapping ((x) pprox x$) through a
-        constrained <bold>bottleneck layer</bold>, the model is forced
-        to capture the most salient features in a compressed
-        <bold>latent space</bold>.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="architectures-and-latent-spaces-nb-article">
-    <title>11.2 Architectures and Latent Spaces</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Encoder and Decoder:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p>The <bold>Encoder</bold> compresses the input into a
-            low-dimensional code.</p>
-          </list-item>
-          <list-item>
-            <p>The <bold>Decoder</bold> reconstructs the original signal
-            from this code.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Non-linearity:</bold> Unlike PCA, which is limited to
-        linear projections, deep autoencoders can learn complex,
-        non-linear manifolds using hierarchical hidden layers and
-        non-linear activations.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Convolutional Autoencoders:</bold> Specialized for
-        spatial data (images, simulations), these use strided
-        convolutions to downsample and transposed convolutions to
-        upsample, preserving geometric structure while reducing
-        dimensionality.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Denoising:</bold> Autoencoders can be trained to
-        recover clean signals from corrupted inputs, effectively
-        learning to project “noisy” points back onto the learned data
-        manifold.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="industrial-and-engineering-applications-nb-article">
-    <title>11.3 Industrial and Engineering Applications</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Data Compression:</bold> Storing high-fidelity
-        engineering data (e.g., leaf spectra or plasma simulations)
-        using only a fraction of the original storage by keeping only
-        the latent codes and the trained decoder.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Anomaly Detection:</bold> Anomalies can be detected in
-        two ways: (1) high reconstruction error (the model cannot
-        reconstruct what it hasn’t seen) or (2) outliers in the latent
-        space distribution.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Feature Extraction:</bold> Latent codes serve as highly
-        optimized, low-dimensional inputs for downstream supervised
-        tasks like time-series prediction or process optimization.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Manifold Hypothesis:</bold> High-dimensional data lies on
+      a lower-dimensional non-linear manifold.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Autoencoders (AE):</bold> Unsupervised neural networks
+      compressing data into a latent bottleneck.</p>
+    </list-item>
+    <list-item>
+      <p><bold>AE Architectures:</bold> Encoders compress, decoders
+      reconstruct; CNNs handle spatial data.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Applications:</bold> Data compression, feature
+      extraction, and anomaly detection.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-10-summary-latent-spaces-embeddings-nb-article">
   <title>12 Week 10 Summary: Latent Spaces; Embeddings</title>
-  <sec id="core-concepts-9-nb-article">
-    <title>12.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Latent Space Definition:</bold> A low-dimensional,
-        continuous vector space that represents the underlying structure
-        of high-dimensional data. In this space, the distance between
-        points reflects their semantic or physical similarity.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Embeddings:</bold> A mapping of high-dimensional, often
-        discrete or sparse data (e.g., categories, words, or crystal
-        structures) into a dense, lower-dimensional latent space where
-        meaningful relationships can be calculated via dot products or
-        Euclidean distance.</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Geometry of Compression:</bold> Latent spaces
-        discovered by autoencoders are non-linear manifolds. Unlike
-        linear PCA, these spaces can disentangle complex factors of
-        variation, such as the position, width, and amplitude of a
-        signal.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="dimensionality-reduction-and-visualization-nb-article">
-    <title>12.2 Dimensionality Reduction and Visualization</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>t-SNE (t-Distributed Stochastic Neighbor
-        Embedding):</bold> A powerful non-linear technique for
-        visualizing high-dimensional data archipelagos. It matches the
-        neighborhood structure of the high-dimensional space to a 2D or
-        3D map by minimizing the KL-divergence between Gaussian
-        (high-dim) and Student’s t-distributions (low-dim).</p>
-      </list-item>
-      <list-item>
-        <p><bold>The Crowding Problem:</bold> t-SNE uses the
-        heavy-tailed Student’s t-distribution in the low-dimensional
-        space to push moderately distant points further apart,
-        preventing the “crowding” that occurs in high-dimensional
-        Gaussian mappings.</p>
-      </list-item>
-      <list-item>
-        <p><bold>UMAP (Uniform Manifold Approximation and
-        Projection):</bold> A modern, faster alternative to t-SNE based
-        on Riemannian geometry that better preserves global structure
-        and scale across the entire dataset.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Kernel PCA:</bold> An extension of PCA that uses the
-        <bold>Kernel Trick</bold> to project data into an implicit,
-        infinite-dimensional feature space where non-linear patterns
-        become linearly separable.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="analysis-and-trust-nb-article">
-    <title>12.3 Analysis and Trust</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Interpretability:</bold> Latent neurons can often be
-        mapped back to physical parameters (e.g., material properties),
-        allowing for semi-supervised discovery.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Anomaly Detection:</bold> Monitoring the distribution
-        of “normal” data in latent space allows for the detection of
-        “exotic” cases that fall outside established clusters, even if
-        those anomalies were never seen during training.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Conditional Latent Probability:</bold> Using histograms
-        and conditional distributions (e.g., (A_2|A_1)$) within the
-        latent space provides a statistical basis for quantifying the
-        novelty or reliability of a model’s prediction.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Latent Spaces:</bold> Low-dimensional vectors where
+      distance reflects semantic/physical similarity.</p>
+    </list-item>
+    <list-item>
+      <p><bold>t-SNE &amp; UMAP:</bold> Non-linear visualization tools
+      to map high-dimensional clusters to 2D/3D.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Crowding Problem:</bold> Addressed by heavy-tailed
+      distributions in lower dimensions.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Interpretability:</bold> Mapping latent neurons to
+      physical parameters builds trust.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-11-summary-unsupervised-learning-revisited-objectives-nb-article">
   <title>13 Week 11 Summary: Unsupervised Learning Revisited
   (Objectives)</title>
-  <sec id="core-concepts-10-nb-article">
-    <title>13.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Unsupervised Paradigm:</bold> In many engineering
-        scenarios, labels are missing (e.g., process data without
-        quality metrics). Unsupervised learning uncovers the inherent
-        structure, regimes, and clusters within the data, providing a
-        foundation for both discovery and dimensionality reduction.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Clustering - K-Means:</bold> A robust,
-        non-probabilistic algorithm that partitions data into $ clusters
-        by minimizing the sum of squared distances to cluster centroids.
-        It operates via an iterative assignment-update cycle that is a
-        “hard” version of the EM algorithm.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Gaussian Mixture Models (GMM):</bold> A probabilistic
-        approach that represents data as a weighted sum of multiple
-        Gaussian components. It treats the cluster membership as a
-        <bold>discrete latent variable</bold>, allowing for “soft”
-        assignments where points can belong to multiple clusters with
-        varying degrees of <bold>responsibility</bold>.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="the-em-expectation-maximization-algorithm-nb-article">
-    <title>13.2 The EM (Expectation-Maximization) Algorithm</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>General Framework:</bold> EM is a powerful iterative
-        strategy for finding maximum likelihood solutions in models with
-        latent variables. It consists of two primary steps:</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>E-step (Expectation):</bold> Calculates the
-            posterior distribution of the latent variables
-            (responsibilities) given the current parameters.</p>
-          </list-item>
-          <list-item>
-            <p><bold>M-step (Maximization):</bold> Updates the model
-            parameters by maximizing the expectation of the
-            complete-data log-likelihood.</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Lower Bound Maximization:</bold> Mathematically, EM
-        maximizes a lower bound on the log-likelihood function. Each
-        cycle is guaranteed to never decrease the likelihood, ensuring
-        convergence to a local maximum.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Robustness and Variants:</bold> While standard K-Means
-        is sensitive to outliers, <bold>K-Medoids</bold> offers a robust
-        alternative by using actual data points as cluster prototypes.
-        For discrete data, <bold>Bernoulli Mixtures</bold> allow for
-        clustering of binary vectors (e.g., digitized images).</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="applications-nb-article">
-    <title>13.3 Applications</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Image Segmentation:</bold> Clustering pixels in color
-        or spectral space to identify homogeneous regions or
-        objects.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Vector Quantization:</bold> A lossy compression
-        technique that replaces data points with the index of their
-        nearest cluster centroid (code-book vector).</p>
-      </list-item>
-      <list-item>
-        <p><bold>Regime Identification:</bold> Detecting different
-        physical flow regimes (e.g., oil/water/gas in pipes) or
-        materials states from unlabeled multi-sensor streams.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Unsupervised Paradigm:</bold> Uncovering regimes and
+      clusters in unlabeled process data.</p>
+    </list-item>
+    <list-item>
+      <p><bold>K-Means &amp; K-Medoids:</bold> Hard clustering
+      minimizing distance to centroids/prototypes.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Gaussian Mixture Models (GMM):</bold> Probabilistic
+      clustering with soft assignments (responsibilities).</p>
+    </list-item>
+    <list-item>
+      <p><bold>EM Algorithm:</bold> Iterative E-step and M-step to find
+      maximum likelihood in latent variable models.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-12-summary-uncertainty-in-predictions-nb-article">
   <title>14 Week 12 Summary: Uncertainty in Predictions</title>
-  <sec id="core-concepts-11-nb-article">
-    <title>14.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Necessity of UQ:</bold> In engineering
-        applications, a single-point prediction is rarely enough.
-        <bold>Uncertainty Quantification (UQ)</bold> allows models to
-        express their confidence, facilitating safer decision-making and
-        efficient out-of-distribution (OOD) detection.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Bayesian Predictive Distribution:</bold> Rather than a
-        single set of weights, Bayesian models maintain a distribution
-        over all possible parameters. The predictive distribution (t|x)$
-        is obtained by integrating over this parameter posterior,
-        resulting in a variance that naturally increases in regions with
-        sparse training data.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Aleatory vs. Epistemic Uncertainty:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Aleatory (Noise):</bold> The irreducible variance
-            due to measurement error or inherent randomness.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Epistemic (Model):</bold> The uncertainty due to
-            lack of data, which Bayesian models quantify via the
-            parameter covariance matrix $.</p>
-          </list-item>
-        </list>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="probabilistic-architectures-nb-article">
-    <title>14.2 Probabilistic Architectures</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Evidence Framework:</bold> A hierarchical Bayesian
-        approach that allows for the optimization of hyperparameters
-        (like regularization strength) directly from the training data
-        by maximizing the <bold>Marginal Likelihood</bold>
-        (Evidence).</p>
-      </list-item>
-      <list-item>
-        <p><bold>Effective Number of Parameters
-        (<inline-formula><alternatives>
-        <tex-math><![CDATA[\gamma]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>γ</mml:mi></mml:math></alternatives></inline-formula>):</bold>
-        A metric that quantifies how many model degrees of freedom are
-        actually being utilized to fit the data, as opposed to being
-        suppressed by the prior.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Mixture-Density Networks (MDN):</bold> A specialized
-        neural network architecture that outputs the parameters of a
-        Gaussian mixture model (<inline-formula><alternatives>
-        <tex-math><![CDATA[\pi, \mu, \sigma]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>π</mml:mi><mml:mo>,</mml:mo><mml:mi>μ</mml:mi><mml:mo>,</mml:mo><mml:mi>σ</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>).
-        This allows the network to model complex, multi-modal
-        probability densities where several different outcomes may be
-        physically plausible.</p>
-      </list-item>
-      <list-item>
-        <p><bold>MC Dropout:</bold> A practical heuristic where dropout
-        is kept active during inference to generate an ensemble of
-        predictions, serving as a frequentist approximation to Bayesian
-        uncertainty.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="physics-and-trust-nb-article">
-    <title>14.3 Physics and Trust</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Stochastic Enrichment:</bold> Probing model stability
-        by augmenting datasets with synthetic noise and observing the
-        variance in the learned results (e.g., centroid movement in
-        K-Means).</p>
-      </list-item>
-      <list-item>
-        <p><bold>Physics-Informed Constraints:</bold> Embedding physical
-        laws (via ODEs/PDEs) into the loss function acts as a powerful
-        regularizer that can significantly reduce epistemic uncertainty,
-        particularly in “data-poor” regions of the parameter space.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Uncertainty Quantification (UQ):</bold> Crucial for safe
+      out-of-distribution engineering decisions.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Bayesian Predictive Distribution:</bold> Integrating over
+      parameter posteriors for robust variance estimates.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Evidence Framework:</bold> Optimizing hyperparameters via
+      Marginal Likelihood maximization.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Physics Constraints:</bold> Embedding ODEs/PDEs reduces
+      epistemic uncertainty in data-poor regions.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-13-summary-physics-informed-constrained-learning-nb-article">
-  <title>15 Week 13 Summary: Physics-Informed &amp; Constrained
+  <title>15 Week 13 Summary: Physics-informed &amp; Constrained
   Learning</title>
-  <sec id="core-concepts-12-nb-article">
-    <title>15.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>PINN Philosophy:</bold> Physics-Informed Machine
-        Learning (PIML) seeks to integrate domain expertise and physical
-        laws (priors) directly into the learning process. The goal is to
-        reduce the amount of data required, improve generalization in
-        unseen regions, and ensure physical consistency.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Data Enrichment:</bold> Actively designing input
-        representations by applying known mathematical transformations
-        (e.g., FFT, Wavelets, Derivatives) that highlight the underlying
-        physical dynamics of the system.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Embedding Analytical Expressions:</bold> Utilizing the
-        <bold>Automatic Differentiation</bold> capabilities of modern ML
-        frameworks to enforce physical constraints within the neural
-        network’s loss function.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="mechanics-of-physics-integration-nb-article">
-    <title>15.2 Mechanics of Physics Integration</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Loss Function Modification:</bold> The objective
-        function is expanded to include a “physics residual” term: =
-        J_{data} + J_{physics}$. The optimizer then searches for a
-        solution that simultaneously fits the observed data and
-        satisfies the governing physical equations (e.g.,
-        ODEs/PDEs).</p>
-      </list-item>
-      <list-item>
-        <p><bold>Boundary Conditions:</bold> Techniques like the
-        <bold>Lagaris substitution</bold> allow for the mathematical
-        enforcement of initial and boundary conditions, ensuring the
-        model’s output is physically valid at the start of the
-        simulation.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Neural Integrators:</bold> Training networks to solve
-        differential equations by minimizing the discrepancy between the
-        network’s gradient and the physical law, effectively using the
-        NN as a flexible surrogate for numerical solvers.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="scientific-trust-and-efficiency-nb-article">
-    <title>15.3 Scientific Trust and Efficiency</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Occam’s Razor:</bold> Information theory provides a
-        rigorous basis for preferring simpler, more parsimonious models.
-        PIML aligns with this by constraining the model’s search space
-        to physically plausible solutions.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Small Data &amp; Balance:</bold> By providing the model
-        with the “rules of the game,” PINNs can succeed in “data-poor”
-        scenarios where pure black-box models would fail due to
-        overfitting or statistical imbalance.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Explainability:</bold> Models that incorporate physical
-        transformations (like FFT) are inherently more interpretable, as
-        their decisions can be traced back to identifiable physical
-        phenomena like resonance or decay rates.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>PINNs:</bold> Integrating physical laws directly into the
+      loss function to reduce data needs.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Data Enrichment:</bold> Applying known mathematical
+      transformations (FFT, derivatives).</p>
+    </list-item>
+    <list-item>
+      <p><bold>Neural Integrators:</bold> Using NNs with automatic
+      differentiation as flexible differential equation solvers.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Scientific Trust:</bold> Physics constraints act as
+      powerful regularizers promoting Occam’s Razor.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="week-14-summary-explainability-limits-scientific-trust-nb-article">
   <title>16 Week 14 Summary: Explainability, Limits, Scientific
   Trust</title>
-  <sec id="core-concepts-13-nb-article">
-    <title>16.1 Core Concepts</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Trust Mandate:</bold> In scientific and industrial
-        AI, a model’s prediction must be justifiable to human experts.
-        <bold>Explainable AI (XAI)</bold> provides the tools to move
-        beyond “black-box” results toward transparent
-        decision-making.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Semantic Structures:</bold> Digitizing meaning requires
-        more than just storing data points. We use specialized
-        structures to organize knowledge:</p>
-        <list list-type="bullet">
-          <list-item>
-            <p><bold>Synonyms:</bold> Mapping different technical terms
-            to the same underlying physical concept.</p>
-          </list-item>
-          <list-item>
-            <p><bold>Taxonomies:</bold> Hierarchically ordering objects
-            to enable algorithmic reasoning (e.g., knowing that a
-            specific sensor belongs to a broader class of thermal
-            devices).</p>
-          </list-item>
-          <list-item>
-            <p><bold>Ontologies:</bold> Modeling complex relationships
-            and interactions between components (e.g., understanding how
-            a pump’s failure causally affects a press’s force).</p>
-          </list-item>
-        </list>
-      </list-item>
-      <list-item>
-        <p><bold>Levels of Explainability:</bold> A model must provide
-        different levels of explanation depending on the audience, from
-        business-level KPIs for managers to physical consistency checks
-        for process engineers.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="tools-for-model-interpretation-nb-article">
-    <title>16.2 Tools for Model Interpretation</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>Sensitivity Analysis:</bold> A method for probing
-        black-box models by applying small disturbances to input
-        variables and measuring the response. This allows researchers to
-        identify which features (or frequency components) drive the
-        model’s output.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Deductive Reasoning:</bold> By combining sensitivity
-        results with an ontology, we can perform deductive logic?for
-        instance, tracing a detected oscillation back to a specific
-        faulty component in a circuit.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Causality in Process Chains:</bold> Distinguishing
-        between <bold>Detection</bold> (identifying an error after it
-        occurs) and <bold>Prediction</bold> (foreseeing an error early
-        enough to prevent it). The value of an AI solution is directly
-        proportional to how early it can intervene in the causal chain
-        of production.</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="reflection-on-model-limits-nb-article">
-    <title>16.3 Reflection on Model Limits</title>
-    <list list-type="bullet">
-      <list-item>
-        <p><bold>The Data Manifold:</bold> Models are only reliable
-        within the region of the “data manifold” they were trained on.
-        Extrapolating beyond these limits requires the integration of
-        physical laws (PINNs) to maintain scientific validity.</p>
-      </list-item>
-      <list-item>
-        <p><bold>Inductive Bias:</bold> Every model makes assumptions.
-        Trust is built when these assumptions are explicitly aligned
-        with established scientific principles rather than being purely
-        data-driven.</p>
-      </list-item>
-    </list>
-  </sec>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Explainable AI (XAI):</bold> Transitioning from black-box
+      to transparent, justifiable decision-making.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Interpretation Tools:</bold> Sensitivity analysis and
+      deductive reasoning using ontologies.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Causality:</bold> Moving from late detection to early
+      prediction via causal process chains.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Limits:</bold> Addressing data bias, extrapolation risks,
+      and AI hallucinations while keeping experts in the loop.</p>
+    </list-item>
+  </list>
 </sec>
 <sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg-nb-article">
   <title>17 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
