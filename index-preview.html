@@ -7,7 +7,7 @@
 
     <meta name="author" content="Philipp Pelz">
     <meta name="author" content="Stefan Hiemer">
-    <meta name="dcterms.date" content="2026-05-02">
+    <meta name="dcterms.date" content="2026-05-09">
     <meta name="keywords" content="Machine Learning, Artificial Intelligence, Mathematics, Linear Algebra, Probability, Optimization">
     <meta name="description" content="Lecture materials for Mathematical Foundations of AI &amp; ML, covering core mathematical concepts including linear algebra, probability, optimization, and their applications in machine learning.">
 
@@ -155,16 +155,16 @@
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     document.body.classList.add('hypothesis-enabled');
   });
-</script>  
+</script>   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script> 
         <link rel="stylesheet" href="styles.css">
       <meta name="citation_title" content="Mathematical Foundations of AI &amp;amp; ML">
 <meta name="citation_keywords" content="Machine Learning,Artificial Intelligence,Mathematics,Linear Algebra,Probability,Optimization">
 <meta name="citation_author" content="Philipp Pelz">
 <meta name="citation_author" content="Stefan Hiemer">
-<meta name="citation_publication_date" content="2026-05-02">
-<meta name="citation_cover_date" content="2026-05-02">
+<meta name="citation_publication_date" content="2026-05-09">
+<meta name="citation_cover_date" content="2026-05-09">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-05-02">
+<meta name="citation_online_date" content="2026-05-09">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Machine learning for engineers: Using data to solve problems for physical systems;,citation_author=Ryan G.. McClarren;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;">
 <meta name="citation_reference" content="citation_title=Machine learning for engineers: Introduction to physics-informed, explainable learning methods for AI in engineering applications;,citation_author=Marcus J Neuer;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;">
@@ -204,7 +204,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">May 2, 2026</p>
+              <p class="date">May 9, 2026</p>
             </div>
           </div>
           
@@ -237,14 +237,14 @@
   <li><a href="#week-1-summary-learning-vs-data-analysis-models-loss-functions" id="toc-week-1-summary-learning-vs-data-analysis-models-loss-functions" class="nav-link" data-scroll-target="#week-1-summary-learning-vs-data-analysis-models-loss-functions"><span class="header-section-number">3</span> Week 1 Summary: Learning vs Data Analysis; Models, Loss Functions</a></li>
   <li><a href="#week-2-summary-linear-algebra-refresher-covariance-pcasvd" id="toc-week-2-summary-linear-algebra-refresher-covariance-pcasvd" class="nav-link" data-scroll-target="#week-2-summary-linear-algebra-refresher-covariance-pcasvd"><span class="header-section-number">4</span> Week 2 Summary: Linear Algebra Refresher; Covariance, PCA/SVD</a></li>
   <li><a href="#week-3-summary-regression-as-loss-minimization" id="toc-week-3-summary-regression-as-loss-minimization" class="nav-link" data-scroll-target="#week-3-summary-regression-as-loss-minimization"><span class="header-section-number">5</span> Week 3 Summary: Regression as Loss Minimization</a></li>
-  <li><a href="#week-4-summary-neural-networks-early-neuron-activations" id="toc-week-4-summary-neural-networks-early-neuron-activations" class="nav-link" data-scroll-target="#week-4-summary-neural-networks-early-neuron-activations"><span class="header-section-number">6</span> Week 4 Summary: Neural Networks Early: Neuron &amp; Activations</a></li>
-  <li><a href="#week-5-summary-backpropagation-gradient-flow" id="toc-week-5-summary-backpropagation-gradient-flow" class="nav-link" data-scroll-target="#week-5-summary-backpropagation-gradient-flow"><span class="header-section-number">7</span> Week 5 Summary: Backpropagation &amp; Gradient Flow</a></li>
+  <li><a href="#week-4-summary-neural-networks-from-neurons-to-cnns" id="toc-week-4-summary-neural-networks-from-neurons-to-cnns" class="nav-link" data-scroll-target="#week-4-summary-neural-networks-from-neurons-to-cnns"><span class="header-section-number">6</span> Week 4 Summary: Neural Networks — From Neurons to CNNs</a></li>
+  <li><a href="#week-5-summary-clustering-autoencoders" id="toc-week-5-summary-clustering-autoencoders" class="nav-link" data-scroll-target="#week-5-summary-clustering-autoencoders"><span class="header-section-number">7</span> Week 5 Summary: Clustering &amp; Autoencoders</a></li>
   <li><a href="#week-6-summary-loss-landscapes-optimization-behavior" id="toc-week-6-summary-loss-landscapes-optimization-behavior" class="nav-link" data-scroll-target="#week-6-summary-loss-landscapes-optimization-behavior"><span class="header-section-number">8</span> Week 6 Summary: Loss Landscapes &amp; Optimization Behavior</a></li>
-  <li><a href="#week-7-summary-generalization-bias-variance-regularization" id="toc-week-7-summary-generalization-bias-variance-regularization" class="nav-link" data-scroll-target="#week-7-summary-generalization-bias-variance-regularization"><span class="header-section-number">9</span> Week 7 Summary: Generalization, Bias-Variance, Regularization</a></li>
+  <li><a href="#week-7-summary-generalization-bias-variance-regularization-tree-ensembles" id="toc-week-7-summary-generalization-bias-variance-regularization-tree-ensembles" class="nav-link" data-scroll-target="#week-7-summary-generalization-bias-variance-regularization-tree-ensembles"><span class="header-section-number">9</span> Week 7 Summary: Generalization, Bias-Variance, Regularization, Tree Ensembles</a></li>
   <li><a href="#week-8-summary-probabilistic-view-of-learning-noise" id="toc-week-8-summary-probabilistic-view-of-learning-noise" class="nav-link" data-scroll-target="#week-8-summary-probabilistic-view-of-learning-noise"><span class="header-section-number">10</span> Week 8 Summary: Probabilistic View of Learning; Noise</a></li>
-  <li><a href="#week-9-summary-representation-learning-features-vs.-learned-representations" id="toc-week-9-summary-representation-learning-features-vs.-learned-representations" class="nav-link" data-scroll-target="#week-9-summary-representation-learning-features-vs.-learned-representations"><span class="header-section-number">11</span> Week 9 Summary: Representation Learning; Features vs.&nbsp;Learned Representations</a></li>
-  <li><a href="#week-10-summary-latent-spaces-embeddings" id="toc-week-10-summary-latent-spaces-embeddings" class="nav-link" data-scroll-target="#week-10-summary-latent-spaces-embeddings"><span class="header-section-number">12</span> Week 10 Summary: Latent Spaces; Embeddings</a></li>
-  <li><a href="#week-11-summary-unsupervised-learning-revisited-objectives" id="toc-week-11-summary-unsupervised-learning-revisited-objectives" class="nav-link" data-scroll-target="#week-11-summary-unsupervised-learning-revisited-objectives"><span class="header-section-number">13</span> Week 11 Summary: Unsupervised Learning Revisited (Objectives)</a></li>
+  <li><a href="#week-9-summary-latent-spaces-advanced-representation-learning" id="toc-week-9-summary-latent-spaces-advanced-representation-learning" class="nav-link" data-scroll-target="#week-9-summary-latent-spaces-advanced-representation-learning"><span class="header-section-number">11</span> Week 9 Summary: Latent Spaces &amp; Advanced Representation Learning</a></li>
+  <li><a href="#week-10-summary-attention-transformers" id="toc-week-10-summary-attention-transformers" class="nav-link" data-scroll-target="#week-10-summary-attention-transformers"><span class="header-section-number">12</span> Week 10 Summary: Attention &amp; Transformers</a></li>
+  <li><a href="#week-11-summary-generative-models-vae-diffusion" id="toc-week-11-summary-generative-models-vae-diffusion" class="nav-link" data-scroll-target="#week-11-summary-generative-models-vae-diffusion"><span class="header-section-number">13</span> Week 11 Summary: Generative Models — VAE &amp; Diffusion</a></li>
   <li><a href="#week-12-summary-uncertainty-in-predictions" id="toc-week-12-summary-uncertainty-in-predictions" class="nav-link" data-scroll-target="#week-12-summary-uncertainty-in-predictions"><span class="header-section-number">14</span> Week 12 Summary: Uncertainty in Predictions</a></li>
   <li><a href="#week-13-summary-physics-informed-constrained-learning" id="toc-week-13-summary-physics-informed-constrained-learning" class="nav-link" data-scroll-target="#week-13-summary-physics-informed-constrained-learning"><span class="header-section-number">15</span> Week 13 Summary: Physics-informed &amp; Constrained Learning</a></li>
   <li><a href="#week-14-summary-explainability-limits-scientific-trust" id="toc-week-14-summary-explainability-limits-scientific-trust" class="nav-link" data-scroll-target="#week-14-summary-explainability-limits-scientific-trust"><span class="header-section-number">16</span> Week 14 Summary: Explainability, Limits, Scientific Trust</a></li>
@@ -420,11 +420,11 @@
 </tr>
 <tr class="odd">
 <td>7</td>
-<td>Generalization, bias?variance, regularization</td>
+<td>Generalization, bias-variance, regularization, <strong>tree ensembles (RF &amp; gradient boosting)</strong></td>
 <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
-<td>?</td>
-<td>Ch. 6 Model Selection &amp; Validation</td>
-<td>Ch. 3 �3.2 Bias?variance decomposition</td>
+<td>—</td>
+<td>Ch. 3 Decision Trees &amp; Random Forests; Ch. 6 Model Selection &amp; Validation</td>
+<td>Ch. 3 §3.2 Bias-variance decomposition; Ch. 14 §14.3–14.4 (combining models, bagging, boosting)</td>
 </tr>
 <tr class="even">
 <td>8</td>
@@ -436,27 +436,27 @@
 </tr>
 <tr class="odd">
 <td>9</td>
-<td>Representation learning; features vs learned reps</td>
-<td>Ch. 5.5 Autoencoder (intro &amp; motivation)</td>
-<td>AE uncertainty extensions</td>
+<td>Latent Spaces &amp; Advanced Representation Learning (t-SNE, UMAP, contrastive, foundation embeddings)</td>
+<td>Ch. 5.5 Autoencoder (recap)</td>
+<td>—</td>
 <td>Ch. 5 Dimension Reduction</td>
-<td>Ch. 12 �12.3 Nonlinear PCA / latent variables</td>
+<td>Ch. 9 §9.1–9.4 mixture models / latent variables; Ch. 12 §12.3 nonlinear latent models</td>
 </tr>
 <tr class="even">
 <td>10</td>
-<td>Latent spaces; embeddings</td>
-<td>Ch. 5.5.1?5.5.3 Autoencoder &amp; Latent Space</td>
-<td>AE architectures</td>
-<td>Ch. 5 Dimension Reduction</td>
-<td>Ch. 12 �12.3?12.4 Latent variable intuition</td>
+<td>Attention &amp; Transformers (self-attention, multi-head, ViT, foundation models)</td>
+<td>—</td>
+<td>—</td>
+<td>Ch. 8 Neural Networks (context only)</td>
+<td>— (covered via <span class="citation" data-cites="vaswani2017attention">(<a href="#ref-vaswani2017attention" role="doc-biblioref"><strong>vaswani2017attention?</strong></a>)</span>, <span class="citation" data-cites="dosovitskiy2021vit">(<a href="#ref-dosovitskiy2021vit" role="doc-biblioref"><strong>dosovitskiy2021vit?</strong></a>)</span>)</td>
 </tr>
 <tr class="odd">
 <td>11</td>
-<td>Unsupervised learning revisited (objectives)</td>
-<td>Ch. 5.3 K-Means (objective-based view)</td>
-<td>t-SNE, advanced clustering</td>
-<td>Ch. 9 Classification (decision boundaries)</td>
-<td>Ch. 9 Mixture Models &amp; EM (conceptual only)</td>
+<td>Generative Models: VAE &amp; Diffusion (ELBO, reparameterization, forward/reverse process, classifier-free guidance)</td>
+<td>Ch. 5.5 AE (foundation for VAE)</td>
+<td>—</td>
+<td>Ch. 8 Neural Networks (autoencoder context)</td>
+<td>Ch. 9 §9.4 EM as ELBO precursor; Ch. 13 §13.3 deep generative perspectives</td>
 </tr>
 <tr class="even">
 <td>12</td>
@@ -505,19 +505,35 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <section id="week-1-summary-learning-vs-data-analysis-models-loss-functions" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="week-1-summary-learning-vs-data-analysis-models-loss-functions"><span class="header-section-number">3</span> Week 1 Summary: Learning vs Data Analysis; Models, Loss Functions</h2>
 <ul>
-<li><strong>Models:</strong> Simplified representations for prediction/explanation (White, Grey, Black-Box).</li>
-<li><strong>Learning Types:</strong> Supervised (Regression/Classification), Unsupervised, Reinforcement.</li>
-<li><strong>Loss Functions:</strong> ML minimizes a loss function (e.g., MSE) to match predictions to targets.</li>
-<li><strong>Complexity:</strong> Occam’s Razor prefers simpler models to avoid overfitting; regularization helps control it.</li>
+<li><strong>Models</strong>: simplified representations for prediction / explanation (white / grey / black-box)</li>
+<li><strong>Learning types</strong>: supervised (regression, classification), unsupervised, reinforcement</li>
+<li><strong>Empirical risk minimization</strong>: learning as optimization, not statistics</li>
+<li><strong>Loss zoo</strong>:
+<ul>
+<li>Regression: MSE, MAE</li>
+<li>Classification: 0-1, softmax + cross-entropy</li>
+</ul></li>
+<li><strong>Train / val / test</strong> splits, cross-validation, <strong>data-leakage taxonomy</strong></li>
+<li><strong>Bias–variance</strong> intuition; Occam’s razor and regularization</li>
+<li><strong>Uncertainty preview</strong>: aleatoric vs epistemic</li>
+<li><strong>Limits</strong>: no-free-lunch, curse of dimensionality</li>
+<li>Frequentist vs Bayesian lenses (set-up for Unit 8)</li>
 </ul>
 </section>
 <section id="week-2-summary-linear-algebra-refresher-covariance-pcasvd" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="week-2-summary-linear-algebra-refresher-covariance-pcasvd"><span class="header-section-number">4</span> Week 2 Summary: Linear Algebra Refresher; Covariance, PCA/SVD</h2>
 <ul>
-<li><strong>Eigendecomposition:</strong> Finding eigenvectors (variance directions) and eigenvalues (variance amount) of a covariance matrix.</li>
-<li><strong>PCA:</strong> Linear dimensionality reduction maximizing variance and compressing data.</li>
-<li><strong>Scree Plots:</strong> Diagnostics to find intrinsic dimensionality (“elbow”).</li>
-<li><strong>Engineering Uses:</strong> Denoising, anomaly detection, and compression (limited to linear manifolds).</li>
+<li><strong>LA refresher</strong>: vector spaces, basis, rank; column / row / null spaces and identifiability</li>
+<li><strong>Projection</strong> geometry; <strong>least squares</strong> as projection onto column space</li>
+<li><strong>Condition number</strong> and numerical stability</li>
+<li><strong>Spectral decomposition</strong> of symmetric / PSD matrices; covariance-matrix geometry</li>
+<li><strong>PCA</strong>: linear dimensionality reduction by variance maximization</li>
+<li><strong>Scree plots</strong> for intrinsic dimensionality (“elbow”)</li>
+<li><strong>SVD</strong>: factorization for any matrix; low-rank approximation (Eckart–Young)</li>
+<li><strong>NMF</strong>: parts-based decomposition for non-negative spectra / images</li>
+<li><strong>Pseudo-inverse</strong> and least-squares solvability</li>
+<li><strong>L1 vs L2</strong> regularization (geometric intuition); whitening and multicollinearity</li>
+<li><strong>Kernel hint</strong> from inner products (sets up later units)</li>
 </ul>
 </section>
 <section id="week-3-summary-regression-as-loss-minimization" class="level2" data-number="5">
@@ -529,23 +545,40 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Runge’s Phenomenon:</strong> Overfitting risk with high-order global polynomials.</li>
 </ul>
 </section>
-<section id="week-4-summary-neural-networks-early-neuron-activations" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="week-4-summary-neural-networks-early-neuron-activations"><span class="header-section-number">6</span> Week 4 Summary: Neural Networks Early: Neuron &amp; Activations</h2>
+<section id="week-4-summary-neural-networks-from-neurons-to-cnns" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="week-4-summary-neural-networks-from-neurons-to-cnns"><span class="header-section-number">6</span> Week 4 Summary: Neural Networks — From Neurons to CNNs</h2>
 <ul>
-<li><strong>Artificial Neuron:</strong> Weighted sum plus a non-linear activation function.</li>
-<li><strong>Activations:</strong> Non-linearity (ReLU, Sigmoid, Tanh) is essential for complex problem-solving.</li>
-<li><strong>Universal Approximation:</strong> A single hidden layer can approximate any continuous function.</li>
-<li><strong>MLP Architecture:</strong> Feed-forward network with input, hidden, and output layers.</li>
+<li><strong>Fixed bases</strong> (Fourier / wavelet / polynomial) → motivation for <strong>learned representations</strong></li>
+<li>The modern <strong>neuron</strong> and <strong>dense layer</strong>; why non-linear activations are non-negotiable</li>
+<li><strong>Universal approximation</strong> vs the parameter explosion of dense layers on images</li>
+<li><strong>Invariance vs equivariance</strong>: what we want from image models</li>
+<li><strong>Convolution</strong> from weight sharing; cross-correlation, feature maps, receptive fields</li>
+<li>Padding, stride, pooling, <span class="math inline">\(1\times1\)</span> channel mixing</li>
+<li><strong>Architectures</strong>: LeNet → VGG → NiN → DenseNet → <strong>U-Net</strong> for dense prediction</li>
+<li>Why CNNs fit microscopy / materials data — and where they fall short</li>
 </ul>
+<p><em>Note</em>: Backpropagation is covered in the self-study supplement <code>02_backprop_self_study.qmd</code> appended to this unit.</p>
 </section>
-<section id="week-5-summary-backpropagation-gradient-flow" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="week-5-summary-backpropagation-gradient-flow"><span class="header-section-number">7</span> Week 5 Summary: Backpropagation &amp; Gradient Flow</h2>
+<section id="week-5-summary-clustering-autoencoders" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="week-5-summary-clustering-autoencoders"><span class="header-section-number">7</span> Week 5 Summary: Clustering &amp; Autoencoders</h2>
 <ul>
-<li><strong>Backpropagation:</strong> Two-pass chain rule application to efficiently compute gradients.</li>
-<li><strong>Vanishing/Exploding Gradients:</strong> Deep networks struggle with signal decay or instability.</li>
-<li><strong>ReLU:</strong> Improves gradient flow for deep architectures by providing a constant positive gradient.</li>
-<li><strong>Jacobian Matrix:</strong> Links differentiable components for system-wide optimization.</li>
+<li><strong>K-Means / K-Medoids</strong>: hard clustering by minimizing within-cluster distance
+<ul>
+<li>Sensitive to initialization (use k-means++); assumes spherical clusters</li>
+</ul></li>
+<li><strong>GMM + EM</strong>: probabilistic clustering with soft assignments
+<ul>
+<li>E-step: responsibilities; M-step: parameter update</li>
+<li>Each EM step never decreases the log-likelihood</li>
+</ul></li>
+<li><strong>Autoencoders</strong>: encoder–bottleneck–decoder, trained on reconstruction loss
+<ul>
+<li>Linear AE recovers PCA</li>
+<li>Non-linear AE captures curved manifolds</li>
+</ul></li>
+<li><strong>Applications</strong>: compression, anomaly detection (reconstruction error), feature extraction</li>
 </ul>
+<p><em>Note</em>: Backpropagation has moved to a self-study supplement appended to Unit 4 (<code>02_backprop_self_study.qmd</code>); this freed the Unit 5 slot for unsupervised learning.</p>
 </section>
 <section id="week-6-summary-loss-landscapes-optimization-behavior" class="level2" data-number="8">
 <h2 data-number="8" class="anchored" data-anchor-id="week-6-summary-loss-landscapes-optimization-behavior"><span class="header-section-number">8</span> Week 6 Summary: Loss Landscapes &amp; Optimization Behavior</h2>
@@ -556,58 +589,143 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Advanced Optimizers:</strong> Momentum and adaptive learning rates (ADAM) navigate complex landscapes robustly.</li>
 </ul>
 </section>
-<section id="week-7-summary-generalization-bias-variance-regularization" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="week-7-summary-generalization-bias-variance-regularization"><span class="header-section-number">9</span> Week 7 Summary: Generalization, Bias-Variance, Regularization</h2>
+<section id="week-7-summary-generalization-bias-variance-regularization-tree-ensembles" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="week-7-summary-generalization-bias-variance-regularization-tree-ensembles"><span class="header-section-number">9</span> Week 7 Summary: Generalization, Bias-Variance, Regularization, Tree Ensembles</h2>
 <ul>
-<li><strong>Generalization:</strong> Ensuring accurate performance on unseen test data.</li>
-<li><strong>Bias-Variance Tradeoff:</strong> Balancing underfitting (high bias) and overfitting (high variance).</li>
-<li><strong>Regularization:</strong> L2 (Ridge), L1 (Lasso), and Dropout penalize complexity to improve robustness.</li>
-<li><strong>Validation:</strong> Cross-validation is essential for unbiased hyperparameter tuning.</li>
+<li><strong>Generalization</strong>: performance on unseen data</li>
+<li><strong>Bias–variance</strong> tradeoff: <span class="math inline">\(\mathrm{MSE} = \mathrm{Bias}^2 + \mathrm{Variance} + \mathrm{noise}\)</span></li>
+<li><strong>Regularization</strong>: L2 (Ridge), L1 (Lasso), Dropout</li>
+<li><strong>Validation</strong>: cross-validation as unbiased generalization estimate
+<ul>
+<li>Never tune on the test set</li>
+</ul></li>
+<li><strong>Random Forests</strong>: bagging + random feature subsets per split
+<ul>
+<li>→ variance reduction via decorrelated trees</li>
+</ul></li>
+<li><strong>Gradient Boosting</strong>: sequential weak learners on residuals
+<ul>
+<li>→ bias reduction</li>
+<li>XGBoost / LightGBM / CatBoost as the practical workhorses</li>
+</ul></li>
+<li><strong>Trees vs NNs</strong>: gradient boosting usually wins on tabular data (<span class="math inline">\(N &lt; 10^5\)</span>)</li>
 </ul>
 </section>
 <section id="week-8-summary-probabilistic-view-of-learning-noise" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="week-8-summary-probabilistic-view-of-learning-noise"><span class="header-section-number">10</span> Week 8 Summary: Probabilistic View of Learning; Noise</h2>
 <ul>
-<li><strong>Taxonomy of Uncertainty:</strong> Aleatory (inherent noise) vs.&nbsp;Epistemic (lack of data).</li>
-<li><strong>Inference Views:</strong> Frequentist (Maximum Likelihood) vs.&nbsp;Bayesian (Posterior updates).</li>
-<li><strong>Robustness:</strong> Student’s t-distribution mitigates outlier impacts better than Gaussian.</li>
-<li><strong>Advanced UQ:</strong> Stochastic enrichment and Mixture-Density Networks capture uncertainty.</li>
+<li><strong>Aleatoric</strong> (irreducible noise) vs <strong>epistemic</strong> (lack of data) uncertainty</li>
+<li><strong>Gaussian</strong> as the maximum-entropy distribution; multivariate Gaussian and covariance geometry; <strong>CLT</strong></li>
+<li><strong>Entropy</strong> and <strong>KL divergence</strong>, including KL between Gaussians (used later for VAEs)</li>
+<li><strong>MLE</strong>: log-likelihood maximization; for a Gaussian, MLE recovers MSE</li>
+<li><strong>Bayes’ theorem</strong> workflow: prior · likelihood ∝ posterior; predictive distribution</li>
+<li><strong>MAP</strong> estimation; <strong>MAP = regularized MLE</strong></li>
+<li>Frequentist vs Bayesian comparison; credible vs confidence intervals</li>
+<li><strong>Robustness</strong>: Student’s t-distribution mitigates outliers better than Gaussian</li>
+<li>Stochastic enrichment and <strong>mixture-density networks</strong> (preview of Unit 12)</li>
+<li>Practical diagnostic: <strong>calibration plots</strong></li>
 </ul>
 </section>
-<section id="week-9-summary-representation-learning-features-vs.-learned-representations" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="week-9-summary-representation-learning-features-vs.-learned-representations"><span class="header-section-number">11</span> Week 9 Summary: Representation Learning; Features vs.&nbsp;Learned Representations</h2>
+<section id="week-9-summary-latent-spaces-advanced-representation-learning" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="week-9-summary-latent-spaces-advanced-representation-learning"><span class="header-section-number">11</span> Week 9 Summary: Latent Spaces &amp; Advanced Representation Learning</h2>
 <ul>
-<li><strong>Manifold Hypothesis:</strong> High-dimensional data lies on a lower-dimensional non-linear manifold.</li>
-<li><strong>Autoencoders (AE):</strong> Unsupervised neural networks compressing data into a latent bottleneck.</li>
-<li><strong>AE Architectures:</strong> Encoders compress, decoders reconstruct; CNNs handle spatial data.</li>
-<li><strong>Applications:</strong> Data compression, feature extraction, and anomaly detection.</li>
+<li>What makes a latent space “good”
+<ul>
+<li>Compactness within concept, separation across concepts</li>
+<li>Smooth interpolation, transferability</li>
+<li>None guaranteed by reconstruction alone</li>
+</ul></li>
+<li><strong>t-SNE</strong>: KL between high-dim Gaussian and low-dim Student-t similarities
+<ul>
+<li>Heavy tail solves the <strong>crowding problem</strong></li>
+<li>Cluster sizes and between-cluster distances are <strong>not</strong> quantitatively meaningful</li>
+</ul></li>
+<li><strong>UMAP</strong>: preserves more global structure than t-SNE; scales to millions of points</li>
+<li><strong>Contrastive learning</strong> (SimCLR, InfoNCE): label-free latent shaping
+<ul>
+<li>Pull augmentations of the same sample together, push others apart</li>
+</ul></li>
+<li><strong>Foundation embeddings</strong> (DINOv2, CLIP): pretrained encoders as feature extractors
+<ul>
+<li>Linear probe is often the strongest baseline for label-scarce tasks</li>
+</ul></li>
 </ul>
 </section>
-<section id="week-10-summary-latent-spaces-embeddings" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="week-10-summary-latent-spaces-embeddings"><span class="header-section-number">12</span> Week 10 Summary: Latent Spaces; Embeddings</h2>
+<section id="week-10-summary-attention-transformers" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="week-10-summary-attention-transformers"><span class="header-section-number">12</span> Week 10 Summary: Attention &amp; Transformers</h2>
 <ul>
-<li><strong>Latent Spaces:</strong> Low-dimensional vectors where distance reflects semantic/physical similarity.</li>
-<li><strong>t-SNE &amp; UMAP:</strong> Non-linear visualization tools to map high-dimensional clusters to 2D/3D.</li>
-<li><strong>Crowding Problem:</strong> Addressed by heavy-tailed distributions in lower dimensions.</li>
-<li><strong>Interpretability:</strong> Mapping latent neurons to physical parameters builds trust.</li>
+<li>Why attention: limits of RNNs / LSTMs for long sequences</li>
+<li><strong>Self-attention</strong>: <span class="math inline">\(\mathrm{softmax}(QK^T/\sqrt{d_k})V\)</span>
+<ul>
+<li>Similarity-weighted average of value vectors with content-based weights</li>
+<li>Positions choose whom to listen to (no fixed locality prior)</li>
+</ul></li>
+<li><strong>Multi-head attention</strong>: parallel heads on learned subspaces, then concat + project
+<ul>
+<li>Different heads specialize on different relationships</li>
+</ul></li>
+<li><strong>Positional encoding</strong>: needed because attention is permutation-equivariant
+<ul>
+<li>Sinusoidal, learned, or RoPE</li>
+</ul></li>
+<li><strong>Transformer block</strong>: multi-head attention + MLP with residual + LayerNorm; stack many</li>
+<li><strong>ViT</strong>: image as a sequence of patch tokens
+<ul>
+<li>Beats CNNs at scale; loses with little data (no locality prior)</li>
+</ul></li>
+<li><strong>Foundation models</strong>: GPT, BERT, ViT, DINO, CLIP
+<ul>
+<li>Pretrain at scale, freeze, reuse via embeddings + small heads</li>
+</ul></li>
 </ul>
 </section>
-<section id="week-11-summary-unsupervised-learning-revisited-objectives" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="week-11-summary-unsupervised-learning-revisited-objectives"><span class="header-section-number">13</span> Week 11 Summary: Unsupervised Learning Revisited (Objectives)</h2>
+<section id="week-11-summary-generative-models-vae-diffusion" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="week-11-summary-generative-models-vae-diffusion"><span class="header-section-number">13</span> Week 11 Summary: Generative Models — VAE &amp; Diffusion</h2>
 <ul>
-<li><strong>Unsupervised Paradigm:</strong> Uncovering regimes and clusters in unlabeled process data.</li>
-<li><strong>K-Means &amp; K-Medoids:</strong> Hard clustering minimizing distance to centroids/prototypes.</li>
-<li><strong>Gaussian Mixture Models (GMM):</strong> Probabilistic clustering with soft assignments (responsibilities).</li>
-<li><strong>EM Algorithm:</strong> Iterative E-step and M-step to find maximum likelihood in latent variable models.</li>
+<li><strong>Why generative</strong>: vanilla autoencoders cannot sample new data</li>
+<li><strong>VAE</strong>: stochastic encoder produces <span class="math inline">\(\mathcal{N}(\mu, \sigma^2)\)</span>
+<ul>
+<li>Trained on the <strong>ELBO</strong> = reconstruction − KL to a Gaussian prior</li>
+<li><strong>Reparameterization trick</strong> <span class="math inline">\(z = \mu + \sigma \odot \epsilon\)</span> for differentiable sampling</li>
+</ul></li>
+<li><strong>Diffusion</strong>: predict the noise <span class="math inline">\(\epsilon_\theta(x_t, t)\)</span> added at a random timestep
+<ul>
+<li>Loss is plain MSE on the noise</li>
+<li>Sample from <span class="math inline">\(\mathcal{N}(0, I)\)</span> and iterate the learned reverse process</li>
+</ul></li>
+<li><strong>Classifier-free guidance</strong>: train conditional + unconditional jointly; mix at sampling</li>
+<li><strong>Trade-offs</strong>:
+<ul>
+<li>VAE: fast sampling, lower-bound likelihood, blurry samples</li>
+<li>Diffusion: slow sampling, state-of-the-art quality</li>
+<li>GANs: fast, no likelihood</li>
+<li>Normalizing flows: exact likelihood, restricted architectures</li>
+</ul></li>
+<li><strong>Materials applications</strong>:
+<ul>
+<li>Inverse design (compositions matching a target property)</li>
+<li>Microstructure generation</li>
+<li>Physics-constrained spectral synthesis</li>
+</ul></li>
 </ul>
 </section>
 <section id="week-12-summary-uncertainty-in-predictions" class="level2" data-number="14">
 <h2 data-number="14" class="anchored" data-anchor-id="week-12-summary-uncertainty-in-predictions"><span class="header-section-number">14</span> Week 12 Summary: Uncertainty in Predictions</h2>
 <ul>
-<li><strong>Uncertainty Quantification (UQ):</strong> Crucial for safe out-of-distribution engineering decisions.</li>
-<li><strong>Bayesian Predictive Distribution:</strong> Integrating over parameter posteriors for robust variance estimates.</li>
-<li><strong>Evidence Framework:</strong> Optimizing hyperparameters via Marginal Likelihood maximization.</li>
-<li><strong>Physics Constraints:</strong> Embedding ODEs/PDEs reduces epistemic uncertainty in data-poor regions.</li>
+<li>Why point predictions aren’t enough; aleatoric vs epistemic recap</li>
+<li><strong>Bayesian predictive distribution</strong> and variance decomposition</li>
+<li><strong>Evidence framework</strong>: marginal likelihood as automatic Occam’s razor; effective number of parameters; empirical Bayes</li>
+<li><strong>Gaussian Processes</strong> as the unit’s main tool
+<ul>
+<li>Mean and kernel function (RBF and others)</li>
+<li>Closed-form prior and posterior; hyperparameter learning</li>
+<li>Strengths and limits (<span class="math inline">\(O(n^3)\)</span> cost, kernel choice)</li>
+</ul></li>
+<li><strong>MC Dropout</strong> and <strong>deep ensembles</strong> as cheaper UQ</li>
+<li><strong>Mixture-density networks</strong> for multi-modal predictive distributions</li>
+<li><strong>Calibration</strong> plots and recalibration</li>
+<li>Choosing a UQ method: comparison table</li>
+<li><strong>Active learning</strong> via GP uncertainty (materials acceleration platforms)</li>
 </ul>
 </section>
 <section id="week-13-summary-physics-informed-constrained-learning" class="level2" data-number="15">
@@ -622,10 +740,20 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <section id="week-14-summary-explainability-limits-scientific-trust" class="level2" data-number="16">
 <h2 data-number="16" class="anchored" data-anchor-id="week-14-summary-explainability-limits-scientific-trust"><span class="header-section-number">16</span> Week 14 Summary: Explainability, Limits, Scientific Trust</h2>
 <ul>
-<li><strong>Explainable AI (XAI):</strong> Transitioning from black-box to transparent, justifiable decision-making.</li>
-<li><strong>Interpretation Tools:</strong> Sensitivity analysis and deductive reasoning using ontologies.</li>
-<li><strong>Causality:</strong> Moving from late detection to early prediction via causal process chains.</li>
-<li><strong>Limits:</strong> Addressing data bias, extrapolation risks, and AI hallucinations while keeping experts in the loop.</li>
+<li><strong>Why XAI</strong>: from black-box to transparent, justifiable decisions; interpretability vs explainability</li>
+<li><strong>Six levels of explainability (E1–E6)</strong>: data → process → feature → model → prediction → decision</li>
+<li><strong>Semantic structures</strong>: controlled vocabularies, taxonomies, ontologies for materials data</li>
+<li><strong>Sensitivity analysis</strong>: perturbation-based, global vs local; feature importance from sensitivity</li>
+<li><strong>Attribution methods</strong>:
+<ul>
+<li><strong>SHAP</strong> (waterfall, beeswarm)</li>
+<li><strong>LIME</strong> (local linear approximation)</li>
+<li><strong>Integrated Gradients</strong> for deep networks</li>
+</ul></li>
+<li><strong>Causality vs correlation</strong>: causal process chains; detection vs prediction</li>
+<li><strong>Counterfactuals</strong>: “what-if” explanations</li>
+<li><strong>Limits</strong>: data bias, extrapolation, OOD detection, fairness — when models should NOT be trusted</li>
+<li>Course retrospective: how the 14-unit arc fits together</li>
 </ul>
 </section>
 <section id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="level2" data-number="17">
@@ -714,11 +842,11 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </tr>
 <tr class="odd">
 <td>7</td>
-<td>Generalization, bias?variance, regularization</td>
-<td>Overfitting control in models (?)</td>
-<td>Limits of high-D regression (?)</td>
-<td>Overfitting demo: polynomial vs NN models</td>
-<td>Critical conceptual gate for both applied courses</td>
+<td>Generalization, bias-variance, regularization; tree ensembles (RF, gradient boosting)</td>
+<td>Overfitting control in models (?); RF / XGBoost as workhorses for tabular characterization data (?)</td>
+<td>Limits of high-D regression (?); tree ensembles for property prediction over tabular materials descriptors (?)</td>
+<td>Overfitting demo: polynomial vs NN models; tree-ensemble baseline (RF &amp; XGBoost) on alloy regression</td>
+<td>Critical conceptual gate for both applied courses; introduces the tabular workhorse</td>
 </tr>
 <tr class="even">
 <td>8</td>
@@ -730,27 +858,27 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </tr>
 <tr class="odd">
 <td>9</td>
-<td>Representation learning: learned vs engineered features</td>
-<td>Feature learning in signals &amp; images (?)</td>
-<td>Descriptor learning vs hand-crafted features (?)</td>
-<td>Feature learning with simple NN</td>
-<td>Transition from classical descriptors</td>
+<td>Latent spaces &amp; advanced representation learning: t-SNE, UMAP, contrastive learning, foundation embeddings</td>
+<td>Visualization &amp; quality assessment of learned features (?)</td>
+<td>Foundation embeddings for materials descriptors (?)</td>
+<td>t-SNE/UMAP comparison; SimCLR + linear probe on a foundation embedding</td>
+<td>Critical for both applied courses; sets up modern self-supervised paradigm</td>
 </tr>
 <tr class="even">
 <td>10</td>
-<td>Latent spaces: autoencoders &amp; embeddings</td>
-<td>Compression &amp; anomaly detection in processes (?)</td>
-<td>Latent materials spaces &amp; embeddings (?)</td>
-<td>Autoencoder with framework (PyTorch/Keras)</td>
-<td>Core week for Materials Genomics</td>
+<td>Attention &amp; Transformers: self-attention, multi-head, positional encoding, ViT, foundation models</td>
+<td>Transformers for sequences and images in characterization (?)</td>
+<td>Transformers for compositions &amp; sequences (SMILES, crystal tokens) (?)</td>
+<td>Single-head attention from scratch; tiny ViT vs CNN on a small dataset</td>
+<td>Architecture behind all modern foundation models</td>
 </tr>
 <tr class="odd">
 <td>11</td>
-<td>Unsupervised learning revisited (objectives, not algorithms)</td>
-<td>Clustering &amp; process drift detection (?)</td>
-<td>Clustering vs discovery in materials space (?)</td>
-<td>Compare clustering vs AE embeddings</td>
-<td>Students reinterpret known clustering methods</td>
+<td>Generative Models: VAE &amp; Diffusion (ELBO, reparameterization, forward/reverse process, classifier-free guidance)</td>
+<td>Generative models for data augmentation &amp; process simulation (?)</td>
+<td>Inverse design via conditional generation (?)</td>
+<td>VAE on Fashion-MNIST + toy diffusion model (200-line DDPM)</td>
+<td>Enables inverse design and modern generative applications</td>
 </tr>
 <tr class="even">
 <td>12</td>

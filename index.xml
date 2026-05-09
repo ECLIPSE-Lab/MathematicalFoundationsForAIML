@@ -178,11 +178,14 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>7</td>
-          <td>Generalization, bias?variance, regularization</td>
+          <td>Generalization, bias-variance, regularization, <bold>tree
+          ensembles (RF &amp; gradient boosting)</bold></td>
           <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
-          <td>?</td>
-          <td>Ch. 6 Model Selection &amp; Validation</td>
-          <td>Ch. 3 �3.2 Bias?variance decomposition</td>
+          <td>—</td>
+          <td>Ch. 3 Decision Trees &amp; Random Forests; Ch. 6 Model
+          Selection &amp; Validation</td>
+          <td>Ch. 3 §3.2 Bias-variance decomposition; Ch. 14 §14.3–14.4
+          (combining models, bagging, boosting)</td>
         </tr>
         <tr>
           <td>8</td>
@@ -195,27 +198,35 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>9</td>
-          <td>Representation learning; features vs learned reps</td>
-          <td>Ch. 5.5 Autoencoder (intro &amp; motivation)</td>
-          <td>AE uncertainty extensions</td>
+          <td>Latent Spaces &amp; Advanced Representation Learning
+          (t-SNE, UMAP, contrastive, foundation embeddings)</td>
+          <td>Ch. 5.5 Autoencoder (recap)</td>
+          <td>—</td>
           <td>Ch. 5 Dimension Reduction</td>
-          <td>Ch. 12 �12.3 Nonlinear PCA / latent variables</td>
+          <td>Ch. 9 §9.1–9.4 mixture models / latent variables; Ch. 12
+          §12.3 nonlinear latent models</td>
         </tr>
         <tr>
           <td>10</td>
-          <td>Latent spaces; embeddings</td>
-          <td>Ch. 5.5.1?5.5.3 Autoencoder &amp; Latent Space</td>
-          <td>AE architectures</td>
-          <td>Ch. 5 Dimension Reduction</td>
-          <td>Ch. 12 �12.3?12.4 Latent variable intuition</td>
+          <td>Attention &amp; Transformers (self-attention, multi-head,
+          ViT, foundation models)</td>
+          <td>—</td>
+          <td>—</td>
+          <td>Ch. 8 Neural Networks (context only)</td>
+          <td>— (covered via
+          (<xref alt="vaswani2017attention?" rid="ref-vaswani2017attention" ref-type="bibr"><bold>vaswani2017attention?</bold></xref>),
+          (<xref alt="dosovitskiy2021vit?" rid="ref-dosovitskiy2021vit" ref-type="bibr"><bold>dosovitskiy2021vit?</bold></xref>))</td>
         </tr>
         <tr>
           <td>11</td>
-          <td>Unsupervised learning revisited (objectives)</td>
-          <td>Ch. 5.3 K-Means (objective-based view)</td>
-          <td>t-SNE, advanced clustering</td>
-          <td>Ch. 9 Classification (decision boundaries)</td>
-          <td>Ch. 9 Mixture Models &amp; EM (conceptual only)</td>
+          <td>Generative Models: VAE &amp; Diffusion (ELBO,
+          reparameterization, forward/reverse process, classifier-free
+          guidance)</td>
+          <td>Ch. 5.5 AE (foundation for VAE)</td>
+          <td>—</td>
+          <td>Ch. 8 Neural Networks (autoencoder context)</td>
+          <td>Ch. 9 §9.4 EM as ELBO precursor; Ch. 13 §13.3 deep
+          generative perspectives</td>
         </tr>
         <tr>
           <td>12</td>
@@ -253,20 +264,44 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   Functions</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Models:</bold> Simplified representations for
-      prediction/explanation (White, Grey, Black-Box).</p>
+      <p><bold>Models</bold>: simplified representations for prediction
+      / explanation (white / grey / black-box)</p>
     </list-item>
     <list-item>
-      <p><bold>Learning Types:</bold> Supervised
-      (Regression/Classification), Unsupervised, Reinforcement.</p>
+      <p><bold>Learning types</bold>: supervised (regression,
+      classification), unsupervised, reinforcement</p>
     </list-item>
     <list-item>
-      <p><bold>Loss Functions:</bold> ML minimizes a loss function
-      (e.g., MSE) to match predictions to targets.</p>
+      <p><bold>Empirical risk minimization</bold>: learning as
+      optimization, not statistics</p>
     </list-item>
     <list-item>
-      <p><bold>Complexity:</bold> Occam’s Razor prefers simpler models
-      to avoid overfitting; regularization helps control it.</p>
+      <p><bold>Loss zoo</bold>:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Regression: MSE, MAE</p>
+        </list-item>
+        <list-item>
+          <p>Classification: 0-1, softmax + cross-entropy</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Train / val / test</bold> splits, cross-validation,
+      <bold>data-leakage taxonomy</bold></p>
+    </list-item>
+    <list-item>
+      <p><bold>Bias–variance</bold> intuition; Occam’s razor and
+      regularization</p>
+    </list-item>
+    <list-item>
+      <p><bold>Uncertainty preview</bold>: aleatoric vs epistemic</p>
+    </list-item>
+    <list-item>
+      <p><bold>Limits</bold>: no-free-lunch, curse of dimensionality</p>
+    </list-item>
+    <list-item>
+      <p>Frequentist vs Bayesian lenses (set-up for Unit 8)</p>
     </list-item>
   </list>
 </sec>
@@ -275,21 +310,46 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   PCA/SVD</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Eigendecomposition:</bold> Finding eigenvectors (variance
-      directions) and eigenvalues (variance amount) of a covariance
-      matrix.</p>
+      <p><bold>LA refresher</bold>: vector spaces, basis, rank; column /
+      row / null spaces and identifiability</p>
     </list-item>
     <list-item>
-      <p><bold>PCA:</bold> Linear dimensionality reduction maximizing
-      variance and compressing data.</p>
+      <p><bold>Projection</bold> geometry; <bold>least squares</bold> as
+      projection onto column space</p>
     </list-item>
     <list-item>
-      <p><bold>Scree Plots:</bold> Diagnostics to find intrinsic
-      dimensionality (“elbow”).</p>
+      <p><bold>Condition number</bold> and numerical stability</p>
     </list-item>
     <list-item>
-      <p><bold>Engineering Uses:</bold> Denoising, anomaly detection,
-      and compression (limited to linear manifolds).</p>
+      <p><bold>Spectral decomposition</bold> of symmetric / PSD
+      matrices; covariance-matrix geometry</p>
+    </list-item>
+    <list-item>
+      <p><bold>PCA</bold>: linear dimensionality reduction by variance
+      maximization</p>
+    </list-item>
+    <list-item>
+      <p><bold>Scree plots</bold> for intrinsic dimensionality
+      (“elbow”)</p>
+    </list-item>
+    <list-item>
+      <p><bold>SVD</bold>: factorization for any matrix; low-rank
+      approximation (Eckart–Young)</p>
+    </list-item>
+    <list-item>
+      <p><bold>NMF</bold>: parts-based decomposition for non-negative
+      spectra / images</p>
+    </list-item>
+    <list-item>
+      <p><bold>Pseudo-inverse</bold> and least-squares solvability</p>
+    </list-item>
+    <list-item>
+      <p><bold>L1 vs L2</bold> regularization (geometric intuition);
+      whitening and multicollinearity</p>
+    </list-item>
+    <list-item>
+      <p><bold>Kernel hint</bold> from inner products (sets up later
+      units)</p>
     </list-item>
   </list>
 </sec>
@@ -314,48 +374,95 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-4-summary-neural-networks-early-neuron-activations">
-  <title>6 Week 4 Summary: Neural Networks Early: Neuron &amp;
-  Activations</title>
+<sec id="week-4-summary-neural-networks-from-neurons-to-cnns">
+  <title>6 Week 4 Summary: Neural Networks — From Neurons to
+  CNNs</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Artificial Neuron:</bold> Weighted sum plus a non-linear
-      activation function.</p>
+      <p><bold>Fixed bases</bold> (Fourier / wavelet / polynomial) →
+      motivation for <bold>learned representations</bold></p>
     </list-item>
     <list-item>
-      <p><bold>Activations:</bold> Non-linearity (ReLU, Sigmoid, Tanh)
-      is essential for complex problem-solving.</p>
+      <p>The modern <bold>neuron</bold> and <bold>dense layer</bold>;
+      why non-linear activations are non-negotiable</p>
     </list-item>
     <list-item>
-      <p><bold>Universal Approximation:</bold> A single hidden layer can
-      approximate any continuous function.</p>
+      <p><bold>Universal approximation</bold> vs the parameter explosion
+      of dense layers on images</p>
     </list-item>
     <list-item>
-      <p><bold>MLP Architecture:</bold> Feed-forward network with input,
-      hidden, and output layers.</p>
+      <p><bold>Invariance vs equivariance</bold>: what we want from
+      image models</p>
+    </list-item>
+    <list-item>
+      <p><bold>Convolution</bold> from weight sharing;
+      cross-correlation, feature maps, receptive fields</p>
+    </list-item>
+    <list-item>
+      <p>Padding, stride, pooling, <inline-formula><alternatives>
+      <tex-math><![CDATA[1\times1]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mn>1</mml:mn><mml:mo>×</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
+      channel mixing</p>
+    </list-item>
+    <list-item>
+      <p><bold>Architectures</bold>: LeNet → VGG → NiN → DenseNet →
+      <bold>U-Net</bold> for dense prediction</p>
+    </list-item>
+    <list-item>
+      <p>Why CNNs fit microscopy / materials data — and where they fall
+      short</p>
     </list-item>
   </list>
+  <p><italic>Note</italic>: Backpropagation is covered in the self-study
+  supplement <monospace>02_backprop_self_study.qmd</monospace> appended
+  to this unit.</p>
 </sec>
-<sec id="week-5-summary-backpropagation-gradient-flow">
-  <title>7 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
+<sec id="week-5-summary-clustering-autoencoders">
+  <title>7 Week 5 Summary: Clustering &amp; Autoencoders</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Backpropagation:</bold> Two-pass chain rule application
-      to efficiently compute gradients.</p>
+      <p><bold>K-Means / K-Medoids</bold>: hard clustering by minimizing
+      within-cluster distance</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Sensitive to initialization (use k-means++); assumes
+          spherical clusters</p>
+        </list-item>
+      </list>
     </list-item>
     <list-item>
-      <p><bold>Vanishing/Exploding Gradients:</bold> Deep networks
-      struggle with signal decay or instability.</p>
+      <p><bold>GMM + EM</bold>: probabilistic clustering with soft
+      assignments</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>E-step: responsibilities; M-step: parameter update</p>
+        </list-item>
+        <list-item>
+          <p>Each EM step never decreases the log-likelihood</p>
+        </list-item>
+      </list>
     </list-item>
     <list-item>
-      <p><bold>ReLU:</bold> Improves gradient flow for deep
-      architectures by providing a constant positive gradient.</p>
+      <p><bold>Autoencoders</bold>: encoder–bottleneck–decoder, trained
+      on reconstruction loss</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Linear AE recovers PCA</p>
+        </list-item>
+        <list-item>
+          <p>Non-linear AE captures curved manifolds</p>
+        </list-item>
+      </list>
     </list-item>
     <list-item>
-      <p><bold>Jacobian Matrix:</bold> Links differentiable components
-      for system-wide optimization.</p>
+      <p><bold>Applications</bold>: compression, anomaly detection
+      (reconstruction error), feature extraction</p>
     </list-item>
   </list>
+  <p><italic>Note</italic>: Backpropagation has moved to a self-study
+  supplement appended to Unit 4
+  (<monospace>02_backprop_self_study.qmd</monospace>); this freed the
+  Unit 5 slot for unsupervised learning.</p>
 </sec>
 <sec id="week-6-summary-loss-landscapes-optimization-behavior">
   <title>8 Week 6 Summary: Loss Landscapes &amp; Optimization
@@ -379,25 +486,59 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-7-summary-generalization-bias-variance-regularization">
+<sec id="week-7-summary-generalization-bias-variance-regularization-tree-ensembles">
   <title>9 Week 7 Summary: Generalization, Bias-Variance,
-  Regularization</title>
+  Regularization, Tree Ensembles</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Generalization:</bold> Ensuring accurate performance on
-      unseen test data.</p>
+      <p><bold>Generalization</bold>: performance on unseen data</p>
     </list-item>
     <list-item>
-      <p><bold>Bias-Variance Tradeoff:</bold> Balancing underfitting
-      (high bias) and overfitting (high variance).</p>
+      <p><bold>Bias–variance</bold> tradeoff:
+      <inline-formula><alternatives>
+      <tex-math><![CDATA[\mathrm{MSE} = \mathrm{Bias}^2 + \mathrm{Variance} + \mathrm{noise}]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mrow><mml:mi mathvariant="normal">M</mml:mi><mml:mi mathvariant="normal">S</mml:mi><mml:mi mathvariant="normal">E</mml:mi></mml:mrow><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mi mathvariant="normal">B</mml:mi><mml:mi mathvariant="normal">i</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mi mathvariant="normal">s</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mrow><mml:mi mathvariant="normal">V</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mi mathvariant="normal">r</mml:mi><mml:mi mathvariant="normal">i</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mi mathvariant="normal">n</mml:mi><mml:mi mathvariant="normal">c</mml:mi><mml:mi mathvariant="normal">e</mml:mi></mml:mrow><mml:mo>+</mml:mo><mml:mrow><mml:mi mathvariant="normal">n</mml:mi><mml:mi mathvariant="normal">o</mml:mi><mml:mi mathvariant="normal">i</mml:mi><mml:mi mathvariant="normal">s</mml:mi><mml:mi mathvariant="normal">e</mml:mi></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula></p>
     </list-item>
     <list-item>
-      <p><bold>Regularization:</bold> L2 (Ridge), L1 (Lasso), and
-      Dropout penalize complexity to improve robustness.</p>
+      <p><bold>Regularization</bold>: L2 (Ridge), L1 (Lasso),
+      Dropout</p>
     </list-item>
     <list-item>
-      <p><bold>Validation:</bold> Cross-validation is essential for
-      unbiased hyperparameter tuning.</p>
+      <p><bold>Validation</bold>: cross-validation as unbiased
+      generalization estimate</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Never tune on the test set</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Random Forests</bold>: bagging + random feature subsets
+      per split</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>→ variance reduction via decorrelated trees</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Gradient Boosting</bold>: sequential weak learners on
+      residuals</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>→ bias reduction</p>
+        </list-item>
+        <list-item>
+          <p>XGBoost / LightGBM / CatBoost as the practical
+          workhorses</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Trees vs NNs</bold>: gradient boosting usually wins on
+      tabular data (<inline-formula><alternatives>
+      <tex-math><![CDATA[N < 10^5]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>N</mml:mi><mml:mo>&lt;</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>5</mml:mn></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)</p>
     </list-item>
   </list>
 </sec>
@@ -406,85 +547,249 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   Noise</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Taxonomy of Uncertainty:</bold> Aleatory (inherent noise)
-      vs. Epistemic (lack of data).</p>
+      <p><bold>Aleatoric</bold> (irreducible noise) vs
+      <bold>epistemic</bold> (lack of data) uncertainty</p>
     </list-item>
     <list-item>
-      <p><bold>Inference Views:</bold> Frequentist (Maximum Likelihood)
-      vs. Bayesian (Posterior updates).</p>
+      <p><bold>Gaussian</bold> as the maximum-entropy distribution;
+      multivariate Gaussian and covariance geometry;
+      <bold>CLT</bold></p>
     </list-item>
     <list-item>
-      <p><bold>Robustness:</bold> Student’s t-distribution mitigates
-      outlier impacts better than Gaussian.</p>
+      <p><bold>Entropy</bold> and <bold>KL divergence</bold>, including
+      KL between Gaussians (used later for VAEs)</p>
     </list-item>
     <list-item>
-      <p><bold>Advanced UQ:</bold> Stochastic enrichment and
-      Mixture-Density Networks capture uncertainty.</p>
-    </list-item>
-  </list>
-</sec>
-<sec id="week-9-summary-representation-learning-features-vs.-learned-representations">
-  <title>11 Week 9 Summary: Representation Learning; Features
-  vs. Learned Representations</title>
-  <list list-type="bullet">
-    <list-item>
-      <p><bold>Manifold Hypothesis:</bold> High-dimensional data lies on
-      a lower-dimensional non-linear manifold.</p>
+      <p><bold>MLE</bold>: log-likelihood maximization; for a Gaussian,
+      MLE recovers MSE</p>
     </list-item>
     <list-item>
-      <p><bold>Autoencoders (AE):</bold> Unsupervised neural networks
-      compressing data into a latent bottleneck.</p>
+      <p><bold>Bayes’ theorem</bold> workflow: prior · likelihood ∝
+      posterior; predictive distribution</p>
     </list-item>
     <list-item>
-      <p><bold>AE Architectures:</bold> Encoders compress, decoders
-      reconstruct; CNNs handle spatial data.</p>
+      <p><bold>MAP</bold> estimation; <bold>MAP = regularized
+      MLE</bold></p>
     </list-item>
     <list-item>
-      <p><bold>Applications:</bold> Data compression, feature
-      extraction, and anomaly detection.</p>
-    </list-item>
-  </list>
-</sec>
-<sec id="week-10-summary-latent-spaces-embeddings">
-  <title>12 Week 10 Summary: Latent Spaces; Embeddings</title>
-  <list list-type="bullet">
-    <list-item>
-      <p><bold>Latent Spaces:</bold> Low-dimensional vectors where
-      distance reflects semantic/physical similarity.</p>
+      <p>Frequentist vs Bayesian comparison; credible vs confidence
+      intervals</p>
     </list-item>
     <list-item>
-      <p><bold>t-SNE &amp; UMAP:</bold> Non-linear visualization tools
-      to map high-dimensional clusters to 2D/3D.</p>
+      <p><bold>Robustness</bold>: Student’s t-distribution mitigates
+      outliers better than Gaussian</p>
     </list-item>
     <list-item>
-      <p><bold>Crowding Problem:</bold> Addressed by heavy-tailed
-      distributions in lower dimensions.</p>
+      <p>Stochastic enrichment and <bold>mixture-density networks</bold>
+      (preview of Unit 12)</p>
     </list-item>
     <list-item>
-      <p><bold>Interpretability:</bold> Mapping latent neurons to
-      physical parameters builds trust.</p>
+      <p>Practical diagnostic: <bold>calibration plots</bold></p>
     </list-item>
   </list>
 </sec>
-<sec id="week-11-summary-unsupervised-learning-revisited-objectives">
-  <title>13 Week 11 Summary: Unsupervised Learning Revisited
-  (Objectives)</title>
+<sec id="week-9-summary-latent-spaces-advanced-representation-learning">
+  <title>11 Week 9 Summary: Latent Spaces &amp; Advanced Representation
+  Learning</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Unsupervised Paradigm:</bold> Uncovering regimes and
-      clusters in unlabeled process data.</p>
+      <p>What makes a latent space “good”</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Compactness within concept, separation across concepts</p>
+        </list-item>
+        <list-item>
+          <p>Smooth interpolation, transferability</p>
+        </list-item>
+        <list-item>
+          <p>None guaranteed by reconstruction alone</p>
+        </list-item>
+      </list>
     </list-item>
     <list-item>
-      <p><bold>K-Means &amp; K-Medoids:</bold> Hard clustering
-      minimizing distance to centroids/prototypes.</p>
+      <p><bold>t-SNE</bold>: KL between high-dim Gaussian and low-dim
+      Student-t similarities</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Heavy tail solves the <bold>crowding problem</bold></p>
+        </list-item>
+        <list-item>
+          <p>Cluster sizes and between-cluster distances are
+          <bold>not</bold> quantitatively meaningful</p>
+        </list-item>
+      </list>
     </list-item>
     <list-item>
-      <p><bold>Gaussian Mixture Models (GMM):</bold> Probabilistic
-      clustering with soft assignments (responsibilities).</p>
+      <p><bold>UMAP</bold>: preserves more global structure than t-SNE;
+      scales to millions of points</p>
     </list-item>
     <list-item>
-      <p><bold>EM Algorithm:</bold> Iterative E-step and M-step to find
-      maximum likelihood in latent variable models.</p>
+      <p><bold>Contrastive learning</bold> (SimCLR, InfoNCE): label-free
+      latent shaping</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Pull augmentations of the same sample together, push others
+          apart</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Foundation embeddings</bold> (DINOv2, CLIP): pretrained
+      encoders as feature extractors</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Linear probe is often the strongest baseline for
+          label-scarce tasks</p>
+        </list-item>
+      </list>
+    </list-item>
+  </list>
+</sec>
+<sec id="week-10-summary-attention-transformers">
+  <title>12 Week 10 Summary: Attention &amp; Transformers</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>Why attention: limits of RNNs / LSTMs for long sequences</p>
+    </list-item>
+    <list-item>
+      <p><bold>Self-attention</bold>: <inline-formula><alternatives>
+      <tex-math><![CDATA[\mathrm{softmax}(QK^T/\sqrt{d_k})V]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi><mml:mi mathvariant="normal">o</mml:mi><mml:mi mathvariant="normal">f</mml:mi><mml:mi mathvariant="normal">t</mml:mi><mml:mi mathvariant="normal">m</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mi mathvariant="normal">x</mml:mi></mml:mrow><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>Q</mml:mi><mml:msup><mml:mi>K</mml:mi><mml:mi>T</mml:mi></mml:msup><mml:mi>/</mml:mi><mml:msqrt><mml:msub><mml:mi>d</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:msqrt><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mi>V</mml:mi></mml:mrow></mml:math></alternatives></inline-formula></p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Similarity-weighted average of value vectors with
+          content-based weights</p>
+        </list-item>
+        <list-item>
+          <p>Positions choose whom to listen to (no fixed locality
+          prior)</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Multi-head attention</bold>: parallel heads on learned
+      subspaces, then concat + project</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Different heads specialize on different relationships</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Positional encoding</bold>: needed because attention is
+      permutation-equivariant</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Sinusoidal, learned, or RoPE</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Transformer block</bold>: multi-head attention + MLP with
+      residual + LayerNorm; stack many</p>
+    </list-item>
+    <list-item>
+      <p><bold>ViT</bold>: image as a sequence of patch tokens</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Beats CNNs at scale; loses with little data (no locality
+          prior)</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Foundation models</bold>: GPT, BERT, ViT, DINO, CLIP</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Pretrain at scale, freeze, reuse via embeddings + small
+          heads</p>
+        </list-item>
+      </list>
+    </list-item>
+  </list>
+</sec>
+<sec id="week-11-summary-generative-models-vae-diffusion">
+  <title>13 Week 11 Summary: Generative Models — VAE &amp;
+  Diffusion</title>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Why generative</bold>: vanilla autoencoders cannot sample
+      new data</p>
+    </list-item>
+    <list-item>
+      <p><bold>VAE</bold>: stochastic encoder produces
+      <inline-formula><alternatives>
+      <tex-math><![CDATA[\mathcal{N}(\mu, \sigma^2)]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>𝒩</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>μ</mml:mi><mml:mo>,</mml:mo><mml:msup><mml:mi>σ</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula></p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Trained on the <bold>ELBO</bold> = reconstruction − KL to a
+          Gaussian prior</p>
+        </list-item>
+        <list-item>
+          <p><bold>Reparameterization trick</bold>
+          <inline-formula><alternatives>
+          <tex-math><![CDATA[z = \mu + \sigma \odot \epsilon]]></tex-math>
+          <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>z</mml:mi><mml:mo>=</mml:mo><mml:mi>μ</mml:mi><mml:mo>+</mml:mo><mml:mi>σ</mml:mi><mml:mo>⊙</mml:mo><mml:mi>ϵ</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+          for differentiable sampling</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Diffusion</bold>: predict the noise
+      <inline-formula><alternatives>
+      <tex-math><![CDATA[\epsilon_\theta(x_t, t)]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>ϵ</mml:mi><mml:mi>θ</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:msub><mml:mi>x</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+      added at a random timestep</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Loss is plain MSE on the noise</p>
+        </list-item>
+        <list-item>
+          <p>Sample from <inline-formula><alternatives>
+          <tex-math><![CDATA[\mathcal{N}(0, I)]]></tex-math>
+          <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>𝒩</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>I</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+          and iterate the learned reverse process</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Classifier-free guidance</bold>: train conditional +
+      unconditional jointly; mix at sampling</p>
+    </list-item>
+    <list-item>
+      <p><bold>Trade-offs</bold>:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>VAE: fast sampling, lower-bound likelihood, blurry
+          samples</p>
+        </list-item>
+        <list-item>
+          <p>Diffusion: slow sampling, state-of-the-art quality</p>
+        </list-item>
+        <list-item>
+          <p>GANs: fast, no likelihood</p>
+        </list-item>
+        <list-item>
+          <p>Normalizing flows: exact likelihood, restricted
+          architectures</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Materials applications</bold>:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Inverse design (compositions matching a target
+          property)</p>
+        </list-item>
+        <list-item>
+          <p>Microstructure generation</p>
+        </list-item>
+        <list-item>
+          <p>Physics-constrained spectral synthesis</p>
+        </list-item>
+      </list>
     </list-item>
   </list>
 </sec>
@@ -492,20 +797,53 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   <title>14 Week 12 Summary: Uncertainty in Predictions</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Uncertainty Quantification (UQ):</bold> Crucial for safe
-      out-of-distribution engineering decisions.</p>
+      <p>Why point predictions aren’t enough; aleatoric vs epistemic
+      recap</p>
     </list-item>
     <list-item>
-      <p><bold>Bayesian Predictive Distribution:</bold> Integrating over
-      parameter posteriors for robust variance estimates.</p>
+      <p><bold>Bayesian predictive distribution</bold> and variance
+      decomposition</p>
     </list-item>
     <list-item>
-      <p><bold>Evidence Framework:</bold> Optimizing hyperparameters via
-      Marginal Likelihood maximization.</p>
+      <p><bold>Evidence framework</bold>: marginal likelihood as
+      automatic Occam’s razor; effective number of parameters; empirical
+      Bayes</p>
     </list-item>
     <list-item>
-      <p><bold>Physics Constraints:</bold> Embedding ODEs/PDEs reduces
-      epistemic uncertainty in data-poor regions.</p>
+      <p><bold>Gaussian Processes</bold> as the unit’s main tool</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Mean and kernel function (RBF and others)</p>
+        </list-item>
+        <list-item>
+          <p>Closed-form prior and posterior; hyperparameter
+          learning</p>
+        </list-item>
+        <list-item>
+          <p>Strengths and limits (<inline-formula><alternatives>
+          <tex-math><![CDATA[O(n^3)]]></tex-math>
+          <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>O</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:msup><mml:mi>n</mml:mi><mml:mn>3</mml:mn></mml:msup><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+          cost, kernel choice)</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>MC Dropout</bold> and <bold>deep ensembles</bold> as
+      cheaper UQ</p>
+    </list-item>
+    <list-item>
+      <p><bold>Mixture-density networks</bold> for multi-modal
+      predictive distributions</p>
+    </list-item>
+    <list-item>
+      <p><bold>Calibration</bold> plots and recalibration</p>
+    </list-item>
+    <list-item>
+      <p>Choosing a UQ method: comparison table</p>
+    </list-item>
+    <list-item>
+      <p><bold>Active learning</bold> via GP uncertainty (materials
+      acceleration platforms)</p>
     </list-item>
   </list>
 </sec>
@@ -536,20 +874,48 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   Trust</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Explainable AI (XAI):</bold> Transitioning from black-box
-      to transparent, justifiable decision-making.</p>
+      <p><bold>Why XAI</bold>: from black-box to transparent,
+      justifiable decisions; interpretability vs explainability</p>
     </list-item>
     <list-item>
-      <p><bold>Interpretation Tools:</bold> Sensitivity analysis and
-      deductive reasoning using ontologies.</p>
+      <p><bold>Six levels of explainability (E1–E6)</bold>: data →
+      process → feature → model → prediction → decision</p>
     </list-item>
     <list-item>
-      <p><bold>Causality:</bold> Moving from late detection to early
-      prediction via causal process chains.</p>
+      <p><bold>Semantic structures</bold>: controlled vocabularies,
+      taxonomies, ontologies for materials data</p>
     </list-item>
     <list-item>
-      <p><bold>Limits:</bold> Addressing data bias, extrapolation risks,
-      and AI hallucinations while keeping experts in the loop.</p>
+      <p><bold>Sensitivity analysis</bold>: perturbation-based, global
+      vs local; feature importance from sensitivity</p>
+    </list-item>
+    <list-item>
+      <p><bold>Attribution methods</bold>:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>SHAP</bold> (waterfall, beeswarm)</p>
+        </list-item>
+        <list-item>
+          <p><bold>LIME</bold> (local linear approximation)</p>
+        </list-item>
+        <list-item>
+          <p><bold>Integrated Gradients</bold> for deep networks</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Causality vs correlation</bold>: causal process chains;
+      detection vs prediction</p>
+    </list-item>
+    <list-item>
+      <p><bold>Counterfactuals</bold>: “what-if” explanations</p>
+    </list-item>
+    <list-item>
+      <p><bold>Limits</bold>: data bias, extrapolation, OOD detection,
+      fairness — when models should NOT be trusted</p>
+    </list-item>
+    <list-item>
+      <p>Course retrospective: how the 14-unit arc fits together</p>
     </list-item>
   </list>
 </sec>
@@ -671,11 +1037,17 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>7</td>
-          <td>Generalization, bias?variance, regularization</td>
-          <td>Overfitting control in models (?)</td>
-          <td>Limits of high-D regression (?)</td>
-          <td>Overfitting demo: polynomial vs NN models</td>
-          <td>Critical conceptual gate for both applied courses</td>
+          <td>Generalization, bias-variance, regularization; tree
+          ensembles (RF, gradient boosting)</td>
+          <td>Overfitting control in models (?); RF / XGBoost as
+          workhorses for tabular characterization data (?)</td>
+          <td>Limits of high-D regression (?); tree ensembles for
+          property prediction over tabular materials descriptors
+          (?)</td>
+          <td>Overfitting demo: polynomial vs NN models; tree-ensemble
+          baseline (RF &amp; XGBoost) on alloy regression</td>
+          <td>Critical conceptual gate for both applied courses;
+          introduces the tabular workhorse</td>
         </tr>
         <tr>
           <td>8</td>
@@ -688,29 +1060,40 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>9</td>
-          <td>Representation learning: learned vs engineered
-          features</td>
-          <td>Feature learning in signals &amp; images (?)</td>
-          <td>Descriptor learning vs hand-crafted features (?)</td>
-          <td>Feature learning with simple NN</td>
-          <td>Transition from classical descriptors</td>
+          <td>Latent spaces &amp; advanced representation learning:
+          t-SNE, UMAP, contrastive learning, foundation embeddings</td>
+          <td>Visualization &amp; quality assessment of learned features
+          (?)</td>
+          <td>Foundation embeddings for materials descriptors (?)</td>
+          <td>t-SNE/UMAP comparison; SimCLR + linear probe on a
+          foundation embedding</td>
+          <td>Critical for both applied courses; sets up modern
+          self-supervised paradigm</td>
         </tr>
         <tr>
           <td>10</td>
-          <td>Latent spaces: autoencoders &amp; embeddings</td>
-          <td>Compression &amp; anomaly detection in processes (?)</td>
-          <td>Latent materials spaces &amp; embeddings (?)</td>
-          <td>Autoencoder with framework (PyTorch/Keras)</td>
-          <td>Core week for Materials Genomics</td>
+          <td>Attention &amp; Transformers: self-attention, multi-head,
+          positional encoding, ViT, foundation models</td>
+          <td>Transformers for sequences and images in characterization
+          (?)</td>
+          <td>Transformers for compositions &amp; sequences (SMILES,
+          crystal tokens) (?)</td>
+          <td>Single-head attention from scratch; tiny ViT vs CNN on a
+          small dataset</td>
+          <td>Architecture behind all modern foundation models</td>
         </tr>
         <tr>
           <td>11</td>
-          <td>Unsupervised learning revisited (objectives, not
-          algorithms)</td>
-          <td>Clustering &amp; process drift detection (?)</td>
-          <td>Clustering vs discovery in materials space (?)</td>
-          <td>Compare clustering vs AE embeddings</td>
-          <td>Students reinterpret known clustering methods</td>
+          <td>Generative Models: VAE &amp; Diffusion (ELBO,
+          reparameterization, forward/reverse process, classifier-free
+          guidance)</td>
+          <td>Generative models for data augmentation &amp; process
+          simulation (?)</td>
+          <td>Inverse design via conditional generation (?)</td>
+          <td>VAE on Fashion-MNIST + toy diffusion model (200-line
+          DDPM)</td>
+          <td>Enables inverse design and modern generative
+          applications</td>
         </tr>
         <tr>
           <td>12</td>
@@ -936,11 +1319,14 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>7</td>
-          <td>Generalization, bias?variance, regularization</td>
+          <td>Generalization, bias-variance, regularization, <bold>tree
+          ensembles (RF &amp; gradient boosting)</bold></td>
           <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
-          <td>?</td>
-          <td>Ch. 6 Model Selection &amp; Validation</td>
-          <td>Ch. 3 �3.2 Bias?variance decomposition</td>
+          <td>—</td>
+          <td>Ch. 3 Decision Trees &amp; Random Forests; Ch. 6 Model
+          Selection &amp; Validation</td>
+          <td>Ch. 3 §3.2 Bias-variance decomposition; Ch. 14 §14.3–14.4
+          (combining models, bagging, boosting)</td>
         </tr>
         <tr>
           <td>8</td>
@@ -953,27 +1339,35 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>9</td>
-          <td>Representation learning; features vs learned reps</td>
-          <td>Ch. 5.5 Autoencoder (intro &amp; motivation)</td>
-          <td>AE uncertainty extensions</td>
+          <td>Latent Spaces &amp; Advanced Representation Learning
+          (t-SNE, UMAP, contrastive, foundation embeddings)</td>
+          <td>Ch. 5.5 Autoencoder (recap)</td>
+          <td>—</td>
           <td>Ch. 5 Dimension Reduction</td>
-          <td>Ch. 12 �12.3 Nonlinear PCA / latent variables</td>
+          <td>Ch. 9 §9.1–9.4 mixture models / latent variables; Ch. 12
+          §12.3 nonlinear latent models</td>
         </tr>
         <tr>
           <td>10</td>
-          <td>Latent spaces; embeddings</td>
-          <td>Ch. 5.5.1?5.5.3 Autoencoder &amp; Latent Space</td>
-          <td>AE architectures</td>
-          <td>Ch. 5 Dimension Reduction</td>
-          <td>Ch. 12 �12.3?12.4 Latent variable intuition</td>
+          <td>Attention &amp; Transformers (self-attention, multi-head,
+          ViT, foundation models)</td>
+          <td>—</td>
+          <td>—</td>
+          <td>Ch. 8 Neural Networks (context only)</td>
+          <td>— (covered via
+          (<xref alt="vaswani2017attention?" rid="ref-vaswani2017attention-nb-article" ref-type="bibr"><bold>vaswani2017attention?</bold></xref>),
+          (<xref alt="dosovitskiy2021vit?" rid="ref-dosovitskiy2021vit-nb-article" ref-type="bibr"><bold>dosovitskiy2021vit?</bold></xref>))</td>
         </tr>
         <tr>
           <td>11</td>
-          <td>Unsupervised learning revisited (objectives)</td>
-          <td>Ch. 5.3 K-Means (objective-based view)</td>
-          <td>t-SNE, advanced clustering</td>
-          <td>Ch. 9 Classification (decision boundaries)</td>
-          <td>Ch. 9 Mixture Models &amp; EM (conceptual only)</td>
+          <td>Generative Models: VAE &amp; Diffusion (ELBO,
+          reparameterization, forward/reverse process, classifier-free
+          guidance)</td>
+          <td>Ch. 5.5 AE (foundation for VAE)</td>
+          <td>—</td>
+          <td>Ch. 8 Neural Networks (autoencoder context)</td>
+          <td>Ch. 9 §9.4 EM as ELBO precursor; Ch. 13 §13.3 deep
+          generative perspectives</td>
         </tr>
         <tr>
           <td>12</td>
@@ -1011,20 +1405,44 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   Functions</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Models:</bold> Simplified representations for
-      prediction/explanation (White, Grey, Black-Box).</p>
+      <p><bold>Models</bold>: simplified representations for prediction
+      / explanation (white / grey / black-box)</p>
     </list-item>
     <list-item>
-      <p><bold>Learning Types:</bold> Supervised
-      (Regression/Classification), Unsupervised, Reinforcement.</p>
+      <p><bold>Learning types</bold>: supervised (regression,
+      classification), unsupervised, reinforcement</p>
     </list-item>
     <list-item>
-      <p><bold>Loss Functions:</bold> ML minimizes a loss function
-      (e.g., MSE) to match predictions to targets.</p>
+      <p><bold>Empirical risk minimization</bold>: learning as
+      optimization, not statistics</p>
     </list-item>
     <list-item>
-      <p><bold>Complexity:</bold> Occam’s Razor prefers simpler models
-      to avoid overfitting; regularization helps control it.</p>
+      <p><bold>Loss zoo</bold>:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Regression: MSE, MAE</p>
+        </list-item>
+        <list-item>
+          <p>Classification: 0-1, softmax + cross-entropy</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Train / val / test</bold> splits, cross-validation,
+      <bold>data-leakage taxonomy</bold></p>
+    </list-item>
+    <list-item>
+      <p><bold>Bias–variance</bold> intuition; Occam’s razor and
+      regularization</p>
+    </list-item>
+    <list-item>
+      <p><bold>Uncertainty preview</bold>: aleatoric vs epistemic</p>
+    </list-item>
+    <list-item>
+      <p><bold>Limits</bold>: no-free-lunch, curse of dimensionality</p>
+    </list-item>
+    <list-item>
+      <p>Frequentist vs Bayesian lenses (set-up for Unit 8)</p>
     </list-item>
   </list>
 </sec>
@@ -1033,21 +1451,46 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   PCA/SVD</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Eigendecomposition:</bold> Finding eigenvectors (variance
-      directions) and eigenvalues (variance amount) of a covariance
-      matrix.</p>
+      <p><bold>LA refresher</bold>: vector spaces, basis, rank; column /
+      row / null spaces and identifiability</p>
     </list-item>
     <list-item>
-      <p><bold>PCA:</bold> Linear dimensionality reduction maximizing
-      variance and compressing data.</p>
+      <p><bold>Projection</bold> geometry; <bold>least squares</bold> as
+      projection onto column space</p>
     </list-item>
     <list-item>
-      <p><bold>Scree Plots:</bold> Diagnostics to find intrinsic
-      dimensionality (“elbow”).</p>
+      <p><bold>Condition number</bold> and numerical stability</p>
     </list-item>
     <list-item>
-      <p><bold>Engineering Uses:</bold> Denoising, anomaly detection,
-      and compression (limited to linear manifolds).</p>
+      <p><bold>Spectral decomposition</bold> of symmetric / PSD
+      matrices; covariance-matrix geometry</p>
+    </list-item>
+    <list-item>
+      <p><bold>PCA</bold>: linear dimensionality reduction by variance
+      maximization</p>
+    </list-item>
+    <list-item>
+      <p><bold>Scree plots</bold> for intrinsic dimensionality
+      (“elbow”)</p>
+    </list-item>
+    <list-item>
+      <p><bold>SVD</bold>: factorization for any matrix; low-rank
+      approximation (Eckart–Young)</p>
+    </list-item>
+    <list-item>
+      <p><bold>NMF</bold>: parts-based decomposition for non-negative
+      spectra / images</p>
+    </list-item>
+    <list-item>
+      <p><bold>Pseudo-inverse</bold> and least-squares solvability</p>
+    </list-item>
+    <list-item>
+      <p><bold>L1 vs L2</bold> regularization (geometric intuition);
+      whitening and multicollinearity</p>
+    </list-item>
+    <list-item>
+      <p><bold>Kernel hint</bold> from inner products (sets up later
+      units)</p>
     </list-item>
   </list>
 </sec>
@@ -1072,48 +1515,95 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-4-summary-neural-networks-early-neuron-activations-nb-article">
-  <title>6 Week 4 Summary: Neural Networks Early: Neuron &amp;
-  Activations</title>
+<sec id="week-4-summary-neural-networks-from-neurons-to-cnns-nb-article">
+  <title>6 Week 4 Summary: Neural Networks — From Neurons to
+  CNNs</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Artificial Neuron:</bold> Weighted sum plus a non-linear
-      activation function.</p>
+      <p><bold>Fixed bases</bold> (Fourier / wavelet / polynomial) →
+      motivation for <bold>learned representations</bold></p>
     </list-item>
     <list-item>
-      <p><bold>Activations:</bold> Non-linearity (ReLU, Sigmoid, Tanh)
-      is essential for complex problem-solving.</p>
+      <p>The modern <bold>neuron</bold> and <bold>dense layer</bold>;
+      why non-linear activations are non-negotiable</p>
     </list-item>
     <list-item>
-      <p><bold>Universal Approximation:</bold> A single hidden layer can
-      approximate any continuous function.</p>
+      <p><bold>Universal approximation</bold> vs the parameter explosion
+      of dense layers on images</p>
     </list-item>
     <list-item>
-      <p><bold>MLP Architecture:</bold> Feed-forward network with input,
-      hidden, and output layers.</p>
+      <p><bold>Invariance vs equivariance</bold>: what we want from
+      image models</p>
+    </list-item>
+    <list-item>
+      <p><bold>Convolution</bold> from weight sharing;
+      cross-correlation, feature maps, receptive fields</p>
+    </list-item>
+    <list-item>
+      <p>Padding, stride, pooling, <inline-formula><alternatives>
+      <tex-math><![CDATA[1\times1]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mn>1</mml:mn><mml:mo>×</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>
+      channel mixing</p>
+    </list-item>
+    <list-item>
+      <p><bold>Architectures</bold>: LeNet → VGG → NiN → DenseNet →
+      <bold>U-Net</bold> for dense prediction</p>
+    </list-item>
+    <list-item>
+      <p>Why CNNs fit microscopy / materials data — and where they fall
+      short</p>
     </list-item>
   </list>
+  <p><italic>Note</italic>: Backpropagation is covered in the self-study
+  supplement <monospace>02_backprop_self_study.qmd</monospace> appended
+  to this unit.</p>
 </sec>
-<sec id="week-5-summary-backpropagation-gradient-flow-nb-article">
-  <title>7 Week 5 Summary: Backpropagation &amp; Gradient Flow</title>
+<sec id="week-5-summary-clustering-autoencoders-nb-article">
+  <title>7 Week 5 Summary: Clustering &amp; Autoencoders</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Backpropagation:</bold> Two-pass chain rule application
-      to efficiently compute gradients.</p>
+      <p><bold>K-Means / K-Medoids</bold>: hard clustering by minimizing
+      within-cluster distance</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Sensitive to initialization (use k-means++); assumes
+          spherical clusters</p>
+        </list-item>
+      </list>
     </list-item>
     <list-item>
-      <p><bold>Vanishing/Exploding Gradients:</bold> Deep networks
-      struggle with signal decay or instability.</p>
+      <p><bold>GMM + EM</bold>: probabilistic clustering with soft
+      assignments</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>E-step: responsibilities; M-step: parameter update</p>
+        </list-item>
+        <list-item>
+          <p>Each EM step never decreases the log-likelihood</p>
+        </list-item>
+      </list>
     </list-item>
     <list-item>
-      <p><bold>ReLU:</bold> Improves gradient flow for deep
-      architectures by providing a constant positive gradient.</p>
+      <p><bold>Autoencoders</bold>: encoder–bottleneck–decoder, trained
+      on reconstruction loss</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Linear AE recovers PCA</p>
+        </list-item>
+        <list-item>
+          <p>Non-linear AE captures curved manifolds</p>
+        </list-item>
+      </list>
     </list-item>
     <list-item>
-      <p><bold>Jacobian Matrix:</bold> Links differentiable components
-      for system-wide optimization.</p>
+      <p><bold>Applications</bold>: compression, anomaly detection
+      (reconstruction error), feature extraction</p>
     </list-item>
   </list>
+  <p><italic>Note</italic>: Backpropagation has moved to a self-study
+  supplement appended to Unit 4
+  (<monospace>02_backprop_self_study.qmd</monospace>); this freed the
+  Unit 5 slot for unsupervised learning.</p>
 </sec>
 <sec id="week-6-summary-loss-landscapes-optimization-behavior-nb-article">
   <title>8 Week 6 Summary: Loss Landscapes &amp; Optimization
@@ -1137,25 +1627,59 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-7-summary-generalization-bias-variance-regularization-nb-article">
+<sec id="week-7-summary-generalization-bias-variance-regularization-tree-ensembles-nb-article">
   <title>9 Week 7 Summary: Generalization, Bias-Variance,
-  Regularization</title>
+  Regularization, Tree Ensembles</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Generalization:</bold> Ensuring accurate performance on
-      unseen test data.</p>
+      <p><bold>Generalization</bold>: performance on unseen data</p>
     </list-item>
     <list-item>
-      <p><bold>Bias-Variance Tradeoff:</bold> Balancing underfitting
-      (high bias) and overfitting (high variance).</p>
+      <p><bold>Bias–variance</bold> tradeoff:
+      <inline-formula><alternatives>
+      <tex-math><![CDATA[\mathrm{MSE} = \mathrm{Bias}^2 + \mathrm{Variance} + \mathrm{noise}]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mrow><mml:mi mathvariant="normal">M</mml:mi><mml:mi mathvariant="normal">S</mml:mi><mml:mi mathvariant="normal">E</mml:mi></mml:mrow><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mi mathvariant="normal">B</mml:mi><mml:mi mathvariant="normal">i</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mi mathvariant="normal">s</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mrow><mml:mi mathvariant="normal">V</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mi mathvariant="normal">r</mml:mi><mml:mi mathvariant="normal">i</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mi mathvariant="normal">n</mml:mi><mml:mi mathvariant="normal">c</mml:mi><mml:mi mathvariant="normal">e</mml:mi></mml:mrow><mml:mo>+</mml:mo><mml:mrow><mml:mi mathvariant="normal">n</mml:mi><mml:mi mathvariant="normal">o</mml:mi><mml:mi mathvariant="normal">i</mml:mi><mml:mi mathvariant="normal">s</mml:mi><mml:mi mathvariant="normal">e</mml:mi></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula></p>
     </list-item>
     <list-item>
-      <p><bold>Regularization:</bold> L2 (Ridge), L1 (Lasso), and
-      Dropout penalize complexity to improve robustness.</p>
+      <p><bold>Regularization</bold>: L2 (Ridge), L1 (Lasso),
+      Dropout</p>
     </list-item>
     <list-item>
-      <p><bold>Validation:</bold> Cross-validation is essential for
-      unbiased hyperparameter tuning.</p>
+      <p><bold>Validation</bold>: cross-validation as unbiased
+      generalization estimate</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Never tune on the test set</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Random Forests</bold>: bagging + random feature subsets
+      per split</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>→ variance reduction via decorrelated trees</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Gradient Boosting</bold>: sequential weak learners on
+      residuals</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>→ bias reduction</p>
+        </list-item>
+        <list-item>
+          <p>XGBoost / LightGBM / CatBoost as the practical
+          workhorses</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Trees vs NNs</bold>: gradient boosting usually wins on
+      tabular data (<inline-formula><alternatives>
+      <tex-math><![CDATA[N < 10^5]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>N</mml:mi><mml:mo>&lt;</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>5</mml:mn></mml:msup></mml:mrow></mml:math></alternatives></inline-formula>)</p>
     </list-item>
   </list>
 </sec>
@@ -1164,85 +1688,249 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   Noise</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Taxonomy of Uncertainty:</bold> Aleatory (inherent noise)
-      vs. Epistemic (lack of data).</p>
+      <p><bold>Aleatoric</bold> (irreducible noise) vs
+      <bold>epistemic</bold> (lack of data) uncertainty</p>
     </list-item>
     <list-item>
-      <p><bold>Inference Views:</bold> Frequentist (Maximum Likelihood)
-      vs. Bayesian (Posterior updates).</p>
+      <p><bold>Gaussian</bold> as the maximum-entropy distribution;
+      multivariate Gaussian and covariance geometry;
+      <bold>CLT</bold></p>
     </list-item>
     <list-item>
-      <p><bold>Robustness:</bold> Student’s t-distribution mitigates
-      outlier impacts better than Gaussian.</p>
+      <p><bold>Entropy</bold> and <bold>KL divergence</bold>, including
+      KL between Gaussians (used later for VAEs)</p>
     </list-item>
     <list-item>
-      <p><bold>Advanced UQ:</bold> Stochastic enrichment and
-      Mixture-Density Networks capture uncertainty.</p>
-    </list-item>
-  </list>
-</sec>
-<sec id="week-9-summary-representation-learning-features-vs.-learned-representations-nb-article">
-  <title>11 Week 9 Summary: Representation Learning; Features
-  vs. Learned Representations</title>
-  <list list-type="bullet">
-    <list-item>
-      <p><bold>Manifold Hypothesis:</bold> High-dimensional data lies on
-      a lower-dimensional non-linear manifold.</p>
+      <p><bold>MLE</bold>: log-likelihood maximization; for a Gaussian,
+      MLE recovers MSE</p>
     </list-item>
     <list-item>
-      <p><bold>Autoencoders (AE):</bold> Unsupervised neural networks
-      compressing data into a latent bottleneck.</p>
+      <p><bold>Bayes’ theorem</bold> workflow: prior · likelihood ∝
+      posterior; predictive distribution</p>
     </list-item>
     <list-item>
-      <p><bold>AE Architectures:</bold> Encoders compress, decoders
-      reconstruct; CNNs handle spatial data.</p>
+      <p><bold>MAP</bold> estimation; <bold>MAP = regularized
+      MLE</bold></p>
     </list-item>
     <list-item>
-      <p><bold>Applications:</bold> Data compression, feature
-      extraction, and anomaly detection.</p>
-    </list-item>
-  </list>
-</sec>
-<sec id="week-10-summary-latent-spaces-embeddings-nb-article">
-  <title>12 Week 10 Summary: Latent Spaces; Embeddings</title>
-  <list list-type="bullet">
-    <list-item>
-      <p><bold>Latent Spaces:</bold> Low-dimensional vectors where
-      distance reflects semantic/physical similarity.</p>
+      <p>Frequentist vs Bayesian comparison; credible vs confidence
+      intervals</p>
     </list-item>
     <list-item>
-      <p><bold>t-SNE &amp; UMAP:</bold> Non-linear visualization tools
-      to map high-dimensional clusters to 2D/3D.</p>
+      <p><bold>Robustness</bold>: Student’s t-distribution mitigates
+      outliers better than Gaussian</p>
     </list-item>
     <list-item>
-      <p><bold>Crowding Problem:</bold> Addressed by heavy-tailed
-      distributions in lower dimensions.</p>
+      <p>Stochastic enrichment and <bold>mixture-density networks</bold>
+      (preview of Unit 12)</p>
     </list-item>
     <list-item>
-      <p><bold>Interpretability:</bold> Mapping latent neurons to
-      physical parameters builds trust.</p>
+      <p>Practical diagnostic: <bold>calibration plots</bold></p>
     </list-item>
   </list>
 </sec>
-<sec id="week-11-summary-unsupervised-learning-revisited-objectives-nb-article">
-  <title>13 Week 11 Summary: Unsupervised Learning Revisited
-  (Objectives)</title>
+<sec id="week-9-summary-latent-spaces-advanced-representation-learning-nb-article">
+  <title>11 Week 9 Summary: Latent Spaces &amp; Advanced Representation
+  Learning</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Unsupervised Paradigm:</bold> Uncovering regimes and
-      clusters in unlabeled process data.</p>
+      <p>What makes a latent space “good”</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Compactness within concept, separation across concepts</p>
+        </list-item>
+        <list-item>
+          <p>Smooth interpolation, transferability</p>
+        </list-item>
+        <list-item>
+          <p>None guaranteed by reconstruction alone</p>
+        </list-item>
+      </list>
     </list-item>
     <list-item>
-      <p><bold>K-Means &amp; K-Medoids:</bold> Hard clustering
-      minimizing distance to centroids/prototypes.</p>
+      <p><bold>t-SNE</bold>: KL between high-dim Gaussian and low-dim
+      Student-t similarities</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Heavy tail solves the <bold>crowding problem</bold></p>
+        </list-item>
+        <list-item>
+          <p>Cluster sizes and between-cluster distances are
+          <bold>not</bold> quantitatively meaningful</p>
+        </list-item>
+      </list>
     </list-item>
     <list-item>
-      <p><bold>Gaussian Mixture Models (GMM):</bold> Probabilistic
-      clustering with soft assignments (responsibilities).</p>
+      <p><bold>UMAP</bold>: preserves more global structure than t-SNE;
+      scales to millions of points</p>
     </list-item>
     <list-item>
-      <p><bold>EM Algorithm:</bold> Iterative E-step and M-step to find
-      maximum likelihood in latent variable models.</p>
+      <p><bold>Contrastive learning</bold> (SimCLR, InfoNCE): label-free
+      latent shaping</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Pull augmentations of the same sample together, push others
+          apart</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Foundation embeddings</bold> (DINOv2, CLIP): pretrained
+      encoders as feature extractors</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Linear probe is often the strongest baseline for
+          label-scarce tasks</p>
+        </list-item>
+      </list>
+    </list-item>
+  </list>
+</sec>
+<sec id="week-10-summary-attention-transformers-nb-article">
+  <title>12 Week 10 Summary: Attention &amp; Transformers</title>
+  <list list-type="bullet">
+    <list-item>
+      <p>Why attention: limits of RNNs / LSTMs for long sequences</p>
+    </list-item>
+    <list-item>
+      <p><bold>Self-attention</bold>: <inline-formula><alternatives>
+      <tex-math><![CDATA[\mathrm{softmax}(QK^T/\sqrt{d_k})V]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi><mml:mi mathvariant="normal">o</mml:mi><mml:mi mathvariant="normal">f</mml:mi><mml:mi mathvariant="normal">t</mml:mi><mml:mi mathvariant="normal">m</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mi mathvariant="normal">x</mml:mi></mml:mrow><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>Q</mml:mi><mml:msup><mml:mi>K</mml:mi><mml:mi>T</mml:mi></mml:msup><mml:mi>/</mml:mi><mml:msqrt><mml:msub><mml:mi>d</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:msqrt><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mi>V</mml:mi></mml:mrow></mml:math></alternatives></inline-formula></p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Similarity-weighted average of value vectors with
+          content-based weights</p>
+        </list-item>
+        <list-item>
+          <p>Positions choose whom to listen to (no fixed locality
+          prior)</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Multi-head attention</bold>: parallel heads on learned
+      subspaces, then concat + project</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Different heads specialize on different relationships</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Positional encoding</bold>: needed because attention is
+      permutation-equivariant</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Sinusoidal, learned, or RoPE</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Transformer block</bold>: multi-head attention + MLP with
+      residual + LayerNorm; stack many</p>
+    </list-item>
+    <list-item>
+      <p><bold>ViT</bold>: image as a sequence of patch tokens</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Beats CNNs at scale; loses with little data (no locality
+          prior)</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Foundation models</bold>: GPT, BERT, ViT, DINO, CLIP</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Pretrain at scale, freeze, reuse via embeddings + small
+          heads</p>
+        </list-item>
+      </list>
+    </list-item>
+  </list>
+</sec>
+<sec id="week-11-summary-generative-models-vae-diffusion-nb-article">
+  <title>13 Week 11 Summary: Generative Models — VAE &amp;
+  Diffusion</title>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Why generative</bold>: vanilla autoencoders cannot sample
+      new data</p>
+    </list-item>
+    <list-item>
+      <p><bold>VAE</bold>: stochastic encoder produces
+      <inline-formula><alternatives>
+      <tex-math><![CDATA[\mathcal{N}(\mu, \sigma^2)]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>𝒩</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>μ</mml:mi><mml:mo>,</mml:mo><mml:msup><mml:mi>σ</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula></p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Trained on the <bold>ELBO</bold> = reconstruction − KL to a
+          Gaussian prior</p>
+        </list-item>
+        <list-item>
+          <p><bold>Reparameterization trick</bold>
+          <inline-formula><alternatives>
+          <tex-math><![CDATA[z = \mu + \sigma \odot \epsilon]]></tex-math>
+          <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>z</mml:mi><mml:mo>=</mml:mo><mml:mi>μ</mml:mi><mml:mo>+</mml:mo><mml:mi>σ</mml:mi><mml:mo>⊙</mml:mo><mml:mi>ϵ</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+          for differentiable sampling</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Diffusion</bold>: predict the noise
+      <inline-formula><alternatives>
+      <tex-math><![CDATA[\epsilon_\theta(x_t, t)]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>ϵ</mml:mi><mml:mi>θ</mml:mi></mml:msub><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:msub><mml:mi>x</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+      added at a random timestep</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Loss is plain MSE on the noise</p>
+        </list-item>
+        <list-item>
+          <p>Sample from <inline-formula><alternatives>
+          <tex-math><![CDATA[\mathcal{N}(0, I)]]></tex-math>
+          <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>𝒩</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>I</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+          and iterate the learned reverse process</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Classifier-free guidance</bold>: train conditional +
+      unconditional jointly; mix at sampling</p>
+    </list-item>
+    <list-item>
+      <p><bold>Trade-offs</bold>:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>VAE: fast sampling, lower-bound likelihood, blurry
+          samples</p>
+        </list-item>
+        <list-item>
+          <p>Diffusion: slow sampling, state-of-the-art quality</p>
+        </list-item>
+        <list-item>
+          <p>GANs: fast, no likelihood</p>
+        </list-item>
+        <list-item>
+          <p>Normalizing flows: exact likelihood, restricted
+          architectures</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Materials applications</bold>:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Inverse design (compositions matching a target
+          property)</p>
+        </list-item>
+        <list-item>
+          <p>Microstructure generation</p>
+        </list-item>
+        <list-item>
+          <p>Physics-constrained spectral synthesis</p>
+        </list-item>
+      </list>
     </list-item>
   </list>
 </sec>
@@ -1250,20 +1938,53 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   <title>14 Week 12 Summary: Uncertainty in Predictions</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Uncertainty Quantification (UQ):</bold> Crucial for safe
-      out-of-distribution engineering decisions.</p>
+      <p>Why point predictions aren’t enough; aleatoric vs epistemic
+      recap</p>
     </list-item>
     <list-item>
-      <p><bold>Bayesian Predictive Distribution:</bold> Integrating over
-      parameter posteriors for robust variance estimates.</p>
+      <p><bold>Bayesian predictive distribution</bold> and variance
+      decomposition</p>
     </list-item>
     <list-item>
-      <p><bold>Evidence Framework:</bold> Optimizing hyperparameters via
-      Marginal Likelihood maximization.</p>
+      <p><bold>Evidence framework</bold>: marginal likelihood as
+      automatic Occam’s razor; effective number of parameters; empirical
+      Bayes</p>
     </list-item>
     <list-item>
-      <p><bold>Physics Constraints:</bold> Embedding ODEs/PDEs reduces
-      epistemic uncertainty in data-poor regions.</p>
+      <p><bold>Gaussian Processes</bold> as the unit’s main tool</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Mean and kernel function (RBF and others)</p>
+        </list-item>
+        <list-item>
+          <p>Closed-form prior and posterior; hyperparameter
+          learning</p>
+        </list-item>
+        <list-item>
+          <p>Strengths and limits (<inline-formula><alternatives>
+          <tex-math><![CDATA[O(n^3)]]></tex-math>
+          <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>O</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:msup><mml:mi>n</mml:mi><mml:mn>3</mml:mn></mml:msup><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+          cost, kernel choice)</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>MC Dropout</bold> and <bold>deep ensembles</bold> as
+      cheaper UQ</p>
+    </list-item>
+    <list-item>
+      <p><bold>Mixture-density networks</bold> for multi-modal
+      predictive distributions</p>
+    </list-item>
+    <list-item>
+      <p><bold>Calibration</bold> plots and recalibration</p>
+    </list-item>
+    <list-item>
+      <p>Choosing a UQ method: comparison table</p>
+    </list-item>
+    <list-item>
+      <p><bold>Active learning</bold> via GP uncertainty (materials
+      acceleration platforms)</p>
     </list-item>
   </list>
 </sec>
@@ -1294,20 +2015,48 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   Trust</title>
   <list list-type="bullet">
     <list-item>
-      <p><bold>Explainable AI (XAI):</bold> Transitioning from black-box
-      to transparent, justifiable decision-making.</p>
+      <p><bold>Why XAI</bold>: from black-box to transparent,
+      justifiable decisions; interpretability vs explainability</p>
     </list-item>
     <list-item>
-      <p><bold>Interpretation Tools:</bold> Sensitivity analysis and
-      deductive reasoning using ontologies.</p>
+      <p><bold>Six levels of explainability (E1–E6)</bold>: data →
+      process → feature → model → prediction → decision</p>
     </list-item>
     <list-item>
-      <p><bold>Causality:</bold> Moving from late detection to early
-      prediction via causal process chains.</p>
+      <p><bold>Semantic structures</bold>: controlled vocabularies,
+      taxonomies, ontologies for materials data</p>
     </list-item>
     <list-item>
-      <p><bold>Limits:</bold> Addressing data bias, extrapolation risks,
-      and AI hallucinations while keeping experts in the loop.</p>
+      <p><bold>Sensitivity analysis</bold>: perturbation-based, global
+      vs local; feature importance from sensitivity</p>
+    </list-item>
+    <list-item>
+      <p><bold>Attribution methods</bold>:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>SHAP</bold> (waterfall, beeswarm)</p>
+        </list-item>
+        <list-item>
+          <p><bold>LIME</bold> (local linear approximation)</p>
+        </list-item>
+        <list-item>
+          <p><bold>Integrated Gradients</bold> for deep networks</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p><bold>Causality vs correlation</bold>: causal process chains;
+      detection vs prediction</p>
+    </list-item>
+    <list-item>
+      <p><bold>Counterfactuals</bold>: “what-if” explanations</p>
+    </list-item>
+    <list-item>
+      <p><bold>Limits</bold>: data bias, extrapolation, OOD detection,
+      fairness — when models should NOT be trusted</p>
+    </list-item>
+    <list-item>
+      <p>Course retrospective: how the 14-unit arc fits together</p>
     </list-item>
   </list>
 </sec>
@@ -1429,11 +2178,17 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>7</td>
-          <td>Generalization, bias?variance, regularization</td>
-          <td>Overfitting control in models (?)</td>
-          <td>Limits of high-D regression (?)</td>
-          <td>Overfitting demo: polynomial vs NN models</td>
-          <td>Critical conceptual gate for both applied courses</td>
+          <td>Generalization, bias-variance, regularization; tree
+          ensembles (RF, gradient boosting)</td>
+          <td>Overfitting control in models (?); RF / XGBoost as
+          workhorses for tabular characterization data (?)</td>
+          <td>Limits of high-D regression (?); tree ensembles for
+          property prediction over tabular materials descriptors
+          (?)</td>
+          <td>Overfitting demo: polynomial vs NN models; tree-ensemble
+          baseline (RF &amp; XGBoost) on alloy regression</td>
+          <td>Critical conceptual gate for both applied courses;
+          introduces the tabular workhorse</td>
         </tr>
         <tr>
           <td>8</td>
@@ -1446,29 +2201,40 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>9</td>
-          <td>Representation learning: learned vs engineered
-          features</td>
-          <td>Feature learning in signals &amp; images (?)</td>
-          <td>Descriptor learning vs hand-crafted features (?)</td>
-          <td>Feature learning with simple NN</td>
-          <td>Transition from classical descriptors</td>
+          <td>Latent spaces &amp; advanced representation learning:
+          t-SNE, UMAP, contrastive learning, foundation embeddings</td>
+          <td>Visualization &amp; quality assessment of learned features
+          (?)</td>
+          <td>Foundation embeddings for materials descriptors (?)</td>
+          <td>t-SNE/UMAP comparison; SimCLR + linear probe on a
+          foundation embedding</td>
+          <td>Critical for both applied courses; sets up modern
+          self-supervised paradigm</td>
         </tr>
         <tr>
           <td>10</td>
-          <td>Latent spaces: autoencoders &amp; embeddings</td>
-          <td>Compression &amp; anomaly detection in processes (?)</td>
-          <td>Latent materials spaces &amp; embeddings (?)</td>
-          <td>Autoencoder with framework (PyTorch/Keras)</td>
-          <td>Core week for Materials Genomics</td>
+          <td>Attention &amp; Transformers: self-attention, multi-head,
+          positional encoding, ViT, foundation models</td>
+          <td>Transformers for sequences and images in characterization
+          (?)</td>
+          <td>Transformers for compositions &amp; sequences (SMILES,
+          crystal tokens) (?)</td>
+          <td>Single-head attention from scratch; tiny ViT vs CNN on a
+          small dataset</td>
+          <td>Architecture behind all modern foundation models</td>
         </tr>
         <tr>
           <td>11</td>
-          <td>Unsupervised learning revisited (objectives, not
-          algorithms)</td>
-          <td>Clustering &amp; process drift detection (?)</td>
-          <td>Clustering vs discovery in materials space (?)</td>
-          <td>Compare clustering vs AE embeddings</td>
-          <td>Students reinterpret known clustering methods</td>
+          <td>Generative Models: VAE &amp; Diffusion (ELBO,
+          reparameterization, forward/reverse process, classifier-free
+          guidance)</td>
+          <td>Generative models for data augmentation &amp; process
+          simulation (?)</td>
+          <td>Inverse design via conditional generation (?)</td>
+          <td>VAE on Fashion-MNIST + toy diffusion model (200-line
+          DDPM)</td>
+          <td>Enables inverse design and modern generative
+          applications</td>
         </tr>
         <tr>
           <td>12</td>
