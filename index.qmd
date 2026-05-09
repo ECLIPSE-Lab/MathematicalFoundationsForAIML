@@ -158,6 +158,9 @@ Tangentially, we also recommend the following books:
 ::: {#refs}
 :::
 ## Week 1 Summary: Learning vs Data Analysis; Models, Loss Functions
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html)
+
 - **Models**: simplified representations for prediction / explanation (white / grey / black-box)
 - **Learning types**: supervised (regression, classification), unsupervised, reinforcement
 - **Empirical risk minimization**: learning as optimization, not statistics
@@ -171,6 +174,9 @@ Tangentially, we also recommend the following books:
 - Frequentist vs Bayesian lenses (set-up for Unit 8)
 
 ## Week 2 Summary: Linear Algebra Refresher; Covariance, PCA/SVD
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html)
+
 - **LA refresher**: vector spaces, basis, rank; column / row / null spaces and identifiability
 - **Projection** geometry; **least squares** as projection onto column space
 - **Condition number** and numerical stability
@@ -184,12 +190,18 @@ Tangentially, we also recommend the following books:
 - **Kernel hint** from inner products (sets up later units)
 
 ## Week 3 Summary: Regression as Loss Minimization
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/03_regression_as_loss_minimization/01_intro.html)
+
 - **Supervised Framework:** Minimizing a cost function (MSE) to find optimal parameters.
 - **Optimization:** Analytical (Ordinary Least Squares) vs. Iterative (Gradient Descent).
 - **Basis Functions:** Expanding linear models to fit non-linear data using transformations (polynomials, splines).
 - **Runge's Phenomenon:** Overfitting risk with high-order global polynomials.
 
 ## Week 4 Summary: Neural Networks — From Neurons to CNNs
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/04_neural_networks_backprop/01_intro.html) · [Backprop self-study](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/04_neural_networks_backprop/02_backprop_self_study.html)
+
 - **Fixed bases** (Fourier / wavelet / polynomial) → motivation for **learned representations**
 - The modern **neuron** and **dense layer**; why non-linear activations are non-negotiable
 - **Universal approximation** vs the parameter explosion of dense layers on images
@@ -202,6 +214,9 @@ Tangentially, we also recommend the following books:
 *Note*: Backpropagation is covered in the self-study supplement `02_backprop_self_study.qmd` appended to this unit.
 
 ## Week 5 Summary: Clustering & Autoencoders
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/05_clustering_and_autoencoders/01_intro.html)
+
 - **K-Means / K-Medoids**: hard clustering by minimizing within-cluster distance
   - Sensitive to initialization (use k-means++); assumes spherical clusters
 - **GMM + EM**: probabilistic clustering with soft assignments
@@ -215,12 +230,18 @@ Tangentially, we also recommend the following books:
 *Note*: Backpropagation has moved to a self-study supplement appended to Unit 4 (`02_backprop_self_study.qmd`); this freed the Unit 5 slot for unsupervised learning.
 
 ## Week 6 Summary: Loss Landscapes & Optimization Behavior
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/06_loss_landscapes_optimization/01_intro.html)
+
 - **Loss Landscape:** High-dimensional topography determining optimization success.
 - **Curvature:** Hessian matrix dictates steepness; ill-conditioned landscapes slow descent.
 - **Saddle Points:** Common traps in high dimensions that hinder optimizers.
 - **Advanced Optimizers:** Momentum and adaptive learning rates (ADAM) navigate complex landscapes robustly.
 
 ## Week 7 Summary: Generalization, Bias-Variance, Regularization, Tree Ensembles
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_generalization_bias_variance/01_intro.html)
+
 - **Generalization**: performance on unseen data
 - **Bias–variance** tradeoff: $\mathrm{MSE} = \mathrm{Bias}^2 + \mathrm{Variance} + \mathrm{noise}$
 - **Regularization**: L2 (Ridge), L1 (Lasso), Dropout
@@ -234,6 +255,9 @@ Tangentially, we also recommend the following books:
 - **Trees vs NNs**: gradient boosting usually wins on tabular data ($N < 10^5$)
 
 ## Week 8 Summary: Probabilistic View of Learning; Noise
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_probabilistic_view_of_learning/01_intro.html)
+
 - **Aleatoric** (irreducible noise) vs **epistemic** (lack of data) uncertainty
 - **Gaussian** as the maximum-entropy distribution; multivariate Gaussian and covariance geometry; **CLT**
 - **Entropy** and **KL divergence**, including KL between Gaussians (used later for VAEs)
@@ -246,6 +270,9 @@ Tangentially, we also recommend the following books:
 - Practical diagnostic: **calibration plots**
 
 ## Week 9 Summary: Latent Spaces & Advanced Representation Learning
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/09_latent_spaces_advanced/01_intro.html)
+
 - What makes a latent space "good"
   - Compactness within concept, separation across concepts
   - Smooth interpolation, transferability
@@ -260,6 +287,9 @@ Tangentially, we also recommend the following books:
   - Linear probe is often the strongest baseline for label-scarce tasks
 
 ## Week 10 Summary: Attention & Transformers
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/10_attention_transformers/01_intro.html)
+
 - Why attention: limits of RNNs / LSTMs for long sequences
 - **Self-attention**: $\mathrm{softmax}(QK^T/\sqrt{d_k})V$
   - Similarity-weighted average of value vectors with content-based weights
@@ -275,6 +305,9 @@ Tangentially, we also recommend the following books:
   - Pretrain at scale, freeze, reuse via embeddings + small heads
 
 ## Week 11 Summary: Generative Models — VAE & Diffusion
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/11_generative_vae_diffusion/01_intro.html)
+
 - **Why generative**: vanilla autoencoders cannot sample new data
 - **VAE**: stochastic encoder produces $\mathcal{N}(\mu, \sigma^2)$
   - Trained on the **ELBO** = reconstruction − KL to a Gaussian prior
@@ -294,6 +327,9 @@ Tangentially, we also recommend the following books:
   - Physics-constrained spectral synthesis
 
 ## Week 12 Summary: Uncertainty in Predictions
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/12_uncertainty_in_predictions/01_intro.html)
+
 - Why point predictions aren't enough; aleatoric vs epistemic recap
 - **Bayesian predictive distribution** and variance decomposition
 - **Evidence framework**: marginal likelihood as automatic Occam's razor; effective number of parameters; empirical Bayes
@@ -308,12 +344,18 @@ Tangentially, we also recommend the following books:
 - **Active learning** via GP uncertainty (materials acceleration platforms)
 
 ## Week 13 Summary: Physics-informed & Constrained Learning
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/13_physics_informed_learning/01_intro.html)
+
 - **PINNs:** Integrating physical laws directly into the loss function to reduce data needs.
 - **Data Enrichment:** Applying known mathematical transformations (FFT, derivatives).
 - **Neural Integrators:** Using NNs with automatic differentiation as flexible differential equation solvers.
 - **Scientific Trust:** Physics constraints act as powerful regularizers promoting Occam's Razor.
 
 ## Week 14 Summary: Explainability, Limits, Scientific Trust
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/14_explainability_limits_trust/01_intro.html)
+
 - **Why XAI**: from black-box to transparent, justifiable decisions; interpretability vs explainability
 - **Six levels of explainability (E1–E6)**: data → process → feature → model → prediction → decision
 - **Semantic structures**: controlled vocabularies, taxonomies, ontologies for materials data

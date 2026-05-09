@@ -262,6 +262,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-1-summary-learning-vs-data-analysis-models-loss-functions">
   <title>3 Week 1 Summary: Learning vs Data Analysis; Models, Loss
   Functions</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Models</bold>: simplified representations for prediction
@@ -308,6 +310,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-2-summary-linear-algebra-refresher-covariance-pcasvd">
   <title>4 Week 2 Summary: Linear Algebra Refresher; Covariance,
   PCA/SVD</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>LA refresher</bold>: vector spaces, basis, rank; column /
@@ -355,6 +359,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </sec>
 <sec id="week-3-summary-regression-as-loss-minimization">
   <title>5 Week 3 Summary: Regression as Loss Minimization</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/03_regression_as_loss_minimization/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Supervised Framework:</bold> Minimizing a cost function
@@ -377,6 +383,11 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-4-summary-neural-networks-from-neurons-to-cnns">
   <title>6 Week 4 Summary: Neural Networks — From Neurons to
   CNNs</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/04_neural_networks_backprop/01_intro.html">Open</ext-link>
+  ·
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/04_neural_networks_backprop/02_backprop_self_study.html">Backprop
+  self-study</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Fixed bases</bold> (Fourier / wavelet / polynomial) →
@@ -419,6 +430,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </sec>
 <sec id="week-5-summary-clustering-autoencoders">
   <title>7 Week 5 Summary: Clustering &amp; Autoencoders</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/05_clustering_and_autoencoders/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>K-Means / K-Medoids</bold>: hard clustering by minimizing
@@ -467,6 +480,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-6-summary-loss-landscapes-optimization-behavior">
   <title>8 Week 6 Summary: Loss Landscapes &amp; Optimization
   Behavior</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/06_loss_landscapes_optimization/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Loss Landscape:</bold> High-dimensional topography
@@ -489,6 +504,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-7-summary-generalization-bias-variance-regularization-tree-ensembles">
   <title>9 Week 7 Summary: Generalization, Bias-Variance,
   Regularization, Tree Ensembles</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_generalization_bias_variance/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Generalization</bold>: performance on unseen data</p>
@@ -545,6 +562,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-8-summary-probabilistic-view-of-learning-noise">
   <title>10 Week 8 Summary: Probabilistic View of Learning;
   Noise</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_probabilistic_view_of_learning/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Aleatoric</bold> (irreducible noise) vs
@@ -591,6 +610,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-9-summary-latent-spaces-advanced-representation-learning">
   <title>11 Week 9 Summary: Latent Spaces &amp; Advanced Representation
   Learning</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/09_latent_spaces_advanced/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p>What makes a latent space “good”</p>
@@ -647,6 +668,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </sec>
 <sec id="week-10-summary-attention-transformers">
   <title>12 Week 10 Summary: Attention &amp; Transformers</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/10_attention_transformers/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p>Why attention: limits of RNNs / LSTMs for long sequences</p>
@@ -711,6 +734,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-11-summary-generative-models-vae-diffusion">
   <title>13 Week 11 Summary: Generative Models — VAE &amp;
   Diffusion</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/11_generative_vae_diffusion/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Why generative</bold>: vanilla autoencoders cannot sample
@@ -795,6 +820,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </sec>
 <sec id="week-12-summary-uncertainty-in-predictions">
   <title>14 Week 12 Summary: Uncertainty in Predictions</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/12_uncertainty_in_predictions/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p>Why point predictions aren’t enough; aleatoric vs epistemic
@@ -850,6 +877,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-13-summary-physics-informed-constrained-learning">
   <title>15 Week 13 Summary: Physics-informed &amp; Constrained
   Learning</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/13_physics_informed_learning/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>PINNs:</bold> Integrating physical laws directly into the
@@ -872,6 +901,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-14-summary-explainability-limits-scientific-trust">
   <title>16 Week 14 Summary: Explainability, Limits, Scientific
   Trust</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/14_explainability_limits_trust/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Why XAI</bold>: from black-box to transparent,
@@ -1403,6 +1434,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-1-summary-learning-vs-data-analysis-models-loss-functions-nb-article">
   <title>3 Week 1 Summary: Learning vs Data Analysis; Models, Loss
   Functions</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/01_learning_vs_data_analysis/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Models</bold>: simplified representations for prediction
@@ -1449,6 +1482,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-2-summary-linear-algebra-refresher-covariance-pcasvd-nb-article">
   <title>4 Week 2 Summary: Linear Algebra Refresher; Covariance,
   PCA/SVD</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/02_linear_algebra_pca_svd/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>LA refresher</bold>: vector spaces, basis, rank; column /
@@ -1496,6 +1531,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </sec>
 <sec id="week-3-summary-regression-as-loss-minimization-nb-article">
   <title>5 Week 3 Summary: Regression as Loss Minimization</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/03_regression_as_loss_minimization/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Supervised Framework:</bold> Minimizing a cost function
@@ -1518,6 +1555,11 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-4-summary-neural-networks-from-neurons-to-cnns-nb-article">
   <title>6 Week 4 Summary: Neural Networks — From Neurons to
   CNNs</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/04_neural_networks_backprop/01_intro.html">Open</ext-link>
+  ·
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/04_neural_networks_backprop/02_backprop_self_study.html">Backprop
+  self-study</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Fixed bases</bold> (Fourier / wavelet / polynomial) →
@@ -1560,6 +1602,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </sec>
 <sec id="week-5-summary-clustering-autoencoders-nb-article">
   <title>7 Week 5 Summary: Clustering &amp; Autoencoders</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/05_clustering_and_autoencoders/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>K-Means / K-Medoids</bold>: hard clustering by minimizing
@@ -1608,6 +1652,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-6-summary-loss-landscapes-optimization-behavior-nb-article">
   <title>8 Week 6 Summary: Loss Landscapes &amp; Optimization
   Behavior</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/06_loss_landscapes_optimization/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Loss Landscape:</bold> High-dimensional topography
@@ -1630,6 +1676,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-7-summary-generalization-bias-variance-regularization-tree-ensembles-nb-article">
   <title>9 Week 7 Summary: Generalization, Bias-Variance,
   Regularization, Tree Ensembles</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_generalization_bias_variance/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Generalization</bold>: performance on unseen data</p>
@@ -1686,6 +1734,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-8-summary-probabilistic-view-of-learning-noise-nb-article">
   <title>10 Week 8 Summary: Probabilistic View of Learning;
   Noise</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_probabilistic_view_of_learning/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Aleatoric</bold> (irreducible noise) vs
@@ -1732,6 +1782,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-9-summary-latent-spaces-advanced-representation-learning-nb-article">
   <title>11 Week 9 Summary: Latent Spaces &amp; Advanced Representation
   Learning</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/09_latent_spaces_advanced/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p>What makes a latent space “good”</p>
@@ -1788,6 +1840,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </sec>
 <sec id="week-10-summary-attention-transformers-nb-article">
   <title>12 Week 10 Summary: Attention &amp; Transformers</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/10_attention_transformers/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p>Why attention: limits of RNNs / LSTMs for long sequences</p>
@@ -1852,6 +1906,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-11-summary-generative-models-vae-diffusion-nb-article">
   <title>13 Week 11 Summary: Generative Models — VAE &amp;
   Diffusion</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/11_generative_vae_diffusion/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Why generative</bold>: vanilla autoencoders cannot sample
@@ -1936,6 +1992,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </sec>
 <sec id="week-12-summary-uncertainty-in-predictions-nb-article">
   <title>14 Week 12 Summary: Uncertainty in Predictions</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/12_uncertainty_in_predictions/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p>Why point predictions aren’t enough; aleatoric vs epistemic
@@ -1991,6 +2049,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-13-summary-physics-informed-constrained-learning-nb-article">
   <title>15 Week 13 Summary: Physics-informed &amp; Constrained
   Learning</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/13_physics_informed_learning/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>PINNs:</bold> Integrating physical laws directly into the
@@ -2013,6 +2073,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="week-14-summary-explainability-limits-scientific-trust-nb-article">
   <title>16 Week 14 Summary: Explainability, Limits, Scientific
   Trust</title>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/14_explainability_limits_trust/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Why XAI</bold>: from black-box to transparent,
