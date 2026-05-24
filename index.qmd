@@ -145,8 +145,8 @@ Tangentially, we also recommend the following books:
 | 4 | Neural networks early: neuron, activations, backprop | Ch. 4.5.1 Neuron; 4.5.3 Activations; 4.5.4 Training | Framework-specific NN sections | Ch. 8 Neural Networks (surrogate perspective) | Ch. 5 §5.1–5.3 NN basics & Backpropagation |
 | 5 | Clustering & Autoencoders | Ch. 5.3 K-Means; Ch. 5.5 Autoencoder | Advanced clustering | Ch. 5 Dimension Reduction | Ch. 9 Mixture Models; Ch. 12.3 Nonlinear PCA |
 | 6 | Loss landscapes & optimization behavior | Ch. 4.4.6 Hyperparameters; Ch. 4.5.5 Optimization | Detailed optimizer variants | Ch. 7 Optimization | Ch. 3 �3.4 Regularization; �3.5 Bayesian view (skim) |
-| 7 | Generalization, bias-variance, regularization, **tree ensembles (RF & gradient boosting)** | Ch. 4.5.9 Overfitting & Cross-Validation | — | Ch. 3 Decision Trees & Random Forests; Ch. 6 Model Selection & Validation | Ch. 3 §3.2 Bias-variance decomposition; Ch. 14 §14.3–14.4 (combining models, bagging, boosting) |
-| 8 | Probabilistic view of learning; noise | Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4 Uncertainty | Bayesian details | Ch. 3 Error and Uncertainty | Ch. 2 �2.1?2.3 Gaussian distributions & moments |
+| 7 | Probabilistic view of learning; noise | Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4 Uncertainty | Bayesian details | Ch. 3 Error and Uncertainty | Ch. 2 �2.1?2.3 Gaussian distributions & moments |
+| 8 | Generalization, bias-variance, regularization, **tree ensembles (RF & gradient boosting)** | Ch. 4.5.9 Overfitting & Cross-Validation | — | Ch. 3 Decision Trees & Random Forests; Ch. 6 Model Selection & Validation | Ch. 3 §3.2 Bias-variance decomposition; Ch. 14 §14.3–14.4 (combining models, bagging, boosting) |
 | 9 | Latent Spaces & Advanced Representation Learning (t-SNE, UMAP, contrastive, foundation embeddings) | Ch. 5.5 Autoencoder (recap) | — | Ch. 5 Dimension Reduction | Ch. 9 §9.1–9.4 mixture models / latent variables; Ch. 12 §12.3 nonlinear latent models |
 |10 | Attention & Transformers (self-attention, multi-head, ViT, foundation models) | — | — | Ch. 8 Neural Networks (context only) | — (covered via @vaswani2017attention, @dosovitskiy2021vit) |
 |11 | Generative Models: VAE & Diffusion (ELBO, reparameterization, forward/reverse process, classifier-free guidance) | Ch. 5.5 AE (foundation for VAE) | — | Ch. 8 Neural Networks (autoencoder context) | Ch. 9 §9.4 EM as ELBO precursor; Ch. 13 §13.3 deep generative perspectives |
@@ -257,14 +257,31 @@ Tangentially, we also recommend the following books:
 ## Week 7: No lecture — Pfingstmontag (25.05.2026, public holiday)
 
 ::: {.callout-warning appearance="simple"}
-**Cancelled** — no MFML lecture takes place on 25.05.2026 (Pfingstmontag public holiday), and the week's exercise is cancelled too. Week 7's planned content (generalization, bias–variance, regularization & tree ensembles) moves to Week 8 (01.06.2026), and every later unit shifts one week later. The closing *Explainability, Limits & Scientific Trust* unit becomes optional reading (listed at the end of the schedule).
+**Cancelled** — no MFML lecture takes place on 25.05.2026 (Pfingstmontag public holiday), and the week's exercise is cancelled too. Every remaining unit shifts one week later (from Week 8 onward), and the closing *Explainability, Limits & Scientific Trust* unit becomes optional reading (listed at the end of the schedule).
 :::
 
-## Week 8 Summary: Generalization, Bias-Variance, Regularization, Tree Ensembles
+## Week 8 Summary: Probabilistic View of Learning; Noise
 
 *Lecture: Monday, 01.06.2026, 10:15-11:45*
 
-**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_generalization_bias_variance/01_intro.html)
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_probabilistic_view_of_learning/01_intro.html)
+
+- **Aleatoric** (irreducible noise) vs **epistemic** (lack of data) uncertainty
+- **Gaussian** as the maximum-entropy distribution; multivariate Gaussian and covariance geometry; **CLT**
+- **Entropy** and **KL divergence**, including KL between Gaussians (used later for VAEs)
+- **MLE**: log-likelihood maximization; for a Gaussian, MLE recovers MSE
+- **Bayes' theorem** workflow: prior · likelihood ∝ posterior; predictive distribution
+- **MAP** estimation; **MAP = regularized MLE**
+- Frequentist vs Bayesian comparison; credible vs confidence intervals
+- **Robustness**: Student's t-distribution mitigates outliers better than Gaussian
+- Stochastic enrichment and **mixture-density networks** (preview of Unit 12)
+- Practical diagnostic: **calibration plots**
+
+## Week 9 Summary: Generalization, Bias-Variance, Regularization, Tree Ensembles
+
+*Lecture: Monday, 08.06.2026, 10:15-11:45*
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_tree_ensembles_tabular/01_intro.html)
 
 - **Generalization**: performance on unseen data
 - **Bias–variance** tradeoff: $\mathrm{MSE} = \mathrm{Bias}^2 + \mathrm{Variance} + \mathrm{noise}$
@@ -277,23 +294,6 @@ Tangentially, we also recommend the following books:
   - → bias reduction
   - XGBoost / LightGBM / CatBoost as the practical workhorses
 - **Trees vs NNs**: gradient boosting usually wins on tabular data ($N < 10^5$)
-
-## Week 9 Summary: Probabilistic View of Learning; Noise
-
-*Lecture: Monday, 08.06.2026, 10:15-11:45*
-
-**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_probabilistic_view_of_learning/01_intro.html)
-
-- **Aleatoric** (irreducible noise) vs **epistemic** (lack of data) uncertainty
-- **Gaussian** as the maximum-entropy distribution; multivariate Gaussian and covariance geometry; **CLT**
-- **Entropy** and **KL divergence**, including KL between Gaussians (used later for VAEs)
-- **MLE**: log-likelihood maximization; for a Gaussian, MLE recovers MSE
-- **Bayes' theorem** workflow: prior · likelihood ∝ posterior; predictive distribution
-- **MAP** estimation; **MAP = regularized MLE**
-- Frequentist vs Bayesian comparison; credible vs confidence intervals
-- **Robustness**: Student's t-distribution mitigates outliers better than Gaussian
-- Stochastic enrichment and **mixture-density networks** (preview of Unit 12)
-- Practical diagnostic: **calibration plots**
 
 ## Week 10 Summary: Latent Spaces & Advanced Representation Learning
 
@@ -426,7 +426,7 @@ Tangentially, we also recommend the following books:
 | 4 | Neural networks early: neuron, activations, backprop | NN regression for materials properties (?) | NN models for structure-property relations (?) | Single-neuron + backprop (manual forward/backward pass) | MFML must precede any NN usage |
 | 5 | Clustering & Autoencoders | Clustering & process drift detection (?) | Clustering vs discovery in materials space (?) | K-Means & simple Autoencoder implementation | MFML supplies unsupervised models |
 | 6 | Loss landscapes, conditioning, optimization behavior | Hyperparameters, robustness, convergence issues (?) | Model robustness & sensitivity (?) | Gradient descent experiments: learning rate & conditioning | Optimization treated as learning dynamics |
-| 7 | **⚠ Pfingsten holiday — no lecture or exercise this week (all three courses; see note below).** MFML's generalization & tree-ensemble unit moves to Week 8 | Overfitting control in models (?); RF / XGBoost as workhorses for tabular characterization data (?) | Limits of high-D regression (?); tree ensembles for property prediction over tabular materials descriptors (?) | Overfitting demo: polynomial vs NN models; tree-ensemble baseline (RF & XGBoost) on alloy regression | Critical conceptual gate for both applied courses; introduces the tabular workhorse |
+| 7 | **⚠ Pfingsten holiday — no lecture or exercise this week (all three courses; see note below).** MFML & ML-PC units shift one week (Week 8 onward) | Overfitting control in models (?); RF / XGBoost as workhorses for tabular characterization data (?) | Limits of high-D regression (?); tree ensembles for property prediction over tabular materials descriptors (?) | Overfitting demo: polynomial vs NN models; tree-ensemble baseline (RF & XGBoost) on alloy regression | Critical conceptual gate for both applied courses; introduces the tabular workhorse |
 | 8 | Probabilistic view of learning: noise & likelihood | Noise-aware modeling & error propagation (?) | Noise & uncertainty in materials datasets (?) | Noise injection; likelihood vs MSE comparison | MFML reframes probability for ML |
 | 9 | Latent spaces & advanced representation learning: t-SNE, UMAP, contrastive learning, foundation embeddings | Visualization & quality assessment of learned features (?) | Foundation embeddings for materials descriptors (?) | t-SNE/UMAP comparison; SimCLR + linear probe on a foundation embedding | Critical for both applied courses; sets up modern self-supervised paradigm |
 | 10 | Attention & Transformers: self-attention, multi-head, positional encoding, ViT, foundation models | Transformers for sequences and images in characterization (?) | Transformers for compositions & sequences (SMILES, crystal tokens) (?) | Single-head attention from scratch; tiny ViT vs CNN on a small dataset | Architecture behind all modern foundation models |
