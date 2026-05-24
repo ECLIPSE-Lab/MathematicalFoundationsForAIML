@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.3">
+<meta name="generator" content="quarto-1.10.5">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Philipp Pelz">
 <meta name="author" content="Stefan Hiemer">
-<meta name="dcterms.date" content="2026-05-13">
+<meta name="dcterms.date" content="2026-05-24">
 <meta name="keywords" content="Machine Learning, Artificial Intelligence, Mathematics, Linear Algebra, Probability, Optimization">
 <meta name="description" content="Lecture materials for Mathematical Foundations of AI &amp; ML, covering core mathematical concepts including linear algebra, probability, optimization, and their applications in machine learning.">
 
@@ -57,10 +57,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cc03a45504bcebdf2e36fbb04c837120.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-58678528f02177bed1400fe3ccbb0fa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-99531da96f133e8d6986ee8266cfdc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -103,10 +103,10 @@ window.Quarto = {
 <meta name="citation_keywords" content="Machine Learning,Artificial Intelligence,Mathematics,Linear Algebra,Probability,Optimization">
 <meta name="citation_author" content="Philipp Pelz">
 <meta name="citation_author" content="Stefan Hiemer">
-<meta name="citation_publication_date" content="2026-05-13">
-<meta name="citation_cover_date" content="2026-05-13">
+<meta name="citation_publication_date" content="2026-05-24">
+<meta name="citation_cover_date" content="2026-05-24">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-05-13">
+<meta name="citation_online_date" content="2026-05-24">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Machine learning for engineers: Using data to solve problems for physical systems;,citation_author=Ryan G.. McClarren;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;">
 <meta name="citation_reference" content="citation_title=Machine learning for engineers: Introduction to physics-informed, explainable learning methods for AI in engineering applications;,citation_author=Marcus J Neuer;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;">
@@ -139,7 +139,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">May 13, 2026</p>
+              <p class="date">May 24, 2026</p>
             </div>
           </div>
           
@@ -175,15 +175,16 @@ window.Quarto = {
   <li><a href="#week-4-summary-neural-networks-from-neurons-to-cnns" id="toc-week-4-summary-neural-networks-from-neurons-to-cnns" class="nav-link" data-scroll-target="#week-4-summary-neural-networks-from-neurons-to-cnns"><span class="header-section-number">6</span> Week 4 Summary: Neural Networks — From Neurons to CNNs</a></li>
   <li><a href="#week-5-summary-clustering-autoencoders" id="toc-week-5-summary-clustering-autoencoders" class="nav-link" data-scroll-target="#week-5-summary-clustering-autoencoders"><span class="header-section-number">7</span> Week 5 Summary: Clustering &amp; Autoencoders</a></li>
   <li><a href="#week-6-summary-loss-landscapes-optimization-behavior" id="toc-week-6-summary-loss-landscapes-optimization-behavior" class="nav-link" data-scroll-target="#week-6-summary-loss-landscapes-optimization-behavior"><span class="header-section-number">8</span> Week 6 Summary: Loss Landscapes &amp; Optimization Behavior</a></li>
-  <li><a href="#week-7-summary-generalization-bias-variance-regularization-tree-ensembles" id="toc-week-7-summary-generalization-bias-variance-regularization-tree-ensembles" class="nav-link" data-scroll-target="#week-7-summary-generalization-bias-variance-regularization-tree-ensembles"><span class="header-section-number">9</span> Week 7 Summary: Generalization, Bias-Variance, Regularization, Tree Ensembles</a></li>
+  <li><a href="#week-7-no-lecture-pfingstmontag-25.05.2026-public-holiday" id="toc-week-7-no-lecture-pfingstmontag-25.05.2026-public-holiday" class="nav-link" data-scroll-target="#week-7-no-lecture-pfingstmontag-25.05.2026-public-holiday"><span class="header-section-number">9</span> Week 7: No lecture — Pfingstmontag (25.05.2026, public holiday)</a></li>
   <li><a href="#week-8-summary-probabilistic-view-of-learning-noise" id="toc-week-8-summary-probabilistic-view-of-learning-noise" class="nav-link" data-scroll-target="#week-8-summary-probabilistic-view-of-learning-noise"><span class="header-section-number">10</span> Week 8 Summary: Probabilistic View of Learning; Noise</a></li>
-  <li><a href="#week-9-summary-latent-spaces-advanced-representation-learning" id="toc-week-9-summary-latent-spaces-advanced-representation-learning" class="nav-link" data-scroll-target="#week-9-summary-latent-spaces-advanced-representation-learning"><span class="header-section-number">11</span> Week 9 Summary: Latent Spaces &amp; Advanced Representation Learning</a></li>
-  <li><a href="#week-10-summary-attention-transformers" id="toc-week-10-summary-attention-transformers" class="nav-link" data-scroll-target="#week-10-summary-attention-transformers"><span class="header-section-number">12</span> Week 10 Summary: Attention &amp; Transformers</a></li>
-  <li><a href="#week-11-summary-generative-models-vae-diffusion" id="toc-week-11-summary-generative-models-vae-diffusion" class="nav-link" data-scroll-target="#week-11-summary-generative-models-vae-diffusion"><span class="header-section-number">13</span> Week 11 Summary: Generative Models — VAE &amp; Diffusion</a></li>
-  <li><a href="#week-12-summary-uncertainty-in-predictions" id="toc-week-12-summary-uncertainty-in-predictions" class="nav-link" data-scroll-target="#week-12-summary-uncertainty-in-predictions"><span class="header-section-number">14</span> Week 12 Summary: Uncertainty in Predictions</a></li>
-  <li><a href="#week-13-summary-physics-informed-constrained-learning" id="toc-week-13-summary-physics-informed-constrained-learning" class="nav-link" data-scroll-target="#week-13-summary-physics-informed-constrained-learning"><span class="header-section-number">15</span> Week 13 Summary: Physics-informed &amp; Constrained Learning</a></li>
-  <li><a href="#week-14-summary-explainability-limits-scientific-trust" id="toc-week-14-summary-explainability-limits-scientific-trust" class="nav-link" data-scroll-target="#week-14-summary-explainability-limits-scientific-trust"><span class="header-section-number">16</span> Week 14 Summary: Explainability, Limits, Scientific Trust</a></li>
-  <li><a href="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" id="toc-mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="nav-link" data-scroll-target="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">17</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</a></li>
+  <li><a href="#week-9-summary-generalization-bias-variance-regularization-tree-ensembles" id="toc-week-9-summary-generalization-bias-variance-regularization-tree-ensembles" class="nav-link" data-scroll-target="#week-9-summary-generalization-bias-variance-regularization-tree-ensembles"><span class="header-section-number">11</span> Week 9 Summary: Generalization, Bias-Variance, Regularization, Tree Ensembles</a></li>
+  <li><a href="#week-10-summary-latent-spaces-advanced-representation-learning" id="toc-week-10-summary-latent-spaces-advanced-representation-learning" class="nav-link" data-scroll-target="#week-10-summary-latent-spaces-advanced-representation-learning"><span class="header-section-number">12</span> Week 10 Summary: Latent Spaces &amp; Advanced Representation Learning</a></li>
+  <li><a href="#week-11-summary-attention-transformers" id="toc-week-11-summary-attention-transformers" class="nav-link" data-scroll-target="#week-11-summary-attention-transformers"><span class="header-section-number">13</span> Week 11 Summary: Attention &amp; Transformers</a></li>
+  <li><a href="#week-12-summary-generative-models-vae-diffusion" id="toc-week-12-summary-generative-models-vae-diffusion" class="nav-link" data-scroll-target="#week-12-summary-generative-models-vae-diffusion"><span class="header-section-number">14</span> Week 12 Summary: Generative Models — VAE &amp; Diffusion</a></li>
+  <li><a href="#week-13-summary-uncertainty-in-predictions" id="toc-week-13-summary-uncertainty-in-predictions" class="nav-link" data-scroll-target="#week-13-summary-uncertainty-in-predictions"><span class="header-section-number">15</span> Week 13 Summary: Uncertainty in Predictions</a></li>
+  <li><a href="#week-14-summary-physics-informed-constrained-learning" id="toc-week-14-summary-physics-informed-constrained-learning" class="nav-link" data-scroll-target="#week-14-summary-physics-informed-constrained-learning"><span class="header-section-number">16</span> Week 14 Summary: Physics-informed &amp; Constrained Learning</a></li>
+  <li><a href="#optional-reading-explainability-limits-scientific-trust" id="toc-optional-reading-explainability-limits-scientific-trust" class="nav-link" data-scroll-target="#optional-reading-explainability-limits-scientific-trust"><span class="header-section-number">17</span> Optional reading: Explainability, Limits &amp; Scientific Trust</a></li>
+  <li><a href="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" id="toc-mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="nav-link" data-scroll-target="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">18</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</a></li>
   </ul>
 <div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/data-screening-preview.html"><i class="bi bi-journal-code"></i>Data Screening</a></li><li><a href="unit05_plan_gemini-preview.html"><i class="bi bi-journal-code"></i>Lecture Plan: Clustering &amp; Autoencoders (Math 05)</a></li></ul></div></nav>
 </div>
@@ -292,6 +293,16 @@ window.Quarto = {
 <li><span class="citation" data-cites="murphy2012machine">Murphy (<a href="#ref-murphy2012machine" role="doc-biblioref">2012</a>)</span>, Machine Learning: A Probabilistic Perspective. MIT Press.</li>
 <li><span class="citation" data-cites="bishop2006pattern">Bishop (<a href="#ref-bishop2006pattern" role="doc-biblioref">2006</a>)</span>, Pattern Recognition and Machine Learning. Springer Science+ Business Media, LLC Berlin, Germany.</li>
 </ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Schedule note:</strong> the reading table below is indexed by <strong>MFML unit</strong> (curriculum order). After the Week-7 (Pfingstmontag, 25.05.2026) cancellation, each unit from Unit 7 onward is delivered one calendar week later — see the weekly schedule above for the actual dates. Unit 14 (Explainability) becomes optional reading.</p>
+</div>
+</div>
+</div>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
@@ -303,7 +314,7 @@ window.Quarto = {
 </colgroup>
 <thead>
 <tr class="header">
-<th>MFML Week</th>
+<th>MFML Unit</th>
 <th>MFML Lecture Focus (Revised)</th>
 <th>Neuer ? Required Reading</th>
 <th>Neuer ? Optional / Skim</th>
@@ -362,19 +373,19 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td>7</td>
-<td>Generalization, bias-variance, regularization, <strong>tree ensembles (RF &amp; gradient boosting)</strong></td>
-<td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
-<td>—</td>
-<td>Ch. 3 Decision Trees &amp; Random Forests; Ch. 6 Model Selection &amp; Validation</td>
-<td>Ch. 3 §3.2 Bias-variance decomposition; Ch. 14 §14.3–14.4 (combining models, bagging, boosting)</td>
-</tr>
-<tr class="even">
-<td>8</td>
 <td>Probabilistic view of learning; noise</td>
 <td>Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4 Uncertainty</td>
 <td>Bayesian details</td>
 <td>Ch. 3 Error and Uncertainty</td>
 <td>Ch. 2 �2.1?2.3 Gaussian distributions &amp; moments</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Generalization, bias-variance, regularization, <strong>tree ensembles (RF &amp; gradient boosting)</strong></td>
+<td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
+<td>—</td>
+<td>Ch. 3 Decision Trees &amp; Random Forests; Ch. 6 Model Selection &amp; Validation</td>
+<td>Ch. 3 §3.2 Bias-variance decomposition; Ch. 14 §14.3–14.4 (combining models, bagging, boosting)</td>
 </tr>
 <tr class="odd">
 <td>9</td>
@@ -418,7 +429,7 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td>14</td>
-<td>Explainability, limits, scientific trust</td>
+<td>Explainability, limits, scientific trust <strong>(optional reading — no scheduled lecture)</strong></td>
 <td>Ch. 7 Explainability (discussion &amp; outlook)</td>
 <td>?</td>
 <td>Ch. 12 Limitations and Outlook</td>
@@ -543,10 +554,40 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Advanced Optimizers:</strong> Momentum and adaptive learning rates (ADAM) navigate complex landscapes robustly.</li>
 </ul>
 </section>
-<section id="week-7-summary-generalization-bias-variance-regularization-tree-ensembles" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="week-7-summary-generalization-bias-variance-regularization-tree-ensembles"><span class="header-section-number">9</span> Week 7 Summary: Generalization, Bias-Variance, Regularization, Tree Ensembles</h2>
-<p><em>Lecture: Monday, 25.05.2026, 10:15-11:45</em></p>
-<p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_generalization_bias_variance/01_intro.html">Open</a></p>
+<section id="week-7-no-lecture-pfingstmontag-25.05.2026-public-holiday" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="week-7-no-lecture-pfingstmontag-25.05.2026-public-holiday"><span class="header-section-number">9</span> Week 7: No lecture — Pfingstmontag (25.05.2026, public holiday)</h2>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Cancelled</strong> — no MFML lecture takes place on 25.05.2026 (Pfingstmontag public holiday), and the week’s exercise is cancelled too. Every remaining unit shifts one week later (from Week 8 onward), and the closing <em>Explainability, Limits &amp; Scientific Trust</em> unit becomes optional reading (listed at the end of the schedule).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="week-8-summary-probabilistic-view-of-learning-noise" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="week-8-summary-probabilistic-view-of-learning-noise"><span class="header-section-number">10</span> Week 8 Summary: Probabilistic View of Learning; Noise</h2>
+<p><em>Lecture: Monday, 01.06.2026, 10:15-11:45</em></p>
+<p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_probabilistic_view_of_learning/01_intro.html">Open</a></p>
+<ul>
+<li><strong>Aleatoric</strong> (irreducible noise) vs <strong>epistemic</strong> (lack of data) uncertainty</li>
+<li><strong>Gaussian</strong> as the maximum-entropy distribution; multivariate Gaussian and covariance geometry; <strong>CLT</strong></li>
+<li><strong>Entropy</strong> and <strong>KL divergence</strong>, including KL between Gaussians (used later for VAEs)</li>
+<li><strong>MLE</strong>: log-likelihood maximization; for a Gaussian, MLE recovers MSE</li>
+<li><strong>Bayes’ theorem</strong> workflow: prior · likelihood ∝ posterior; predictive distribution</li>
+<li><strong>MAP</strong> estimation; <strong>MAP = regularized MLE</strong></li>
+<li>Frequentist vs Bayesian comparison; credible vs confidence intervals</li>
+<li><strong>Robustness</strong>: Student’s t-distribution mitigates outliers better than Gaussian</li>
+<li>Stochastic enrichment and <strong>mixture-density networks</strong> (preview of Unit 12)</li>
+<li>Practical diagnostic: <strong>calibration plots</strong></li>
+</ul>
+</section>
+<section id="week-9-summary-generalization-bias-variance-regularization-tree-ensembles" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="week-9-summary-generalization-bias-variance-regularization-tree-ensembles"><span class="header-section-number">11</span> Week 9 Summary: Generalization, Bias-Variance, Regularization, Tree Ensembles</h2>
+<p><em>Lecture: Monday, 08.06.2026, 10:15-11:45</em></p>
+<p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_tree_ensembles_tabular/01_intro.html">Open</a></p>
 <ul>
 <li><strong>Generalization</strong>: performance on unseen data</li>
 <li><strong>Bias–variance</strong> tradeoff: <span class="math inline">\(\mathrm{MSE} = \mathrm{Bias}^2 + \mathrm{Variance} + \mathrm{noise}\)</span></li>
@@ -567,26 +608,9 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Trees vs NNs</strong>: gradient boosting usually wins on tabular data (<span class="math inline">\(N &lt; 10^5\)</span>)</li>
 </ul>
 </section>
-<section id="week-8-summary-probabilistic-view-of-learning-noise" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="week-8-summary-probabilistic-view-of-learning-noise"><span class="header-section-number">10</span> Week 8 Summary: Probabilistic View of Learning; Noise</h2>
-<p><em>Lecture: Monday, 01.06.2026, 10:15-11:45</em></p>
-<p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_probabilistic_view_of_learning/01_intro.html">Open</a></p>
-<ul>
-<li><strong>Aleatoric</strong> (irreducible noise) vs <strong>epistemic</strong> (lack of data) uncertainty</li>
-<li><strong>Gaussian</strong> as the maximum-entropy distribution; multivariate Gaussian and covariance geometry; <strong>CLT</strong></li>
-<li><strong>Entropy</strong> and <strong>KL divergence</strong>, including KL between Gaussians (used later for VAEs)</li>
-<li><strong>MLE</strong>: log-likelihood maximization; for a Gaussian, MLE recovers MSE</li>
-<li><strong>Bayes’ theorem</strong> workflow: prior · likelihood ∝ posterior; predictive distribution</li>
-<li><strong>MAP</strong> estimation; <strong>MAP = regularized MLE</strong></li>
-<li>Frequentist vs Bayesian comparison; credible vs confidence intervals</li>
-<li><strong>Robustness</strong>: Student’s t-distribution mitigates outliers better than Gaussian</li>
-<li>Stochastic enrichment and <strong>mixture-density networks</strong> (preview of Unit 12)</li>
-<li>Practical diagnostic: <strong>calibration plots</strong></li>
-</ul>
-</section>
-<section id="week-9-summary-latent-spaces-advanced-representation-learning" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="week-9-summary-latent-spaces-advanced-representation-learning"><span class="header-section-number">11</span> Week 9 Summary: Latent Spaces &amp; Advanced Representation Learning</h2>
-<p><em>Lecture: Monday, 08.06.2026, 10:15-11:45</em></p>
+<section id="week-10-summary-latent-spaces-advanced-representation-learning" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="week-10-summary-latent-spaces-advanced-representation-learning"><span class="header-section-number">12</span> Week 10 Summary: Latent Spaces &amp; Advanced Representation Learning</h2>
+<p><em>Lecture: Monday, 15.06.2026, 10:15-11:45</em></p>
 <p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/09_latent_spaces_advanced/01_intro.html">Open</a></p>
 <ul>
 <li>What makes a latent space “good”
@@ -611,9 +635,9 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul></li>
 </ul>
 </section>
-<section id="week-10-summary-attention-transformers" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="week-10-summary-attention-transformers"><span class="header-section-number">12</span> Week 10 Summary: Attention &amp; Transformers</h2>
-<p><em>Lecture: Monday, 15.06.2026, 10:15-11:45</em></p>
+<section id="week-11-summary-attention-transformers" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="week-11-summary-attention-transformers"><span class="header-section-number">13</span> Week 11 Summary: Attention &amp; Transformers</h2>
+<p><em>Lecture: Monday, 22.06.2026, 10:15-11:45</em></p>
 <p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/10_attention_transformers/01_intro.html">Open</a></p>
 <ul>
 <li>Why attention: limits of RNNs / LSTMs for long sequences</li>
@@ -641,9 +665,9 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul></li>
 </ul>
 </section>
-<section id="week-11-summary-generative-models-vae-diffusion" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="week-11-summary-generative-models-vae-diffusion"><span class="header-section-number">13</span> Week 11 Summary: Generative Models — VAE &amp; Diffusion</h2>
-<p><em>Lecture: Monday, 22.06.2026, 10:15-11:45</em></p>
+<section id="week-12-summary-generative-models-vae-diffusion" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="week-12-summary-generative-models-vae-diffusion"><span class="header-section-number">14</span> Week 12 Summary: Generative Models — VAE &amp; Diffusion</h2>
+<p><em>Lecture: Monday, 29.06.2026, 10:15-11:45</em></p>
 <p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/11_generative_vae_diffusion/01_intro.html">Open</a></p>
 <ul>
 <li><strong>Why generative</strong>: vanilla autoencoders cannot sample new data</li>
@@ -673,9 +697,9 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </ul></li>
 </ul>
 </section>
-<section id="week-12-summary-uncertainty-in-predictions" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="week-12-summary-uncertainty-in-predictions"><span class="header-section-number">14</span> Week 12 Summary: Uncertainty in Predictions</h2>
-<p><em>Lecture: Monday, 29.06.2026, 10:15-11:45</em></p>
+<section id="week-13-summary-uncertainty-in-predictions" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="week-13-summary-uncertainty-in-predictions"><span class="header-section-number">15</span> Week 13 Summary: Uncertainty in Predictions</h2>
+<p><em>Lecture: Monday, 06.07.2026, 10:15-11:45</em></p>
 <p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/12_uncertainty_in_predictions/01_intro.html">Open</a></p>
 <ul>
 <li>Why point predictions aren’t enough; aleatoric vs epistemic recap</li>
@@ -694,9 +718,9 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Active learning</strong> via GP uncertainty (materials acceleration platforms)</li>
 </ul>
 </section>
-<section id="week-13-summary-physics-informed-constrained-learning" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="week-13-summary-physics-informed-constrained-learning"><span class="header-section-number">15</span> Week 13 Summary: Physics-informed &amp; Constrained Learning</h2>
-<p><em>Lecture: Monday, 06.07.2026, 10:15-11:45</em></p>
+<section id="week-14-summary-physics-informed-constrained-learning" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="week-14-summary-physics-informed-constrained-learning"><span class="header-section-number">16</span> Week 14 Summary: Physics-informed &amp; Constrained Learning</h2>
+<p><em>Lecture: Monday, 13.07.2026, 10:15-11:45</em></p>
 <p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/13_physics_informed_learning/01_intro.html">Open</a></p>
 <ul>
 <li><strong>PINNs:</strong> Integrating physical laws directly into the loss function to reduce data needs.</li>
@@ -705,9 +729,9 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li><strong>Scientific Trust:</strong> Physics constraints act as powerful regularizers promoting Occam’s Razor.</li>
 </ul>
 </section>
-<section id="week-14-summary-explainability-limits-scientific-trust" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="week-14-summary-explainability-limits-scientific-trust"><span class="header-section-number">16</span> Week 14 Summary: Explainability, Limits, Scientific Trust</h2>
-<p><em>Lecture: Monday, 13.07.2026, 10:15-11:45</em></p>
+<section id="optional-reading-explainability-limits-scientific-trust" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="optional-reading-explainability-limits-scientific-trust"><span class="header-section-number">17</span> Optional reading: Explainability, Limits &amp; Scientific Trust</h2>
+<p><em>No scheduled lecture — this unit moved to optional reading after the Week-7 (Pfingstmontag) cancellation. The slides below remain available for self-study.</em></p>
 <p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/14_explainability_limits_trust/01_intro.html">Open</a></p>
 <ul>
 <li><strong>Why XAI</strong>: from black-box to transparent, justifiable decisions; interpretability vs explainability</li>
@@ -726,8 +750,8 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li>Course retrospective: how the 14-unit arc fits together</li>
 </ul>
 </section>
-<section id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">17</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</h2>
+<section id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">18</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</h2>
 <p><strong>Legend</strong></p>
 <ul>
 <li><strong>?</strong> First serious use ? concept must be introduced in MFML <em>before</em> being used in ML-PC or MG<br>
@@ -812,7 +836,7 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </tr>
 <tr class="odd">
 <td>7</td>
-<td>Generalization, bias-variance, regularization; tree ensembles (RF, gradient boosting)</td>
+<td><strong>⚠ Pfingsten holiday — no lecture or exercise this week (all three courses; see note below).</strong> MFML &amp; ML-PC units shift one week (Week 8 onward)</td>
 <td>Overfitting control in models (?); RF / XGBoost as workhorses for tabular characterization data (?)</td>
 <td>Limits of high-D regression (?); tree ensembles for property prediction over tabular materials descriptors (?)</td>
 <td>Overfitting demo: polynomial vs NN models; tree-ensemble baseline (RF &amp; XGBoost) on alloy regression</td>
@@ -876,6 +900,16 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Week 7 (25–26.05.2026) is cancelled</strong> across all three courses (Pfingstmontag / Pfingstdienstag public holidays) — no lectures and no exercises. MFML and ML-PC shift every later lecture one calendar week (MFML’s <em>Explainability</em> unit becomes optional reading; ML-PC consumes its former Week-14 buffer); Materials Genomics consolidates its Week-7 material into Weeks 6 &amp; 8. The rows above show the topic and dependency sequence — see each course’s weekly schedule for the exact post-holiday dates.</p>
+</div>
+</div>
+</div>
 </section>
 
 </main>

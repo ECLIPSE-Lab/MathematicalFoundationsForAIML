@@ -105,6 +105,15 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       Business Media, LLC Berlin, Germany.</p>
     </list-item>
   </list>
+  <boxed-text>
+  <p><bold>Note</bold></p>
+  <p><bold>Schedule note:</bold> the reading table below is indexed by
+  <bold>MFML unit</bold> (curriculum order). After the Week-7
+  (Pfingstmontag, 25.05.2026) cancellation, each unit from Unit 7 onward
+  is delivered one calendar week later — see the weekly schedule above
+  for the actual dates. Unit 14 (Explainability) becomes optional
+  reading.</p>
+  </boxed-text>
   <table-wrap>
     <table>
       <colgroup>
@@ -117,7 +126,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       </colgroup>
       <thead>
         <tr>
-          <th>MFML Week</th>
+          <th>MFML Unit</th>
           <th>MFML Lecture Focus (Revised)</th>
           <th>Neuer ? Required Reading</th>
           <th>Neuer ? Optional / Skim</th>
@@ -178,6 +187,15 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>7</td>
+          <td>Probabilistic view of learning; noise</td>
+          <td>Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4
+          Uncertainty</td>
+          <td>Bayesian details</td>
+          <td>Ch. 3 Error and Uncertainty</td>
+          <td>Ch. 2 �2.1?2.3 Gaussian distributions &amp; moments</td>
+        </tr>
+        <tr>
+          <td>8</td>
           <td>Generalization, bias-variance, regularization, <bold>tree
           ensembles (RF &amp; gradient boosting)</bold></td>
           <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
@@ -186,15 +204,6 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           Selection &amp; Validation</td>
           <td>Ch. 3 §3.2 Bias-variance decomposition; Ch. 14 §14.3–14.4
           (combining models, bagging, boosting)</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Probabilistic view of learning; noise</td>
-          <td>Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4
-          Uncertainty</td>
-          <td>Bayesian details</td>
-          <td>Ch. 3 Error and Uncertainty</td>
-          <td>Ch. 2 �2.1?2.3 Gaussian distributions &amp; moments</td>
         </tr>
         <tr>
           <td>9</td>
@@ -246,7 +255,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>14</td>
-          <td>Explainability, limits, scientific trust</td>
+          <td>Explainability, limits, scientific trust <bold>(optional
+          reading — no scheduled lecture)</bold></td>
           <td>Ch. 7 Explainability (discussion &amp; outlook)</td>
           <td>?</td>
           <td>Ch. 12 Limitations and Outlook</td>
@@ -507,12 +517,74 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-7-summary-generalization-bias-variance-regularization-tree-ensembles">
-  <title>9 Week 7 Summary: Generalization, Bias-Variance,
-  Regularization, Tree Ensembles</title>
-  <p><italic>Lecture: Monday, 25.05.2026, 10:15-11:45</italic></p>
+<sec id="week-7-no-lecture-pfingstmontag-25.05.2026-public-holiday">
+  <title>9 Week 7: No lecture — Pfingstmontag (25.05.2026, public
+  holiday)</title>
+  <boxed-text>
+  <p><bold>Warning</bold></p>
+  <p><bold>Cancelled</bold> — no MFML lecture takes place on 25.05.2026
+  (Pfingstmontag public holiday), and the week’s exercise is cancelled
+  too. Every remaining unit shifts one week later (from Week 8 onward),
+  and the closing <italic>Explainability, Limits &amp; Scientific
+  Trust</italic> unit becomes optional reading (listed at the end of the
+  schedule).</p>
+  </boxed-text>
+</sec>
+<sec id="week-8-summary-probabilistic-view-of-learning-noise">
+  <title>10 Week 8 Summary: Probabilistic View of Learning;
+  Noise</title>
+  <p><italic>Lecture: Monday, 01.06.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
-  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_generalization_bias_variance/01_intro.html">Open</ext-link></p>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_probabilistic_view_of_learning/01_intro.html">Open</ext-link></p>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Aleatoric</bold> (irreducible noise) vs
+      <bold>epistemic</bold> (lack of data) uncertainty</p>
+    </list-item>
+    <list-item>
+      <p><bold>Gaussian</bold> as the maximum-entropy distribution;
+      multivariate Gaussian and covariance geometry;
+      <bold>CLT</bold></p>
+    </list-item>
+    <list-item>
+      <p><bold>Entropy</bold> and <bold>KL divergence</bold>, including
+      KL between Gaussians (used later for VAEs)</p>
+    </list-item>
+    <list-item>
+      <p><bold>MLE</bold>: log-likelihood maximization; for a Gaussian,
+      MLE recovers MSE</p>
+    </list-item>
+    <list-item>
+      <p><bold>Bayes’ theorem</bold> workflow: prior · likelihood ∝
+      posterior; predictive distribution</p>
+    </list-item>
+    <list-item>
+      <p><bold>MAP</bold> estimation; <bold>MAP = regularized
+      MLE</bold></p>
+    </list-item>
+    <list-item>
+      <p>Frequentist vs Bayesian comparison; credible vs confidence
+      intervals</p>
+    </list-item>
+    <list-item>
+      <p><bold>Robustness</bold>: Student’s t-distribution mitigates
+      outliers better than Gaussian</p>
+    </list-item>
+    <list-item>
+      <p>Stochastic enrichment and <bold>mixture-density networks</bold>
+      (preview of Unit 12)</p>
+    </list-item>
+    <list-item>
+      <p>Practical diagnostic: <bold>calibration plots</bold></p>
+    </list-item>
+  </list>
+</sec>
+<sec id="week-9-summary-generalization-bias-variance-regularization-tree-ensembles">
+  <title>11 Week 9 Summary: Generalization, Bias-Variance,
+  Regularization, Tree Ensembles</title>
+  <p><italic>Lecture: Monday, 08.06.2026, 10:15-11:45</italic></p>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_tree_ensembles_tabular/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Generalization</bold>: performance on unseen data</p>
@@ -566,59 +638,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-8-summary-probabilistic-view-of-learning-noise">
-  <title>10 Week 8 Summary: Probabilistic View of Learning;
-  Noise</title>
-  <p><italic>Lecture: Monday, 01.06.2026, 10:15-11:45</italic></p>
-  <p><bold>Slides:</bold>
-  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_probabilistic_view_of_learning/01_intro.html">Open</ext-link></p>
-  <list list-type="bullet">
-    <list-item>
-      <p><bold>Aleatoric</bold> (irreducible noise) vs
-      <bold>epistemic</bold> (lack of data) uncertainty</p>
-    </list-item>
-    <list-item>
-      <p><bold>Gaussian</bold> as the maximum-entropy distribution;
-      multivariate Gaussian and covariance geometry;
-      <bold>CLT</bold></p>
-    </list-item>
-    <list-item>
-      <p><bold>Entropy</bold> and <bold>KL divergence</bold>, including
-      KL between Gaussians (used later for VAEs)</p>
-    </list-item>
-    <list-item>
-      <p><bold>MLE</bold>: log-likelihood maximization; for a Gaussian,
-      MLE recovers MSE</p>
-    </list-item>
-    <list-item>
-      <p><bold>Bayes’ theorem</bold> workflow: prior · likelihood ∝
-      posterior; predictive distribution</p>
-    </list-item>
-    <list-item>
-      <p><bold>MAP</bold> estimation; <bold>MAP = regularized
-      MLE</bold></p>
-    </list-item>
-    <list-item>
-      <p>Frequentist vs Bayesian comparison; credible vs confidence
-      intervals</p>
-    </list-item>
-    <list-item>
-      <p><bold>Robustness</bold>: Student’s t-distribution mitigates
-      outliers better than Gaussian</p>
-    </list-item>
-    <list-item>
-      <p>Stochastic enrichment and <bold>mixture-density networks</bold>
-      (preview of Unit 12)</p>
-    </list-item>
-    <list-item>
-      <p>Practical diagnostic: <bold>calibration plots</bold></p>
-    </list-item>
-  </list>
-</sec>
-<sec id="week-9-summary-latent-spaces-advanced-representation-learning">
-  <title>11 Week 9 Summary: Latent Spaces &amp; Advanced Representation
+<sec id="week-10-summary-latent-spaces-advanced-representation-learning">
+  <title>12 Week 10 Summary: Latent Spaces &amp; Advanced Representation
   Learning</title>
-  <p><italic>Lecture: Monday, 08.06.2026, 10:15-11:45</italic></p>
+  <p><italic>Lecture: Monday, 15.06.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/09_latent_spaces_advanced/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -675,9 +698,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-10-summary-attention-transformers">
-  <title>12 Week 10 Summary: Attention &amp; Transformers</title>
-  <p><italic>Lecture: Monday, 15.06.2026, 10:15-11:45</italic></p>
+<sec id="week-11-summary-attention-transformers">
+  <title>13 Week 11 Summary: Attention &amp; Transformers</title>
+  <p><italic>Lecture: Monday, 22.06.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/10_attention_transformers/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -741,10 +764,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-11-summary-generative-models-vae-diffusion">
-  <title>13 Week 11 Summary: Generative Models — VAE &amp;
+<sec id="week-12-summary-generative-models-vae-diffusion">
+  <title>14 Week 12 Summary: Generative Models — VAE &amp;
   Diffusion</title>
-  <p><italic>Lecture: Monday, 22.06.2026, 10:15-11:45</italic></p>
+  <p><italic>Lecture: Monday, 29.06.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/11_generative_vae_diffusion/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -829,9 +852,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-12-summary-uncertainty-in-predictions">
-  <title>14 Week 12 Summary: Uncertainty in Predictions</title>
-  <p><italic>Lecture: Monday, 29.06.2026, 10:15-11:45</italic></p>
+<sec id="week-13-summary-uncertainty-in-predictions">
+  <title>15 Week 13 Summary: Uncertainty in Predictions</title>
+  <p><italic>Lecture: Monday, 06.07.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/12_uncertainty_in_predictions/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -886,10 +909,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-13-summary-physics-informed-constrained-learning">
-  <title>15 Week 13 Summary: Physics-informed &amp; Constrained
+<sec id="week-14-summary-physics-informed-constrained-learning">
+  <title>16 Week 14 Summary: Physics-informed &amp; Constrained
   Learning</title>
-  <p><italic>Lecture: Monday, 06.07.2026, 10:15-11:45</italic></p>
+  <p><italic>Lecture: Monday, 13.07.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/13_physics_informed_learning/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -911,10 +934,12 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-14-summary-explainability-limits-scientific-trust">
-  <title>16 Week 14 Summary: Explainability, Limits, Scientific
+<sec id="optional-reading-explainability-limits-scientific-trust">
+  <title>17 Optional reading: Explainability, Limits &amp; Scientific
   Trust</title>
-  <p><italic>Lecture: Monday, 13.07.2026, 10:15-11:45</italic></p>
+  <p><italic>No scheduled lecture — this unit moved to optional reading
+  after the Week-7 (Pfingstmontag) cancellation. The slides below remain
+  available for self-study.</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/14_explainability_limits_trust/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -965,7 +990,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </list>
 </sec>
 <sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg">
-  <title>17 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
+  <title>18 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
   Overview (with ML-PC &amp; MG)</title>
   <p><bold>Legend</bold></p>
   <list list-type="bullet">
@@ -1082,8 +1107,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>7</td>
-          <td>Generalization, bias-variance, regularization; tree
-          ensembles (RF, gradient boosting)</td>
+          <td><bold>⚠ Pfingsten holiday — no lecture or exercise this
+          week (all three courses; see note below).</bold> MFML &amp;
+          ML-PC units shift one week (Week 8 onward)</td>
           <td>Overfitting control in models (?); RF / XGBoost as
           workhorses for tabular characterization data (?)</td>
           <td>Limits of high-D regression (?); tree ensembles for
@@ -1171,6 +1197,17 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       </tbody>
     </table>
   </table-wrap>
+  <boxed-text>
+  <p><bold>Warning</bold></p>
+  <p><bold>Week 7 (25–26.05.2026) is cancelled</bold> across all three
+  courses (Pfingstmontag / Pfingstdienstag public holidays) — no
+  lectures and no exercises. MFML and ML-PC shift every later lecture
+  one calendar week (MFML’s <italic>Explainability</italic> unit becomes
+  optional reading; ML-PC consumes its former Week-14 buffer); Materials
+  Genomics consolidates its Week-7 material into Weeks 6 &amp; 8. The
+  rows above show the topic and dependency sequence — see each course’s
+  weekly schedule for the exact post-holiday dates.</p>
+  </boxed-text>
 </sec>
 </body>
 
@@ -1291,6 +1328,17 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       Business Media, LLC Berlin, Germany.</p>
     </list-item>
   </list>
+  <boxed-text>
+    <disp-quote>
+      <p><bold>Note</bold></p>
+      <p><bold>Schedule note:</bold> the reading table below is indexed
+      by <bold>MFML unit</bold> (curriculum order). After the Week-7
+      (Pfingstmontag, 25.05.2026) cancellation, each unit from Unit 7
+      onward is delivered one calendar week later — see the weekly
+      schedule above for the actual dates. Unit 14 (Explainability)
+      becomes optional reading.</p>
+    </disp-quote>
+  </boxed-text>
   <table-wrap>
     <table>
       <colgroup>
@@ -1303,7 +1351,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       </colgroup>
       <thead>
         <tr>
-          <th>MFML Week</th>
+          <th>MFML Unit</th>
           <th>MFML Lecture Focus (Revised)</th>
           <th>Neuer ? Required Reading</th>
           <th>Neuer ? Optional / Skim</th>
@@ -1364,6 +1412,15 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>7</td>
+          <td>Probabilistic view of learning; noise</td>
+          <td>Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4
+          Uncertainty</td>
+          <td>Bayesian details</td>
+          <td>Ch. 3 Error and Uncertainty</td>
+          <td>Ch. 2 �2.1?2.3 Gaussian distributions &amp; moments</td>
+        </tr>
+        <tr>
+          <td>8</td>
           <td>Generalization, bias-variance, regularization, <bold>tree
           ensembles (RF &amp; gradient boosting)</bold></td>
           <td>Ch. 4.5.9 Overfitting &amp; Cross-Validation</td>
@@ -1372,15 +1429,6 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
           Selection &amp; Validation</td>
           <td>Ch. 3 §3.2 Bias-variance decomposition; Ch. 14 §14.3–14.4
           (combining models, bagging, boosting)</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Probabilistic view of learning; noise</td>
-          <td>Ch. 2.2 Distinguishing Uncertainties; Ch. 6.4
-          Uncertainty</td>
-          <td>Bayesian details</td>
-          <td>Ch. 3 Error and Uncertainty</td>
-          <td>Ch. 2 �2.1?2.3 Gaussian distributions &amp; moments</td>
         </tr>
         <tr>
           <td>9</td>
@@ -1432,7 +1480,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>14</td>
-          <td>Explainability, limits, scientific trust</td>
+          <td>Explainability, limits, scientific trust <bold>(optional
+          reading — no scheduled lecture)</bold></td>
           <td>Ch. 7 Explainability (discussion &amp; outlook)</td>
           <td>?</td>
           <td>Ch. 12 Limitations and Outlook</td>
@@ -1693,12 +1742,76 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-7-summary-generalization-bias-variance-regularization-tree-ensembles-nb-article">
-  <title>9 Week 7 Summary: Generalization, Bias-Variance,
-  Regularization, Tree Ensembles</title>
-  <p><italic>Lecture: Monday, 25.05.2026, 10:15-11:45</italic></p>
+<sec id="week-7-no-lecture-pfingstmontag-25.05.2026-public-holiday-nb-article">
+  <title>9 Week 7: No lecture — Pfingstmontag (25.05.2026, public
+  holiday)</title>
+  <boxed-text>
+    <disp-quote>
+      <p><bold>Warning</bold></p>
+      <p><bold>Cancelled</bold> — no MFML lecture takes place on
+      25.05.2026 (Pfingstmontag public holiday), and the week’s exercise
+      is cancelled too. Every remaining unit shifts one week later (from
+      Week 8 onward), and the closing <italic>Explainability, Limits
+      &amp; Scientific Trust</italic> unit becomes optional reading
+      (listed at the end of the schedule).</p>
+    </disp-quote>
+  </boxed-text>
+</sec>
+<sec id="week-8-summary-probabilistic-view-of-learning-noise-nb-article">
+  <title>10 Week 8 Summary: Probabilistic View of Learning;
+  Noise</title>
+  <p><italic>Lecture: Monday, 01.06.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
-  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_generalization_bias_variance/01_intro.html">Open</ext-link></p>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/07_probabilistic_view_of_learning/01_intro.html">Open</ext-link></p>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Aleatoric</bold> (irreducible noise) vs
+      <bold>epistemic</bold> (lack of data) uncertainty</p>
+    </list-item>
+    <list-item>
+      <p><bold>Gaussian</bold> as the maximum-entropy distribution;
+      multivariate Gaussian and covariance geometry;
+      <bold>CLT</bold></p>
+    </list-item>
+    <list-item>
+      <p><bold>Entropy</bold> and <bold>KL divergence</bold>, including
+      KL between Gaussians (used later for VAEs)</p>
+    </list-item>
+    <list-item>
+      <p><bold>MLE</bold>: log-likelihood maximization; for a Gaussian,
+      MLE recovers MSE</p>
+    </list-item>
+    <list-item>
+      <p><bold>Bayes’ theorem</bold> workflow: prior · likelihood ∝
+      posterior; predictive distribution</p>
+    </list-item>
+    <list-item>
+      <p><bold>MAP</bold> estimation; <bold>MAP = regularized
+      MLE</bold></p>
+    </list-item>
+    <list-item>
+      <p>Frequentist vs Bayesian comparison; credible vs confidence
+      intervals</p>
+    </list-item>
+    <list-item>
+      <p><bold>Robustness</bold>: Student’s t-distribution mitigates
+      outliers better than Gaussian</p>
+    </list-item>
+    <list-item>
+      <p>Stochastic enrichment and <bold>mixture-density networks</bold>
+      (preview of Unit 12)</p>
+    </list-item>
+    <list-item>
+      <p>Practical diagnostic: <bold>calibration plots</bold></p>
+    </list-item>
+  </list>
+</sec>
+<sec id="week-9-summary-generalization-bias-variance-regularization-tree-ensembles-nb-article">
+  <title>11 Week 9 Summary: Generalization, Bias-Variance,
+  Regularization, Tree Ensembles</title>
+  <p><italic>Lecture: Monday, 08.06.2026, 10:15-11:45</italic></p>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_tree_ensembles_tabular/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
       <p><bold>Generalization</bold>: performance on unseen data</p>
@@ -1752,59 +1865,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-8-summary-probabilistic-view-of-learning-noise-nb-article">
-  <title>10 Week 8 Summary: Probabilistic View of Learning;
-  Noise</title>
-  <p><italic>Lecture: Monday, 01.06.2026, 10:15-11:45</italic></p>
-  <p><bold>Slides:</bold>
-  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/08_probabilistic_view_of_learning/01_intro.html">Open</ext-link></p>
-  <list list-type="bullet">
-    <list-item>
-      <p><bold>Aleatoric</bold> (irreducible noise) vs
-      <bold>epistemic</bold> (lack of data) uncertainty</p>
-    </list-item>
-    <list-item>
-      <p><bold>Gaussian</bold> as the maximum-entropy distribution;
-      multivariate Gaussian and covariance geometry;
-      <bold>CLT</bold></p>
-    </list-item>
-    <list-item>
-      <p><bold>Entropy</bold> and <bold>KL divergence</bold>, including
-      KL between Gaussians (used later for VAEs)</p>
-    </list-item>
-    <list-item>
-      <p><bold>MLE</bold>: log-likelihood maximization; for a Gaussian,
-      MLE recovers MSE</p>
-    </list-item>
-    <list-item>
-      <p><bold>Bayes’ theorem</bold> workflow: prior · likelihood ∝
-      posterior; predictive distribution</p>
-    </list-item>
-    <list-item>
-      <p><bold>MAP</bold> estimation; <bold>MAP = regularized
-      MLE</bold></p>
-    </list-item>
-    <list-item>
-      <p>Frequentist vs Bayesian comparison; credible vs confidence
-      intervals</p>
-    </list-item>
-    <list-item>
-      <p><bold>Robustness</bold>: Student’s t-distribution mitigates
-      outliers better than Gaussian</p>
-    </list-item>
-    <list-item>
-      <p>Stochastic enrichment and <bold>mixture-density networks</bold>
-      (preview of Unit 12)</p>
-    </list-item>
-    <list-item>
-      <p>Practical diagnostic: <bold>calibration plots</bold></p>
-    </list-item>
-  </list>
-</sec>
-<sec id="week-9-summary-latent-spaces-advanced-representation-learning-nb-article">
-  <title>11 Week 9 Summary: Latent Spaces &amp; Advanced Representation
+<sec id="week-10-summary-latent-spaces-advanced-representation-learning-nb-article">
+  <title>12 Week 10 Summary: Latent Spaces &amp; Advanced Representation
   Learning</title>
-  <p><italic>Lecture: Monday, 08.06.2026, 10:15-11:45</italic></p>
+  <p><italic>Lecture: Monday, 15.06.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/09_latent_spaces_advanced/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -1861,9 +1925,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-10-summary-attention-transformers-nb-article">
-  <title>12 Week 10 Summary: Attention &amp; Transformers</title>
-  <p><italic>Lecture: Monday, 15.06.2026, 10:15-11:45</italic></p>
+<sec id="week-11-summary-attention-transformers-nb-article">
+  <title>13 Week 11 Summary: Attention &amp; Transformers</title>
+  <p><italic>Lecture: Monday, 22.06.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/10_attention_transformers/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -1927,10 +1991,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-11-summary-generative-models-vae-diffusion-nb-article">
-  <title>13 Week 11 Summary: Generative Models — VAE &amp;
+<sec id="week-12-summary-generative-models-vae-diffusion-nb-article">
+  <title>14 Week 12 Summary: Generative Models — VAE &amp;
   Diffusion</title>
-  <p><italic>Lecture: Monday, 22.06.2026, 10:15-11:45</italic></p>
+  <p><italic>Lecture: Monday, 29.06.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/11_generative_vae_diffusion/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -2015,9 +2079,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-12-summary-uncertainty-in-predictions-nb-article">
-  <title>14 Week 12 Summary: Uncertainty in Predictions</title>
-  <p><italic>Lecture: Monday, 29.06.2026, 10:15-11:45</italic></p>
+<sec id="week-13-summary-uncertainty-in-predictions-nb-article">
+  <title>15 Week 13 Summary: Uncertainty in Predictions</title>
+  <p><italic>Lecture: Monday, 06.07.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/12_uncertainty_in_predictions/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -2072,10 +2136,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-13-summary-physics-informed-constrained-learning-nb-article">
-  <title>15 Week 13 Summary: Physics-informed &amp; Constrained
+<sec id="week-14-summary-physics-informed-constrained-learning-nb-article">
+  <title>16 Week 14 Summary: Physics-informed &amp; Constrained
   Learning</title>
-  <p><italic>Lecture: Monday, 06.07.2026, 10:15-11:45</italic></p>
+  <p><italic>Lecture: Monday, 13.07.2026, 10:15-11:45</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/13_physics_informed_learning/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -2097,10 +2161,12 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
-<sec id="week-14-summary-explainability-limits-scientific-trust-nb-article">
-  <title>16 Week 14 Summary: Explainability, Limits, Scientific
+<sec id="optional-reading-explainability-limits-scientific-trust-nb-article">
+  <title>17 Optional reading: Explainability, Limits &amp; Scientific
   Trust</title>
-  <p><italic>Lecture: Monday, 13.07.2026, 10:15-11:45</italic></p>
+  <p><italic>No scheduled lecture — this unit moved to optional reading
+  after the Week-7 (Pfingstmontag) cancellation. The slides below remain
+  available for self-study.</italic></p>
   <p><bold>Slides:</bold>
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/14_explainability_limits_trust/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
@@ -2151,7 +2217,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   </list>
 </sec>
 <sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg-nb-article">
-  <title>17 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
+  <title>18 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
   Overview (with ML-PC &amp; MG)</title>
   <p><bold>Legend</bold></p>
   <list list-type="bullet">
@@ -2268,8 +2334,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
         </tr>
         <tr>
           <td>7</td>
-          <td>Generalization, bias-variance, regularization; tree
-          ensembles (RF, gradient boosting)</td>
+          <td><bold>⚠ Pfingsten holiday — no lecture or exercise this
+          week (all three courses; see note below).</bold> MFML &amp;
+          ML-PC units shift one week (Week 8 onward)</td>
           <td>Overfitting control in models (?); RF / XGBoost as
           workhorses for tabular characterization data (?)</td>
           <td>Limits of high-D regression (?); tree ensembles for
@@ -2357,6 +2424,20 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       </tbody>
     </table>
   </table-wrap>
+  <boxed-text>
+    <disp-quote>
+      <p><bold>Warning</bold></p>
+      <p><bold>Week 7 (25–26.05.2026) is cancelled</bold> across all
+      three courses (Pfingstmontag / Pfingstdienstag public holidays) —
+      no lectures and no exercises. MFML and ML-PC shift every later
+      lecture one calendar week (MFML’s <italic>Explainability</italic>
+      unit becomes optional reading; ML-PC consumes its former Week-14
+      buffer); Materials Genomics consolidates its Week-7 material into
+      Weeks 6 &amp; 8. The rows above show the topic and dependency
+      sequence — see each course’s weekly schedule for the exact
+      post-holiday dates.</p>
+    </disp-quote>
+  </boxed-text>
 </sec>
 </body>
 
