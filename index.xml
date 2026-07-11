@@ -917,20 +917,53 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/13_physics_informed_learning/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
-      <p><bold>PINNs:</bold> Integrating physical laws directly into the
-      loss function to reduce data needs.</p>
+      <p><bold>The PIML spectrum:</bold> four ways to inject physics —
+      data enrichment → loss penalties → architecture → hybrid
+      solvers</p>
     </list-item>
     <list-item>
-      <p><bold>Data Enrichment:</bold> Applying known mathematical
-      transformations (FFT, derivatives).</p>
+      <p><bold>Recap (first half):</bold> physics as regularization;
+      data enrichment (FFT, derivatives); automatic differentiation for
+      input derivatives; the PINN loss <inline-formula><alternatives>
+      <tex-math><![CDATA[J = J_{\text{data}} + \lambda J_{\text{physics}}]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>J</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mi>J</mml:mi><mml:mtext mathvariant="normal">data</mml:mtext></mml:msub><mml:mo>+</mml:mo><mml:mi>λ</mml:mi><mml:msub><mml:mi>J</mml:mi><mml:mtext mathvariant="normal">physics</mml:mtext></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+      collocation points, and the role of <inline-formula><alternatives>
+      <tex-math><![CDATA[\lambda]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula></p>
     </list-item>
     <list-item>
-      <p><bold>Neural Integrators:</bold> Using NNs with automatic
-      differentiation as flexible differential equation solvers.</p>
+      <p><bold>PINN failure modes:</bold> wrong physics,
+      convection-dominated problems, gradient pathologies</p>
     </list-item>
     <list-item>
-      <p><bold>Scientific Trust:</bold> Physics constraints act as
-      powerful regularizers promoting Occam’s Razor.</p>
+      <p><bold>New math (second half):</bold></p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Boundary conditions: soft (penalty) vs <bold>hard
+          enforcement via the Lagaris substitution</bold>
+          <inline-formula><alternatives>
+          <tex-math><![CDATA[f(x) = A(x) + B(x)\,\mathrm{NN}(x)]]></tex-math>
+          <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>f</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mo>=</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mo>+</mml:mo><mml:mi>B</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mspace width="0.167em"></mml:mspace><mml:mrow><mml:mi mathvariant="normal">N</mml:mi><mml:mi mathvariant="normal">N</mml:mi></mml:mrow><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+          with a worked example</p>
+        </list-item>
+        <list-item>
+          <p>Why physics helps small data: the Occam’s razor / MDL
+          view</p>
+        </list-item>
+        <list-item>
+          <p>Physics in the <bold>architecture</bold>: Hamiltonian NNs
+          and group equivariance — constraints
+          <italic>guaranteed</italic> by construction vs
+          <italic>requested</italic> by the loss</p>
+        </list-item>
+        <list-item>
+          <p><bold>Neural operators</bold>: DeepONet and Fourier Neural
+          Operators for learning solution operators</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p>Exam summary: ten statements you should be able to defend</p>
     </list-item>
   </list>
 </sec>
@@ -989,8 +1022,89 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
+<sec id="appendix-algorithm-compendium-pseudocode-reference">
+  <title>18 Appendix: Algorithm Compendium — Pseudocode
+  Reference</title>
+  <p><italic>Self-study reference deck — one pseudocode slide per
+  algorithm, tagged with the unit that derives it. Exam bar: be able to
+  write each algorithm from memory and state its classic
+  pitfall.</italic></p>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/15_algorithm_compendium/01_intro.html">Open</ext-link></p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Each slide: <bold>Input/Output header, numbered steps</bold>,
+      one line <italic>why it works</italic>, one <italic>classic
+      pitfall</italic>; notation follows the lectures
+      (<inline-formula><alternatives>
+      <tex-math><![CDATA[\boldsymbol{\theta}, \mathbf{w}]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>𝛉</mml:mi><mml:mo>,</mml:mo><mml:mi>𝐰</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+      parameters, <inline-formula><alternatives>
+      <tex-math><![CDATA[\eta]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>η</mml:mi></mml:math></alternatives></inline-formula>
+      learning rate, <inline-formula><alternatives>
+      <tex-math><![CDATA[\lambda]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
+      regularization weight)</p>
+    </list-item>
+    <list-item>
+      <p><bold>Coverage by unit:</bold></p>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Unit 1:</bold> data splitting &amp; k-fold
+          cross-validation</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 2:</bold> OLS/ridge, PCA via SVD</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 3:</bold> GD/SGD, Newton’s method, logistic
+          regression</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 4:</bold> MLP forward pass, backpropagation, 2D
+          convolution</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 5:</bold> k-means, EM for GMM, autoencoder</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 6:</bold> momentum/Nesterov, AdaGrad</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 7:</bold> MLE/MAP</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 8:</bold> CART, random forest, gradient
+          boosting, permutation importance</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 9:</bold> t-SNE, UMAP, SimCLR</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 10:</bold> attention, multi-head, transformer
+          block, ViT</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 11:</bold> VAE, DDPM training, sampling +
+          guidance</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 12:</bold> GP regression, ensembles/MC dropout,
+          calibration, EI</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 13:</bold> PINN, Lagaris substitution</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 14:</bold> sensitivity analysis</p>
+        </list-item>
+      </list>
+    </list-item>
+  </list>
+</sec>
 <sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg">
-  <title>18 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
+  <title>19 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
   Overview (with ML-PC &amp; MG)</title>
   <p><bold>Legend</bold></p>
   <list list-type="bullet">
@@ -2144,20 +2258,53 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/13_physics_informed_learning/01_intro.html">Open</ext-link></p>
   <list list-type="bullet">
     <list-item>
-      <p><bold>PINNs:</bold> Integrating physical laws directly into the
-      loss function to reduce data needs.</p>
+      <p><bold>The PIML spectrum:</bold> four ways to inject physics —
+      data enrichment → loss penalties → architecture → hybrid
+      solvers</p>
     </list-item>
     <list-item>
-      <p><bold>Data Enrichment:</bold> Applying known mathematical
-      transformations (FFT, derivatives).</p>
+      <p><bold>Recap (first half):</bold> physics as regularization;
+      data enrichment (FFT, derivatives); automatic differentiation for
+      input derivatives; the PINN loss <inline-formula><alternatives>
+      <tex-math><![CDATA[J = J_{\text{data}} + \lambda J_{\text{physics}}]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>J</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mi>J</mml:mi><mml:mtext mathvariant="normal">data</mml:mtext></mml:msub><mml:mo>+</mml:mo><mml:mi>λ</mml:mi><mml:msub><mml:mi>J</mml:mi><mml:mtext mathvariant="normal">physics</mml:mtext></mml:msub></mml:mrow></mml:math></alternatives></inline-formula>,
+      collocation points, and the role of <inline-formula><alternatives>
+      <tex-math><![CDATA[\lambda]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula></p>
     </list-item>
     <list-item>
-      <p><bold>Neural Integrators:</bold> Using NNs with automatic
-      differentiation as flexible differential equation solvers.</p>
+      <p><bold>PINN failure modes:</bold> wrong physics,
+      convection-dominated problems, gradient pathologies</p>
     </list-item>
     <list-item>
-      <p><bold>Scientific Trust:</bold> Physics constraints act as
-      powerful regularizers promoting Occam’s Razor.</p>
+      <p><bold>New math (second half):</bold></p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Boundary conditions: soft (penalty) vs <bold>hard
+          enforcement via the Lagaris substitution</bold>
+          <inline-formula><alternatives>
+          <tex-math><![CDATA[f(x) = A(x) + B(x)\,\mathrm{NN}(x)]]></tex-math>
+          <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>f</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mo>=</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mo>+</mml:mo><mml:mi>B</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mspace width="0.167em"></mml:mspace><mml:mrow><mml:mi mathvariant="normal">N</mml:mi><mml:mi mathvariant="normal">N</mml:mi></mml:mrow><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>,
+          with a worked example</p>
+        </list-item>
+        <list-item>
+          <p>Why physics helps small data: the Occam’s razor / MDL
+          view</p>
+        </list-item>
+        <list-item>
+          <p>Physics in the <bold>architecture</bold>: Hamiltonian NNs
+          and group equivariance — constraints
+          <italic>guaranteed</italic> by construction vs
+          <italic>requested</italic> by the loss</p>
+        </list-item>
+        <list-item>
+          <p><bold>Neural operators</bold>: DeepONet and Fourier Neural
+          Operators for learning solution operators</p>
+        </list-item>
+      </list>
+    </list-item>
+    <list-item>
+      <p>Exam summary: ten statements you should be able to defend</p>
     </list-item>
   </list>
 </sec>
@@ -2216,8 +2363,89 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
     </list-item>
   </list>
 </sec>
+<sec id="appendix-algorithm-compendium-pseudocode-reference-nb-article">
+  <title>18 Appendix: Algorithm Compendium — Pseudocode
+  Reference</title>
+  <p><italic>Self-study reference deck — one pseudocode slide per
+  algorithm, tagged with the unit that derives it. Exam bar: be able to
+  write each algorithm from memory and state its classic
+  pitfall.</italic></p>
+  <p><bold>Slides:</bold>
+  <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/15_algorithm_compendium/01_intro.html">Open</ext-link></p>
+  <list list-type="bullet">
+    <list-item>
+      <p>Each slide: <bold>Input/Output header, numbered steps</bold>,
+      one line <italic>why it works</italic>, one <italic>classic
+      pitfall</italic>; notation follows the lectures
+      (<inline-formula><alternatives>
+      <tex-math><![CDATA[\boldsymbol{\theta}, \mathbf{w}]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>𝛉</mml:mi><mml:mo>,</mml:mo><mml:mi>𝐰</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+      parameters, <inline-formula><alternatives>
+      <tex-math><![CDATA[\eta]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>η</mml:mi></mml:math></alternatives></inline-formula>
+      learning rate, <inline-formula><alternatives>
+      <tex-math><![CDATA[\lambda]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
+      regularization weight)</p>
+    </list-item>
+    <list-item>
+      <p><bold>Coverage by unit:</bold></p>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Unit 1:</bold> data splitting &amp; k-fold
+          cross-validation</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 2:</bold> OLS/ridge, PCA via SVD</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 3:</bold> GD/SGD, Newton’s method, logistic
+          regression</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 4:</bold> MLP forward pass, backpropagation, 2D
+          convolution</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 5:</bold> k-means, EM for GMM, autoencoder</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 6:</bold> momentum/Nesterov, AdaGrad</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 7:</bold> MLE/MAP</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 8:</bold> CART, random forest, gradient
+          boosting, permutation importance</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 9:</bold> t-SNE, UMAP, SimCLR</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 10:</bold> attention, multi-head, transformer
+          block, ViT</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 11:</bold> VAE, DDPM training, sampling +
+          guidance</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 12:</bold> GP regression, ensembles/MC dropout,
+          calibration, EI</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 13:</bold> PINN, Lagaris substitution</p>
+        </list-item>
+        <list-item>
+          <p><bold>Unit 14:</bold> sensitivity analysis</p>
+        </list-item>
+      </list>
+    </list-item>
+  </list>
+</sec>
 <sec id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg-nb-article">
-  <title>18 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
+  <title>19 Mathematical Foundations of AI &amp; ML ? Unified Syllabus
   Overview (with ML-PC &amp; MG)</title>
   <p><bold>Legend</bold></p>
   <list list-type="bullet">

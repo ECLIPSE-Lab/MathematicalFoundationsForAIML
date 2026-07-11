@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.10.5">
+    <meta name="generator" content="quarto-1.10.14">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
     <meta name="author" content="Philipp Pelz">
     <meta name="author" content="Stefan Hiemer">
-    <meta name="dcterms.date" content="2026-05-24">
+    <meta name="dcterms.date" content="2026-07-11">
     <meta name="keywords" content="Machine Learning, Artificial Intelligence, Mathematics, Linear Algebra, Probability, Optimization">
     <meta name="description" content="Lecture materials for Mathematical Foundations of AI &amp; ML, covering core mathematical concepts including linear algebra, probability, optimization, and their applications in machine learning.">
 
@@ -146,10 +146,10 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cc03a45504bcebdf2e36fbb04c837120.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cd20848ca02fc76d36aef2d89ed0b5fd.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-99531da96f133e8d6986ee8266cfdc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b36586e2ee45e68bffb8ad2fbc8df37f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
      <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -161,10 +161,10 @@
 <meta name="citation_keywords" content="Machine Learning,Artificial Intelligence,Mathematics,Linear Algebra,Probability,Optimization">
 <meta name="citation_author" content="Philipp Pelz">
 <meta name="citation_author" content="Stefan Hiemer">
-<meta name="citation_publication_date" content="2026-05-24">
-<meta name="citation_cover_date" content="2026-05-24">
+<meta name="citation_publication_date" content="2026-07-11">
+<meta name="citation_cover_date" content="2026-07-11">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-05-24">
+<meta name="citation_online_date" content="2026-07-11">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Machine learning for engineers: Using data to solve problems for physical systems;,citation_author=Ryan G.. McClarren;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;">
 <meta name="citation_reference" content="citation_title=Machine learning for engineers: Introduction to physics-informed, explainable learning methods for AI in engineering applications;,citation_author=Marcus J Neuer;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;">
@@ -204,7 +204,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">May 24, 2026</p>
+              <p class="date">July 11, 2026</p>
             </div>
           </div>
           
@@ -249,7 +249,8 @@
   <li><a href="#week-13-summary-uncertainty-in-predictions" id="toc-week-13-summary-uncertainty-in-predictions" class="nav-link" data-scroll-target="#week-13-summary-uncertainty-in-predictions"><span class="header-section-number">15</span> Week 13 Summary: Uncertainty in Predictions</a></li>
   <li><a href="#week-14-summary-physics-informed-constrained-learning" id="toc-week-14-summary-physics-informed-constrained-learning" class="nav-link" data-scroll-target="#week-14-summary-physics-informed-constrained-learning"><span class="header-section-number">16</span> Week 14 Summary: Physics-informed &amp; Constrained Learning</a></li>
   <li><a href="#optional-reading-explainability-limits-scientific-trust" id="toc-optional-reading-explainability-limits-scientific-trust" class="nav-link" data-scroll-target="#optional-reading-explainability-limits-scientific-trust"><span class="header-section-number">17</span> Optional reading: Explainability, Limits &amp; Scientific Trust</a></li>
-  <li><a href="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" id="toc-mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="nav-link" data-scroll-target="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">18</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</a></li>
+  <li><a href="#appendix-algorithm-compendium-pseudocode-reference" id="toc-appendix-algorithm-compendium-pseudocode-reference" class="nav-link" data-scroll-target="#appendix-algorithm-compendium-pseudocode-reference"><span class="header-section-number">18</span> Appendix: Algorithm Compendium — Pseudocode Reference</a></li>
+  <li><a href="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" id="toc-mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="nav-link" data-scroll-target="#mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">19</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</a></li>
   </ul>
 </nav>
 </div>
@@ -783,10 +784,17 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <p><em>Lecture: Monday, 13.07.2026, 10:15-11:45</em></p>
 <p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/13_physics_informed_learning/01_intro.html">Open</a></p>
 <ul>
-<li><strong>PINNs:</strong> Integrating physical laws directly into the loss function to reduce data needs.</li>
-<li><strong>Data Enrichment:</strong> Applying known mathematical transformations (FFT, derivatives).</li>
-<li><strong>Neural Integrators:</strong> Using NNs with automatic differentiation as flexible differential equation solvers.</li>
-<li><strong>Scientific Trust:</strong> Physics constraints act as powerful regularizers promoting Occam’s Razor.</li>
+<li><strong>The PIML spectrum:</strong> four ways to inject physics — data enrichment → loss penalties → architecture → hybrid solvers</li>
+<li><strong>Recap (first half):</strong> physics as regularization; data enrichment (FFT, derivatives); automatic differentiation for input derivatives; the PINN loss <span class="math inline">\(J = J_{\text{data}} + \lambda J_{\text{physics}}\)</span>, collocation points, and the role of <span class="math inline">\(\lambda\)</span></li>
+<li><strong>PINN failure modes:</strong> wrong physics, convection-dominated problems, gradient pathologies</li>
+<li><strong>New math (second half):</strong>
+<ul>
+<li>Boundary conditions: soft (penalty) vs <strong>hard enforcement via the Lagaris substitution</strong> <span class="math inline">\(f(x) = A(x) + B(x)\,\mathrm{NN}(x)\)</span>, with a worked example</li>
+<li>Why physics helps small data: the Occam’s razor / MDL view</li>
+<li>Physics in the <strong>architecture</strong>: Hamiltonian NNs and group equivariance — constraints <em>guaranteed</em> by construction vs <em>requested</em> by the loss</li>
+<li><strong>Neural operators</strong>: DeepONet and Fourier Neural Operators for learning solution operators</li>
+</ul></li>
+<li>Exam summary: ten statements you should be able to defend</li>
 </ul>
 </section>
 <section id="optional-reading-explainability-limits-scientific-trust" class="level2" data-number="17">
@@ -810,8 +818,33 @@ Neuer, Marcus J. 2024. <em>Machine Learning for Engineers: Introduction to Physi
 <li>Course retrospective: how the 14-unit arc fits together</li>
 </ul>
 </section>
-<section id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">18</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</h2>
+<section id="appendix-algorithm-compendium-pseudocode-reference" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="appendix-algorithm-compendium-pseudocode-reference"><span class="header-section-number">18</span> Appendix: Algorithm Compendium — Pseudocode Reference</h2>
+<p><em>Self-study reference deck — one pseudocode slide per algorithm, tagged with the unit that derives it. Exam bar: be able to write each algorithm from memory and state its classic pitfall.</em></p>
+<p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/15_algorithm_compendium/01_intro.html">Open</a></p>
+<ul>
+<li>Each slide: <strong>Input/Output header, numbered steps</strong>, one line <em>why it works</em>, one <em>classic pitfall</em>; notation follows the lectures (<span class="math inline">\(\boldsymbol{\theta}, \mathbf{w}\)</span> parameters, <span class="math inline">\(\eta\)</span> learning rate, <span class="math inline">\(\lambda\)</span> regularization weight)</li>
+<li><strong>Coverage by unit:</strong>
+<ul>
+<li><strong>Unit 1:</strong> data splitting &amp; k-fold cross-validation</li>
+<li><strong>Unit 2:</strong> OLS/ridge, PCA via SVD</li>
+<li><strong>Unit 3:</strong> GD/SGD, Newton’s method, logistic regression</li>
+<li><strong>Unit 4:</strong> MLP forward pass, backpropagation, 2D convolution</li>
+<li><strong>Unit 5:</strong> k-means, EM for GMM, autoencoder</li>
+<li><strong>Unit 6:</strong> momentum/Nesterov, AdaGrad</li>
+<li><strong>Unit 7:</strong> MLE/MAP</li>
+<li><strong>Unit 8:</strong> CART, random forest, gradient boosting, permutation importance</li>
+<li><strong>Unit 9:</strong> t-SNE, UMAP, SimCLR</li>
+<li><strong>Unit 10:</strong> attention, multi-head, transformer block, ViT</li>
+<li><strong>Unit 11:</strong> VAE, DDPM training, sampling + guidance</li>
+<li><strong>Unit 12:</strong> GP regression, ensembles/MC dropout, calibration, EI</li>
+<li><strong>Unit 13:</strong> PINN, Lagaris substitution</li>
+<li><strong>Unit 14:</strong> sensitivity analysis</li>
+</ul></li>
+</ul>
+</section>
+<section id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="mathematical-foundations-of-ai-ml-unified-syllabus-overview-with-ml-pc-mg"><span class="header-section-number">19</span> Mathematical Foundations of AI &amp; ML ? Unified Syllabus Overview (with ML-PC &amp; MG)</h2>
 <p><strong>Legend</strong></p>
 <ul>
 <li><strong>?</strong> First serious use ? concept must be introduced in MFML <em>before</em> being used in ML-PC or MG<br>

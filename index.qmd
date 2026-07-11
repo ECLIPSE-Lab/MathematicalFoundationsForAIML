@@ -383,10 +383,15 @@ Tangentially, we also recommend the following books:
 
 **Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/13_physics_informed_learning/01_intro.html)
 
-- **PINNs:** Integrating physical laws directly into the loss function to reduce data needs.
-- **Data Enrichment:** Applying known mathematical transformations (FFT, derivatives).
-- **Neural Integrators:** Using NNs with automatic differentiation as flexible differential equation solvers.
-- **Scientific Trust:** Physics constraints act as powerful regularizers promoting Occam's Razor.
+- **The PIML spectrum:** four ways to inject physics — data enrichment → loss penalties → architecture → hybrid solvers
+- **Recap (first half):** physics as regularization; data enrichment (FFT, derivatives); automatic differentiation for input derivatives; the PINN loss $J = J_{\text{data}} + \lambda J_{\text{physics}}$, collocation points, and the role of $\lambda$
+- **PINN failure modes:** wrong physics, convection-dominated problems, gradient pathologies
+- **New math (second half):**
+  - Boundary conditions: soft (penalty) vs **hard enforcement via the Lagaris substitution** $f(x) = A(x) + B(x)\,\mathrm{NN}(x)$, with a worked example
+  - Why physics helps small data: the Occam's razor / MDL view
+  - Physics in the **architecture**: Hamiltonian NNs and group equivariance — constraints *guaranteed* by construction vs *requested* by the loss
+  - **Neural operators**: DeepONet and Fourier Neural Operators for learning solution operators
+- Exam summary: ten statements you should be able to defend
 
 ## Optional reading: Explainability, Limits & Scientific Trust
 
@@ -406,6 +411,29 @@ Tangentially, we also recommend the following books:
 - **Counterfactuals**: "what-if" explanations
 - **Limits**: data bias, extrapolation, OOD detection, fairness — when models should NOT be trusted
 - Course retrospective: how the 14-unit arc fits together
+
+## Appendix: Algorithm Compendium — Pseudocode Reference
+
+*Self-study reference deck — one pseudocode slide per algorithm, tagged with the unit that derives it. Exam bar: be able to write each algorithm from memory and state its classic pitfall.*
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/mathematical_foundations_of_ai_and_ml/15_algorithm_compendium/01_intro.html)
+
+- Each slide: **Input/Output header, numbered steps**, one line *why it works*, one *classic pitfall*; notation follows the lectures ($\boldsymbol{\theta}, \mathbf{w}$ parameters, $\eta$ learning rate, $\lambda$ regularization weight)
+- **Coverage by unit:**
+  - **Unit 1:** data splitting & k-fold cross-validation
+  - **Unit 2:** OLS/ridge, PCA via SVD
+  - **Unit 3:** GD/SGD, Newton's method, logistic regression
+  - **Unit 4:** MLP forward pass, backpropagation, 2D convolution
+  - **Unit 5:** k-means, EM for GMM, autoencoder
+  - **Unit 6:** momentum/Nesterov, AdaGrad
+  - **Unit 7:** MLE/MAP
+  - **Unit 8:** CART, random forest, gradient boosting, permutation importance
+  - **Unit 9:** t-SNE, UMAP, SimCLR
+  - **Unit 10:** attention, multi-head, transformer block, ViT
+  - **Unit 11:** VAE, DDPM training, sampling + guidance
+  - **Unit 12:** GP regression, ensembles/MC dropout, calibration, EI
+  - **Unit 13:** PINN, Lagaris substitution
+  - **Unit 14:** sensitivity analysis
 
 ## Mathematical Foundations of AI & ML ? Unified Syllabus Overview (with ML-PC & MG)
 **Legend**
